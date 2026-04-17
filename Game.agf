@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>0</AudioIndexer>
+      <AudioIndexer>1</AudioIndexer>
       <AutoMoveInWalkMode>False</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets>Windows</BuildTargets>
@@ -2286,7 +2286,7 @@
               <Transparency>0</Transparency>
               <Visible>False</Visible>
               <Width>1150</Width>
-              <ZOrder>0</ZOrder>
+              <ZOrder>100</ZOrder>
             </NormalGUI>
             <Controls>
               <GUILabel>
@@ -2331,6 +2331,130 @@
             </NormalGUI>
             <Controls />
           </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>8</BackgroundColor>
+              <BackgroundImage>32</BackgroundImage>
+              <BorderColor>2</BorderColor>
+              <Clickable>True</Clickable>
+              <Height>174</Height>
+              <ID>11</ID>
+              <Left>460</Left>
+              <Name>gInventory_menu</Name>
+              <OnClick />
+              <PopupStyle>Normal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Top>910</Top>
+              <Transparency>0</Transparency>
+              <Visible>False</Visible>
+              <Width>1019</Width>
+              <ZOrder>0</ZOrder>
+            </NormalGUI>
+            <Controls>
+              <GUIInventory>
+                <CharacterID>-1</CharacterID>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Height>112</Height>
+                <ID>0</ID>
+                <ItemHeight>110</ItemHeight>
+                <ItemWidth>110</ItemWidth>
+                <Left>165</Left>
+                <Locked>False</Locked>
+                <Name>InventoryWindow1</Name>
+                <Top>36</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>706</Width>
+                <ZOrder>0</ZOrder>
+              </GUIInventory>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>2</Height>
+                <ID>1</ID>
+                <Image>25</Image>
+                <Left>831</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>Button1</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>0</PushedImage>
+                <Text xml:space="preserve">New Button</Text>
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>-35</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>3</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>1</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>150</Height>
+                <ID>2</ID>
+                <Image>23</Image>
+                <Left>848</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>Right_bottom</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>Right_bottom_OnClick</OnClick>
+                <PushedImage>0</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>16</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>81</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>2</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>150</Height>
+                <ID>3</ID>
+                <Image>24</Image>
+                <Left>107</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>Left_bottom</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>Left_bottom_OnClick</OnClick>
+                <PushedImage>0</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>16</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>81</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>3</ZOrder>
+              </GUIButton>
+            </Controls>
+          </GUIMain>
         </GUIs>
       </GUIFolder>
     </GUIs>
@@ -2346,7 +2470,7 @@
             <ID>1</ID>
             <Image>2041</Image>
             <Name>iBlueCup</Name>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties />
             <Interactions>
               <ScriptModule>GlobalScript.asc</ScriptModule>
@@ -2365,7 +2489,7 @@
             <ID>2</ID>
             <Image>2042</Image>
             <Name>iKey</Name>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties />
             <Interactions>
               <ScriptModule>GlobalScript.asc</ScriptModule>
@@ -2378,11 +2502,11 @@
           </InventoryItem>
           <InventoryItem>
             <CursorImage>0</CursorImage>
-            <Description xml:space="preserve">New inventory item</Description>
+            <Description>Dino_toy</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
             <ID>3</ID>
-            <Image>27</Image>
+            <Image>28</Image>
             <Name>iDino</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties />
@@ -2626,7 +2750,12 @@
 @S  // Dialog startup entry point
 return 
 @1
-  TypeText("DDDDD...");
+  FadeOut(2);
+  aSplash.Play();
+  Wait(120);
+  FadeIn(2);
+  TypeText("Стало намного лучше");
+  is_washed = true;
 stop
 @2
   TypeText("Из темного отверстия несет гнилью...");
@@ -3136,7 +3265,15 @@ stop
       <PaletteEntry Index="255" Type="Background" Red="120" Green="120" Blue="120" />
     </Palette>
     <GlobalVariables>
-      <Variables />
+      <Variables>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>false</DefaultValue>
+          <Name>is_washed</Name>
+          <Type>bool</Type>
+        </GlobalVariable>
+      </Variables>
     </GlobalVariables>
     <Sprites>
       <SpriteFolder Name="Main">
@@ -5217,54 +5354,6 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="23" Width="1433" Height="687" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-            <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Комнаты\ChatGPT Image 16 апр. 2026 г., 21_55_06.png</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>687</ImportHeight>
-              <ImportWidth>1433</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>True</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <TransparentColorIndex>0</TransparentColorIndex>
-              <ImportAlphaChannel>True</ImportAlphaChannel>
-            </Source>
-          </Sprite>
-          <Sprite Slot="24" Width="471" Height="223" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-            <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\ChatGPT Image 16 апр. 2026 г., 21_55_06.png</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>223</ImportHeight>
-              <ImportWidth>471</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>True</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <TransparentColorIndex>0</TransparentColorIndex>
-              <ImportAlphaChannel>True</ImportAlphaChannel>
-            </Source>
-          </Sprite>
-          <Sprite Slot="25" Width="650" Height="308" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-            <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\ChatGPT Image 16 апр. 2026 г., 21_55_06.png</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>308</ImportHeight>
-              <ImportWidth>650</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>True</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <TransparentColorIndex>0</TransparentColorIndex>
-              <ImportAlphaChannel>True</ImportAlphaChannel>
-            </Source>
-          </Sprite>
           <Sprite Slot="26" Width="712" Height="628" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
               <FileName>C:\Users\Admin\Downloads\ChatGPT Image 16 апр. 2026 г., 2 (3).png</FileName>
@@ -5293,6 +5382,86 @@ stop
               <RemapToGamePalette>True</RemapToGamePalette>
               <RemapToRoomPalette>False</RemapToRoomPalette>
               <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="28" Width="100" Height="100" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>C:\Users\Admin\Desktop\Промты\Инвентарь\iDino.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>100</ImportHeight>
+              <ImportWidth>100</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="32" Width="1019" Height="174" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>C:\Users\Admin\Desktop\Промты\Рамка\3redblanket_httpss.mj.runkgPjJKa9gwQ_picture_frame_ - ar_41_ - s_57cbc6e7-ba7d-4f87-bd61-39711be6d324_3.PNG</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>174</ImportHeight>
+              <ImportWidth>1019</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="25" Width="3" Height="2" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>C:\Users\Admin\Downloads\iloveimg-resized\Без названия.png</FileName>
+              <OffsetX>41</OffsetX>
+              <OffsetY>87</OffsetY>
+              <ImportHeight>2</ImportHeight>
+              <ImportWidth>3</ImportWidth>
+              <ImportAsTile>True</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="23" Width="81" Height="150" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>C:\Users\Admin\Desktop\Промты\Рамка\Без названия33.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>150</ImportHeight>
+              <ImportWidth>81</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>TopLeft</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="24" Width="81" Height="150" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>C:\Users\Admin\Desktop\Промты\Рамка\Без названия25.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>150</ImportHeight>
+              <ImportWidth>81</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>TopLeft</ImportMethod>
               <TransparentColorIndex>0</TransparentColorIndex>
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
@@ -5674,7 +5843,21 @@ See KeyboardMovement.txt for details.
           </AudioClipFolder>
           <AudioClipFolder Name="Sounds">
             <SubFolders />
-            <AudioClips />
+            <AudioClips>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>0</ID>
+                <Index>1</Index>
+                <ScriptName>aSplash</ScriptName>
+                <SourceFileName xml:space="preserve">C:\Users\Admin\Downloads\kran-s-vysokim-naporom (mp3cut.net).mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-04-17 12:35:33Z</FileLastModifiedDate>
+              </AudioClip>
+            </AudioClips>
             <AudioClipFolder>
               <DefaultBundlingType>InGameEXE</DefaultBundlingType>
               <DefaultPriority>Inherit</DefaultPriority>

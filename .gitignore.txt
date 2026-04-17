@@ -1,6 +1,0 @@
-/_Debug/
-/Compiled/
-/AudioCache/
-/Backup/
-/*.bak
-/*.user
