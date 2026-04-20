@@ -2959,8 +2959,8 @@ stop
         <AnimateOnlyOnHotspots>False</AnimateOnlyOnHotspots>
         <AnimateOnlyWhenMoving>False</AnimateOnlyWhenMoving>
         <AnimationDelay>5</AnimationDelay>
-        <HotspotX>0</HotspotX>
-        <HotspotY>0</HotspotY>
+        <HotspotX>7</HotspotX>
+        <HotspotY>7</HotspotY>
         <ID>1</ID>
         <Image>2056</Image>
         <Name xml:space="preserve">Look at</Name>
@@ -3138,7 +3138,7 @@ stop
         <OutlineStyle>None</OutlineStyle>
         <PointSize>24</PointSize>
         <SizeMultiplier>1</SizeMultiplier>
-        <SourceFilename>C:\Users\Admin\Desktop\arial.ttf</SourceFilename>
+        <SourceFilename>Assets/Шрифты/arial.ttf</SourceFilename>
         <TTFMetricsFixup>None</TTFMetricsFixup>
         <VerticalOffset>0</VerticalOffset>
       </Font>
@@ -3152,7 +3152,7 @@ stop
         <OutlineStyle>None</OutlineStyle>
         <PointSize>18</PointSize>
         <SizeMultiplier>1</SizeMultiplier>
-        <SourceFilename>C:\Users\Admin\Desktop\Промты\Шрифты\HATTEN.TTF</SourceFilename>
+        <SourceFilename>Assets/Шрифты/HATTEN.TTF</SourceFilename>
         <TTFMetricsFixup>None</TTFMetricsFixup>
         <VerticalOffset>0</VerticalOffset>
       </Font>
@@ -3166,7 +3166,7 @@ stop
         <OutlineStyle>None</OutlineStyle>
         <PointSize>25</PointSize>
         <SizeMultiplier>1</SizeMultiplier>
-        <SourceFilename>C:\Users\Admin\Desktop\Промты\Шрифты\arial.ttf</SourceFilename>
+        <SourceFilename>Assets/Шрифты/arial.ttf</SourceFilename>
         <TTFMetricsFixup>SetAscenderToHeight</TTFMetricsFixup>
         <VerticalOffset>0</VerticalOffset>
       </Font>
@@ -4654,38 +4654,6 @@ stop
                       <ImportAlphaChannel>True</ImportAlphaChannel>
                     </Source>
                   </Sprite>
-                  <Sprite Slot="37" Width="1" Height="1" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                    <Source>
-                      <FileName>C:\Users\Admin\Downloads\1.png</FileName>
-                      <OffsetX>21</OffsetX>
-                      <OffsetY>22</OffsetY>
-                      <ImportHeight>1</ImportHeight>
-                      <ImportWidth>1</ImportWidth>
-                      <ImportAsTile>True</ImportAsTile>
-                      <Frame>0</Frame>
-                      <RemapToGamePalette>True</RemapToGamePalette>
-                      <RemapToRoomPalette>False</RemapToRoomPalette>
-                      <ImportMethod>LeaveAsIs</ImportMethod>
-                      <TransparentColorIndex>0</TransparentColorIndex>
-                      <ImportAlphaChannel>True</ImportAlphaChannel>
-                    </Source>
-                  </Sprite>
-                  <Sprite Slot="38" Width="50" Height="40" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-                    <Source>
-                      <FileName>C:\Users\Admin\Downloads\1.png</FileName>
-                      <OffsetX>0</OffsetX>
-                      <OffsetY>0</OffsetY>
-                      <ImportHeight>40</ImportHeight>
-                      <ImportWidth>50</ImportWidth>
-                      <ImportAsTile>False</ImportAsTile>
-                      <Frame>0</Frame>
-                      <RemapToGamePalette>True</RemapToGamePalette>
-                      <RemapToRoomPalette>False</RemapToRoomPalette>
-                      <ImportMethod>LeaveAsIs</ImportMethod>
-                      <TransparentColorIndex>0</TransparentColorIndex>
-                      <ImportAlphaChannel>True</ImportAlphaChannel>
-                    </Source>
-                  </Sprite>
                 </Sprites>
               </SpriteFolder>
             </SubFolders>
@@ -5208,7 +5176,7 @@ stop
           </Sprite>
           <Sprite Slot="1" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\персон2_flipped 444512.png</FileName>
+              <FileName>Assets/персон2_flipped 444512.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>680</ImportHeight>
@@ -5224,7 +5192,7 @@ stop
           </Sprite>
           <Sprite Slot="2" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\character_mirrored.png</FileName>
+              <FileName>Assets/character_mirrored.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>680</ImportHeight>
@@ -5240,7 +5208,7 @@ stop
           </Sprite>
           <Sprite Slot="3" Width="353" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Идет вправо\Новая папка\redblanket_httpss_mj_run1oMlVMvVq7g_walking_ - ar_67128_ - vide_8fee39d4-74be-49da-a83c-5f7a45e95309_2_001.png</FileName>
+              <FileName>Assets/Идет вправо/redblanket_httpss_mj_run1oMlVMvVq7g_walking_ - ar_67128_ - vide_8fee39d4-74be-49da-a83c-5f7a45e95309_2_001.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>680</ImportHeight>
@@ -5256,7 +5224,7 @@ stop
           </Sprite>
           <Sprite Slot="4" Width="353" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Идет вправо\Новая папка\redblanket_httpss_mj_run1oMlVMvVq7g_walking_ - ar_67128_ - vide_8fee39d4-74be-49da-a83c-5f7a45e95309_2_002.png</FileName>
+              <FileName>Assets/Идет вправо/redblanket_httpss_mj_run1oMlVMvVq7g_walking_ - ar_67128_ - vide_8fee39d4-74be-49da-a83c-5f7a45e95309_2_002.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>680</ImportHeight>
@@ -5272,7 +5240,7 @@ stop
           </Sprite>
           <Sprite Slot="5" Width="353" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Идет вправо\Новая папка\redblanket_httpss_mj_run1oMlVMvVq7g_walking_ - ar_67128_ - vide_8fee39d4-74be-49da-a83c-5f7a45e95309_2_003.png</FileName>
+              <FileName>Assets/Идет вправо/redblanket_httpss_mj_run1oMlVMvVq7g_walking_ - ar_67128_ - vide_8fee39d4-74be-49da-a83c-5f7a45e95309_2_003.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>680</ImportHeight>
@@ -5288,7 +5256,7 @@ stop
           </Sprite>
           <Sprite Slot="6" Width="353" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Идет вправо\Новая папка\redblanket_httpss_mj_run1oMlVMvVq7g_walking_ - ar_67128_ - vide_8fee39d4-74be-49da-a83c-5f7a45e95309_2_004.png</FileName>
+              <FileName>Assets/Идет вправо/redblanket_httpss_mj_run1oMlVMvVq7g_walking_ - ar_67128_ - vide_8fee39d4-74be-49da-a83c-5f7a45e95309_2_004.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>680</ImportHeight>
@@ -5304,7 +5272,7 @@ stop
           </Sprite>
           <Sprite Slot="7" Width="353" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Идет вправо\Новая папка\redblanket_httpss_mj_runK-YHoCs_-kI_walking_ - ar_67128_ - vide_5f3d6025-f0ef-4b9e-99ad-9cae8072efe5_2_001.png</FileName>
+              <FileName>Assets/Идет вправо/redblanket_httpss_mj_runK-YHoCs_-kI_walking_ - ar_67128_ - vide_5f3d6025-f0ef-4b9e-99ad-9cae8072efe5_2_001.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>680</ImportHeight>
@@ -5320,7 +5288,7 @@ stop
           </Sprite>
           <Sprite Slot="8" Width="353" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Идет вправо\Новая папка\redblanket_httpss_mj_runK-YHoCs_-kI_walking_ - ar_67128_ - vide_5f3d6025-f0ef-4b9e-99ad-9cae8072efe5_2_002.png</FileName>
+              <FileName>Assets/Идет вправо/redblanket_httpss_mj_runK-YHoCs_-kI_walking_ - ar_67128_ - vide_5f3d6025-f0ef-4b9e-99ad-9cae8072efe5_2_002.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>680</ImportHeight>
@@ -5336,7 +5304,7 @@ stop
           </Sprite>
           <Sprite Slot="9" Width="353" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Идет вправо\Новая папка\redblanket_httpss_mj_runK-YHoCs_-kI_walking_ - ar_67128_ - vide_5f3d6025-f0ef-4b9e-99ad-9cae8072efe5_2_003.png</FileName>
+              <FileName>Assets/Идет вправо/redblanket_httpss_mj_runK-YHoCs_-kI_walking_ - ar_67128_ - vide_5f3d6025-f0ef-4b9e-99ad-9cae8072efe5_2_003.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>680</ImportHeight>
@@ -5352,7 +5320,7 @@ stop
           </Sprite>
           <Sprite Slot="10" Width="353" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Идет вправо\Новая папка\redblanket_httpss_mj_runK-YHoCs_-kI_walking_ - ar_67128_ - vide_5f3d6025-f0ef-4b9e-99ad-9cae8072efe5_2_004.png</FileName>
+              <FileName>Assets/Идет вправо/redblanket_httpss_mj_runK-YHoCs_-kI_walking_ - ar_67128_ - vide_5f3d6025-f0ef-4b9e-99ad-9cae8072efe5_2_004.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>680</ImportHeight>
@@ -5368,7 +5336,7 @@ stop
           </Sprite>
           <Sprite Slot="11" Width="353" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="False">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Идет вправо\Новая папка\redblanket_httpss_mj_runK-YHoCs_-kI_walking_ - ar_67128_ - vide_5f3d6025-f0ef-4b9e-99ad-9cae8072efe5_2_005.png</FileName>
+              <FileName>Assets/Идет вправо/redblanket_httpss_mj_runK-YHoCs_-kI_walking_ - ar_67128_ - vide_5f3d6025-f0ef-4b9e-99ad-9cae8072efe5_2_005.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>680</ImportHeight>
@@ -5384,7 +5352,7 @@ stop
           </Sprite>
           <Sprite Slot="12" Width="353" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Идет влево\redblanket_httpss_mj_runK-YHoCs_.png</FileName>
+              <FileName>Assets/Идет влево/redblanket_httpss_mj_runK-YHoCs_.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>680</ImportHeight>
@@ -5400,7 +5368,7 @@ stop
           </Sprite>
           <Sprite Slot="13" Width="353" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Идет влево\redblanket_httpss_mj_run1oMlVMvV (1).png</FileName>
+              <FileName>Assets/Идет влево/redblanket_httpss_mj_run1oMlVMvV (1).png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>680</ImportHeight>
@@ -5416,7 +5384,7 @@ stop
           </Sprite>
           <Sprite Slot="14" Width="353" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Идет влево\redblanket_httpss_mj_run1oMlVMvV (2).png</FileName>
+              <FileName>Assets/Идет влево/redblanket_httpss_mj_run1oMlVMvV (2).png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>680</ImportHeight>
@@ -5432,7 +5400,7 @@ stop
           </Sprite>
           <Sprite Slot="15" Width="353" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Идет влево\redblanket_httpss_mj_run1oMlVMvV (3).png</FileName>
+              <FileName>Assets/Идет влево/redblanket_httpss_mj_run1oMlVMvV (3).png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>680</ImportHeight>
@@ -5448,7 +5416,7 @@ stop
           </Sprite>
           <Sprite Slot="16" Width="353" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Идет влево\redblanket_httpss_mj_run1oMlVMvV.png</FileName>
+              <FileName>Assets/Идет влево/redblanket_httpss_mj_run1oMlVMvV.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>680</ImportHeight>
@@ -5464,7 +5432,7 @@ stop
           </Sprite>
           <Sprite Slot="17" Width="353" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Идет влево\redblanket_httpss_mj_runK-YHoCs_ (1).png</FileName>
+              <FileName>Assets/Идет влево/redblanket_httpss_mj_runK-YHoCs_ (1).png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>680</ImportHeight>
@@ -5480,7 +5448,7 @@ stop
           </Sprite>
           <Sprite Slot="18" Width="353" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Идет влево\redblanket_httpss_mj_runK-YHoCs_ (2).png</FileName>
+              <FileName>Assets/Идет влево/redblanket_httpss_mj_runK-YHoCs_ (2).png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>680</ImportHeight>
@@ -5496,7 +5464,7 @@ stop
           </Sprite>
           <Sprite Slot="19" Width="353" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Идет влево\redblanket_httpss_mj_runK-YHoCs_ (3).png</FileName>
+              <FileName>Assets/Идет влево/redblanket_httpss_mj_runK-YHoCs_ (3).png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>680</ImportHeight>
@@ -5512,7 +5480,7 @@ stop
           </Sprite>
           <Sprite Slot="20" Width="353" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="False">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Идет влево\redblanket_httpss_mj_runK-YHoCs_ (4).png</FileName>
+              <FileName>Assets/Идет влево/redblanket_httpss_mj_runK-YHoCs_ (4).png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>680</ImportHeight>
@@ -5526,25 +5494,9 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="21" Width="1762" Height="437" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-            <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Рамка\redblanket_Dark_horror_dialogue_box_sleek_matte_black_stone_t_e4629129-9b57-4f44-bab3-4cc3db7eb1c6_12.PNG</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>437</ImportHeight>
-              <ImportWidth>1762</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>True</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <TransparentColorIndex>0</TransparentColorIndex>
-              <ImportAlphaChannel>True</ImportAlphaChannel>
-            </Source>
-          </Sprite>
           <Sprite Slot="22" Width="1150" Height="230" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Рамка\1.png</FileName>
+              <FileName>Assets/Рамка/1.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>230</ImportHeight>
@@ -5558,25 +5510,9 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="26" Width="712" Height="628" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-            <Source>
-              <FileName>C:\Users\Admin\Downloads\ChatGPT Image 16 апр. 2026 г., 2 (3).png</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>628</ImportHeight>
-              <ImportWidth>712</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>True</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <TransparentColorIndex>0</TransparentColorIndex>
-              <ImportAlphaChannel>True</ImportAlphaChannel>
-            </Source>
-          </Sprite>
           <Sprite Slot="27" Width="714" Height="630" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Downloads\ChatGPT Image 16 апр. 2026 г., 2 (4).png</FileName>
+              <FileName>Assets/ChatGPT Image 16 апр. 2026 г., 2 (4).png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>630</ImportHeight>
@@ -5592,7 +5528,7 @@ stop
           </Sprite>
           <Sprite Slot="28" Width="100" Height="100" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Инвентарь\iDino.png</FileName>
+              <FileName>Assets/iDino.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>100</ImportHeight>
@@ -5608,7 +5544,7 @@ stop
           </Sprite>
           <Sprite Slot="32" Width="1019" Height="174" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Рамка\3redblanket_httpss.mj.runkgPjJKa9gwQ_picture_frame_ - ar_41_ - s_57cbc6e7-ba7d-4f87-bd61-39711be6d324_3.PNG</FileName>
+              <FileName>Assets/3redblanket_httpss.mj.runkgPjJKa9gwQ_picture_frame_ - ar_41_ - s_57cbc6e7-ba7d-4f87-bd61-39711be6d324_3.PNG</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>174</ImportHeight>
@@ -5622,14 +5558,14 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="25" Width="3" Height="2" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+          <Sprite Slot="25" Width="1431" Height="1331" ColorDepth="32" Resolution="Real" AlphaChannel="False">
             <Source>
-              <FileName>C:\Users\Admin\Downloads\iloveimg-resized\Без названия.png</FileName>
-              <OffsetX>41</OffsetX>
-              <OffsetY>87</OffsetY>
-              <ImportHeight>2</ImportHeight>
-              <ImportWidth>3</ImportWidth>
-              <ImportAsTile>True</ImportAsTile>
+              <FileName>Assets/cement-texture.jpg</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>1331</ImportHeight>
+              <ImportWidth>1431</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>
               <RemapToRoomPalette>False</RemapToRoomPalette>
@@ -5640,7 +5576,7 @@ stop
           </Sprite>
           <Sprite Slot="23" Width="81" Height="150" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Рамка\Без названия33.png</FileName>
+              <FileName>Assets/Без названия33.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>150</ImportHeight>
@@ -5656,7 +5592,7 @@ stop
           </Sprite>
           <Sprite Slot="24" Width="81" Height="150" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Рамка\Без названия25.png</FileName>
+              <FileName>Assets/Без названия25.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>150</ImportHeight>
@@ -5672,7 +5608,7 @@ stop
           </Sprite>
           <Sprite Slot="34" Width="687" Height="97" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Рамка\redb666lanket_httpss.mj.runkgPjJKa9gwQ_picture_frame_ - ar_41_ - s_57cbc6e7-ba7d-4f87-bd61-39711be6d324_2.png</FileName>
+              <FileName>Assets/redb666lanket_httpss.mj.runkgPjJKa9gwQ_picture_frame_ - ar_41_ - s_57cbc6e7-ba7d-4f87-bd61-39711be6d324_2.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>97</ImportHeight>
@@ -5688,7 +5624,7 @@ stop
           </Sprite>
           <Sprite Slot="29" Width="259" Height="500" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Илья сидит\redblanket_httpss_mj_run1oMlVMvVq7g_sits_with_his_hands_clutc_e8f0841d-5747-4734-938a-7f8bf745d81e_0__1__003(1).png</FileName>
+              <FileName>Assets/Анимация/redblanket_httpss_mj_run1oMlVMvVq7g_sits_with_his_hands_clutc_e8f0841d-5747-4734-938a-7f8bf745d81e_0__1__003(1).png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>500</ImportHeight>
@@ -5704,7 +5640,7 @@ stop
           </Sprite>
           <Sprite Slot="30" Width="259" Height="500" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Илья сидит\redblanket_httpss_mj_run1oMlVMvVq7g_sits_with_his_hands_clutc_e8f0841d-5747-4734-938a-7f8bf745d81e_0__1__003.png</FileName>
+              <FileName>Assets/Анимация/redblanket_httpss_mj_run1oMlVMvVq7g_sits_with_his_hands_clutc_e8f0841d-5747-4734-938a-7f8bf745d81e_0__1__003.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>500</ImportHeight>
@@ -5720,7 +5656,7 @@ stop
           </Sprite>
           <Sprite Slot="31" Width="337" Height="650" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\redblanket_httpss_mj_run1oMlVMvVq7g_sits_down_ - ar_67128_ - vi_b5b3bdba-d160-4c36-9245-0fccc8797ca6_2_002.png</FileName>
+              <FileName>Assets/Анимация/redblanket_httpss_mj_run1oMlVMvVq7g_sits_down_ - ar_67128_ - vi_b5b3bdba-d160-4c36-9245-0fccc8797ca6_2_002.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>650</ImportHeight>
@@ -5736,7 +5672,7 @@ stop
           </Sprite>
           <Sprite Slot="33" Width="100" Height="110" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Downloads\redblanket_Miniatures_models_for_the_game._2D_horror._Each_on_d003d00b-9b4f-43a7-aecd-791fb4e3e01f_2.png</FileName>
+              <FileName>Assets/redblanket_Miniatures_models_for_the_game._2D_horror._Each_on_d003d00b-9b4f-43a7-aecd-791fb4e3e01f_2.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>110</ImportHeight>
@@ -5750,9 +5686,9 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="35" Width="334" Height="114" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+          <Sprite Slot="35" Width="334" Height="114" ColorDepth="32" Resolution="Real" AlphaChannel="False">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Рамка\2.PNG</FileName>
+              <FileName>Assets/133.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>114</ImportHeight>
@@ -5768,7 +5704,7 @@ stop
           </Sprite>
           <Sprite Slot="36" Width="150" Height="150" ColorDepth="32" Resolution="Real" AlphaChannel="False">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Рамка\2.png</FileName>
+              <FileName>Assets/22.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>150</ImportHeight>
@@ -5784,7 +5720,7 @@ stop
           </Sprite>
           <Sprite Slot="39" Width="50" Height="40" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Downloads\1.png</FileName>
+              <FileName>Assets/1.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>40</ImportHeight>
@@ -5798,57 +5734,9 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="40" Width="193" Height="208" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-            <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Курсоры\2.PNG</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>208</ImportHeight>
-              <ImportWidth>193</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>True</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <TransparentColorIndex>0</TransparentColorIndex>
-              <ImportAlphaChannel>True</ImportAlphaChannel>
-            </Source>
-          </Sprite>
-          <Sprite Slot="41" Width="123" Height="150" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-            <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\Курсоры\2.PNG</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>150</ImportHeight>
-              <ImportWidth>123</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>True</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <TransparentColorIndex>0</TransparentColorIndex>
-              <ImportAlphaChannel>True</ImportAlphaChannel>
-            </Source>
-          </Sprite>
-          <Sprite Slot="42" Width="102" Height="110" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-            <Source>
-              <FileName>C:\Users\Admin\Downloads\2.png</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>110</ImportHeight>
-              <ImportWidth>102</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>True</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <TransparentColorIndex>0</TransparentColorIndex>
-              <ImportAlphaChannel>True</ImportAlphaChannel>
-            </Source>
-          </Sprite>
           <Sprite Slot="43" Width="83" Height="90" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Downloads\2 (1).png</FileName>
+              <FileName>Assets/2 (1).png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>90</ImportHeight>
@@ -6302,7 +6190,7 @@ See KeyboardMovement.txt for details.
                 <ID>0</ID>
                 <Index>1</Index>
                 <ScriptName>aSplash</ScriptName>
-                <SourceFileName xml:space="preserve">C:\Users\Admin\Downloads\kran-s-vysokim-naporom (mp3cut.net).mp3</SourceFileName>
+                <SourceFileName xml:space="preserve">Assets/kran-s-vysokim-naporom (mp3cut.net).mp3</SourceFileName>
                 <Type>3</Type>
                 <FileLastModifiedDate>2026-04-17 12:35:33Z</FileLastModifiedDate>
               </AudioClip>
