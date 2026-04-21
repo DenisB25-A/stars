@@ -702,6 +702,10 @@
             <Description IsNull="True" />
             <Number>9</Number>
           </UnloadedRoom>
+          <UnloadedRoom>
+            <Description IsNull="True" />
+            <Number>10</Number>
+          </UnloadedRoom>
         </UnloadedRooms>
       </UnloadedRoomFolder>
     </Rooms>
@@ -2871,7 +2875,7 @@
         <Dialogs>
           <Dialog>
             <ID>0</ID>
-            <Name>dSinkChoice</Name>
+            <Name>dBathchoice</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
@@ -2881,15 +2885,18 @@ return
   aSplash.Play();
   Wait(120);
   FadeIn(2);
-  TypeText("Стало намного лучше");
+  TypeText("Преодолевая апатию и некоторую брезгливость вы все же снимаете с себя и одежду и становитесь на холодную эмалированную поверхность.");
+  TypeText("В голове свербит привычная мысль: 'А смысл?' Однако горячая вода и аромат какого-то дешевого шампуня все же делает свое дело.");
+  TypeText("Постояв несколько минут под душем, вы чувствуете себя значительно лучше.");
   is_washed = true;
-  ChangeMood(-1);
+  ChangeMood(1);
 stop
 @2
-  TypeText("Из темного отверстия несет гнилью...");
+  TypeText("Непонятно на что вы расчитывали, пытаясь сдвинуть этого монстра. Все, на что вас хватает, это сдернуть одну сторону на пару сантиметров, отчего старый сифон лопается и в нос ударяет запах гнили.");
+  TypeText("Поздравляю, теперь этим воспользоваться нельзя. Если только вы не хотите устроить соседям 'Ноев потоп'.");
+  is_washed = true;
 stop
 @3
-  TypeText("Сука. Я в тебя щас насру");
 stop
 ]]></Script>
             <DialogOptions>
@@ -2897,19 +2904,19 @@ stop
                 <ID>1</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text>Умыться</Text>
+                <Text xml:space="preserve">Принять душ</Text>
               </DialogOption>
               <DialogOption>
                 <ID>2</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Не умываться</Text>
+                <Text xml:space="preserve">Попытаться сорвать ванну с места (пора ей отправиться на помойку)</Text>
               </DialogOption>
               <DialogOption>
                 <ID>3</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Угрожать раковине</Text>
+                <Text>Уйти</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
@@ -5793,6 +5800,102 @@ stop
               <OffsetY>0</OffsetY>
               <ImportHeight>170</ImportHeight>
               <ImportWidth>153</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="26" Width="927" Height="112" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>C:\Users\Admin\Desktop\Промты\Комнаты\redblanket_httpss.mj.runkgPjJKa9gwQ_picture_frame_--ar_41_--s_57cbc6e7-ba7d-4f87-bd61-39711be6d324_2.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>112</ImportHeight>
+              <ImportWidth>927</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="37" Width="564" Height="56" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+            <Source>
+              <FileName>Assets/redblanket_httpss.mj.runkgPjJKa9gwQ_picture_frame_ - ar_41_ - s_57cbc6e7-ba7d-4f87-bd61-39711be6d324_2.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>56</ImportHeight>
+              <ImportWidth>564</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="38" Width="1831" Height="907" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>C:\Users\Admin\Desktop\Промты\Снимок экрана 2026-04-21 145938.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>907</ImportHeight>
+              <ImportWidth>1831</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="40" Width="1164" Height="639" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>C:\Users\Admin\Desktop\Промты\2Снимок экрана 2026-04-21 145938.PNG</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>639</ImportHeight>
+              <ImportWidth>1164</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="44" Width="1184" Height="689" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/2Снимок экрана 2026-04-21 145938.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>689</ImportHeight>
+              <ImportWidth>1184</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="45" Width="135" Height="150" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Объекты/redblanket_4Miniatures_models_for_the_game._2D_horror._Each_on_053166fc-e600-4230-be95-5de48dc874a1_0 (1).png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>150</ImportHeight>
+              <ImportWidth>135</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>
