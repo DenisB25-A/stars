@@ -4,3 +4,7 @@
 // scripts.
 import function TypeText(String message);
 import function ChangeMood(int amount);
+
+import int notesOrder[20];
+import String notesNames[20];
+import function UpdateJournalUI();
