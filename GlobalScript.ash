@@ -9,3 +9,4 @@ import int notesOrder[20];
 import String notesNames[20];
 import function UpdateJournalUI();
 import String notesTexts[20];
+import function ReadAndAddNote(int id);

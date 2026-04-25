@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>3</AudioIndexer>
+      <AudioIndexer>10</AudioIndexer>
       <AutoMoveInWalkMode>False</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets>Windows</BuildTargets>
@@ -709,6 +709,10 @@
           <UnloadedRoom>
             <Description IsNull="True" />
             <Number>11</Number>
+          </UnloadedRoom>
+          <UnloadedRoom>
+            <Description IsNull="True" />
+            <Number>12</Number>
           </UnloadedRoom>
         </UnloadedRooms>
       </UnloadedRoomFolder>
@@ -2684,7 +2688,7 @@
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Top>100</Top>
               <Transparency>0</Transparency>
-              <Visible>True</Visible>
+              <Visible>False</Visible>
               <Width>640</Width>
               <ZOrder>0</ZOrder>
             </NormalGUI>
@@ -2935,10 +2939,10 @@
                 <ClipImage>False</ClipImage>
                 <Enabled>True</Enabled>
                 <Font>0</Font>
-                <Height>926</Height>
+                <Height>679</Height>
                 <ID>1</ID>
                 <Image>0</Image>
-                <Left>37</Left>
+                <Left>93</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>0</MouseoverImage>
                 <Name>btnViewerImage</Name>
@@ -2950,10 +2954,10 @@
                 <TextColor>0</TextColor>
                 <TextPaddingHorizontal>2</TextPaddingHorizontal>
                 <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>53</Top>
+                <Top>173</Top>
                 <Translated>True</Translated>
                 <Visible>False</Visible>
-                <Width>664</Width>
+                <Width>563</Width>
                 <WrapText>False</WrapText>
                 <ZOrder>1</ZOrder>
               </GUIButton>
@@ -6425,13 +6429,13 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="42" Width="1025" Height="550" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+          <Sprite Slot="26" Width="150" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>Assets/Комнаты/Снимок экрана 2026-04-22 211857.png</FileName>
+              <FileName>Assets/22 — копия.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
-              <ImportHeight>550</ImportHeight>
-              <ImportWidth>1025</ImportWidth>
+              <ImportHeight>50</ImportHeight>
+              <ImportWidth>150</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>
@@ -6441,13 +6445,13 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="26" Width="150" Height="50" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+          <Sprite Slot="42" Width="1025" Height="550" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>Assets/22 — копия.png</FileName>
+              <FileName>Assets/Комнаты/Снимок экрана 2026-04-22 211857.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
-              <ImportHeight>50</ImportHeight>
-              <ImportWidth>150</ImportWidth>
+              <ImportHeight>550</ImportHeight>
+              <ImportWidth>1025</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>
@@ -6521,22 +6525,6 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="46" Width="40" Height="35" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-            <Source>
-              <FileName>Assets/Кнопки/22.png</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>35</ImportHeight>
-              <ImportWidth>40</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>True</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <TransparentColorIndex>0</TransparentColorIndex>
-              <ImportAlphaChannel>True</ImportAlphaChannel>
-            </Source>
-          </Sprite>
           <Sprite Slot="47" Width="75" Height="61" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
               <FileName>Assets/Кнопки/22.png</FileName>
@@ -6569,13 +6557,93 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="48" Width="768" Height="864" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+          <Sprite Slot="54" Width="125" Height="123" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Desktop\photo_2026-04-11_13-51-11.jpg</FileName>
+              <FileName>Assets/Кнопки/3red33blanket_httpss.mj.runkgPjJKa9gwQ_picture_frame_ - ar_41_ - s_57cbc6e7-ba7d-4f87-bd61-39711be6d324_3.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
-              <ImportHeight>864</ImportHeight>
-              <ImportWidth>768</ImportWidth>
+              <ImportHeight>123</ImportHeight>
+              <ImportWidth>125</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="56" Width="1095" Height="269" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Комнаты/Шкаф выдвижной.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>269</ImportHeight>
+              <ImportWidth>1095</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="57" Width="890" Height="160" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Комнаты/Шкаф выдвижной 2.PNG</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>160</ImportHeight>
+              <ImportWidth>890</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="53" Width="150" Height="83" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Объекты/photo.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>83</ImportHeight>
+              <ImportWidth>150</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="55" Width="558" Height="698" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Записки/redblanket_Authentic_vintage_1970s_Soviet_Union_black_and_whi_7667abc3-a808-4d30-bc27-1fbe145ce50d_0 (1).png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>698</ImportHeight>
+              <ImportWidth>558</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="46" Width="558" Height="698" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+            <Source>
+              <FileName>C:\Users\Admin\Downloads\redblanket_Authentic_vintage_1980s_USSR_black_and_white_famil_12207718-284f-4be5-a96b-066e755ed443_2 (1).png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>698</ImportHeight>
+              <ImportWidth>558</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>
@@ -7054,6 +7122,84 @@ See KeyboardMovement.txt for details.
                 <SourceFileName xml:space="preserve">Assets/Звуки/computer-keyboard-text-input (mp3cut.net).mp3</SourceFileName>
                 <Type>3</Type>
                 <FileLastModifiedDate>2026-04-23 11:32:07Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>3</ID>
+                <Index>4</Index>
+                <ScriptName>aScary_breath</ScriptName>
+                <SourceFileName>Assets/Звуки/scary-breath-of-a-young-man.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-04-25 11:51:35Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>4</ID>
+                <Index>5</Index>
+                <ScriptName>aDrawer_open</ScriptName>
+                <SourceFileName>Assets/Звуки/drawer_open.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-04-25 12:52:56Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>5</ID>
+                <Index>6</Index>
+                <ScriptName>aDrawer_close</ScriptName>
+                <SourceFileName>Assets/Звуки/drawer_close.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-04-25 12:54:04Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>6</ID>
+                <Index>8</Index>
+                <ScriptName>aDoor_sound</ScriptName>
+                <SourceFileName>Assets/Звуки/door_sound2.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-04-25 17:35:28Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>7</ID>
+                <Index>9</Index>
+                <ScriptName>aDoor_sound2</ScriptName>
+                <SourceFileName>Assets/Звуки/door_sound.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-04-25 17:20:09Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>8</ID>
+                <Index>10</Index>
+                <ScriptName>aDoor_sound3</ScriptName>
+                <SourceFileName>Assets/Звуки/door_sound3.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-04-25 17:48:16Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
