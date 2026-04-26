@@ -3167,6 +3167,82 @@
               <Event Index="4" />
             </Interactions>
           </InventoryItem>
+          <InventoryItem>
+            <CursorImage>0</CursorImage>
+            <Description xml:space="preserve">New inventory item</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>6</ID>
+            <Image>78</Image>
+            <Name>iCoffee</Name>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <Properties />
+            <Interactions>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
+          <InventoryItem>
+            <CursorImage>0</CursorImage>
+            <Description xml:space="preserve">New inventory item</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>7</ID>
+            <Image>79</Image>
+            <Name>iVodka</Name>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <Properties />
+            <Interactions>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
+          <InventoryItem>
+            <CursorImage>0</CursorImage>
+            <Description xml:space="preserve">New inventory item</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>8</ID>
+            <Image>48</Image>
+            <Name>iSugar</Name>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <Properties />
+            <Interactions>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
+          <InventoryItem>
+            <CursorImage>0</CursorImage>
+            <Description xml:space="preserve">New inventory item</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>9</ID>
+            <Image>76</Image>
+            <Name>iKey_storeroom</Name>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <Properties />
+            <Interactions>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
         </InventoryItems>
       </InventoryItemFolder>
     </InventoryItems>
@@ -3589,6 +3665,33 @@ stop
                 <Say>False</Say>
                 <Show>True</Show>
                 <Text>Уйти</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>5</ID>
+            <Name>dMilkCarton</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+return
+@2
+return
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text />
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text />
               </DialogOption>
             </DialogOptions>
           </Dialog>
@@ -6397,7 +6500,7 @@ stop
           </Sprite>
           <Sprite Slot="28" Width="100" Height="100" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>Assets/iDino.png</FileName>
+              <FileName>C:\Users\Admin\Documents\stars\Assets\Инвентарь\iDino.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>100</ImportHeight>
@@ -6541,7 +6644,7 @@ stop
           </Sprite>
           <Sprite Slot="33" Width="100" Height="110" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>Assets/redblanket_Miniatures_models_for_the_game._2D_horror._Each_on_d003d00b-9b4f-43a7-aecd-791fb4e3e01f_2.png</FileName>
+              <FileName>C:\Users\Admin\Documents\stars\Assets\Инвентарь\redblanket_Miniatures_models_for_the_game._2D_horror._Each_on_d003d00b-9b4f-43a7-aecd-791fb4e3e01f_2.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>110</ImportHeight>
@@ -6626,22 +6729,6 @@ stop
               <OffsetY>0</OffsetY>
               <ImportHeight>572</ImportHeight>
               <ImportWidth>921</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>True</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <TransparentColorIndex>0</TransparentColorIndex>
-              <ImportAlphaChannel>True</ImportAlphaChannel>
-            </Source>
-          </Sprite>
-          <Sprite Slot="41" Width="63" Height="100" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-            <Source>
-              <FileName>Assets/Объекты/Пакет молока.png</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>100</ImportHeight>
-              <ImportWidth>63</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>
@@ -6939,22 +7026,6 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="48" Width="901" Height="1168" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-            <Source>
-              <FileName>Assets/Объекты/Пакет молока 2.png</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>1168</ImportHeight>
-              <ImportWidth>901</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>True</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <TransparentColorIndex>0</TransparentColorIndex>
-              <ImportAlphaChannel>True</ImportAlphaChannel>
-            </Source>
-          </Sprite>
           <Sprite Slot="58" Width="77" Height="100" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
               <FileName>Assets/Пакет молока 2.png</FileName>
@@ -7074,6 +7145,86 @@ stop
               <OffsetY>0</OffsetY>
               <ImportHeight>500</ImportHeight>
               <ImportWidth>259</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="77" Width="67" Height="70" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Инвентарь/openart-gpt-image-2-edit-1_1777207859258_b8f0e505.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>70</ImportHeight>
+              <ImportWidth>67</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="78" Width="96" Height="100" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Инвентарь/Кофе.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>100</ImportHeight>
+              <ImportWidth>96</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="79" Width="100" Height="111" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Инвентарь/Водка.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>111</ImportHeight>
+              <ImportWidth>100</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="48" Width="92" Height="100" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>C:\Users\Admin\Documents\stars\Assets\Инвентарь\gpt-image-2-edit-1.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>100</ImportHeight>
+              <ImportWidth>92</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="76" Width="100" Height="100" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Инвентарь/redblanket_Miniatures_models_for_the_game._2D_horror._Each_on_200e2005-d7e9-4991-adc7-65d5a43f2860_2.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>100</ImportHeight>
+              <ImportWidth>100</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>
