@@ -3592,6 +3592,59 @@ stop
               </DialogOption>
             </DialogOptions>
           </Dialog>
+          <Dialog>
+            <ID>5</ID>
+            <Name>dMilkCarton</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file dMilkCarton
+@S  // Dialog startup entry point
+return
+@1
+  TypeText("Теперь у меня есть молоко"); 
+  did_milk_used = true;
+  object[1].Visible  = false;
+  player.AddInventory(iMilkCarton);
+stop
+@2
+  dMilkCarton.SetOptionState(2, eOptionOff);
+  TypeText("Оно прокисло. Как жаль...");
+return
+@3
+  TypeText("Фу! Прокисло!");
+  did_milk_used = true;
+  ChangeMood(-1);
+  object[1].Visible  = false;
+stop
+@4
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Взять пакет молока</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Проверить молоко</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Выпить молоко</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text>Уйти</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
         </Dialogs>
       </DialogFolder>
     </Dialogs>
