@@ -157,17 +157,6 @@
         <Name>RequiredRegion</Name>
         <Type>Number</Type>
       </CustomPropertySchemaItem>
-      <CustomPropertySchemaItem>
-        <AppliesToCharacters>True</AppliesToCharacters>
-        <AppliesToHotspots>True</AppliesToHotspots>
-        <AppliesToInvItems>True</AppliesToInvItems>
-        <AppliesToObjects>True</AppliesToObjects>
-        <AppliesToRooms>True</AppliesToRooms>
-        <DefaultValue xml:space="preserve">Незаполненное описание вещи</DefaultValue>
-        <Description />
-        <Name>Description</Name>
-        <Type>Text</Type>
-      </CustomPropertySchemaItem>
     </PropertyDefinitions>
     <GlobalMessages>
       <Message ID="500" />
@@ -2541,7 +2530,7 @@
               <BackgroundImage>36</BackgroundImage>
               <BorderColor>0</BorderColor>
               <Clickable>True</Clickable>
-              <Height>50</Height>
+              <Height>100</Height>
               <ID>13</ID>
               <Left>0</Left>
               <Name>gContext</Name>
@@ -2552,7 +2541,7 @@
               <Top>0</Top>
               <Transparency>0</Transparency>
               <Visible>False</Visible>
-              <Width>150</Width>
+              <Width>170</Width>
               <ZOrder>0</ZOrder>
             </NormalGUI>
             <Controls>
@@ -2562,10 +2551,10 @@
                 <ClipImage>False</ClipImage>
                 <Enabled>True</Enabled>
                 <Font>5</Font>
-                <Height>150</Height>
+                <Height>50</Height>
                 <ID>0</ID>
                 <Image>36</Image>
-                <Left>-1</Left>
+                <Left>6</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>0</MouseoverImage>
                 <Name>btnExamine</Name>
@@ -2577,12 +2566,68 @@
                 <TextColor>50712</TextColor>
                 <TextPaddingHorizontal>2</TextPaddingHorizontal>
                 <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>-54</Top>
+                <Top>-6</Top>
                 <Translated>True</Translated>
                 <Visible>True</Visible>
                 <Width>150</Width>
                 <WrapText>False</WrapText>
                 <ZOrder>0</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>5</Font>
+                <Height>50</Height>
+                <ID>1</ID>
+                <Image>36</Image>
+                <Left>169</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>Button4</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnExamine_OnClick</OnClick>
+                <PushedImage>0</PushedImage>
+                <Text>Осмотреть</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>50712</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>99</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>150</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>1</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>5</Font>
+                <Height>51</Height>
+                <ID>2</ID>
+                <Image>36</Image>
+                <Left>0</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>Use_button</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>Use_button_OnClick</OnClick>
+                <PushedImage>0</PushedImage>
+                <Text>Использовать</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>50712</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>40</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>165</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>2</ZOrder>
               </GUIButton>
             </Controls>
           </GUIMain>
@@ -2796,10 +2841,10 @@
                 <Clickable>True</Clickable>
                 <ClipImage>False</ClipImage>
                 <Enabled>True</Enabled>
-                <Font>5</Font>
+                <Font>6</Font>
                 <Height>52</Height>
                 <ID>0</ID>
-                <Image>0</Image>
+                <Image>61</Image>
                 <Left>254</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>0</MouseoverImage>
@@ -2815,7 +2860,7 @@
                 <Top>101</Top>
                 <Translated>True</Translated>
                 <Visible>True</Visible>
-                <Width>694</Width>
+                <Width>695</Width>
                 <WrapText>False</WrapText>
                 <ZOrder>0</ZOrder>
               </GUIButton>
@@ -2824,10 +2869,10 @@
                 <Clickable>True</Clickable>
                 <ClipImage>False</ClipImage>
                 <Enabled>True</Enabled>
-                <Font>5</Font>
+                <Font>6</Font>
                 <Height>52</Height>
                 <ID>1</ID>
-                <Image>0</Image>
+                <Image>61</Image>
                 <Left>254</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>0</MouseoverImage>
@@ -2843,7 +2888,7 @@
                 <Top>154</Top>
                 <Translated>True</Translated>
                 <Visible>True</Visible>
-                <Width>694</Width>
+                <Width>695</Width>
                 <WrapText>False</WrapText>
                 <ZOrder>1</ZOrder>
               </GUIButton>
@@ -2852,16 +2897,16 @@
                 <Clickable>True</Clickable>
                 <ClipImage>False</ClipImage>
                 <Enabled>True</Enabled>
-                <Font>5</Font>
+                <Font>6</Font>
                 <Height>52</Height>
                 <ID>2</ID>
-                <Image>0</Image>
+                <Image>61</Image>
                 <Left>254</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>0</MouseoverImage>
                 <Name>btnNote3</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick />
+                <OnClick>btnNote3_OnClick</OnClick>
                 <PushedImage>0</PushedImage>
                 <Text xml:space="preserve">New Button</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
@@ -2871,7 +2916,7 @@
                 <Top>203</Top>
                 <Translated>True</Translated>
                 <Visible>True</Visible>
-                <Width>694</Width>
+                <Width>695</Width>
                 <WrapText>False</WrapText>
                 <ZOrder>2</ZOrder>
               </GUIButton>
@@ -2880,16 +2925,16 @@
                 <Clickable>True</Clickable>
                 <ClipImage>False</ClipImage>
                 <Enabled>True</Enabled>
-                <Font>5</Font>
+                <Font>6</Font>
                 <Height>52</Height>
                 <ID>3</ID>
-                <Image>0</Image>
+                <Image>61</Image>
                 <Left>254</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>0</MouseoverImage>
                 <Name>btnNote4</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick />
+                <OnClick>btnNote4_OnClick</OnClick>
                 <PushedImage>0</PushedImage>
                 <Text xml:space="preserve">New Button</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
@@ -2899,7 +2944,7 @@
                 <Top>255</Top>
                 <Translated>True</Translated>
                 <Visible>True</Visible>
-                <Width>694</Width>
+                <Width>695</Width>
                 <WrapText>False</WrapText>
                 <ZOrder>3</ZOrder>
               </GUIButton>
@@ -3105,43 +3150,14 @@
           </InventoryItem>
           <InventoryItem>
             <CursorImage>0</CursorImage>
-            <Description xml:space="preserve">Пакет молока</Description>
+            <Description />
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
             <ID>5</ID>
-            <Image>41</Image>
-            <Name>iMilkCarton</Name>
+            <Image>59</Image>
+            <Name>iCup</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>Description</Name>
-                <Value xml:space="preserve">Пакет молока</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>41</CursorImage>
-            <Description xml:space="preserve">Банка с кофе</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>6</ID>
-            <Image>0</Image>
-            <Name>iCoffeeCan</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>Description</Name>
-                <Value xml:space="preserve">Банка растворимого кофе</Value>
-              </CustomProperty>
-            </Properties>
+            <Properties />
             <Interactions>
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Event Index="0" />
@@ -3539,113 +3555,26 @@ stop
           </Dialog>
           <Dialog>
             <ID>4</ID>
-            <Name>dMilkCarton</Name>
+            <Name>dUnder_bed</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 return
 @1
-  TypeText("Теперь у меня есть молоко"); 
-  did_milk_used = true;
-  object[1].Visible  = false;
-  player.AddInventory(iMilkCarton);
-stop
-@2
-  dMilkCarton.SetOptionState(2, eOptionOff);
-  TypeText("Оно прокисло. Как жаль...");
-return
-@3
-  TypeText("Фу! Прокисло!");
-  did_milk_used = true;
-  ChangeMood(-1);
-  object[1].Visible  = false;
-stop
-@4
-stop
-]]></Script>
-            <DialogOptions>
-              <DialogOption>
-                <ID>1</ID>
-                <Say>True</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Взять пакет молока</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>2</ID>
-                <Say>True</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Проверить молоко</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>3</ID>
-                <Say>True</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Выпить пакет молока</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>4</ID>
-                <Say>True</Say>
-                <Show>True</Show>
-                <Text>Уйти</Text>
-              </DialogOption>
-            </DialogOptions>
-          </Dialog>
-          <Dialog>
-            <ID>5</ID>
-            <Name>dTeapot</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file
-@S  // Dialog startup entry point
-  if (!is_teapot_boiled) {
-    TypeText("Старый чайник. Можно нагреть воды, чтобы сделать кофе.");
-  } else {
-    TypeText("Чайник нагрет. Осталось ддобыть ингредиенты для кофе.");
+  if (packofcigarettes == false)
+  {
+    TypeText("Вы неохотно опускаетесь на колени, стараясь не ворошить в голове детские воспоминания, которые, конечно, были лишь сном. Однако там слишком темно, чтобы что-то разглядеть.");
+    TypeText("Вы вытягиваете руку и пытаетесь нащупать что-то вслепую, пока пальцы не касаются чего-то прямоугольного и хрустящего. Ну конечно! Она всего лишь завалилась под кровать.");
+    TypeText("Получен предмет 'Пачка сигарет'");
+    player.AddInventory(iCigarettes);
+    packofcigarettes = true;
   }
-return
-@1
-  is_teapot_boiled = true;
-  TypeText("Чайник нагрелся");
-  dTeapot.SetOptionState(1, eOptionOff);
+  else
+  {
+    TypeText("Там ничего нет.");
+  }
 stop
 @2
-stop
-
-]]></Script>
-            <DialogOptions>
-              <DialogOption>
-                <ID>1</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Нагреть воды</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>2</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text>Уйти</Text>
-              </DialogOption>
-            </DialogOptions>
-          </Dialog>
-          <Dialog>
-            <ID>6</ID>
-            <Name>dCoffeeCan</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file
-@S  // Dialog startup entry point
-  TypeText("Почему кофе в кладовке!?");
-return
-@1
-  is_coffee_spilled = true;
-  ChangeMood(-1);
-  TypeText("Какой же я неуклюжий");
-stop
-@2
-  TypeText("Теперь у меня есть кофе");
-  object[0].Visible  = false;
-  is_coffee_spilled = true;
-  player.AddInventory(iCoffeeCan);
-stop
-@3
 stop
 ]]></Script>
             <DialogOptions>
@@ -3653,16 +3582,10 @@ stop
                 <ID>1</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Просыпать кофе на пол</Text>
+                <Text xml:space="preserve">Заглянуть под кровать</Text>
               </DialogOption>
               <DialogOption>
                 <ID>2</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Взять кофе</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>3</ID>
                 <Say>False</Say>
                 <Show>True</Show>
                 <Text>Уйти</Text>
@@ -4223,21 +4146,7 @@ stop
           <ArraySize>0</ArraySize>
           <ArrayType>None</ArrayType>
           <DefaultValue>false</DefaultValue>
-          <Name>did_milk_used</Name>
-          <Type>bool</Type>
-        </GlobalVariable>
-        <GlobalVariable>
-          <ArraySize>0</ArraySize>
-          <ArrayType>None</ArrayType>
-          <DefaultValue>false</DefaultValue>
-          <Name>is_teapot_boiled</Name>
-          <Type>bool</Type>
-        </GlobalVariable>
-        <GlobalVariable>
-          <ArraySize>0</ArraySize>
-          <ArrayType>None</ArrayType>
-          <DefaultValue>false</DefaultValue>
-          <Name>is_coffee_spilled</Name>
+          <Name>packofcigarettes</Name>
           <Type>bool</Type>
         </GlobalVariable>
       </Variables>
@@ -5951,6 +5860,171 @@ stop
               </Sprite>
             </Sprites>
           </SpriteFolder>
+          <SpriteFolder Name="Animations">
+            <SubFolders />
+            <Sprites>
+              <Sprite Slot="62" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Анимация/Курит (право)/redblanket_httpss_mj_run1oMlVMvVq7g_side_view_standing_still__51d354aa-3e3b-4532-9f51-5f6a066f29cd_3_001.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>680</ImportHeight>
+                  <ImportWidth>356</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="63" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Анимация/Курит (право)/redblanket_httpss_mj_run1oMlVMvVq7g_side_view_standing_still__51d354aa-3e3b-4532-9f51-5f6a066f29cd_3_002.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>680</ImportHeight>
+                  <ImportWidth>356</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="65" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Анимация/Курит (право)/redblanket_httpss_mj_run1oMlVMvVq7g_side_view_standing_still__51d354aa-3e3b-4532-9f51-5f6a066f29cd_3_003.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>680</ImportHeight>
+                  <ImportWidth>356</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="66" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Анимация/Курит (право)/redblanket_httpss_mj_run1oMlVMvVq7g_side_view_standing_still__51d354aa-3e3b-4532-9f51-5f6a066f29cd_3_004.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>680</ImportHeight>
+                  <ImportWidth>356</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="67" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Анимация/Курит (право)/redblanket_httpss_mj_run1oMlVMvVq7g_side_view_standing_still__51d354aa-3e3b-4532-9f51-5f6a066f29cd_3_005.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>680</ImportHeight>
+                  <ImportWidth>356</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="71" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Анимация/Курит (право)/redblanket_httpss_mj_run1oMlVMvVq7g_side_view_standing_still__51d354aa-3e3b-4532-9f51-5f6a066f29cd_3_006.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>680</ImportHeight>
+                  <ImportWidth>356</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="72" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Анимация/Курит (право)/redblanket_httpss_mj_run1oMlVMvVq7g_side_view_standing_still__51d354aa-3e3b-4532-9f51-5f6a066f29cd_3_007.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>680</ImportHeight>
+                  <ImportWidth>356</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="73" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Анимация/Курит (право)/redblanket_httpss_mj_run1oMlVMvVq7g_side_view_standing_still__51d354aa-3e3b-4532-9f51-5f6a066f29cd_3_008.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>680</ImportHeight>
+                  <ImportWidth>356</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="74" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Анимация/Курит (право)/redblanket_httpss_mj_run1oMlVMvVq7g_side_view_standing_still__51d354aa-3e3b-4532-9f51-5f6a066f29cd_3_009.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>680</ImportHeight>
+                  <ImportWidth>356</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="75" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Анимация/Курит (право)/redblanket_httpss_mj_run1oMlVMvVq7g_side_view_standing_still__51d354aa-3e3b-4532-9f51-5f6a066f29cd_3_010.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>680</ImportHeight>
+                  <ImportWidth>356</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+            </Sprites>
+          </SpriteFolder>
         </SubFolders>
         <Sprites>
           <Sprite Slot="0" Width="10" Height="6" ColorDepth="32" Resolution="Real" AlphaChannel="False">
@@ -6497,13 +6571,13 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="36" Width="150" Height="150" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+          <Sprite Slot="36" Width="170" Height="150" ColorDepth="32" Resolution="Real" AlphaChannel="False">
             <Source>
               <FileName>Assets/22.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>150</ImportHeight>
-              <ImportWidth>150</ImportWidth>
+              <ImportWidth>170</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>
@@ -6865,6 +6939,150 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
+          <Sprite Slot="48" Width="901" Height="1168" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Объекты/Пакет молока 2.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>1168</ImportHeight>
+              <ImportWidth>901</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="58" Width="77" Height="100" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Пакет молока 2.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>100</ImportHeight>
+              <ImportWidth>77</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="60" Width="379" Height="258" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/redblanket_Miniatures_models_for_the_game._2D_horror._Each_on_053166fc-e600-4230-be95-5de48dc874a1_1.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>258</ImportHeight>
+              <ImportWidth>379</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="61" Width="695" Height="52" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Кнопки/redblanket_Miniatures_models_for_the_game._2D_horror._Each_on_053166fc-e600-4230-be95-5de48dc874a1_0.PNG</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>52</ImportHeight>
+              <ImportWidth>695</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="64" Width="210" Height="210" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Пустая кружка.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>210</ImportHeight>
+              <ImportWidth>210</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="59" Width="100" Height="101" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Инвентарь/Пустая кружка2.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>101</ImportHeight>
+              <ImportWidth>100</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="68" Width="259" Height="500" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Анимация/а.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>500</ImportHeight>
+              <ImportWidth>259</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="69" Width="259" Height="500" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Анимация/б.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>500</ImportHeight>
+              <ImportWidth>259</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="70" Width="259" Height="500" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Анимация/в.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>500</ImportHeight>
+              <ImportWidth>259</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
         </Sprites>
       </SpriteFolder>
     </Sprites>
@@ -7138,21 +7356,42 @@ stop
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>29</Image>
+                    <Image>68</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>1</ID>
-                    <Image>30</Image>
+                    <Image>69</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
                     <Flipped>False</Flipped>
                     <ID>2</ID>
-                    <Image>29</Image>
+                    <Image>70</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>3</ID>
+                    <Image>69</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>4</ID>
+                    <Image>68</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>5</ID>
+                    <Image>69</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -7187,6 +7426,88 @@ stop
                 <ID>1</ID>
                 <RunNextLoop>False</RunNextLoop>
                 <Frames />
+              </Loop>
+            </Loops>
+          </View>
+          <View>
+            <ID>4</ID>
+            <Name>Smoking</Name>
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>62</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>63</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>30</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>65</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>3</ID>
+                    <Image>66</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>4</ID>
+                    <Image>67</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>5</ID>
+                    <Image>71</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>6</ID>
+                    <Image>72</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>7</ID>
+                    <Image>73</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>8</ID>
+                    <Image>74</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>9</ID>
+                    <Image>75</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
               </Loop>
             </Loops>
           </View>
