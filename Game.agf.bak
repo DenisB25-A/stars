@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>11</AudioIndexer>
+      <AudioIndexer>13</AudioIndexer>
       <AutoMoveInWalkMode>False</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets>Windows</BuildTargets>
@@ -3475,20 +3475,18 @@
 return 
 @1
   FadeOut(2);
-  aSplash.Play();
   Wait(120);
   FadeIn(2);
   TypeText("Преодолевая апатию и некоторую брезгливость вы все же снимаете с себя и одежду и становитесь на холодную эмалированную поверхность.");
-  TypeText("В голове свербит привычная мысль: 'А смысл?' Однако горячая вода и аромат какого-то дешевого шампуня все же делает свое дело.");
+  aShower.Play();
+  TypeText("В голове свербит привычная мысль: 'А смысл?' Однако горячая вода и аромат какого-то дешевого шампуня делает свое дело.");
   TypeText("Постояв несколько минут под душем, вы чувствуете себя значительно лучше.");
   is_washed = true;
   ChangeMood(1);
 stop
 @2
-  TypeText("Непонятно на что вы расчитывали, пытаясь сдвинуть этого монстра. Все, на что вас хватает, это сдернуть одну сторону на пару сантиметров, отчего старый сифон лопается и в нос ударяет запах гнили.");
-  TypeText("Поздравляю, теперь этим воспользоваться нельзя. Если только вы не хотите устроить соседям 'Ноев потоп'.");
-  is_washed = true;
-stop
+  TypeText("Темно и несет плесенью. Мне совершенно точно не хочется там копаться без веской причины.");
+return
 @3
 stop
 ]]></Script>
@@ -3503,7 +3501,7 @@ stop
                 <ID>2</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Попытаться сорвать ванну с места (пора ей отправиться на помойку)</Text>
+                <Text xml:space="preserve">Заглянуть под ванну</Text>
               </DialogOption>
               <DialogOption>
                 <ID>3</ID>
@@ -6500,7 +6498,7 @@ return
           </Sprite>
           <Sprite Slot="28" Width="100" Height="100" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Documents\stars\Assets\Инвентарь\iDino.png</FileName>
+              <FileName>Assets/Инвентарь/iDino.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>100</ImportHeight>
@@ -6644,7 +6642,7 @@ return
           </Sprite>
           <Sprite Slot="33" Width="100" Height="110" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Documents\stars\Assets\Инвентарь\redblanket_Miniatures_models_for_the_game._2D_horror._Each_on_d003d00b-9b4f-43a7-aecd-791fb4e3e01f_2.png</FileName>
+              <FileName>Assets/Инвентарь/redblanket_Miniatures_models_for_the_game._2D_horror._Each_on_d003d00b-9b4f-43a7-aecd-791fb4e3e01f_2.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>110</ImportHeight>
@@ -7204,7 +7202,7 @@ return
           </Sprite>
           <Sprite Slot="48" Width="92" Height="100" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Documents\stars\Assets\Инвентарь\gpt-image-2-edit-1.png</FileName>
+              <FileName>Assets/Инвентарь/gpt-image-2-edit-1.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>100</ImportHeight>
@@ -7225,6 +7223,70 @@ return
               <OffsetY>0</OffsetY>
               <ImportHeight>100</ImportHeight>
               <ImportWidth>100</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="41" Width="300" Height="166" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Комнаты/открытый шкафчик.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>166</ImportHeight>
+              <ImportWidth>300</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="80" Width="301" Height="183" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Комнаты/открытый шкафчик.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>183</ImportHeight>
+              <ImportWidth>301</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="81" Width="326" Height="203" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/открытый шкафчик.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>203</ImportHeight>
+              <ImportWidth>326</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="82" Width="213" Height="161" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Комнаты/Открытый шкафчик2.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>161</ImportHeight>
+              <ImportWidth>213</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>
@@ -7978,6 +8040,32 @@ See KeyboardMovement.txt for details.
                 <SourceFileName>Assets/Звуки/smoke.mp3</SourceFileName>
                 <Type>3</Type>
                 <FileLastModifiedDate>2026-04-26 10:04:48Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>10</ID>
+                <Index>12</Index>
+                <ScriptName>aSink_water</ScriptName>
+                <SourceFileName>Assets/Звуки/sink_water.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-04-27 13:36:33Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>11</ID>
+                <Index>13</Index>
+                <ScriptName>aShower</ScriptName>
+                <SourceFileName>Assets/Звуки/shower.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-04-27 14:05:15Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
