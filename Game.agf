@@ -157,6 +157,17 @@
         <Name>RequiredRegion</Name>
         <Type>Number</Type>
       </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>False</AppliesToCharacters>
+        <AppliesToHotspots>False</AppliesToHotspots>
+        <AppliesToInvItems>True</AppliesToInvItems>
+        <AppliesToObjects>False</AppliesToObjects>
+        <AppliesToRooms>False</AppliesToRooms>
+        <DefaultValue xml:space="preserve">Ничего особенного</DefaultValue>
+        <Description xml:space="preserve">Осмотр предметов в инвертаре</Description>
+        <Name>Description</Name>
+        <Type>Text</Type>
+      </CustomPropertySchemaItem>
     </PropertyDefinitions>
     <GlobalMessages>
       <Message ID="500" />
@@ -729,6 +740,14 @@
           <UnloadedRoom>
             <Description IsNull="True" />
             <Number>16</Number>
+          </UnloadedRoom>
+          <UnloadedRoom>
+            <Description IsNull="True" />
+            <Number>17</Number>
+          </UnloadedRoom>
+          <UnloadedRoom>
+            <Description IsNull="True" />
+            <Number>18</Number>
           </UnloadedRoom>
         </UnloadedRooms>
       </UnloadedRoomFolder>
@@ -3135,7 +3154,12 @@
             <Image>28</Image>
             <Name>iDino</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties />
+            <Properties>
+              <CustomProperty>
+                <Name>Description</Name>
+                <Value xml:space="preserve">Резиновый динозавр. Хвост немного погрызен.</Value>
+              </CustomProperty>
+            </Properties>
             <Interactions>
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Event Index="0" />
@@ -3147,14 +3171,19 @@
           </InventoryItem>
           <InventoryItem>
             <CursorImage>0</CursorImage>
-            <Description>Сигареты</Description>
+            <Description />
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
             <ID>4</ID>
             <Image>33</Image>
             <Name>iCigarettes</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties />
+            <Properties>
+              <CustomProperty>
+                <Name>Description</Name>
+                <Value xml:space="preserve">Пачка сигарет. Когда-нибудь я брошу, но... не сейчас.</Value>
+              </CustomProperty>
+            </Properties>
             <Interactions>
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Event Index="0" />
@@ -3192,7 +3221,12 @@
             <Image>78</Image>
             <Name>iCoffee</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties />
+            <Properties>
+              <CustomProperty>
+                <Name>Description</Name>
+                <Value xml:space="preserve">Пыльная, но приличная на вид банка кофе. Срок годности не истек и выглядит хорошо.</Value>
+              </CustomProperty>
+            </Properties>
             <Interactions>
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Event Index="0" />
@@ -3211,7 +3245,12 @@
             <Image>79</Image>
             <Name>iVodka</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties />
+            <Properties>
+              <CustomProperty>
+                <Name>Description</Name>
+                <Value xml:space="preserve">Я бы, конечно, очень хорошо подумал, прежде чем рискнул это пить.</Value>
+              </CustomProperty>
+            </Properties>
             <Interactions>
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Event Index="0" />
@@ -3230,7 +3269,12 @@
             <Image>48</Image>
             <Name>iSugar</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties />
+            <Properties>
+              <CustomProperty>
+                <Name>Description</Name>
+                <Value xml:space="preserve">Обычная банка с сахаром.</Value>
+              </CustomProperty>
+            </Properties>
             <Interactions>
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Event Index="0" />
@@ -3249,7 +3293,12 @@
             <Image>76</Image>
             <Name>iKey_storeroom</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties />
+            <Properties>
+              <CustomProperty>
+                <Name>Description</Name>
+                <Value xml:space="preserve">Ключ от кладовки. Мама закрывала ее, потому что сквознял отворял дверь. Но, мне кажется, были и другие причины.</Value>
+              </CustomProperty>
+            </Properties>
             <Interactions>
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Event Index="0" />
