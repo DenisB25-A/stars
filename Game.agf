@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>13</AudioIndexer>
+      <AudioIndexer>14</AudioIndexer>
       <AutoMoveInWalkMode>False</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets>Windows</BuildTargets>
@@ -675,7 +675,50 @@
     <Plugins />
     <Rooms>
       <UnloadedRoomFolder Name="Main">
-        <SubFolders />
+        <SubFolders>
+          <UnloadedRoomFolder Name="Stairs">
+            <SubFolders />
+            <UnloadedRooms>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>15</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>16</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>17</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>18</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>19</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>20</Number>
+              </UnloadedRoom>
+            </UnloadedRooms>
+          </UnloadedRoomFolder>
+          <UnloadedRoomFolder Name="Night_rooms">
+            <SubFolders />
+            <UnloadedRooms>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>13</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>14</Number>
+              </UnloadedRoom>
+            </UnloadedRooms>
+          </UnloadedRoomFolder>
+        </SubFolders>
         <UnloadedRooms>
           <UnloadedRoom>
             <Description IsNull="True" />
@@ -724,30 +767,6 @@
           <UnloadedRoom>
             <Description IsNull="True" />
             <Number>12</Number>
-          </UnloadedRoom>
-          <UnloadedRoom>
-            <Description IsNull="True" />
-            <Number>13</Number>
-          </UnloadedRoom>
-          <UnloadedRoom>
-            <Description IsNull="True" />
-            <Number>14</Number>
-          </UnloadedRoom>
-          <UnloadedRoom>
-            <Description IsNull="True" />
-            <Number>15</Number>
-          </UnloadedRoom>
-          <UnloadedRoom>
-            <Description IsNull="True" />
-            <Number>16</Number>
-          </UnloadedRoom>
-          <UnloadedRoom>
-            <Description IsNull="True" />
-            <Number>17</Number>
-          </UnloadedRoom>
-          <UnloadedRoom>
-            <Description IsNull="True" />
-            <Number>18</Number>
           </UnloadedRoom>
         </UnloadedRooms>
       </UnloadedRoomFolder>
@@ -2948,7 +2967,7 @@
                 <TextColor>0</TextColor>
                 <TextPaddingHorizontal>2</TextPaddingHorizontal>
                 <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>203</Top>
+                <Top>204</Top>
                 <Translated>True</Translated>
                 <Visible>True</Visible>
                 <Width>695</Width>
@@ -2976,12 +2995,68 @@
                 <TextColor>0</TextColor>
                 <TextPaddingHorizontal>2</TextPaddingHorizontal>
                 <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>255</Top>
+                <Top>256</Top>
                 <Translated>True</Translated>
                 <Visible>True</Visible>
                 <Width>695</Width>
                 <WrapText>False</WrapText>
                 <ZOrder>3</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>6</Font>
+                <Height>52</Height>
+                <ID>4</ID>
+                <Image>61</Image>
+                <Left>254</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnNote5</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnNote5_OnClick</OnClick>
+                <PushedImage>0</PushedImage>
+                <Text xml:space="preserve">New Button</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>310</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>695</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>4</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>6</Font>
+                <Height>52</Height>
+                <ID>5</ID>
+                <Image>61</Image>
+                <Left>254</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnNote6</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnNote6_OnClick</OnClick>
+                <PushedImage>0</PushedImage>
+                <Text xml:space="preserve">New Button</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>359</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>695</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>5</ZOrder>
               </GUIButton>
             </Controls>
           </GUIMain>
@@ -7361,6 +7436,22 @@ return
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
+          <Sprite Slot="85" Width="139" Height="172" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Объекты/openart-image_1777548407314_433640fb_1777548407383_125f74ab.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>172</ImportHeight>
+              <ImportWidth>139</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
         </Sprites>
       </SpriteFolder>
     </Sprites>
@@ -8131,6 +8222,19 @@ See KeyboardMovement.txt for details.
                 <SourceFileName>Assets/Звуки/shower.mp3</SourceFileName>
                 <Type>3</Type>
                 <FileLastModifiedDate>2026-04-27 14:05:15Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>12</ID>
+                <Index>14</Index>
+                <ScriptName>aElectropanel</ScriptName>
+                <SourceFileName xml:space="preserve">Assets/Звуки/выбитые предохранители.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-04-30 11:39:54Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
