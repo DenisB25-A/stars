@@ -3779,7 +3779,8 @@ stop
 @S  // Dialog startup entry point
 return
 @1
-  TypeText("Какого черта? Неужели дверь примерзла... Такое бывает? Ладно. Я все равно особо не голоден.");
+  TypeText("Какого черта... Дверца не открывается.");
+  TypeText("Примерзла? Не знал, что такое бывает. Ладно. Сейчас я все равно не голоден.");
 stop
 @2
 stop
@@ -3897,15 +3898,15 @@ return
 @1
   if (packofcigarettes == false)
   {
-    TypeText("Вы неохотно опускаетесь на колени, стараясь не ворошить в голове детские воспоминания, которые, конечно, были лишь сном. Однако там слишком темно, чтобы что-то разглядеть.");
-    TypeText("Вы вытягиваете руку и пытаетесь нащупать что-то вслепую, пока пальцы не касаются чего-то прямоугольного и хрустящего. Ну конечно! Она всего лишь завалилась под кровать.");
+    TypeText("Вы вытягиваете руку и пытаетесь нащупать что-то вслепую.");
+    TypeText("Среди фантиков, старых оберток от конфет и закатившихся рублевых монеток вам попадается что-то прямоугольное и хрустящее. Ну конечно! Вот она где.");
     TypeText("Получен предмет 'Пачка сигарет'");
     player.AddInventory(iCigarettes);
     packofcigarettes = true;
   }
   else
   {
-    TypeText("Там ничего нет.");
+    TypeText("Там никого нет.");
   }
 stop
 @2
@@ -3994,6 +3995,82 @@ return
                 <Say>False</Say>
                 <Show>True</Show>
                 <Text>Уйти</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>7</ID>
+            <Name>dBookshelf</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+  TypeText("Полки прогибаются под рядами угрюмых советских многотомников, но взгляд цепляется за несколько, которые привлекают внимание.");
+option-off 1;
+option-off 3
+option-on 4;
+option-on 5;
+option-on 6;
+option-on 7;
+return
+@2
+  TypeText("Вы осматриваете полки, пытаясь уловить хоть какой-нибудь след нарушенного порядка в рядах строго выстроенных книг. Однако все корешки выглядят одинаково. Вы берете несколько наугад, пролистываете, но внутри - ничего.");
+  TypeText("Так можно копаться хоть до самого вечера.");
+return
+@3
+stop
+@4
+return
+@5
+return
+@6
+return
+@7
+return
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Поискать книгу на вечер</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Найти мамину книгу с закладкой</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text>Уйти</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">"Алиса в стране чудес" Льюис Кэрролл</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>5</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Взять "Процесс" Франца Кафки</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>6</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Взять "Степной волк" Германа Гессе</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>7</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text>Назад</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
