@@ -746,6 +746,28 @@
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
+          <UnloadedRoomFolder Name="Preamble">
+            <SubFolders />
+            <UnloadedRooms>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>28</Number>
+              </UnloadedRoom>
+            </UnloadedRooms>
+          </UnloadedRoomFolder>
+          <UnloadedRoomFolder Name="Mirror">
+            <SubFolders />
+            <UnloadedRooms>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>29</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>30</Number>
+              </UnloadedRoom>
+            </UnloadedRooms>
+          </UnloadedRoomFolder>
         </SubFolders>
         <UnloadedRooms>
           <UnloadedRoom>
@@ -3655,7 +3677,7 @@
             <SpeechView>0</SpeechView>
             <StartX>583</StartX>
             <StartY>996</StartY>
-            <StartingRoom>1</StartingRoom>
+            <StartingRoom>29</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>True</TurnWhenFacing>
