@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>11</AudioIndexer>
+      <AudioIndexer>14</AudioIndexer>
       <AutoMoveInWalkMode>False</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets>Windows</BuildTargets>
@@ -156,6 +156,17 @@
         <Description />
         <Name>RequiredRegion</Name>
         <Type>Number</Type>
+      </CustomPropertySchemaItem>
+      <CustomPropertySchemaItem>
+        <AppliesToCharacters>False</AppliesToCharacters>
+        <AppliesToHotspots>False</AppliesToHotspots>
+        <AppliesToInvItems>True</AppliesToInvItems>
+        <AppliesToObjects>False</AppliesToObjects>
+        <AppliesToRooms>False</AppliesToRooms>
+        <DefaultValue xml:space="preserve">Ничего особенного</DefaultValue>
+        <Description xml:space="preserve">Осмотр предметов в инвертаре</Description>
+        <Name>Description</Name>
+        <Type>Text</Type>
       </CustomPropertySchemaItem>
     </PropertyDefinitions>
     <GlobalMessages>
@@ -664,7 +675,78 @@
     <Plugins />
     <Rooms>
       <UnloadedRoomFolder Name="Main">
-        <SubFolders />
+        <SubFolders>
+          <UnloadedRoomFolder Name="Stairs">
+            <SubFolders />
+            <UnloadedRooms>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>13</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>14</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>15</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>16</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>17</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>18</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>19</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>20</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>21</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>22</Number>
+              </UnloadedRoom>
+            </UnloadedRooms>
+          </UnloadedRoomFolder>
+          <UnloadedRoomFolder Name="Night_rooms">
+            <SubFolders />
+            <UnloadedRooms>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>23</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>24</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>25</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>26</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>27</Number>
+              </UnloadedRoom>
+            </UnloadedRooms>
+          </UnloadedRoomFolder>
+        </SubFolders>
         <UnloadedRooms>
           <UnloadedRoom>
             <Description IsNull="True" />
@@ -2913,7 +2995,7 @@
                 <TextColor>0</TextColor>
                 <TextPaddingHorizontal>2</TextPaddingHorizontal>
                 <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>203</Top>
+                <Top>204</Top>
                 <Translated>True</Translated>
                 <Visible>True</Visible>
                 <Width>695</Width>
@@ -2941,12 +3023,68 @@
                 <TextColor>0</TextColor>
                 <TextPaddingHorizontal>2</TextPaddingHorizontal>
                 <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>255</Top>
+                <Top>256</Top>
                 <Translated>True</Translated>
                 <Visible>True</Visible>
                 <Width>695</Width>
                 <WrapText>False</WrapText>
                 <ZOrder>3</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>6</Font>
+                <Height>52</Height>
+                <ID>4</ID>
+                <Image>61</Image>
+                <Left>254</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnNote5</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnNote5_OnClick</OnClick>
+                <PushedImage>0</PushedImage>
+                <Text xml:space="preserve">New Button</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>310</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>695</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>4</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>6</Font>
+                <Height>52</Height>
+                <ID>5</ID>
+                <Image>61</Image>
+                <Left>254</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnNote6</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnNote6_OnClick</OnClick>
+                <PushedImage>0</PushedImage>
+                <Text xml:space="preserve">New Button</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>359</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>695</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>5</ZOrder>
               </GUIButton>
             </Controls>
           </GUIMain>
@@ -3119,7 +3257,12 @@
             <Image>28</Image>
             <Name>iDino</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties />
+            <Properties>
+              <CustomProperty>
+                <Name>Description</Name>
+                <Value xml:space="preserve">Резиновый динозавр. Хвост немного погрызен.</Value>
+              </CustomProperty>
+            </Properties>
             <Interactions>
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Event Index="0" />
@@ -3131,14 +3274,19 @@
           </InventoryItem>
           <InventoryItem>
             <CursorImage>0</CursorImage>
-            <Description>Сигареты</Description>
+            <Description />
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
             <ID>4</ID>
             <Image>33</Image>
             <Name>iCigarettes</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties />
+            <Properties>
+              <CustomProperty>
+                <Name>Description</Name>
+                <Value xml:space="preserve">Пачка сигарет. Когда-нибудь я брошу, но... не сейчас.</Value>
+              </CustomProperty>
+            </Properties>
             <Interactions>
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Event Index="0" />
@@ -3176,7 +3324,12 @@
             <Image>78</Image>
             <Name>iCoffee</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties />
+            <Properties>
+              <CustomProperty>
+                <Name>Description</Name>
+                <Value xml:space="preserve">Пыльная, но приличная на вид банка кофе. Срок годности не истек и выглядит хорошо.</Value>
+              </CustomProperty>
+            </Properties>
             <Interactions>
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Event Index="0" />
@@ -3195,7 +3348,12 @@
             <Image>79</Image>
             <Name>iVodka</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties />
+            <Properties>
+              <CustomProperty>
+                <Name>Description</Name>
+                <Value xml:space="preserve">Я бы, конечно, очень хорошо подумал, прежде чем рискнул это пить.</Value>
+              </CustomProperty>
+            </Properties>
             <Interactions>
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Event Index="0" />
@@ -3214,7 +3372,12 @@
             <Image>48</Image>
             <Name>iSugar</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties />
+            <Properties>
+              <CustomProperty>
+                <Name>Description</Name>
+                <Value xml:space="preserve">Обычная банка с сахаром.</Value>
+              </CustomProperty>
+            </Properties>
             <Interactions>
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Event Index="0" />
@@ -3233,7 +3396,60 @@
             <Image>76</Image>
             <Name>iKey_storeroom</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties />
+            <Properties>
+              <CustomProperty>
+                <Name>Description</Name>
+                <Value xml:space="preserve">Ключ от кладовки. Мама закрывала ее, потому что сквознял отворял дверь. Но, мне кажется, были и другие причины.</Value>
+              </CustomProperty>
+            </Properties>
+            <Interactions>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
+          <InventoryItem>
+            <CursorImage>0</CursorImage>
+            <Description xml:space="preserve">New inventory item</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>10</ID>
+            <Image>83</Image>
+            <Name>iNote</Name>
+            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <Properties>
+              <CustomProperty>
+                <Name>Description</Name>
+                <Value xml:space="preserve">Каждое слово старательно замазано черным маркером.</Value>
+              </CustomProperty>
+            </Properties>
+            <Interactions>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
+          <InventoryItem>
+            <CursorImage>0</CursorImage>
+            <Description xml:space="preserve">New inventory item</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>11</ID>
+            <Image>58</Image>
+            <Name>iMilk</Name>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <Properties>
+              <CustomProperty>
+                <Name>Description</Name>
+                <Value xml:space="preserve">На вид пачка кажется слегка вздутой. Вы открываете крышку, осторожно принюхиваетесь, и ваши опасения оправдываются. Прокисло. Ну чтож, по крайней мере, вы заметили до того, как испортить свой кофе.</Value>
+              </CustomProperty>
+            </Properties>
             <Interactions>
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Event Index="0" />
@@ -3458,6 +3674,50 @@
               <Event Index="7" />
             </Interactions>
           </Character>
+          <Character>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <AnimationDelay>4</AnimationDelay>
+            <BlinkingView>0</BlinkingView>
+            <Clickable>True</Clickable>
+            <DiagonalLoops>True</DiagonalLoops>
+            <ID>1</ID>
+            <IdleAnimationDelay>4</IdleAnimationDelay>
+            <IdleDelay>0</IdleDelay>
+            <IdleView>5</IdleView>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <NormalView>5</NormalView>
+            <Properties />
+            <RealName>Bum</RealName>
+            <ScriptName>cBum</ScriptName>
+            <Solid>True</Solid>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>12</SpeechColor>
+            <SpeechView>0</SpeechView>
+            <StartX>935</StartX>
+            <StartY>910</StartY>
+            <StartingRoom>18</StartingRoom>
+            <ThinkingView>0</ThinkingView>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <TurnWhenFacing>True</TurnWhenFacing>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <Interactions>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4">cBum_AnyClick</Event>
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
         </Characters>
       </CharacterFolder>
     </Characters>
@@ -3475,20 +3735,18 @@
 return 
 @1
   FadeOut(2);
-  aSplash.Play();
   Wait(120);
   FadeIn(2);
   TypeText("Преодолевая апатию и некоторую брезгливость вы все же снимаете с себя и одежду и становитесь на холодную эмалированную поверхность.");
-  TypeText("В голове свербит привычная мысль: 'А смысл?' Однако горячая вода и аромат какого-то дешевого шампуня все же делает свое дело.");
+  aShower.Play();
+  TypeText("В голове свербит привычная мысль: 'А смысл?' Однако горячая вода и аромат какого-то дешевого шампуня делает свое дело.");
   TypeText("Постояв несколько минут под душем, вы чувствуете себя значительно лучше.");
   is_washed = true;
   ChangeMood(1);
 stop
 @2
-  TypeText("Непонятно на что вы расчитывали, пытаясь сдвинуть этого монстра. Все, на что вас хватает, это сдернуть одну сторону на пару сантиметров, отчего старый сифон лопается и в нос ударяет запах гнили.");
-  TypeText("Поздравляю, теперь этим воспользоваться нельзя. Если только вы не хотите устроить соседям 'Ноев потоп'.");
-  is_washed = true;
-stop
+  TypeText("Темно и несет плесенью. Мне совершенно точно не хочется там копаться без веской причины.");
+return
 @3
 stop
 ]]></Script>
@@ -3503,7 +3761,7 @@ stop
                 <ID>2</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Попытаться сорвать ванну с места (пора ей отправиться на помойку)</Text>
+                <Text xml:space="preserve">Заглянуть под ванну</Text>
               </DialogOption>
               <DialogOption>
                 <ID>3</ID>
@@ -3521,7 +3779,8 @@ stop
 @S  // Dialog startup entry point
 return
 @1
-  TypeText("Какого черта? Неужели дверь примерзла... Такое бывает? Ладно. Я все равно особо не голоден.");
+  TypeText("Какого черта... Дверца не открывается.");
+  TypeText("Примерзла? Не знал, что такое бывает. Ладно. Сейчас я все равно не голоден.");
 stop
 @2
 stop
@@ -3639,15 +3898,15 @@ return
 @1
   if (packofcigarettes == false)
   {
-    TypeText("Вы неохотно опускаетесь на колени, стараясь не ворошить в голове детские воспоминания, которые, конечно, были лишь сном. Однако там слишком темно, чтобы что-то разглядеть.");
-    TypeText("Вы вытягиваете руку и пытаетесь нащупать что-то вслепую, пока пальцы не касаются чего-то прямоугольного и хрустящего. Ну конечно! Она всего лишь завалилась под кровать.");
+    TypeText("Вы вытягиваете руку и пытаетесь нащупать что-то вслепую.");
+    TypeText("Среди фантиков, старых оберток от конфет и закатившихся рублевых монеток вам попадается что-то прямоугольное и хрустящее. Ну конечно! Вот она где.");
     TypeText("Получен предмет 'Пачка сигарет'");
     player.AddInventory(iCigarettes);
     packofcigarettes = true;
   }
   else
   {
-    TypeText("Там ничего нет.");
+    TypeText("Там никого нет.");
   }
 stop
 @2
@@ -3670,7 +3929,35 @@ stop
           </Dialog>
           <Dialog>
             <ID>5</ID>
-            <Name>dMilkCarton</Name>
+            <Name>dTeapot</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+  TypeText("Хотелось бы чего-то большего, чем запивать тоску кипятком. Мне нужны молоко, кофе, сахар, наверняка все это где-нибудь здесь.");
+return
+@2
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Сделать кофе</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text>Уйти</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>6</ID>
+            <Name>dKitchen_sink</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
@@ -3679,19 +3966,111 @@ return
 return
 @2
 return
+@3
+return
+@4
+return
 ]]></Script>
             <DialogOptions>
               <DialogOption>
                 <ID>1</ID>
-                <Say>True</Say>
+                <Say>False</Say>
                 <Show>True</Show>
-                <Text />
+                <Text xml:space="preserve">Осмотреть полки</Text>
               </DialogOption>
               <DialogOption>
                 <ID>2</ID>
-                <Say>True</Say>
+                <Say>False</Say>
                 <Show>True</Show>
-                <Text />
+                <Text xml:space="preserve">Взять банку с сахаром</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Осмотреть помойное ведро</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text>Уйти</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>7</ID>
+            <Name>dBookshelf</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+  TypeText("Полки прогибаются под рядами угрюмых советских многотомников, но взгляд цепляется за несколько, которые привлекают внимание.");
+option-off 1;
+option-off 3
+option-on 4;
+option-on 5;
+option-on 6;
+option-on 7;
+return
+@2
+  TypeText("Вы осматриваете полки, пытаясь уловить хоть какой-нибудь след нарушенного порядка в рядах строго выстроенных книг. Однако все корешки выглядят одинаково. Вы берете несколько наугад, пролистываете, но внутри - ничего.");
+  TypeText("Так можно копаться хоть до самого вечера.");
+return
+@3
+stop
+@4
+return
+@5
+return
+@6
+return
+@7
+return
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Поискать книгу на вечер</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Найти мамину книгу с закладкой</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text>Уйти</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">"Алиса в стране чудес" Льюис Кэрролл</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>5</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Взять "Процесс" Франца Кафки</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>6</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Взять "Степной волк" Германа Гессе</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>7</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text>Назад</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
@@ -3743,10 +4122,10 @@ return
         <AnimateOnlyOnHotspots>False</AnimateOnlyOnHotspots>
         <AnimateOnlyWhenMoving>False</AnimateOnlyWhenMoving>
         <AnimationDelay>5</AnimationDelay>
-        <HotspotX>1</HotspotX>
-        <HotspotY>1</HotspotY>
+        <HotspotX>0</HotspotX>
+        <HotspotY>0</HotspotY>
         <ID>3</ID>
-        <Image>2058</Image>
+        <Image>96</Image>
         <Name xml:space="preserve">Talk to</Name>
         <StandardMode>True</StandardMode>
         <View>0</View>
@@ -3837,7 +4216,7 @@ return
         <HotspotX>0</HotspotX>
         <HotspotY>0</HotspotY>
         <ID>10</ID>
-        <Image>39</Image>
+        <Image>95</Image>
         <Name>Inspect</Name>
         <StandardMode>False</StandardMode>
         <View>0</View>
@@ -4250,6 +4629,13 @@ return
           <ArrayType>None</ArrayType>
           <DefaultValue>false</DefaultValue>
           <Name>packofcigarettes</Name>
+          <Type>bool</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>false</DefaultValue>
+          <Name>Go_to_dark</Name>
           <Type>bool</Type>
         </GlobalVariable>
       </Variables>
@@ -6126,6 +6512,54 @@ return
                   <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
+              <Sprite Slot="90" Width="400" Height="400" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Персонажи/Анимация 2/1.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>400</ImportHeight>
+                  <ImportWidth>400</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="91" Width="400" Height="400" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Персонажи/Анимация 2/2.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>400</ImportHeight>
+                  <ImportWidth>400</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="92" Width="400" Height="400" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Персонажи/Анимация 2/3.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>400</ImportHeight>
+                  <ImportWidth>400</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
         </SubFolders>
@@ -6500,7 +6934,7 @@ return
           </Sprite>
           <Sprite Slot="28" Width="100" Height="100" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Documents\stars\Assets\Инвентарь\iDino.png</FileName>
+              <FileName>Assets/Инвентарь/iDino.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>100</ImportHeight>
@@ -6644,7 +7078,7 @@ return
           </Sprite>
           <Sprite Slot="33" Width="100" Height="110" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Documents\stars\Assets\Инвентарь\redblanket_Miniatures_models_for_the_game._2D_horror._Each_on_d003d00b-9b4f-43a7-aecd-791fb4e3e01f_2.png</FileName>
+              <FileName>Assets/Инвентарь/redblanket_Miniatures_models_for_the_game._2D_horror._Each_on_d003d00b-9b4f-43a7-aecd-791fb4e3e01f_2.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>110</ImportHeight>
@@ -7204,7 +7638,7 @@ return
           </Sprite>
           <Sprite Slot="48" Width="92" Height="100" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Documents\stars\Assets\Инвентарь\gpt-image-2-edit-1.png</FileName>
+              <FileName>Assets/Инвентарь/gpt-image-2-edit-1.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>100</ImportHeight>
@@ -7225,6 +7659,182 @@ return
               <OffsetY>0</OffsetY>
               <ImportHeight>100</ImportHeight>
               <ImportWidth>100</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="41" Width="300" Height="166" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Комнаты/открытый шкафчик.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>166</ImportHeight>
+              <ImportWidth>300</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="80" Width="301" Height="183" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Комнаты/открытый шкафчик.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>183</ImportHeight>
+              <ImportWidth>301</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="81" Width="326" Height="203" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/открытый шкафчик.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>203</ImportHeight>
+              <ImportWidth>326</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="82" Width="213" Height="161" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Комнаты/Открытый шкафчик2.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>161</ImportHeight>
+              <ImportWidth>213</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="85" Width="139" Height="172" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Объекты/openart-image_1777548407314_433640fb_1777548407383_125f74ab.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>172</ImportHeight>
+              <ImportWidth>139</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="83" Width="110" Height="75" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Инвентарь/redblanket_Miniatures_models_for_the_game._2D_horror._Each_on_053166fc-e600-4230-be95-5de48dc874a1_1.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>75</ImportHeight>
+              <ImportWidth>110</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="84" Width="558" Height="372" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+            <Source>
+              <FileName>Assets/Записки/redblanket_crayon_drawing_on_album_paper._Scared_little_child_1966371c-ce8e-4a84-a7c8-d1bc5f64e6ad_0 (2).png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>372</ImportHeight>
+              <ImportWidth>558</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="95" Width="72" Height="70" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Курсоры/Курсор 2(Лупа).png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>70</ImportHeight>
+              <ImportWidth>72</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="96" Width="68" Height="70" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Курсоры/Курсор 2 (диалог).png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>70</ImportHeight>
+              <ImportWidth>68</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="86" Width="150" Height="130" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Объекты/Арматура.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>130</ImportHeight>
+              <ImportWidth>150</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="87" Width="150" Height="130" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Объекты/Арматура2.PNG</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>130</ImportHeight>
+              <ImportWidth>150</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>
@@ -7743,6 +8353,91 @@ return
               </Loop>
             </Loops>
           </View>
+          <View>
+            <ID>5</ID>
+            <Name>Bum_sitting</Name>
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>20</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>90</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>20</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>91</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>20</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>92</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>20</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>3</ID>
+                    <Image>92</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>20</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>4</ID>
+                    <Image>91</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>20</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>5</ID>
+                    <Image>90</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>1</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>2</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>3</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+            </Loops>
+          </View>
         </Views>
       </ViewFolder>
     </Views>
@@ -7978,6 +8673,45 @@ See KeyboardMovement.txt for details.
                 <SourceFileName>Assets/Звуки/smoke.mp3</SourceFileName>
                 <Type>3</Type>
                 <FileLastModifiedDate>2026-04-26 10:04:48Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>10</ID>
+                <Index>12</Index>
+                <ScriptName>aSink_water</ScriptName>
+                <SourceFileName>Assets/Звуки/sink_water.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-04-27 13:36:33Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>11</ID>
+                <Index>13</Index>
+                <ScriptName>aShower</ScriptName>
+                <SourceFileName>Assets/Звуки/shower.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-04-27 14:05:15Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>12</ID>
+                <Index>14</Index>
+                <ScriptName>aElectropanel</ScriptName>
+                <SourceFileName xml:space="preserve">Assets/Звуки/выбитые предохранители.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-04-30 11:39:54Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
