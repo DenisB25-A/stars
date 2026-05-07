@@ -3225,6 +3225,47 @@
               </GUIButton>
             </Controls>
           </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>32</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <BorderColor>2</BorderColor>
+              <Clickable>True</Clickable>
+              <Height>1079</Height>
+              <ID>18</ID>
+              <Left>0</Left>
+              <Name>gDarkOverlay</Name>
+              <OnClick />
+              <PopupStyle>Normal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Top>0</Top>
+              <Transparency>100</Transparency>
+              <Visible>False</Visible>
+              <Width>1919</Width>
+              <ZOrder>0</ZOrder>
+            </NormalGUI>
+            <Controls>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>6</Font>
+                <Height>817</Height>
+                <ID>0</ID>
+                <Left>1238</Left>
+                <Locked>False</Locked>
+                <Name>lblThougts</Name>
+                <Text xml:space="preserve">Это заглушка для текста длиною на все деньги</Text>
+                <TextAlignment>TopLeft</TextAlignment>
+                <TextColor>65535</TextColor>
+                <Top>107</Top>
+                <Translated>True</Translated>
+                <Visible>False</Visible>
+                <Width>526</Width>
+                <ZOrder>0</ZOrder>
+              </GUILabel>
+            </Controls>
+          </GUIMain>
         </GUIs>
       </GUIFolder>
     </GUIs>
@@ -3677,7 +3718,7 @@
             <SpeechView>0</SpeechView>
             <StartX>583</StartX>
             <StartY>996</StartY>
-            <StartingRoom>29</StartingRoom>
+            <StartingRoom>1</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>True</TurnWhenFacing>
@@ -3983,15 +4024,32 @@ stop
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
+  TypeText("Что у нас тут интересно!?");
+option-off 2;
+option-off 4;
 return
 @1
+  TypeText("На полках стоит мука, сахар, сода и ещё какие-то крупы. Не помню, чтобы я когда-то их использовал. Обычно мама готовила. А я был беспомощен: и пельмени сварить не в состоянии.");
+option-on 2;
+option-off 1;
 return
 @2
+  cEgo.AddInventory(iSugar);
+  TypeText("Сахар, наверное, пригодится");
+option-off 2;
 return
 @3
+  TypeText("Там почти ничего нет, хотя пахнет неприятно.");
+  TypeText("Что это? Жук? Нет...");
+  TypeText("Таракан!");
+  TypeText("Смотрит на меня. Шевелит своими усищами.");
+option-on 4;
+option-off 3;
 return
 @4
-return
+stop
+@5
+stop
 ]]></Script>
             <DialogOptions>
               <DialogOption>
@@ -4014,6 +4072,12 @@ return
               </DialogOption>
               <DialogOption>
                 <ID>4</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Поговорить с тараканом</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>5</ID>
                 <Say>False</Say>
                 <Show>True</Show>
                 <Text>Уйти</Text>
@@ -4093,6 +4157,37 @@ return
                 <Say>False</Say>
                 <Show>False</Show>
                 <Text>Назад</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>8</ID>
+            <Name>dBalcony</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+stop
+@2
+  TypeText("На балконе приятно свежо и тихо. Но... чего-то не хватает.");
+  TypeText("Как же хочется курить...");
+  player.ChangeRoom(5, 406, 1010);
+  aDoor_sound3.Play();
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text>Покурить</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text>Уйти</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
@@ -4658,6 +4753,13 @@ return
           <ArrayType>None</ArrayType>
           <DefaultValue>false</DefaultValue>
           <Name>Go_to_dark</Name>
+          <Type>bool</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>false</DefaultValue>
+          <Name>was_balcony_thoughts</Name>
           <Type>bool</Type>
         </GlobalVariable>
       </Variables>
