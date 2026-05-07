@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>14</AudioIndexer>
+      <AudioIndexer>16</AudioIndexer>
       <AutoMoveInWalkMode>False</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets>Windows</BuildTargets>
@@ -4386,7 +4386,7 @@ stop
         <AutoOutlineStyle>Squared</AutoOutlineStyle>
         <AutoOutlineThickness>1</AutoOutlineThickness>
         <ID>3</ID>
-        <LineSpacing>0</LineSpacing>
+        <LineSpacing>28</LineSpacing>
         <Name xml:space="preserve">Font 3</Name>
         <OutlineFont>0</OutlineFont>
         <OutlineStyle>None</OutlineStyle>
@@ -8836,6 +8836,32 @@ See KeyboardMovement.txt for details.
                 <SourceFileName xml:space="preserve">Assets/Звуки/выбитые предохранители.mp3</SourceFileName>
                 <Type>3</Type>
                 <FileLastModifiedDate>2026-04-30 11:39:54Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>13</ID>
+                <Index>15</Index>
+                <ScriptName>aYard_noise</ScriptName>
+                <SourceFileName>Assets/Звуки/zvuki-dvora.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-05-07 12:41:53Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>40</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>14</ID>
+                <Index>16</Index>
+                <ScriptName>aDrops_water</ScriptName>
+                <SourceFileName>Assets/Звуки/drops-with-echo-effect.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-05-07 13:11:43Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
