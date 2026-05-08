@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>16</AudioIndexer>
+      <AudioIndexer>23</AudioIndexer>
       <AutoMoveInWalkMode>False</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets>Windows</BuildTargets>
@@ -752,6 +752,10 @@
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>28</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>31</Number>
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
@@ -3962,7 +3966,7 @@ return
   if (packofcigarettes == false)
   {
     TypeText("Вы вытягиваете руку и пытаетесь нащупать что-то вслепую.");
-    TypeText("Среди фантиков, старых оберток от конфет и закатившихся рублевых монеток вам попадается что-то прямоугольное и хрустящее. Ну конечно! Вот она где.");
+    TypeText("Среди фантиков, старых оберток и закатившихся рублевых монеток вам попадается что-то прямоугольное и хрустящее. Ну конечно! Где же она еще могла быть?");
     TypeText("Получен предмет 'Пачка сигарет'");
     player.AddInventory(iCigarettes);
     packofcigarettes = true;
@@ -4186,6 +4190,38 @@ stop
               <DialogOption>
                 <ID>2</ID>
                 <Say>True</Say>
+                <Show>True</Show>
+                <Text>Уйти</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>9</ID>
+            <Name>dUnder_bed2</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+  TypeText("В темноте под кроватью белеет клочок бумаги.");
+  TypeText("Вы протягиваете руку и вытаскиваете его, поднося к свету.");
+  ReadAndAddNote(4);
+  TypeText("Это мой детский рисунок.");
+  TypeText("Откуда он здесь?");
+stop
+@2
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Заглянуть под кровать</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
                 <Show>True</Show>
                 <Text>Уйти</Text>
               </DialogOption>
@@ -4760,6 +4796,13 @@ stop
           <ArrayType>None</ArrayType>
           <DefaultValue>false</DefaultValue>
           <Name>was_balcony_thoughts</Name>
+          <Type>bool</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>false</DefaultValue>
+          <Name>unknown_sound</Name>
           <Type>bool</Type>
         </GlobalVariable>
       </Variables>
@@ -8057,7 +8100,7 @@ stop
                     <Flipped>False</Flipped>
                     <ID>2</ID>
                     <Image>13</Image>
-                    <Sound>0</Sound>
+                    <Sound>18</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
@@ -8071,7 +8114,7 @@ stop
                     <Flipped>False</Flipped>
                     <ID>4</ID>
                     <Image>15</Image>
-                    <Sound>0</Sound>
+                    <Sound>19</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
@@ -8085,7 +8128,7 @@ stop
                     <Flipped>False</Flipped>
                     <ID>6</ID>
                     <Image>17</Image>
-                    <Sound>0</Sound>
+                    <Sound>20</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
@@ -8099,7 +8142,7 @@ stop
                     <Flipped>False</Flipped>
                     <ID>8</ID>
                     <Image>19</Image>
-                    <Sound>0</Sound>
+                    <Sound>21</Sound>
                   </ViewFrame>
                 </Frames>
               </Loop>
@@ -8126,7 +8169,7 @@ stop
                     <Flipped>False</Flipped>
                     <ID>2</ID>
                     <Image>4</Image>
-                    <Sound>0</Sound>
+                    <Sound>18</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
@@ -8140,7 +8183,7 @@ stop
                     <Flipped>False</Flipped>
                     <ID>4</ID>
                     <Image>6</Image>
-                    <Sound>0</Sound>
+                    <Sound>19</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
@@ -8154,7 +8197,7 @@ stop
                     <Flipped>False</Flipped>
                     <ID>6</ID>
                     <Image>8</Image>
-                    <Sound>0</Sound>
+                    <Sound>20</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
@@ -8168,7 +8211,7 @@ stop
                     <Flipped>False</Flipped>
                     <ID>8</ID>
                     <Image>10</Image>
-                    <Sound>0</Sound>
+                    <Sound>21</Sound>
                   </ViewFrame>
                 </Frames>
               </Loop>
@@ -8854,7 +8897,7 @@ See KeyboardMovement.txt for details.
                 <BundlingType>InGameEXE</BundlingType>
                 <DefaultPriority>Inherit</DefaultPriority>
                 <DefaultRepeat>Inherit</DefaultRepeat>
-                <DefaultVolume>40</DefaultVolume>
+                <DefaultVolume>30</DefaultVolume>
                 <FileType>MP3</FileType>
                 <ID>14</ID>
                 <Index>16</Index>
@@ -8863,12 +8906,102 @@ See KeyboardMovement.txt for details.
                 <Type>3</Type>
                 <FileLastModifiedDate>2026-05-07 13:11:43Z</FileLastModifiedDate>
               </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>19</ID>
+                <Index>22</Index>
+                <ScriptName>aCup_drop</ScriptName>
+                <SourceFileName>Assets/Звуки/cup-drop.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-05-07 23:50:28Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>20</ID>
+                <Index>23</Index>
+                <ScriptName>aUnknown_run</ScriptName>
+                <SourceFileName>Assets/Звуки/unknown_run.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-05-08 00:17:09Z</FileLastModifiedDate>
+              </AudioClip>
             </AudioClips>
             <AudioClipFolder>
               <DefaultBundlingType>InGameEXE</DefaultBundlingType>
               <DefaultPriority>Inherit</DefaultPriority>
               <DefaultRepeat>False</DefaultRepeat>
               <DefaultType>3</DefaultType>
+              <DefaultVolume>100</DefaultVolume>
+            </AudioClipFolder>
+          </AudioClipFolder>
+          <AudioClipFolder Name="Steps">
+            <SubFolders />
+            <AudioClips>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>30</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>15</ID>
+                <Index>18</Index>
+                <ScriptName>aStep_1</ScriptName>
+                <SourceFileName xml:space="preserve">Assets/Звуки/Шаги/step 1.mp3</SourceFileName>
+                <Type>1</Type>
+                <FileLastModifiedDate>2026-05-07 23:26:48Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>30</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>16</ID>
+                <Index>19</Index>
+                <ScriptName>aStep_2</ScriptName>
+                <SourceFileName xml:space="preserve">Assets/Звуки/Шаги/step 2.mp3</SourceFileName>
+                <Type>1</Type>
+                <FileLastModifiedDate>2026-05-07 23:29:59Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>30</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>17</ID>
+                <Index>20</Index>
+                <ScriptName>aStep_3</ScriptName>
+                <SourceFileName xml:space="preserve">Assets/Звуки/Шаги/step 4 (2).mp3</SourceFileName>
+                <Type>1</Type>
+                <FileLastModifiedDate>2026-05-07 23:21:14Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>30</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>18</ID>
+                <Index>21</Index>
+                <ScriptName>aStep_4</ScriptName>
+                <SourceFileName xml:space="preserve">Assets/Звуки/Шаги/step 4.mp3</SourceFileName>
+                <Type>1</Type>
+                <FileLastModifiedDate>2026-05-07 23:18:52Z</FileLastModifiedDate>
+              </AudioClip>
+            </AudioClips>
+            <AudioClipFolder>
+              <DefaultBundlingType>InGameEXE</DefaultBundlingType>
+              <DefaultPriority>Inherit</DefaultPriority>
+              <DefaultRepeat>Inherit</DefaultRepeat>
+              <DefaultType>1</DefaultType>
               <DefaultVolume>100</DefaultVolume>
             </AudioClipFolder>
           </AudioClipFolder>
