@@ -744,6 +744,10 @@
                 <Description IsNull="True" />
                 <Number>27</Number>
               </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>28</Number>
+              </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
           <UnloadedRoomFolder Name="Preamble">
@@ -751,15 +755,15 @@
             <UnloadedRooms>
               <UnloadedRoom>
                 <Description IsNull="True" />
-                <Number>28</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
                 <Number>31</Number>
               </UnloadedRoom>
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>32</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>33</Number>
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
@@ -825,6 +829,10 @@
           <UnloadedRoom>
             <Description IsNull="True" />
             <Number>12</Number>
+          </UnloadedRoom>
+          <UnloadedRoom>
+            <Description IsNull="True" />
+            <Number>34</Number>
           </UnloadedRoom>
         </UnloadedRooms>
       </UnloadedRoomFolder>
@@ -3726,7 +3734,7 @@
             <SpeechView>0</SpeechView>
             <StartX>583</StartX>
             <StartY>996</StartY>
-            <StartingRoom>32</StartingRoom>
+            <StartingRoom>23</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>True</TurnWhenFacing>
