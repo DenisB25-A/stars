@@ -3153,13 +3153,13 @@
                 <Font>6</Font>
                 <Height>882</Height>
                 <ID>0</ID>
-                <Left>37</Left>
+                <Left>42</Left>
                 <Locked>False</Locked>
                 <Name>lblViewerText</Name>
                 <Text />
                 <TextAlignment>TopLeft</TextAlignment>
                 <TextColor>0</TextColor>
-                <Top>53</Top>
+                <Top>95</Top>
                 <Translated>True</Translated>
                 <Visible>False</Visible>
                 <Width>667</Width>
@@ -3199,13 +3199,13 @@
                 <Font>6</Font>
                 <Height>50</Height>
                 <ID>2</ID>
-                <Left>586</Left>
+                <Left>557</Left>
                 <Locked>False</Locked>
                 <Name>Label3</Name>
                 <Text xml:space="preserve">Закрыть (Х)</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
                 <TextColor>0</TextColor>
-                <Top>0</Top>
+                <Top>9</Top>
                 <Translated>True</Translated>
                 <Visible>True</Visible>
                 <Width>170</Width>
@@ -3220,7 +3220,7 @@
                 <Height>48</Height>
                 <ID>3</ID>
                 <Image>0</Image>
-                <Left>580</Left>
+                <Left>563</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>0</MouseoverImage>
                 <Name>ButtonClose2</Name>
@@ -3232,7 +3232,7 @@
                 <TextColor>0</TextColor>
                 <TextPaddingHorizontal>2</TextPaddingHorizontal>
                 <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>0</Top>
+                <Top>17</Top>
                 <Translated>True</Translated>
                 <Visible>True</Visible>
                 <Width>158</Width>
@@ -3734,7 +3734,7 @@
             <SpeechView>0</SpeechView>
             <StartX>583</StartX>
             <StartY>996</StartY>
-            <StartingRoom>23</StartingRoom>
+            <StartingRoom>1</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>True</TurnWhenFacing>
@@ -4473,14 +4473,14 @@ stop
         <VerticalOffset>0</VerticalOffset>
       </Font>
       <Font>
-        <AutoOutlineStyle>Squared</AutoOutlineStyle>
+        <AutoOutlineStyle>Rounded</AutoOutlineStyle>
         <AutoOutlineThickness>1</AutoOutlineThickness>
         <ID>6</ID>
-        <LineSpacing>0</LineSpacing>
+        <LineSpacing>50</LineSpacing>
         <Name xml:space="preserve">Font 6</Name>
-        <OutlineFont>0</OutlineFont>
-        <OutlineStyle>None</OutlineStyle>
-        <PointSize>26</PointSize>
+        <OutlineFont>6</OutlineFont>
+        <OutlineStyle>UseOutlineFont</OutlineStyle>
+        <PointSize>33</PointSize>
         <SizeMultiplier>1</SizeMultiplier>
         <SourceFilename>Assets/Шрифты/ofont.ru_Daneehand.ttf</SourceFilename>
         <TTFMetricsFixup>SetAscenderToHeight</TTFMetricsFixup>
@@ -8103,6 +8103,38 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
+          <Sprite Slot="102" Width="139" Height="640" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>C:\Users\Admin\Documents\stars\Assets\Комнаты\Предисловие\Манекен 1 .png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>640</ImportHeight>
+              <ImportWidth>139</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="98" Width="151" Height="639" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Комнаты/Предисловие/Манекен 2 .png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>639</ImportHeight>
+              <ImportWidth>151</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
         </Sprites>
       </SpriteFolder>
     </Sprites>
@@ -8744,12 +8776,29 @@ stop
               </Loop>
             </Loops>
           </View>
+          <View>
+            <ID>7</ID>
+            <Name>Maneken</Name>
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>102</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+            </Loops>
+          </View>
         </Views>
       </ViewFolder>
     </Views>
-    <DeletedViews>
-      <ViewID>7</ViewID>
-    </DeletedViews>
+    <DeletedViews />
     <Scripts>
       <ScriptFolder Name="Main">
         <SubFolders />
