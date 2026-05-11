@@ -5,6 +5,7 @@
 import function TypeText(String message);
 import function ChangeMood(int amount);
 import function start_diming();
+import function stop_diming();
 
 import int notesOrder[20];
 import String notesNames[20];

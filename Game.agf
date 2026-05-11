@@ -9122,7 +9122,7 @@ See KeyboardMovement.txt for details.
                 <ScriptName>aStep_3</ScriptName>
                 <SourceFileName xml:space="preserve">Assets/Звуки/Шаги/step 4 (2).mp3</SourceFileName>
                 <Type>1</Type>
-                <FileLastModifiedDate>2026-05-07 23:21:14Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2026-05-11 09:04:23Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InGameEXE</BundlingType>
