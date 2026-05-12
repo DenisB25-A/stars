@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>23</AudioIndexer>
+      <AudioIndexer>24</AudioIndexer>
       <AutoMoveInWalkMode>False</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets>Windows</BuildTargets>
@@ -3538,6 +3538,25 @@
               <Event Index="4" />
             </Interactions>
           </InventoryItem>
+          <InventoryItem>
+            <CursorImage>0</CursorImage>
+            <Description xml:space="preserve">New inventory item</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>12</ID>
+            <Image>41</Image>
+            <Name>iChocolate</Name>
+            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <Properties />
+            <Interactions>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
         </InventoryItems>
       </InventoryItemFolder>
     </InventoryItems>
@@ -3734,7 +3753,7 @@
             <SpeechView>0</SpeechView>
             <StartX>583</StartX>
             <StartY>996</StartY>
-            <StartingRoom>1</StartingRoom>
+            <StartingRoom>31</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>True</TurnWhenFacing>
@@ -3858,8 +3877,9 @@ stop
 @S  // Dialog startup entry point
 return
 @1
-  TypeText("Какого черта... Дверца не открывается.");
-  TypeText("Примерзла? Не знал, что такое бывает. Ладно. Сейчас я все равно не голоден.");
+  aFridge_close.Play();
+  TypeText("Дверца не открывается.");
+  TypeText("Может примерзла? Не знал, что такое бывает. Ладно. Сейчас я все равно не голоден.");
 stop
 @2
 stop
@@ -7927,38 +7947,6 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="41" Width="300" Height="166" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-            <Source>
-              <FileName>Assets/Комнаты/открытый шкафчик.png</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>166</ImportHeight>
-              <ImportWidth>300</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>True</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <TransparentColorIndex>0</TransparentColorIndex>
-              <ImportAlphaChannel>True</ImportAlphaChannel>
-            </Source>
-          </Sprite>
-          <Sprite Slot="80" Width="301" Height="183" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-            <Source>
-              <FileName>Assets/Комнаты/открытый шкафчик.png</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>183</ImportHeight>
-              <ImportWidth>301</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>True</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <TransparentColorIndex>0</TransparentColorIndex>
-              <ImportAlphaChannel>True</ImportAlphaChannel>
-            </Source>
-          </Sprite>
           <Sprite Slot="81" Width="326" Height="203" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
               <FileName>Assets/открытый шкафчик.png</FileName>
@@ -8071,22 +8059,6 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="86" Width="150" Height="130" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-            <Source>
-              <FileName>Assets/Объекты/Арматура.png</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>130</ImportHeight>
-              <ImportWidth>150</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>True</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <TransparentColorIndex>0</TransparentColorIndex>
-              <ImportAlphaChannel>True</ImportAlphaChannel>
-            </Source>
-          </Sprite>
           <Sprite Slot="87" Width="150" Height="130" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
               <FileName>Assets/Объекты/Арматура2.PNG</FileName>
@@ -8105,7 +8077,7 @@ stop
           </Sprite>
           <Sprite Slot="102" Width="139" Height="640" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>C:\Users\Admin\Documents\stars\Assets\Комнаты\Предисловие\Манекен 1 .png</FileName>
+              <FileName>Assets/Комнаты/Предисловие/Манекен 1 .png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>640</ImportHeight>
@@ -8119,13 +8091,61 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="98" Width="151" Height="639" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+          <Sprite Slot="99" Width="139" Height="640" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>Assets/Комнаты/Предисловие/Манекен 2 .png</FileName>
+              <FileName>Assets/Комнаты/Предисловие/Манекен 2.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
-              <ImportHeight>639</ImportHeight>
-              <ImportWidth>151</ImportWidth>
+              <ImportHeight>640</ImportHeight>
+              <ImportWidth>139</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="98" Width="139" Height="640" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Комнаты/Предисловие/Манекен 3.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>640</ImportHeight>
+              <ImportWidth>139</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="104" Width="101" Height="150" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>C:\Users\Admin\Documents\stars\Assets\Объекты\openart-image_1778582350613_1596581b_1778582350638_63111bce (1).png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>150</ImportHeight>
+              <ImportWidth>101</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="41" Width="85" Height="110" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Инвентарь/openart-image_1778582350613_1596581b_1778582350638_63111bce (1).png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>110</ImportHeight>
+              <ImportWidth>85</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>
@@ -8785,9 +8805,30 @@ stop
                 <RunNextLoop>False</RunNextLoop>
                 <Frames>
                   <ViewFrame>
-                    <Delay>0</Delay>
+                    <Delay>5</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
+                    <Image>102</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>35</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>98</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>35</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>99</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>5</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>3</ID>
                     <Image>102</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
@@ -9121,6 +9162,19 @@ See KeyboardMovement.txt for details.
                 <SourceFileName>Assets/Звуки/unknown_run.mp3</SourceFileName>
                 <Type>3</Type>
                 <FileLastModifiedDate>2026-05-08 00:17:09Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>21</ID>
+                <Index>24</Index>
+                <ScriptName>aFridge_close</ScriptName>
+                <SourceFileName>Assets/Звуки/fridge_close.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-05-12 09:45:20Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
