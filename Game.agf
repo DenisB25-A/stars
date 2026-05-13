@@ -3247,7 +3247,7 @@
               <ID>18</ID>
               <Left>0</Left>
               <Name>gDarkOverlay</Name>
-              <OnClick />
+              <OnClick>gDarkOverlay_OnClick</OnClick>
               <PopupStyle>Normal</PopupStyle>
               <PopupYPos>0</PopupYPos>
               <ScriptModule>GlobalScript.asc</ScriptModule>
@@ -3262,15 +3262,15 @@
                 <Clickable>True</Clickable>
                 <Enabled>True</Enabled>
                 <Font>6</Font>
-                <Height>817</Height>
+                <Height>900</Height>
                 <ID>0</ID>
-                <Left>1238</Left>
+                <Left>1264</Left>
                 <Locked>False</Locked>
                 <Name>lblThougts</Name>
                 <Text xml:space="preserve">Это заглушка для текста длиною на все деньги</Text>
                 <TextAlignment>TopLeft</TextAlignment>
                 <TextColor>65535</TextColor>
-                <Top>107</Top>
+                <Top>62</Top>
                 <Translated>True</Translated>
                 <Visible>False</Visible>
                 <Width>526</Width>
@@ -3754,7 +3754,7 @@
             <SpeechView>0</SpeechView>
             <StartX>583</StartX>
             <StartY>996</StartY>
-            <StartingRoom>1</StartingRoom>
+            <StartingRoom>2</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>True</TurnWhenFacing>
@@ -4033,25 +4033,71 @@ stop
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
+  if (cEgo.HasInventory(iCoffee)) {
+      dTeapot.SetOptionState(1, eOptionOn);
+      dTeapot.SetOptionState(4, eOptionOn);
+      
+    if (cEgo.HasInventory(iSugar)) {
+        dTeapot.SetOptionState(2, eOptionOn);
+        
+      if (cEgo.HasInventory(iMilk)) {
+          dTeapot.SetOptionState(3, eOptionOn);
+          dTeapot.SetOptionState(5, eOptionOff);
+      }
+    }
+  }
 return
 @1
-  TypeText("Хотелось бы чего-то большего, чем запивать тоску кипятком. Мне нужны молоко, кофе, сахар, наверняка все это где-нибудь здесь.");
-return
+  TypeText("Вода из унитаза была бы приятнее");
+  was_brew_coffee = true;
+  ChangeMood(-1);
+stop
 @2
+  TypeText("Нельзя сказать, что это было прям вкусно");
+  was_brew_coffee = true;
+stop
+@3
+  TypeText("Какая же редкостная мерзость");
+  was_brew_coffee = true;
+  ChangeMood(-1);
+stop
+@4
+stop
+@5
+  TypeText("Хотелось бы чего-то большего, чем запивать тоску кипятком");
+  TypeText("Мне нужны молоко, кофе, сахар, наверняка все это где-нибудь здесь");
 stop
 ]]></Script>
             <DialogOptions>
               <DialogOption>
                 <ID>1</ID>
                 <Say>False</Say>
-                <Show>True</Show>
+                <Show>False</Show>
                 <Text xml:space="preserve">Сделать кофе</Text>
               </DialogOption>
               <DialogOption>
                 <ID>2</ID>
                 <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Сделать кофе с сахаром</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Сделать кофе с молоком и сахаром</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Ничего не делать</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>5</ID>
+                <Say>False</Say>
                 <Show>True</Show>
-                <Text>Уйти</Text>
+                <Text xml:space="preserve">Что там ещё нужно?</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
@@ -4255,6 +4301,110 @@ stop
               <DialogOption>
                 <ID>2</ID>
                 <Say>False</Say>
+                <Show>True</Show>
+                <Text>Уйти</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>10</ID>
+            <Name>dMilkCarton</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file dMilkCarton
+@S  // Dialog startup entry point
+    TypeText("Пакет молока. Почему он не в холодильнике, а здесь? Я уже и не помню.");
+return
+@1
+  TypeText("Теперь у меня есть молоко"); 
+  object[1].Visible  = false;
+  player.AddInventory(iMilk);
+stop
+@2
+  dMilkCarton.SetOptionState(2, eOptionOff);
+  TypeText("Оно прокисло. Как жаль...");
+return
+@3
+  TypeText("Фу! Прокисло!");
+  ChangeMood(-1);
+  object[1].Visible  = false;
+stop
+@4
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Взять молоко</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Проверить молоко</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Выпить молоко</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text>Уйти</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>11</ID>
+            <Name>dCoffeeTin</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+  TypeText("На верхней полке стоит баночка приличного на вид кофе. Мама не пила его, но держала на случай прихода гостей.");
+  TypeText("Судя по слою пыли, гостей здесь не было уже очень давно.");
+return
+@1
+  player.AddInventory(iCoffee);
+  object[0].Visible = false;
+stop
+@2
+  TypeText("Какой же я неуклюжий");
+  object[0].Visible = false;
+stop
+@3
+  TypeText("На вкус как мышьяк... боже...");
+  object[0].Visible = false;
+  ChangeMood(-1);
+stop
+@4
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Взять кофе</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Просыать кофе на пол</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>True</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Поесть кофе</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Say>True</Say>
                 <Show>True</Show>
                 <Text>Уйти</Text>
               </DialogOption>
@@ -4836,6 +4986,13 @@ stop
           <ArrayType>None</ArrayType>
           <DefaultValue>false</DefaultValue>
           <Name>unknown_sound</Name>
+          <Type>bool</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>false</DefaultValue>
+          <Name>was_brew_coffee</Name>
           <Type>bool</Type>
         </GlobalVariable>
       </Variables>
@@ -8877,6 +9034,30 @@ stop
       <ScriptFolder Name="Main">
         <SubFolders />
         <ScriptAndHeaders>
+          <ScriptAndHeader>
+            <ScriptAndHeader_Header>
+              <Script>
+                <FileName>show_accumulated_text_after.ash</FileName>
+                <Name />
+                <Description />
+                <Author />
+                <Version />
+                <Key>379351710</Key>
+                <IsHeader>True</IsHeader>
+              </Script>
+            </ScriptAndHeader_Header>
+            <ScriptAndHeader_Script>
+              <Script>
+                <FileName>show_accumulated_text_after.asc</FileName>
+                <Name />
+                <Description />
+                <Author />
+                <Version />
+                <Key>379351710</Key>
+                <IsHeader>False</IsHeader>
+              </Script>
+            </ScriptAndHeader_Script>
+          </ScriptAndHeader>
           <ScriptAndHeader>
             <ScriptAndHeader_Header>
               <Script>
