@@ -1,2 +1,1 @@
-Game : (room:1) [room1.asc:10] Warning: blocking Say call during fade-out.
-Game : (room:1) [room1.asc:10] Wait() was used in "Before Fadein" event; use "After Fadein" instead
+Game : (room:29) [room29.asc:6] Wait() was used in "Before Fadein" event; use "After Fadein" instead
