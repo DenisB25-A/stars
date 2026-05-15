@@ -3773,7 +3773,7 @@
             <SpeechView>0</SpeechView>
             <StartX>583</StartX>
             <StartY>996</StartY>
-            <StartingRoom>1</StartingRoom>
+            <StartingRoom>13</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>True</TurnWhenFacing>
@@ -4194,28 +4194,23 @@ stop
 @S  // Dialog startup entry point
 return
 @1
-  TypeText("Полки прогибаются под рядами угрюмых советских многотомников, но взгляд цепляется за несколько, которые привлекают внимание.");
+  TypeText("Вы пробегаете взглядом по угрюмым советским многотомникам, занимающим полки, и он останавливается на невзрачном корешке бордового цвета.");
+  TypeText("Вы встаете на цыпочки и тянетесь к верхней полке. В лицо летит облачко пыли.");
+  TypeText("Герман Гессе 'Степной волк'. Странный выбор, но ладно.");
+  player.AddInventory(iBook);
 option-off 1;
-option-off 3
-option-on 4;
-option-on 5;
-option-on 6;
-option-on 7;
-return
+option-on 3;
+stop
 @2
   TypeText("Вы осматриваете полки, пытаясь уловить хоть какой-нибудь след нарушенного порядка в рядах строго выстроенных книг. Однако все корешки выглядят одинаково. Вы берете несколько наугад, пролистываете, но внутри - ничего.");
   TypeText("Так можно копаться хоть до самого вечера.");
 return
 @3
+  TypeText("Не вижу больше ничего интересного. На сегодня и так есть, чем заняться.");
 stop
 @4
-return
-@5
-return
-@6
-return
-@7
-return
+stop
+
 ]]></Script>
             <DialogOptions>
               <DialogOption>
@@ -4233,32 +4228,14 @@ return
               <DialogOption>
                 <ID>3</ID>
                 <Say>False</Say>
-                <Show>True</Show>
-                <Text>Уйти</Text>
+                <Show>False</Show>
+                <Text xml:space="preserve">Осмотреть полки</Text>
               </DialogOption>
               <DialogOption>
                 <ID>4</ID>
                 <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">"Алиса в стране чудес" Льюис Кэрролл</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>5</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">Взять "Процесс" Франца Кафки</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>6</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">Взять "Степной волк" Германа Гессе</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>7</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text>Назад</Text>
+                <Show>True</Show>
+                <Text>Уйти</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
@@ -4426,6 +4403,33 @@ stop
                 <Say>True</Say>
                 <Show>True</Show>
                 <Text>Уйти</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>12</ID>
+            <Name>dBum</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+return
+@2
+return
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text />
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text />
               </DialogOption>
             </DialogOptions>
           </Dialog>
