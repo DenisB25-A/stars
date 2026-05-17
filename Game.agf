@@ -3523,7 +3523,7 @@
             <ID>11</ID>
             <Image>41</Image>
             <Name>iChocolate</Name>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
@@ -3547,7 +3547,7 @@
             <ID>12</ID>
             <Image>103</Image>
             <Name>iCup</Name>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties />
             <Interactions>
               <ScriptModule>GlobalScript.asc</ScriptModule>
@@ -3566,7 +3566,7 @@
             <ID>13</ID>
             <Image>101</Image>
             <Name>iBook</Name>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties />
             <Interactions>
               <ScriptModule>GlobalScript.asc</ScriptModule>
@@ -3773,7 +3773,7 @@
             <SpeechView>0</SpeechView>
             <StartX>583</StartX>
             <StartY>996</StartY>
-            <StartingRoom>1</StartingRoom>
+            <StartingRoom>23</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>False</TurnWhenFacing>
@@ -4206,7 +4206,7 @@ stop
   TypeText("Так можно копаться хоть до самого вечера.");
 return
 @3
-  TypeText("Не вижу больше ничего интересного. На сегодня и так есть, чем заняться.");
+  TypeText("На сегодня уже есть, чем заняться.");
 stop
 @4
 stop
@@ -7034,7 +7034,7 @@ return
                   <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="100" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+              <Sprite Slot="110" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                 <Source>
                   <FileName>Assets/Анимация/Дыхание (вправо)/1.png</FileName>
                   <OffsetX>0</OffsetX>
@@ -7050,7 +7050,7 @@ return
                   <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="105" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+              <Sprite Slot="111" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                 <Source>
                   <FileName>Assets/Анимация/Дыхание (вправо)/2.png</FileName>
                   <OffsetX>0</OffsetX>
@@ -7066,7 +7066,7 @@ return
                   <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="106" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+              <Sprite Slot="112" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                 <Source>
                   <FileName>Assets/Анимация/Дыхание (вправо)/3.png</FileName>
                   <OffsetX>0</OffsetX>
@@ -7082,7 +7082,7 @@ return
                   <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="107" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+              <Sprite Slot="100" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                 <Source>
                   <FileName>Assets/Анимация/Дыхание (влево)/1.png</FileName>
                   <OffsetX>0</OffsetX>
@@ -7098,7 +7098,7 @@ return
                   <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="108" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+              <Sprite Slot="105" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                 <Source>
                   <FileName>Assets/Анимация/Дыхание (влево)/2.png</FileName>
                   <OffsetX>0</OffsetX>
@@ -7114,7 +7114,7 @@ return
                   <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
-              <Sprite Slot="109" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+              <Sprite Slot="106" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                 <Source>
                   <FileName>Assets/Анимация/Дыхание (влево)/3.png</FileName>
                   <OffsetX>0</OffsetX>
@@ -8510,6 +8510,22 @@ return
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
+          <Sprite Slot="109" Width="565" Height="750" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>C:\Users\Admin\Downloads\ChatGPT Image 14 мая 2026 г., 00_56_00 (2).png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>750</ImportHeight>
+              <ImportWidth>565</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
         </Sprites>
       </SpriteFolder>
     </Sprites>
@@ -9208,47 +9224,6 @@ return
                     <Delay>10</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>107</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>10</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>1</ID>
-                    <Image>108</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>10</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>2</ID>
-                    <Image>109</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>10</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>3</ID>
-                    <Image>108</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                  <ViewFrame>
-                    <Delay>10</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>4</ID>
-                    <Image>107</Image>
-                    <Sound>0</Sound>
-                  </ViewFrame>
-                </Frames>
-              </Loop>
-              <Loop>
-                <ID>2</ID>
-                <RunNextLoop>False</RunNextLoop>
-                <Frames>
-                  <ViewFrame>
-                    <Delay>10</Delay>
-                    <Flipped>False</Flipped>
-                    <ID>0</ID>
                     <Image>100</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
@@ -9278,6 +9253,47 @@ return
                     <Flipped>False</Flipped>
                     <ID>4</ID>
                     <Image>100</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>2</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>10</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>110</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>2</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>111</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>10</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>112</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>2</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>3</ID>
+                    <Image>111</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>10</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>4</ID>
+                    <Image>110</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
