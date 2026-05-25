@@ -3857,12 +3857,12 @@
             <MovementSpeedY>0</MovementSpeedY>
             <NormalView>5</NormalView>
             <Properties />
-            <RealName>Bum</RealName>
+            <RealName>Бомж</RealName>
             <ScriptName>cBum</ScriptName>
             <Solid>True</Solid>
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>12</SpeechColor>
-            <SpeechView>0</SpeechView>
+            <SpeechView>10</SpeechView>
             <StartX>935</StartX>
             <StartY>910</StartY>
             <StartingRoom>18</StartingRoom>
@@ -3879,6 +3879,50 @@
               <Event Index="2" />
               <Event Index="3" />
               <Event Index="4">cBum_AnyClick</Event>
+              <Event Index="5" />
+              <Event Index="6" />
+              <Event Index="7" />
+            </Interactions>
+          </Character>
+          <Character>
+            <AdjustSpeedWithScaling>False</AdjustSpeedWithScaling>
+            <AdjustVolumeWithScaling>False</AdjustVolumeWithScaling>
+            <AnimationDelay>4</AnimationDelay>
+            <BlinkingView>0</BlinkingView>
+            <Clickable>True</Clickable>
+            <DiagonalLoops>True</DiagonalLoops>
+            <ID>2</ID>
+            <IdleAnimationDelay>4</IdleAnimationDelay>
+            <IdleDelay>20</IdleDelay>
+            <IdleView>9</IdleView>
+            <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
+            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeedX>0</MovementSpeedX>
+            <MovementSpeedY>0</MovementSpeedY>
+            <NormalView>9</NormalView>
+            <Properties />
+            <RealName>Жук</RealName>
+            <ScriptName>cBeatle</ScriptName>
+            <Solid>True</Solid>
+            <SpeechAnimationDelay>5</SpeechAnimationDelay>
+            <SpeechColor>12</SpeechColor>
+            <SpeechView>0</SpeechView>
+            <StartX>430</StartX>
+            <StartY>940</StartY>
+            <StartingRoom>23</StartingRoom>
+            <ThinkingView>0</ThinkingView>
+            <TurnBeforeWalking>True</TurnBeforeWalking>
+            <TurnWhenFacing>True</TurnWhenFacing>
+            <UniformMovementSpeed>True</UniformMovementSpeed>
+            <UseRoomAreaLighting>True</UseRoomAreaLighting>
+            <UseRoomAreaScaling>True</UseRoomAreaScaling>
+            <Interactions>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
               <Event Index="5" />
               <Event Index="6" />
               <Event Index="7" />
@@ -4461,7 +4505,11 @@ stop
             <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 return
+
 @1
+  cBum.LockView(cBum.SpeechView); // Включаем анимацию рта
+  cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
+  TypeText(">Бомж: Добрый человек.");
 return
 @2
 return
@@ -4471,13 +4519,13 @@ return
                 <ID>1</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text />
+                <Text xml:space="preserve">"Дать сигарету"</Text>
               </DialogOption>
               <DialogOption>
                 <ID>2</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text />
+                <Text xml:space="preserve">Ты кто такой?</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
@@ -7249,6 +7297,38 @@ return
                   <ImportAlphaChannel>True</ImportAlphaChannel>
                 </Source>
               </Sprite>
+              <Sprite Slot="29" Width="400" Height="400" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Персонажи/Говорит/1.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>400</ImportHeight>
+                  <ImportWidth>400</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="30" Width="400" Height="400" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Персонажи/Говорит/2.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>400</ImportHeight>
+                  <ImportWidth>400</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
             </Sprites>
           </SpriteFolder>
         </SubFolders>
@@ -9421,7 +9501,7 @@ return
           </View>
           <View>
             <ID>9</ID>
-            <Name>Beatle</Name>
+            <Name>Beatle_view</Name>
             <Loops>
               <Loop>
                 <ID>0</ID>
@@ -9467,6 +9547,63 @@ return
                     <Flipped>False</Flipped>
                     <ID>5</ID>
                     <Image>107</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>1</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>2</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>0</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>3</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+            </Loops>
+          </View>
+          <View>
+            <ID>10</ID>
+            <Name>Bum_talking</Name>
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>29</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>30</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>

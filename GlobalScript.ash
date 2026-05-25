@@ -3,6 +3,7 @@
 // place import definitions and #define names here to be used by all
 // scripts.
 import function TypeText(String message);
+
 import function ChangeMood(int amount);
 import function start_diming();
 import function stop_diming();
