@@ -1,1 +1,1 @@
-Game : (room:29) [room29.asc:6] Wait() was used in "Before Fadein" event; use "After Fadein" instead
+Game : (room:32) [room32.asc:7] Object.Animate (oManeken): invalid repeat value 920, will treat as REPEAT (1).
