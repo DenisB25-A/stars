@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>28</AudioIndexer>
+      <AudioIndexer>29</AudioIndexer>
       <AutoMoveInWalkMode>False</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets>Windows</BuildTargets>
@@ -3585,7 +3585,7 @@
             <ID>14</ID>
             <Image>116</Image>
             <Name>iBarrete</Name>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
@@ -3633,7 +3633,7 @@
             <ID>16</ID>
             <Image>121</Image>
             <Name>iRastyKnife</Name>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
@@ -3657,7 +3657,7 @@
             <ID>17</ID>
             <Image>122</Image>
             <Name>iBarrete2</Name>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
@@ -3681,7 +3681,7 @@
             <ID>18</ID>
             <Image>123</Image>
             <Name>iKnife</Name>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
@@ -3893,7 +3893,7 @@
             <SpeechView>0</SpeechView>
             <StartX>583</StartX>
             <StartY>996</StartY>
-            <StartingRoom>23</StartingRoom>
+            <StartingRoom>1</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>False</TurnWhenFacing>
@@ -4361,17 +4361,29 @@ return
   TypeText("Вы пробегаете взглядом по угрюмым советским многотомникам, занимающим полки, и он останавливается на невзрачном корешке бордового цвета.");
   TypeText("Вы встаете на цыпочки и тянетесь к верхней полке. В лицо летит облачко пыли.");
   TypeText("Герман Гессе 'Степной волк'. Странный выбор, но ладно.");
+  TypeText("Получен предмет: 'Книга'");
   player.AddInventory(iBook);
 option-off 1;
 option-on 3;
 stop
 @2
-  TypeText("Вы осматриваете полки, пытаясь уловить хоть какой-нибудь след нарушенного порядка в рядах строго выстроенных книг. Однако все корешки выглядят одинаково. Вы берете несколько наугад, пролистываете, но внутри - ничего.");
-  TypeText("Так можно копаться хоть до самого вечера.");
+  if (prompts == 3)
+  {
+    TypeText("Тоненькая книжица 'Агаты Кристи' уместилась на нижней полке, в дальнем ряду. Вы бы и не заметили, если б не знали, что ищете наверняка.");
+    TypeText("Она легко распахивается на середине, заложенная небольшим металлическим предметом вместо закладки.");
+    TypeText("Это не ключ. Между страниц - обычная заколка для волос.");
+    TypeText("Получен предмет: 'Женская заколка для волос.'");
+    player.AddInventory(iBarrete);
+  }
+  else
+  {
+    TypeText("Вы осматриваете полки, пытаясь уловить хоть какой-нибудь след нарушенного порядка в рядах строго выстроенных книг. Однако все корешки выглядят одинаково. Вы берете несколько наугад, пролистываете, но внутри - ничего.");
+    TypeText("Так можно копаться хоть до самого вечера.");
+  }
 return
 @3
   TypeText("На сегодня уже есть, чем заняться.");
-stop
+return
 @4
 stop
 
@@ -8972,6 +8984,54 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
+          <Sprite Slot="124" Width="468" Height="237" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Комнаты/Шкафы/Шкаф на столе.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>237</ImportHeight>
+              <ImportWidth>468</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="125" Width="212" Height="108" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Комнаты/Шкафы/Верхний шкаф (с книгами).png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>108</ImportHeight>
+              <ImportWidth>212</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="126" Width="210" Height="115" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Комнаты/Шкафы/Нижний шкаф (с книгами).png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>115</ImportHeight>
+              <ImportWidth>210</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
         </Sprites>
       </SpriteFolder>
     </Sprites>
@@ -10013,7 +10073,7 @@ See KeyboardMovement.txt for details.
                 <BundlingType>InGameEXE</BundlingType>
                 <DefaultPriority>Inherit</DefaultPriority>
                 <DefaultRepeat>Inherit</DefaultRepeat>
-                <DefaultVolume>50</DefaultVolume>
+                <DefaultVolume>20</DefaultVolume>
                 <FileType>MP3</FileType>
                 <ID>25</ID>
                 <Index>28</Index>
@@ -10306,6 +10366,19 @@ See KeyboardMovement.txt for details.
                 <SourceFileName>Assets/Звуки/paper.mp3</SourceFileName>
                 <Type>3</Type>
                 <FileLastModifiedDate>2026-05-26 17:47:38Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>26</ID>
+                <Index>29</Index>
+                <ScriptName>aBarrete</ScriptName>
+                <SourceFileName>Assets/Звуки/Barret.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-05-27 18:51:56Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
