@@ -776,6 +776,15 @@
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
+          <UnloadedRoomFolder Name="Strange_rooms">
+            <SubFolders />
+            <UnloadedRooms>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>30</Number>
+              </UnloadedRoom>
+            </UnloadedRooms>
+          </UnloadedRoomFolder>
         </SubFolders>
         <UnloadedRooms>
           <UnloadedRoom>
@@ -4374,6 +4383,8 @@ stop
     TypeText("Это не ключ. Между страниц - обычная заколка для волос.");
     TypeText("Получен предмет: 'Женская заколка для волос.'");
     player.AddInventory(iBarrete);
+// ИСПРАВЛЕНИЕ: Выключаем опцию НАВСЕГДА
+    dBookshelf.SetOptionState(2, eOptionOffForever);
   }
   else
   {
@@ -9023,6 +9034,22 @@ stop
               <OffsetY>0</OffsetY>
               <ImportHeight>115</ImportHeight>
               <ImportWidth>210</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="127" Width="809" Height="447" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Комнаты/Шкафы/Ночной ноутбук.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>447</ImportHeight>
+              <ImportWidth>809</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>
