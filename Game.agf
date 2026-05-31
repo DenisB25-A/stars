@@ -734,10 +734,6 @@
               </UnloadedRoom>
               <UnloadedRoom>
                 <Description IsNull="True" />
-                <Number>25</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
                 <Number>26</Number>
               </UnloadedRoom>
               <UnloadedRoom>
@@ -798,6 +794,35 @@
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
+          <UnloadedRoomFolder Name="Living_room">
+            <SubFolders />
+            <UnloadedRooms>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>3</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>8</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>9</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>10</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>11</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>25</Number>
+              </UnloadedRoom>
+            </UnloadedRooms>
+          </UnloadedRoomFolder>
         </SubFolders>
         <UnloadedRooms>
           <UnloadedRoom>
@@ -810,10 +835,6 @@
           </UnloadedRoom>
           <UnloadedRoom>
             <Description IsNull="True" />
-            <Number>3</Number>
-          </UnloadedRoom>
-          <UnloadedRoom>
-            <Description IsNull="True" />
             <Number>4</Number>
           </UnloadedRoom>
           <UnloadedRoom>
@@ -823,22 +844,6 @@
           <UnloadedRoom>
             <Description IsNull="True" />
             <Number>7</Number>
-          </UnloadedRoom>
-          <UnloadedRoom>
-            <Description IsNull="True" />
-            <Number>8</Number>
-          </UnloadedRoom>
-          <UnloadedRoom>
-            <Description IsNull="True" />
-            <Number>9</Number>
-          </UnloadedRoom>
-          <UnloadedRoom>
-            <Description IsNull="True" />
-            <Number>10</Number>
-          </UnloadedRoom>
-          <UnloadedRoom>
-            <Description IsNull="True" />
-            <Number>11</Number>
           </UnloadedRoom>
           <UnloadedRoom>
             <Description IsNull="True" />
@@ -3959,7 +3964,7 @@
             <SpeechView>0</SpeechView>
             <StartX>583</StartX>
             <StartY>996</StartY>
-            <StartingRoom>31</StartingRoom>
+            <StartingRoom>23</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>False</TurnWhenFacing>
@@ -4662,6 +4667,7 @@ return
   cBum.LockView(cBum.SpeechView); // Включаем анимацию рта
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
   TypeText(">Бомж: Человек. Которому зябко на улице.");
+  TypeText(">Бомж: Так и будешь стоять над душой?");
   cBum.UnlockView();
 option-off 1
 
@@ -4671,10 +4677,13 @@ return
   aSmoke.Play();
   player.x = 1270; 
   player.y = 925;
-  Wait(40);    // Мгновение темноты
+  Wait(120);    // Мгновение темноты
   FadeIn(2);
   player.LockView(ILYA_ON_STAIRS);
-  TypeText("Антон: Что-то странное происходит.");
+  Wait(40);
+option-off 1
+option-on 4
+option-on 5
 return
 @3
   cBum.LockView(cBum.SpeechView);
@@ -4685,6 +4694,14 @@ return
 option-off 3
 return
 
+@4
+  cBum.LockView(cBum.SpeechView); // Включаем анимацию рта
+  cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
+  TypeText(">Бомж: Нет. А зачем мне? Здесь тепло. Батареи греют. Ветер не дует. Менты не гоняют.");
+  TypeText(">Бомж: Нет. А зачем мне? Здесь тепло. Батареи греют. Ветер не дует. Менты не гоняют.");
+return
+@5
+return
 ]]></Script>
             <DialogOptions>
               <DialogOption>
@@ -4704,6 +4721,18 @@ return
                 <Say>False</Say>
                 <Show>True</Show>
                 <Text xml:space="preserve">Я не шатаюсь...</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Вы пробовали выйти на улицу?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>5</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Что-то странное происходит</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
