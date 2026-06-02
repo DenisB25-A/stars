@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>31</AudioIndexer>
+      <AudioIndexer>34</AudioIndexer>
       <AutoMoveInWalkMode>False</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets>Windows</BuildTargets>
@@ -3656,7 +3656,7 @@
             <ID>16</ID>
             <Image>121</Image>
             <Name>iRastyKnife</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <PlayerStartsWithItem>True</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
@@ -4661,27 +4661,32 @@ stop
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
+option-off 4
+option-off 5
+option-off 6
+option-off 7
 return
 
 @1
   cBum.LockView(cBum.SpeechView); // Включаем анимацию рта
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
   TypeText(">Бомж: Человек. Которому зябко на улице.");
-  TypeText(">Бомж: Так и будешь стоять над душой?");
+  TypeText(">Бомж: И который очень хочет курить.");
   cBum.UnlockView();
 option-off 1
 
 return
 @2
   FadeOut(2);
+  Wait(120);
   aSmoke.Play();
   player.x = 1270; 
   player.y = 925;
-  Wait(120);    // Мгновение темноты
-  FadeIn(2);
   player.LockView(ILYA_ON_STAIRS);
+  FadeIn(2);
   Wait(40);
 option-off 1
+option-off 2
 option-on 4
 option-on 5
 return
@@ -4697,10 +4702,42 @@ return
 @4
   cBum.LockView(cBum.SpeechView); // Включаем анимацию рта
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
-  TypeText(">Бомж: Нет. А зачем мне? Здесь тепло. Батареи греют. Ветер не дует. Менты не гоняют.");
-  TypeText(">Бомж: Нет. А зачем мне? Здесь тепло. Батареи греют. Ветер не дует. Менты не гоняют.");
+  cBum.UnlockView();
+  TypeText(">Бомж: Зачем мне? Здесь тепло. Батареи греют. Ветер не дует. Менты не гоняют.");
+  TypeText("Антон: Вы не понимаете - тут что-то происходит. Надо выбираться, а я... короче я не могу найти выход.");
+  cBum.LockView(cBum.SpeechView); 
+  cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
+  TypeText(">Бомж: Бежать... я много от чего бегал, парень."); 
+  TypeText(">Бомж: От неприятностей, от долгов, от женщин, от жизни - от всего бегал."); 
+  TypeText(">Бомж: Вот только когда бежишь, всегда оказываешься вот в такой бетонной коробке.");
+  TypeText(">Бомж: Где воняет ссаниной.");
+  cBum.UnlockView();
+option-off 4
 return
 @5
+  TypeText("Антон: Что-то странное происходит...");
+  TypeText("Антон: С тех пор, как я переехал сюда.");
+  TypeText("Антон: Мне постоянно кажется, что в квартире кроме меня кто-то есть.");
+  TypeText("Антон: А сейчас там нет света, хотя электричество есть на всех этажах.");
+  TypeText("Антон: И... я не могу выйти из дома.");
+  TypeText("Антон: Подъезд куда-то делся. Осталась только лестница вниз.");
+  TypeText("Антон: В темноту.");
+  TypeText("Антон: Я... не знаю, зачем это все говорю.");
+  Wait(120);
+  cBum.LockView(cBum.SpeechView); 
+  cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
+  TypeText(">Бомж: Да говори, парень, авось станет легче.");
+  TypeText(">Бомж: Ночь всегда долгая, а эта темней и длинее прочих.");
+  TypeText(">Бомж: Времени у нас предостаточно.");
+  TypeText(">Бомж: И чего же ты хочешь?");
+  cBum.UnlockView();
+option-off 4
+option-on 6
+option-on 7
+return
+@6
+return
+@7
 return
 ]]></Script>
             <DialogOptions>
@@ -4726,13 +4763,25 @@ return
                 <ID>4</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Вы пробовали выйти на улицу?</Text>
+                <Text xml:space="preserve">Вы пытались выйти на улицу?</Text>
               </DialogOption>
               <DialogOption>
                 <ID>5</ID>
                 <Say>False</Say>
                 <Show>True</Show>
                 <Text xml:space="preserve">Что-то странное происходит</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>6</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Я хочу вернуться домой</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>7</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Я хочу уйти отсюда</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
@@ -4745,8 +4794,17 @@ return
 return
 @1
   FadeOut(2); 
-  Wait(40);   
+  AudioChannel *channel1 = aUnder_bed.Play();
+
+  Wait(120);   
   FadeIn(2); 
+  TypeText("Черт...");
+  TypeText("Вы резко отдергиваете руку, и видите, как на безымянном пальце выступает капелька крови.");
+  TypeText("Вы вновь наклоняетесь и уже более осторожно протягиваете руку в темноту.");
+  TypeText("Пальцы нащупывают бугристое от ржавчины лезвие.");
+  TypeText("Получен предмет: 'Ржавый нож'");
+  player.AddInventory(iRastyKnife);
+  Preamble_under_bed = true;
 stop
 @2
 stop
@@ -5400,9 +5458,9 @@ return
         <GlobalVariable>
           <ArraySize>0</ArraySize>
           <ArrayType>None</ArrayType>
-          <DefaultValue>false</DefaultValue>
+          <DefaultValue>0</DefaultValue>
           <Name>unknown_sound</Name>
-          <Type>bool</Type>
+          <Type>int</Type>
         </GlobalVariable>
         <GlobalVariable>
           <ArraySize>0</ArraySize>
@@ -5438,6 +5496,13 @@ return
           <DefaultValue>0</DefaultValue>
           <Name>prompts</Name>
           <Type>int</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>false</DefaultValue>
+          <Name>Preamble_under_bed</Name>
+          <Type>bool</Type>
         </GlobalVariable>
       </Variables>
     </GlobalVariables>
@@ -9285,6 +9350,22 @@ return
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
+          <Sprite Slot="133" Width="320" Height="320" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Объекты/Манекен.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>320</ImportHeight>
+              <ImportWidth>320</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
         </Sprites>
       </SpriteFolder>
     </Sprites>
@@ -10658,6 +10739,45 @@ See KeyboardMovement.txt for details.
                 <SourceFileName>Assets/Звуки/Двери/jg-032316-sfx-wood-door-opening.mp3</SourceFileName>
                 <Type>3</Type>
                 <FileLastModifiedDate>2026-05-31 09:43:51Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>20</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>29</ID>
+                <Index>32</Index>
+                <ScriptName>aUnder_bed</ScriptName>
+                <SourceFileName xml:space="preserve">Assets/Звуки/шарит под кроватью.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-06-01 18:57:18Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>30</ID>
+                <Index>33</Index>
+                <ScriptName>aRop_cut</ScriptName>
+                <SourceFileName xml:space="preserve">Assets/Звуки/обрезание веревки.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-06-01 21:24:56Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>31</ID>
+                <Index>34</Index>
+                <ScriptName>aFall</ScriptName>
+                <SourceFileName xml:space="preserve">Assets/Звуки/Падение манекена.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-06-01 21:27:52Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
