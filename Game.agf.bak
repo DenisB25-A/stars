@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>34</AudioIndexer>
+      <AudioIndexer>35</AudioIndexer>
       <AutoMoveInWalkMode>False</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets>Windows</BuildTargets>
@@ -774,6 +774,10 @@
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>30</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>36</Number>
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
@@ -3632,7 +3636,7 @@
             <ID>15</ID>
             <Image>117</Image>
             <Name>iArmature</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <PlayerStartsWithItem>True</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
@@ -3680,7 +3684,7 @@
             <ID>17</ID>
             <Image>122</Image>
             <Name>iBarrete2</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <PlayerStartsWithItem>True</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
@@ -3964,7 +3968,7 @@
             <SpeechView>0</SpeechView>
             <StartX>583</StartX>
             <StartY>996</StartY>
-            <StartingRoom>31</StartingRoom>
+            <StartingRoom>23</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>False</TurnWhenFacing>
@@ -9366,6 +9370,22 @@ return
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
+          <Sprite Slot="134" Width="66" Height="99" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Объекты/Дверная ручка (1).png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>99</ImportHeight>
+              <ImportWidth>66</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
         </Sprites>
       </SpriteFolder>
     </Sprites>
@@ -10778,6 +10798,19 @@ See KeyboardMovement.txt for details.
                 <SourceFileName xml:space="preserve">Assets/Звуки/Падение манекена.mp3</SourceFileName>
                 <Type>3</Type>
                 <FileLastModifiedDate>2026-06-01 21:27:52Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>32</ID>
+                <Index>35</Index>
+                <ScriptName>aBreaking</ScriptName>
+                <SourceFileName xml:space="preserve">Assets/Звуки/взлом ящика.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-06-02 14:27:39Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
