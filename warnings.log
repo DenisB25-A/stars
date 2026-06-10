@@ -1,1 +1,2 @@
-Game : (room:27) [room27.asc:118] Character.Walk: specified character cSlender not in current room (is in 0, current room 27)
+Game : (room:29) [room29.asc:6] Wait() was used in "Before Fadein" event; use "After Fadein" instead
+Game : (room:29) [room29.asc:6] Wait() was used in "Before Fadein" event; use "After Fadein" instead

@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>40</AudioIndexer>
+      <AudioIndexer>41</AudioIndexer>
       <AutoMoveInWalkMode>False</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets>Windows</BuildTargets>
@@ -730,10 +730,6 @@
               </UnloadedRoom>
               <UnloadedRoom>
                 <Description IsNull="True" />
-                <Number>24</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
                 <Number>28</Number>
               </UnloadedRoom>
             </UnloadedRooms>
@@ -836,15 +832,24 @@
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
+          <UnloadedRoomFolder Name="Coridor">
+            <SubFolders />
+            <UnloadedRooms>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>2</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>24</Number>
+              </UnloadedRoom>
+            </UnloadedRooms>
+          </UnloadedRoomFolder>
         </SubFolders>
         <UnloadedRooms>
           <UnloadedRoom>
             <Description IsNull="True" />
             <Number>1</Number>
-          </UnloadedRoom>
-          <UnloadedRoom>
-            <Description IsNull="True" />
-            <Number>2</Number>
           </UnloadedRoom>
           <UnloadedRoom>
             <Description IsNull="True" />
@@ -3375,12 +3380,12 @@
                 <NewModeNumber>0</NewModeNumber>
                 <OnClick>Laptop_Button1_OnClick</OnClick>
                 <PushedImage>0</PushedImage>
-                <Text xml:space="preserve">от Ксения Р.:                     RE: По поводу увольнения...</Text>
+                <Text />
                 <TextAlignment>BottomLeft</TextAlignment>
                 <TextColor>1055</TextColor>
                 <TextPaddingHorizontal>2</TextPaddingHorizontal>
                 <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>153</Top>
+                <Top>152</Top>
                 <Translated>True</Translated>
                 <Visible>True</Visible>
                 <Width>924</Width>
@@ -3403,7 +3408,7 @@
                 <NewModeNumber>0</NewModeNumber>
                 <OnClick>Laptop_Button2_OnClick</OnClick>
                 <PushedImage>0</PushedImage>
-                <Text xml:space="preserve">от НЕИЗВЕСТНО :            ТОЛЬКО СЕГОДНЯ!!! УНИКАЛЬНАЯ РАСПРО...</Text>
+                <Text />
                 <TextAlignment>BottomLeft</TextAlignment>
                 <TextColor>1055</TextColor>
                 <TextPaddingHorizontal>2</TextPaddingHorizontal>
@@ -3431,7 +3436,7 @@
                 <NewModeNumber>0</NewModeNumber>
                 <OnClick>Laptop_Button3_OnClick</OnClick>
                 <PushedImage>0</PushedImage>
-                <Text xml:space="preserve">от НЕИЗВЕСТНО:              Без темы</Text>
+                <Text />
                 <TextAlignment>BottomLeft</TextAlignment>
                 <TextColor>1055</TextColor>
                 <TextPaddingHorizontal>2</TextPaddingHorizontal>
@@ -3459,7 +3464,7 @@
                 <NewModeNumber>0</NewModeNumber>
                 <OnClick>Laptop_Button4_OnClick</OnClick>
                 <PushedImage>0</PushedImage>
-                <Text xml:space="preserve">от Ксения Р.:                     RE: По поводу увольнения...</Text>
+                <Text />
                 <TextAlignment>BottomLeft</TextAlignment>
                 <TextColor>1055</TextColor>
                 <TextPaddingHorizontal>2</TextPaddingHorizontal>
@@ -4155,7 +4160,7 @@
             <SpeechView>0</SpeechView>
             <StartX>583</StartX>
             <StartY>996</StartY>
-            <StartingRoom>1</StartingRoom>
+            <StartingRoom>23</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>False</TurnWhenFacing>
@@ -5206,6 +5211,50 @@ stop
               </DialogOption>
             </DialogOptions>
           </Dialog>
+          <Dialog>
+            <ID>16</ID>
+            <Name>dBoss</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+  aComputer_keyboard.Play();
+  TypeText("...");
+  boss_answer = boss_answer + 1;
+stop
+@2
+  aComputer_keyboard.Play();
+  TypeText("...");
+  boss_answer = boss_answer + 1;
+stop
+@3
+  aComputer_keyboard.Play();
+  TypeText("...");
+  boss_answer = boss_answer + 1;
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Хорошо, Дмитрий Васильевич.</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Знаете, с выходом из дома у меня сейчас некие трудности...</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Дмитрий Васильевич, при всем уважении, пошел нахуй.</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
         </Dialogs>
       </DialogFolder>
     </Dialogs>
@@ -5846,6 +5895,13 @@ stop
           <DefaultValue>false</DefaultValue>
           <Name>knife</Name>
           <Type>bool</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>0</DefaultValue>
+          <Name>boss_answer</Name>
+          <Type>int</Type>
         </GlobalVariable>
       </Variables>
     </GlobalVariables>
@@ -11635,6 +11691,19 @@ See KeyboardMovement.txt for details.
                 <SourceFileName>Assets/Звуки/electric_lamp.mp3</SourceFileName>
                 <Type>3</Type>
                 <FileLastModifiedDate>2026-06-07 19:35:00Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>38</ID>
+                <Index>41</Index>
+                <ScriptName>aKey</ScriptName>
+                <SourceFileName>Assets/Звуки/key.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-06-10 20:06:07Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
