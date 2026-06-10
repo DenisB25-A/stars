@@ -2797,7 +2797,7 @@
               <Transparency>0</Transparency>
               <Visible>False</Visible>
               <Width>1025</Width>
-              <ZOrder>0</ZOrder>
+              <ZOrder>20</ZOrder>
             </NormalGUI>
             <Controls>
               <GUILabel>
@@ -3336,6 +3336,141 @@
                 <Width>526</Width>
                 <ZOrder>0</ZOrder>
               </GUILabel>
+            </Controls>
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>8</BackgroundColor>
+              <BackgroundImage>154</BackgroundImage>
+              <BorderColor>2</BorderColor>
+              <Clickable>True</Clickable>
+              <Height>689</Height>
+              <ID>19</ID>
+              <Left>348</Left>
+              <Name>gLaptop</Name>
+              <OnClick />
+              <PopupStyle>Normal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Top>34</Top>
+              <Transparency>0</Transparency>
+              <Visible>False</Visible>
+              <Width>1184</Width>
+              <ZOrder>10</ZOrder>
+            </NormalGUI>
+            <Controls>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>7</Font>
+                <Height>49</Height>
+                <ID>0</ID>
+                <Image>61</Image>
+                <Left>260</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>Laptop_Button1</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>Laptop_Button1_OnClick</OnClick>
+                <PushedImage>0</PushedImage>
+                <Text xml:space="preserve">от Ксения Р.:                     RE: По поводу увольнения...</Text>
+                <TextAlignment>BottomLeft</TextAlignment>
+                <TextColor>1055</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>153</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>924</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>0</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>7</Font>
+                <Height>49</Height>
+                <ID>1</ID>
+                <Image>61</Image>
+                <Left>260</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>Laptop_Button2</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>Laptop_Button2_OnClick</OnClick>
+                <PushedImage>0</PushedImage>
+                <Text xml:space="preserve">от НЕИЗВЕСТНО :            ТОЛЬКО СЕГОДНЯ!!! УНИКАЛЬНАЯ РАСПРО...</Text>
+                <TextAlignment>BottomLeft</TextAlignment>
+                <TextColor>1055</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>203</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>924</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>1</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>7</Font>
+                <Height>49</Height>
+                <ID>2</ID>
+                <Image>61</Image>
+                <Left>260</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>Laptop_Button3</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>Laptop_Button3_OnClick</OnClick>
+                <PushedImage>0</PushedImage>
+                <Text xml:space="preserve">от НЕИЗВЕСТНО:              Без темы</Text>
+                <TextAlignment>BottomLeft</TextAlignment>
+                <TextColor>1055</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>257</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>924</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>2</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>7</Font>
+                <Height>49</Height>
+                <ID>3</ID>
+                <Image>61</Image>
+                <Left>260</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>Laptop_Button4</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>Laptop_Button4_OnClick</OnClick>
+                <PushedImage>0</PushedImage>
+                <Text xml:space="preserve">от Ксения Р.:                     RE: По поводу увольнения...</Text>
+                <TextAlignment>BottomLeft</TextAlignment>
+                <TextColor>1055</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>312</Top>
+                <Translated>True</Translated>
+                <Visible>False</Visible>
+                <Width>924</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>3</ZOrder>
+              </GUIButton>
             </Controls>
           </GUIMain>
         </GUIs>
@@ -4020,7 +4155,7 @@
             <SpeechView>0</SpeechView>
             <StartX>583</StartX>
             <StartY>996</StartY>
-            <StartingRoom>23</StartingRoom>
+            <StartingRoom>1</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>False</TurnWhenFacing>
@@ -4265,6 +4400,7 @@ return
   aComputer_keyboard.Play();
   TypeText("...");
   ksenia_answer = true;
+  Laptop_Button4.Visible = true;
 run-script 1
 stop
 @2
@@ -5314,6 +5450,20 @@ stop
         <PointSize>33</PointSize>
         <SizeMultiplier>1</SizeMultiplier>
         <SourceFilename>Assets/Шрифты/ofont.ru_Daneehand.ttf</SourceFilename>
+        <TTFMetricsFixup>SetAscenderToHeight</TTFMetricsFixup>
+        <VerticalOffset>0</VerticalOffset>
+      </Font>
+      <Font>
+        <AutoOutlineStyle>Squared</AutoOutlineStyle>
+        <AutoOutlineThickness>1</AutoOutlineThickness>
+        <ID>7</ID>
+        <LineSpacing>0</LineSpacing>
+        <Name xml:space="preserve">Font 7</Name>
+        <OutlineFont>0</OutlineFont>
+        <OutlineStyle>None</OutlineStyle>
+        <PointSize>25</PointSize>
+        <SizeMultiplier>1</SizeMultiplier>
+        <SourceFilename>Assets/Шрифты/arialbd.ttf</SourceFilename>
         <TTFMetricsFixup>SetAscenderToHeight</TTFMetricsFixup>
         <VerticalOffset>0</VerticalOffset>
       </Font>
@@ -9815,38 +9965,6 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="148" Width="166" Height="460" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-            <Source>
-              <FileName>C:\Users\Admin\Desktop\Промты\openart-image_1780325379334_a6303013_1780325379379_09a103d3.PNG</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>460</ImportHeight>
-              <ImportWidth>166</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>True</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <TransparentColorIndex>0</TransparentColorIndex>
-              <ImportAlphaChannel>True</ImportAlphaChannel>
-            </Source>
-          </Sprite>
-          <Sprite Slot="149" Width="260" Height="720" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-            <Source>
-              <FileName>C:\Users\Admin\Downloads\openart-image_1780325379334_a6303013_1780325379379_09a103d3 (2).png</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>720</ImportHeight>
-              <ImportWidth>260</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>True</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <TransparentColorIndex>0</TransparentColorIndex>
-              <ImportAlphaChannel>True</ImportAlphaChannel>
-            </Source>
-          </Sprite>
           <Sprite Slot="150" Width="271" Height="750" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
               <FileName>Assets/Персонажи/Длинный/openart-image_1780325379334_a6303013_1780325379379_09a103d3 (3).png</FileName>
@@ -9870,6 +9988,22 @@ stop
               <OffsetY>0</OffsetY>
               <ImportHeight>750</ImportHeight>
               <ImportWidth>419</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="154" Width="1184" Height="689" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/2Снимок экрана 2026-04-21 145938.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>689</ImportHeight>
+              <ImportWidth>1184</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>
