@@ -726,10 +726,6 @@
             <UnloadedRooms>
               <UnloadedRoom>
                 <Description IsNull="True" />
-                <Number>23</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
                 <Number>28</Number>
               </UnloadedRoom>
             </UnloadedRooms>
@@ -748,6 +744,10 @@
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>33</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>37</Number>
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
@@ -830,6 +830,10 @@
                 <Description IsNull="True" />
                 <Number>26</Number>
               </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>38</Number>
+              </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
           <UnloadedRoomFolder Name="Coridor">
@@ -845,12 +849,25 @@
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
+          <UnloadedRoomFolder Name="Bedroom">
+            <SubFolders />
+            <UnloadedRooms>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>1</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>12</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>23</Number>
+              </UnloadedRoom>
+            </UnloadedRooms>
+          </UnloadedRoomFolder>
         </SubFolders>
         <UnloadedRooms>
-          <UnloadedRoom>
-            <Description IsNull="True" />
-            <Number>1</Number>
-          </UnloadedRoom>
           <UnloadedRoom>
             <Description IsNull="True" />
             <Number>6</Number>
@@ -858,10 +875,6 @@
           <UnloadedRoom>
             <Description IsNull="True" />
             <Number>7</Number>
-          </UnloadedRoom>
-          <UnloadedRoom>
-            <Description IsNull="True" />
-            <Number>12</Number>
           </UnloadedRoom>
           <UnloadedRoom>
             <Description IsNull="True" />
@@ -3809,7 +3822,7 @@
             <ID>15</ID>
             <Image>117</Image>
             <Name>iArmature</Name>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
@@ -3833,7 +3846,7 @@
             <ID>16</ID>
             <Image>121</Image>
             <Name>iRastyKnife</Name>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
@@ -3857,7 +3870,7 @@
             <ID>17</ID>
             <Image>122</Image>
             <Name>iBarrete2</Name>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
@@ -3955,6 +3968,30 @@
             <Name>iDoor_handle</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties />
+            <Interactions>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
+          <InventoryItem>
+            <CursorImage>0</CursorImage>
+            <Description xml:space="preserve">New inventory item</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>22</ID>
+            <Image>148</Image>
+            <Name>iGoldenKey</Name>
+            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <Properties>
+              <CustomProperty>
+                <Name>Description</Name>
+                <Value xml:space="preserve">Большой позолоченный ключ. По размеру подходит под замочную скважину шкафа</Value>
+              </CustomProperty>
+            </Properties>
             <Interactions>
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Event Index="0" />
@@ -4327,19 +4364,33 @@
 @S  // Dialog startup entry point
 return 
 @1
-  TypeText("Преодолевая апатию и некоторую брезгливость вы все же снимаете с себя и одежду и становитесь на холодную эмалированную поверхность.");
-  FadeOut(2);
-  aShower.Play();
-  Wait(160);
-  FadeIn(2);
-  TypeText("В голове свербит привычная мысль: 'А смысл?' Однако горячая вода и аромат какого-то дешевого шампуня делает свое дело.");
-  TypeText("Постояв несколько минут под душем, вы чувствуете себя значительно лучше.");
-  is_washed = true;
-  ChangeMood(1);
+  if (IsNight == false)
+  {
+    TypeText("Преодолевая апатию и некоторую брезгливость вы все же снимаете с себя и одежду и становитесь на холодную эмалированную поверхность.");
+    FadeOut(2);
+    aShower.Play();
+    Wait(160);
+    FadeIn(2);
+    TypeText("В голове свербит привычная мысль: 'А смысл?' Однако горячая вода и аромат какого-то дешевого шампуня делает свое дело.");
+    TypeText("Постояв несколько минут под душем, вы чувствуете себя значительно лучше.");
+    is_washed = true;
+    ChangeMood(1);
+  }
+  else
+  {
+    TypeText("Думаю, мыться сейчас - не лучшая идея.");
+  }
 stop
 @2
-  TypeText("Темно и несет плесенью. Мне совершенно точно не хочется там копаться без веской причины.");
-return
+  if (IsNight == false)
+  {
+    TypeText("Темно и несет плесенью. Мне совершенно точно не хочется там копаться без веской причины.");
+  }
+  else
+  {
+    player.ChangeRoom(38, 0, 0);
+  }
+stop
 @3
 stop
 ]]></Script>
@@ -4348,19 +4399,19 @@ stop
                 <ID>1</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Принять душ</Text>
+                <Text xml:space="preserve">1. Принять душ</Text>
               </DialogOption>
               <DialogOption>
                 <ID>2</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Заглянуть под ванну</Text>
+                <Text xml:space="preserve">2. Заглянуть под ванну</Text>
               </DialogOption>
               <DialogOption>
                 <ID>3</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text>Уйти</Text>
+                <Text xml:space="preserve">3. Уйти</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
@@ -10060,6 +10111,22 @@ stop
               <OffsetY>0</OffsetY>
               <ImportHeight>689</ImportHeight>
               <ImportWidth>1184</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="148" Width="100" Height="100" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Инвентарь/Ключ от шкафа.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>100</ImportHeight>
+              <ImportWidth>100</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>
