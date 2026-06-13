@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>41</AudioIndexer>
+      <AudioIndexer>43</AudioIndexer>
       <AutoMoveInWalkMode>False</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets>Windows</BuildTargets>
@@ -866,15 +866,24 @@
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
+          <UnloadedRoomFolder Name="Storeroom">
+            <SubFolders />
+            <UnloadedRooms>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>7</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>39</Number>
+              </UnloadedRoom>
+            </UnloadedRooms>
+          </UnloadedRoomFolder>
         </SubFolders>
         <UnloadedRooms>
           <UnloadedRoom>
             <Description IsNull="True" />
             <Number>6</Number>
-          </UnloadedRoom>
-          <UnloadedRoom>
-            <Description IsNull="True" />
-            <Number>7</Number>
           </UnloadedRoom>
           <UnloadedRoom>
             <Description IsNull="True" />
@@ -4001,6 +4010,49 @@
               <Event Index="4" />
             </Interactions>
           </InventoryItem>
+          <InventoryItem>
+            <CursorImage>0</CursorImage>
+            <Description xml:space="preserve">New inventory item</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>23</ID>
+            <Image>149</Image>
+            <Name>iLamp</Name>
+            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <Properties />
+            <Interactions>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
+          <InventoryItem>
+            <CursorImage>0</CursorImage>
+            <Description xml:space="preserve">New inventory item</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>24</ID>
+            <Image>155</Image>
+            <Name>iBread</Name>
+            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <Properties>
+              <CustomProperty>
+                <Name>Description</Name>
+                <Value xml:space="preserve">Немного черствый батон хлеба, с краев чуть поддернутый плесенью.</Value>
+              </CustomProperty>
+            </Properties>
+            <Interactions>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
         </InventoryItems>
       </InventoryItemFolder>
     </InventoryItems>
@@ -4197,7 +4249,7 @@
             <SpeechView>0</SpeechView>
             <StartX>583</StartX>
             <StartY>996</StartY>
-            <StartingRoom>23</StartingRoom>
+            <StartingRoom>31</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>False</TurnWhenFacing>
@@ -5306,6 +5358,112 @@ stop
               </DialogOption>
             </DialogOptions>
           </Dialog>
+          <Dialog>
+            <ID>17</ID>
+            <Name>dBlacky</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+option-on 1  
+option-on 2  
+option-off 3
+option-off 4
+return
+@1
+  TypeText("<????: Мы - твой единственный друг, Антон.");
+  TypeText("<????: Ты забыл нас? А мы всегда ждали, когда ты вернешься. Мы всегда были тут.");
+  TypeText("<????: Ты ведь уже был здесь. Приходил и не вернулся. Помнишь? Вспомни.");
+option-off 1
+option-on 3
+return
+@2
+  TypeText("<????: Место, куда возвращается каждый, кто мечтает сбежать.");
+  TypeText("<????: Конечно, ты можешь уйти, если захочешь. Пока что. Но ты вернешься - мы знаем.");
+option-off 2
+option-on 3
+return
+@3
+  TypeText("<????: Это значит, что любому самообману приходит конец, и ты возвращаешься к тому, чего ты заслуживаешь на самом деле, мой друг.");
+  TypeText("<????: Скажи, мы тебе не нравимся? Но ведь у нас больше общего, чем ты думаешь.");
+  TypeText("<????: Сейчас думаешь. Придет время, и ты все поймешь. А мы подождем. Мы умеем ждать.");
+option-off 3
+option-on 4
+return
+@4
+  TypeText("<????: Конечно. Я дам тебе шанс.");
+  TypeText("<????: В который раз. Очередной. Снова. Один из многих, все из которых заканчивались для тебя одинаково.");
+  TypeText("<????: В какой-то мере, это даже забавно.");
+  TypeText("<????: Но чтобы уйти, тебе кое-что нужно. Подойди ближе. Не бойся - это не больно.");
+  TypeText("<????: Подойди.");
+  TypeText("<????: Ближе.");
+  blacky = blacky + 1;
+option-off-forever 4
+stop
+@5
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Что ты такое?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Что это за место?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Что это значит - "ты меня ждал"?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Пожалуйста... послушай, кто бы ты ни был, я просто хочу уйти.</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>5</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">"Это все мне просто мерещится" (закончить диалог).</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>18</ID>
+            <Name>dShadows</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+  aTeleport.Play();
+  player.ChangeRoom(32, 260, 960);
+return
+@2
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Войти в темноту.</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Не сейчас.</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
         </Dialogs>
       </DialogFolder>
     </Dialogs>
@@ -5952,6 +6110,13 @@ stop
           <ArrayType>None</ArrayType>
           <DefaultValue>0</DefaultValue>
           <Name>boss_answer</Name>
+          <Type>int</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>0</DefaultValue>
+          <Name>blacky</Name>
           <Type>int</Type>
         </GlobalVariable>
       </Variables>
@@ -10136,6 +10301,38 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
+          <Sprite Slot="149" Width="100" Height="110" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Инвентарь/Лампа.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>110</ImportHeight>
+              <ImportWidth>100</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="155" Width="100" Height="110" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Инвентарь/Хлеб.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>110</ImportHeight>
+              <ImportWidth>100</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
         </Sprites>
       </SpriteFolder>
     </Sprites>
@@ -11070,35 +11267,35 @@ stop
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
-                    <Delay>30</Delay>
+                    <Delay>15</Delay>
                     <Flipped>False</Flipped>
                     <ID>1</ID>
                     <Image>145</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
-                    <Delay>30</Delay>
+                    <Delay>15</Delay>
                     <Flipped>False</Flipped>
                     <ID>2</ID>
                     <Image>146</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
-                    <Delay>45</Delay>
+                    <Delay>15</Delay>
                     <Flipped>False</Flipped>
                     <ID>3</ID>
                     <Image>147</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
-                    <Delay>30</Delay>
+                    <Delay>15</Delay>
                     <Flipped>False</Flipped>
                     <ID>4</ID>
                     <Image>146</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                   <ViewFrame>
-                    <Delay>30</Delay>
+                    <Delay>15</Delay>
                     <Flipped>False</Flipped>
                     <ID>5</ID>
                     <Image>145</Image>
@@ -11330,6 +11527,19 @@ See KeyboardMovement.txt for details.
                 <SourceFileName>Assets/Звуки/Фоновая/scary_coridor.mp3</SourceFileName>
                 <Type>2</Type>
                 <FileLastModifiedDate>2026-06-07 10:18:59Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InSeparateVOX</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>80</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>39</ID>
+                <Index>42</Index>
+                <ScriptName>aBlack_hole</ScriptName>
+                <SourceFileName>Assets/Звуки/Фоновая/black_hole.mp3</SourceFileName>
+                <Type>2</Type>
+                <FileLastModifiedDate>2026-06-12 15:44:14Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
@@ -11771,6 +11981,19 @@ See KeyboardMovement.txt for details.
                 <SourceFileName>Assets/Звуки/key.mp3</SourceFileName>
                 <Type>3</Type>
                 <FileLastModifiedDate>2026-06-10 20:06:07Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>40</ID>
+                <Index>43</Index>
+                <ScriptName>aTeleport</ScriptName>
+                <SourceFileName>Assets/Звуки/вход_в_темноту.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-06-12 15:31:25Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
