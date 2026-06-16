@@ -786,11 +786,11 @@
             <UnloadedRooms>
               <UnloadedRoom>
                 <Description IsNull="True" />
-                <Number>27</Number>
+                <Number>5</Number>
               </UnloadedRoom>
               <UnloadedRoom>
                 <Description IsNull="True" />
-                <Number>5</Number>
+                <Number>27</Number>
               </UnloadedRoom>
               <UnloadedRoom>
                 <Description IsNull="True" />
@@ -3096,7 +3096,7 @@
                 <TextColor>0</TextColor>
                 <TextPaddingHorizontal>2</TextPaddingHorizontal>
                 <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>204</Top>
+                <Top>207</Top>
                 <Translated>True</Translated>
                 <Visible>True</Visible>
                 <Width>695</Width>
@@ -3214,6 +3214,34 @@
                 <Width>695</Width>
                 <WrapText>False</WrapText>
                 <ZOrder>6</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>6</Font>
+                <Height>52</Height>
+                <ID>7</ID>
+                <Image>61</Image>
+                <Left>254</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnNote8</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnNote8_OnClick</OnClick>
+                <PushedImage>0</PushedImage>
+                <Text xml:space="preserve">New Button</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>461</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>695</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>7</ZOrder>
               </GUIButton>
             </Controls>
           </GUIMain>
@@ -3705,7 +3733,7 @@
             <ID>9</ID>
             <Image>83</Image>
             <Name>iNote</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <PlayerStartsWithItem>True</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
@@ -3839,7 +3867,7 @@
             <ID>15</ID>
             <Image>117</Image>
             <Name>iArmature</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <PlayerStartsWithItem>True</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
@@ -4074,6 +4102,30 @@
               <CustomProperty>
                 <Name>Description</Name>
                 <Value xml:space="preserve">Моток женских волос черного цвета. У меня очень неприятное чувство, будто они едва заметно шевелятся в кармане.</Value>
+              </CustomProperty>
+            </Properties>
+            <Interactions>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
+          <InventoryItem>
+            <CursorImage>0</CursorImage>
+            <Description xml:space="preserve">New inventory item</Description>
+            <HotspotX>0</HotspotX>
+            <HotspotY>0</HotspotY>
+            <ID>26</ID>
+            <Image>160</Image>
+            <Name>iStar_salve</Name>
+            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <Properties>
+              <CustomProperty>
+                <Name>Description</Name>
+                <Value xml:space="preserve">Это же легендарная "Звездочка". Как могло прийти в голову ее выбросить?</Value>
               </CustomProperty>
             </Properties>
             <Interactions>
@@ -4752,11 +4804,13 @@ return
 option-off 2;
 return
 @3
-  TypeText("Там почти ничего нет, хотя пахнет неприятно.");
-  TypeText("Что это? Жук? Нет...");
-  TypeText("Таракан!");
-  TypeText("Смотрит на меня. Шевелит своими усищами.");
-option-on 4;
+  TypeText("Внутри почти пусто, но пахнет неприятно.");
+  TypeText("Поворошив рукой картофельные очистки, вы нащупываете что-то маленькое и металлическое.");
+  TypeText("На свет появляется крохотная шайба с логотипом, знакомым с детства: мазь 'Звездочка'.");
+  TypeText("Не понимая, зачем она вам, вы кладете ее в карман.");
+  player.AddInventory(iStar_salve);
+  TypeText("Получен предмет: 'мазь Звездочка'.");
+
 option-off 3;
 return
 @4
@@ -5042,6 +5096,10 @@ option-off 4
 option-off 5
 option-off 6
 option-off 7
+option-off 8
+option-off 9
+option-off 10
+option-off 11
 return
 
 @1
@@ -5103,17 +5161,20 @@ return
   Wait(120);
   cBum.LockView(cBum.SpeechView); 
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
-  TypeText(">Бомж: Говори, парень, авось полегчает.");
+  TypeText(">Бомж: Говори, авось полегчает.");
   TypeText(">Бомж: Ночь - она всегда долгая, а эта будет длинее прочих.");
   TypeText(">Бомж: Времени у нас - до рассвета.");
   TypeText(">Бомж: Так чего же ты хочешь?");
   cBum.UnlockView();
 option-off 4
+option-off 5
 option-on 6
 option-on 7
 return
 @6
-  TypeText("Антон: Я хочу просто вернуться домой.");
+  TypeText("Антон: Как чего? Я просто хочу вернуться домой.");
+  TypeText("Антон: Починить свет, зайти в свою комнату и лечь спать.");
+  TypeText("Антон: А завтра сделать вид, что вся эта дичь мне приснилась.");
   cBum.LockView(cBum.SpeechView); 
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
   TypeText(">Бомж: Домой, говоришь?");
@@ -5121,35 +5182,69 @@ return
   Wait(120);
   cBum.LockView(cBum.SpeechView); 
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
-  TypeText(">Бомж: Хорошее слово. Теплое. Но знаешь, что я тебе скажу, парень?");
+  TypeText(">Бомж: Дом - это хорошее слово. Теплое. Но знаешь, что я тебе скажу, парень?");
   TypeText(">Бомж: Ты не хочешь домой. Ты хочешь вернуться назад.");
   TypeText(">Бомж: Ты устал, тебе страшно. Ты думаешь закрыться за дверью, провернуть все замки и оказаться в месте, где тебя когда-то любили. Когда-то давно, парень. Хочешь вернуться в прошлое.");
   TypeText(">Бомж: Носишь его, как тяжелый мешок за плечами.");
   TypeText(">Бомж: Я же вижу. Брось его. Посмотри на меня - вот я дома.");
   cBum.UnlockView();
-option-off 6
-option-off 7
+option-off-forever 6
+option-off-forever 7
 option-on 8
 return
 @7
-  TypeText("Антон: Творится какое-то безумие. Я просто хочу отсюда выбраться.");
+  TypeText("Антон: Здесь происходит что-то ненормальное. Мне надо выбраться отсюда.");
   cBum.LockView(cBum.SpeechView); 
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
-  TypeText(">Бомж: Можно сбежать из панельки, парень. Но, как говорится, панелька не уйдет мз тебя.");
+  TypeText(">Бомж: Это несложно, парень. Но, знаешь, как говорят? Уйдешь из панельки, а вот панелька не уйдет из тебя. Будешь просто таскать ее всюду.");
   TypeText(">Бомж: Знаешь, что я сам понял, когда стер ноги до крови?");
   TypeText(">Бомж: Настоящий побег - это побег от самого себя.");
   TypeText(">Бомж: Треплются, что все это невозможно, но я считаю, что это как раз лучше всего. И что это - самое правильное.");
   TypeText(">Бомж: Когда удалось сбежать от себя - становится все равно, где ты и кто ты.");
-  TypeText(">Бомж: Тогда-то ты и становишься свободным.");
+  TypeText(">Бомж: Тогда ты и освободишься.");
   cBum.UnlockView();
-option-off 6
-option-off 7
+option-off-forever 6
+option-off-forever 7
 option-on 8  
 return
 @8
-  TypeText("Антон: Здесь творится какое-то безумие. Я просто хочу отсюда выбраться.");
+  TypeText("Антон: Эээ... спасибо. Не скажу, что я понял, что делать, но я об этом подумаю на досуге.");
+  TypeText("Антон: Хотя сложно о чем-то думать, когда жизнь идет наперекосяк и не спишь вторые сутки подряд.");
+  TypeText("Антон: Правда, все это не решает моей насущной проблемы.");
+  cBum.LockView(cBum.SpeechView); 
+  cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
+  TypeText(">Бомж: С любой проблемой главное не спешить, парень.");
+  TypeText(">Бомж: Рано или поздно она все равно решится, а ты не будешь уставшим.");
+  cBum.UnlockView();
+option-off 8
+option-off 9
+option-off 10
+option-on 11
 return
 @9
+  TypeText("Антон: Это, конечно, все очень интересно. Вот только я не понял вообще нихрена.");
+  cBum.LockView(cBum.SpeechView); 
+  cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
+  TypeText(">Бомж: Если ты оказался здесь и до сих пор ничегошеньки не понял, то дела твои никудышно, парень");
+  TypeText(">Бомж: Хотя, возможно, это все молодость, и время еще есть.");
+  TypeText(">Бомж: Но помни - его не так много.");
+  cBum.UnlockView();
+option-off 8
+option-off 9
+option-off 10
+option-on 11
+return
+@10
+  TypeText("Антон: Слушай, я типо воспитанный, все дела, и знаю, что перед старшими надо челом бить.");
+  TypeText("Антон: Но по-моему ты просто старый выживший из ума маразматик.");
+  TypeText("Антон: Так что не капай мне на мозги. Со своей жизнью я как-нибудь сам разберусь.");
+  cBum.LockView(cBum.SpeechView); 
+  cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
+  TypeText(">Бомж: Разберешься - охотно верю.");
+  TypeText(">Бомж: Но пока ты сидишь на ступеньках с воняющим старым бомжом.");
+  cBum.UnlockView();
+return
+@11
   cBum.LockView(cBum.SpeechView); 
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
   TypeText(">Бомж: Нет, я бомж-лужевидец.");
@@ -5157,19 +5252,17 @@ return
   TypeText("Антон: Чего?");
   cBum.LockView(cBum.SpeechView); 
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
-  TypeText(">Бомж: Это было давно, парень. Ты тогда еще ползал под столом на коленках и слюнявил фломастеры. А я тот день прошатался в пустую по рынкам. Ничего не удалось раздобыть, и голова кружилась от голода.");
+  TypeText(">Бомж: Это было давно, парень. Ты тогда еще ползал под столом на коленках и слюнявил фломастеры. А я в тот день прошатался впустую по рынкам. Никто мне не подал, ничего не удалось раздобыть, и голова кружилась от голода.");
   TypeText(">Бомж: Я присел на бордюр, чтобы немного передохнуть, и, о горе, вдобавок ко всему пошел ливень. Передо мной быстро образовалась огромная грязная лужа.");
-  TypeText(">Бомж: Встать не было сил, и я просто сидел и смотрел. Смотрел, как бесконечно бьют капли, и как круги расходятся по воде. Мне было плохо, я весь вымок, от слабости кружилась голова, но я продолжал просто смотреть. И в какой-то момент я что-то увидел.");
-  TypeText(">Бомж: Можешь мне не верить, парень, но в луже был я сам. Не именно я, а другой я, который сидел и тоже смотрел в такую же лужу, где был уже другой я, точно также смотрящий в еще одну - и так далее. В тот миг что-то изменилось. Меня пронзило знанием. Из воды вылетели тонкие красные нити, которые потянулись во все стороны и оплели все вокруг. Меня сцепило с теми 'другими', смотрящими в бесконечные лужи.");
-  TypeText(">Бомж: Я был так поражен, что вскочил на ноги и принялся кружиться и танцевать прямо на улице под дождем.");
-  TypeText(">Бомж: Меня быстро схватили и упекли на неделю в психушку.");
+  TypeText(">Бомж: Идти куда-то не было сил, и я просто сидел и смотрел. Смотрел, как бесконечно бьют капли, и как круги расходятся по воде. Я чувствовал себя плохо, весь вымок, от слабости кружилась голова, но я просто сидел, как побитая псина и смотрел в лужу. И в какой-то момент что-то произошло.");
+  TypeText(">Бомж: Я что-то увидел. Можешь мне не верить, парень, но в луже был я сам. То есть, не мое отражение, а я, но только другой я, который сидел и тоже смотрел в такую же лужу, где был уже другой я, точно также смотрящий в еще одну - и так далее. В тот миг в моей голове что-то щелкнуло. Меня пронзило знанием.");
+  TypeText(">Бомж: Из воды вылетели красные нити, они потянулись в стороны и оплели все вокруг. Меня сцепило с теми 'другими' бесконечными версиями, смотрящими в бесконечные лужи.");
+  TypeText(">Бомж: Я был так поражен, что вскочил на ноги и принялся кружиться и танцевать, прямо на улице, под дождем.");
+  TypeText(">Бомж: Меня после этого упекли на неделю в психушку.");
   TypeText(">Бомж: Но в тот день я много понял о жизни.");
   cBum.UnlockView();
   TypeText("Антон: ...");
   TypeText("Антон: Ахуительная история.");
-option-off 9
-return
-@10
 return
 ]]></Script>
             <DialogOptions>
@@ -5207,7 +5300,7 @@ return
                 <ID>6</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Я хочу вернуться домой.</Text>
+                <Text xml:space="preserve">Я хочу вернуться в свой дом</Text>
               </DialogOption>
               <DialogOption>
                 <ID>7</ID>
@@ -5225,13 +5318,19 @@ return
                 <ID>9</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Ты что, типо, психолог?</Text>
+                <Text xml:space="preserve">Я не понял вообще нихрена.</Text>
               </DialogOption>
               <DialogOption>
                 <ID>10</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">По-моему, ты втираешь мне какую-то дичь</Text>
+                <Text xml:space="preserve">Ты меня заебал.</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>11</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Ты что, типо, психолог?</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
@@ -10406,6 +10505,54 @@ stop
               <OffsetY>0</OffsetY>
               <ImportHeight>110</ImportHeight>
               <ImportWidth>100</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="158" Width="84" Height="150" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Объекты/Лампа (погасшая).png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>150</ImportHeight>
+              <ImportWidth>84</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="159" Width="70" Height="150" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Объекты/Лампа (1).png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>150</ImportHeight>
+              <ImportWidth>70</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="160" Width="73" Height="110" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Инвентарь/102670-a-9-6-d-a96d8594865b2c416e4d44164e9536baa7d0b042_102670 (1).png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>110</ImportHeight>
+              <ImportWidth>73</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>
