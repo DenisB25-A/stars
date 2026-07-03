@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>46</AudioIndexer>
+      <AudioIndexer>47</AudioIndexer>
       <AutoMoveInWalkMode>False</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets>Windows</BuildTargets>
@@ -749,6 +749,10 @@
                 <Description IsNull="True" />
                 <Number>37</Number>
               </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>42</Number>
+              </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
           <UnloadedRoomFolder Name="Mirror">
@@ -778,6 +782,18 @@
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>41</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>43</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>44</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>45</Number>
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
@@ -3834,7 +3850,12 @@
             <Image>103</Image>
             <Name>iCup</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties />
+            <Properties>
+              <CustomProperty>
+                <Name>Description</Name>
+                <Value xml:space="preserve">Кружка прекрасного горячего кофе! Что может быть лучше? Конечно, при условии, что вы все сделали правильно.</Value>
+              </CustomProperty>
+            </Properties>
             <Interactions>
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Event Index="0" />
@@ -4361,7 +4382,7 @@
             <SpeechView>0</SpeechView>
             <StartX>583</StartX>
             <StartY>996</StartY>
-            <StartingRoom>31</StartingRoom>
+            <StartingRoom>23</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>False</TurnWhenFacing>
@@ -4758,24 +4779,60 @@ stop
   }
 return
 @1
-  TypeText("Вода из унитаза была бы приятнее");
+  FadeOut(2);
+  AudioChannel *channel1 = aCoffee.Play();
+  while (channel1 != null && channel1.IsPlaying) 
+  {
+    Wait(1); 
+  }
+  FadeIn(2);
+  TypeText("Настолько крепкий, что сводит зубы, еще и несладкий. Не самый мой любимый напиток. Но за неимением лучшего и это сойдет.");
   was_brew_coffee = true;
-  ChangeMood(-1);
+  player.LoseInventory(iCoffee);
+  player.AddInventory(iCup);
+  TypeText("Получен предмет: 'Кружка с кофе.'");
+  
 stop
 @2
-  TypeText("Нельзя сказать, что это было прям вкусно");
+  FadeOut(2);
+  AudioChannel *channel1 = aCoffee.Play();
+  while (channel1 != null && channel1.IsPlaying) 
+  {
+    Wait(1); 
+  }
+  FadeIn(2);
+  TypeText("Вот, то что надо.");
   was_brew_coffee = true;
+  player.LoseInventory(iCoffee);
+  player.LoseInventory(iSugar);
+  player.AddInventory(iCup);
+  ChangeMood(1);
 stop
 @3
-  TypeText("Какая же редкостная мерзость");
+  FadeOut(2);
+  AudioChannel *channel1 = aCoffee.Play();
+  while (channel1 != null && channel1.IsPlaying) 
+  {
+    Wait(1); 
+  }
+  FadeIn(2);
+  TypeText("...");
+  TypeText("Молоко прокисло...");
+  TypeText("Я или не заметил этого или снова забыл... Теперь вода из унитаза на вкус была бы приятнее.");
+  TypeText("Черт, ну почему все снова идет не так?");
+  TypeText("Я так больше... эх.");
   was_brew_coffee = true;
-  ChangeMood(-1);
+  player.LoseInventory(iCoffee);
+  player.LoseInventory(iSugar);
+  player.LoseInventory(iMilk);
+  player.AddInventory(iCup);
+  ChangeMood(-2);
 stop
 @4
 stop
 @5
-  TypeText("Хотелось бы чего-то большего, чем запивать тоску кипятком");
-  TypeText("Мне нужны молоко, кофе, сахар, наверняка все это где-нибудь здесь");
+  TypeText("Хотелось бы чего-то большего, чем запивать тоску кипятком.");
+  TypeText("Мне нужны молоко, кофе, сахар, наверняка все это где-нибудь здесь.");
 stop
 ]]></Script>
             <DialogOptions>
@@ -4783,25 +4840,25 @@ stop
                 <ID>1</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">Сделать кофе</Text>
+                <Text xml:space="preserve">Сделать крепкий черный кофе.</Text>
               </DialogOption>
               <DialogOption>
                 <ID>2</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">Сделать кофе с сахаром</Text>
+                <Text xml:space="preserve">Сделать простой кофе с сахаром.</Text>
               </DialogOption>
               <DialogOption>
                 <ID>3</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">Сделать кофе с молоком и сахаром</Text>
+                <Text xml:space="preserve">Сделать кофе с сахаром и молоком.</Text>
               </DialogOption>
               <DialogOption>
                 <ID>4</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">Ничего не делать</Text>
+                <Text>Уйти.</Text>
               </DialogOption>
               <DialogOption>
                 <ID>5</ID>
@@ -5659,6 +5716,37 @@ stop
                 <Say>False</Say>
                 <Show>True</Show>
                 <Text xml:space="preserve">Не сейчас.</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>19</ID>
+            <Name>dBalcony_cofee</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+  FadeOut(2);
+  player.ChangeRoom(34, 0, 0);
+  Wait(80);
+  FadeIn(2);
+stop
+@2
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Провести остаток дня здесь.</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Не сейчас, еще есть дела.</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
@@ -10627,6 +10715,22 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
+          <Sprite Slot="162" Width="513" Height="141" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Комнаты/Предисловие/Объект для клика.PNG</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>141</ImportHeight>
+              <ImportWidth>513</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
         </Sprites>
       </SpriteFolder>
     </Sprites>
@@ -12327,6 +12431,19 @@ See KeyboardMovement.txt for details.
                 <SourceFileName xml:space="preserve">Assets/Звуки/Тихий скрип.mp3</SourceFileName>
                 <Type>3</Type>
                 <FileLastModifiedDate>2026-06-17 11:48:26Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>44</ID>
+                <Index>47</Index>
+                <ScriptName>aCoffee</ScriptName>
+                <SourceFileName xml:space="preserve">Assets/Звуки/Приготовление кофе.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-06-18 14:06:45Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
