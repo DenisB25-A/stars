@@ -3940,7 +3940,7 @@
             <ID>16</ID>
             <Image>121</Image>
             <Name>iRastyKnife</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <PlayerStartsWithItem>True</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
@@ -4382,7 +4382,7 @@
             <SpeechView>0</SpeechView>
             <StartX>583</StartX>
             <StartY>996</StartY>
-            <StartingRoom>36</StartingRoom>
+            <StartingRoom>32</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>False</TurnWhenFacing>
@@ -10731,13 +10731,13 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="163" Width="512" Height="512" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+          <Sprite Slot="164" Width="534" Height="534" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>Assets/Головоломки/zodiak-wheel-512.png</FileName>
+              <FileName>Assets/Головоломки/zodiak-wheel-534.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
-              <ImportHeight>512</ImportHeight>
-              <ImportWidth>512</ImportWidth>
+              <ImportHeight>534</ImportHeight>
+              <ImportWidth>534</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>
@@ -10747,13 +10747,61 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="164" Width="534" Height="534" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+          <Sprite Slot="163" Width="513" Height="141" ColorDepth="32" Resolution="Real" AlphaChannel="False">
             <Source>
-              <FileName>Assets/Головоломки/zodiak-wheel-534.png</FileName>
+              <FileName>Assets/Комнаты/Предисловие/4-arrows-first-arrow-back.jpg</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
-              <ImportHeight>534</ImportHeight>
-              <ImportWidth>534</ImportWidth>
+              <ImportHeight>141</ImportHeight>
+              <ImportWidth>513</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="165" Width="513" Height="141" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+            <Source>
+              <FileName>Assets/Комнаты/Предисловие/4-arrows-second-arrow-back.jpg</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>141</ImportHeight>
+              <ImportWidth>513</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="166" Width="513" Height="141" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+            <Source>
+              <FileName>Assets/Комнаты/Предисловие/4-arrows-third-arrow-back.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>141</ImportHeight>
+              <ImportWidth>513</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="167" Width="513" Height="141" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+            <Source>
+              <FileName>Assets/Комнаты/Предисловие/4-arrows-forth-arrow-back.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>141</ImportHeight>
+              <ImportWidth>513</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>
