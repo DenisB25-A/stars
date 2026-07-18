@@ -4,3 +4,5 @@ AudioCache/
 Backup/
 *.bak
 *.user
+/_OpenInEditor.lock
+/.cursor

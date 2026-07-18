@@ -1,0 +1,10 @@
+---
+description: Always ask before making any changes
+alwaysApply: true
+---
+
+# Ask before editing
+
+- Before making any file changes, always ask the user first.
+- Do not edit, create, or delete files until the user explicitly confirms.
+- If the user already clearly requested a specific change in the same message, that counts as confirmation for that change only.

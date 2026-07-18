@@ -1,0 +1,10 @@
+---
+description: Keep assistant replies short and direct
+alwaysApply: true
+---
+
+# Short answers
+
+- Answer briefly and directly.
+- Prefer a few short sentences over long explanations.
+- Expand only when the user asks for detail.
