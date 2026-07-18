@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>47</AudioIndexer>
+      <AudioIndexer>48</AudioIndexer>
       <AutoMoveInWalkMode>False</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets>Windows</BuildTargets>
@@ -3940,7 +3940,7 @@
             <ID>16</ID>
             <Image>121</Image>
             <Name>iRastyKnife</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <PlayerStartsWithItem>True</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
@@ -4382,7 +4382,7 @@
             <SpeechView>0</SpeechView>
             <StartX>583</StartX>
             <StartY>996</StartY>
-            <StartingRoom>23</StartingRoom>
+            <StartingRoom>32</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>False</TurnWhenFacing>
@@ -9963,22 +9963,6 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="104" Width="101" Height="150" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-            <Source>
-              <FileName>Assets/Объекты/openart-image_1778582350613_1596581b_1778582350638_63111bce (1).png</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>150</ImportHeight>
-              <ImportWidth>101</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>True</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <TransparentColorIndex>0</TransparentColorIndex>
-              <ImportAlphaChannel>True</ImportAlphaChannel>
-            </Source>
-          </Sprite>
           <Sprite Slot="41" Width="85" Height="110" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
               <FileName>Assets/Инвентарь/openart-image_1778582350613_1596581b_1778582350638_63111bce (1).png</FileName>
@@ -10571,6 +10555,22 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
+          <Sprite Slot="104" Width="101" Height="150" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Объекты/openart-image_1778582350613_1596581b_1778582350638_63111bce (1).png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>150</ImportHeight>
+              <ImportWidth>101</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
           <Sprite Slot="148" Width="100" Height="100" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
               <FileName>Assets/Инвентарь/Ключ от шкафа.png</FileName>
@@ -10718,6 +10718,86 @@ stop
           <Sprite Slot="162" Width="513" Height="141" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
               <FileName>Assets/Комнаты/Предисловие/Объект для клика.PNG</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>141</ImportHeight>
+              <ImportWidth>513</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="164" Width="534" Height="534" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Головоломки/zodiak-wheel-534.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>534</ImportHeight>
+              <ImportWidth>534</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="163" Width="513" Height="141" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+            <Source>
+              <FileName>Assets/Комнаты/Предисловие/4-arrows-first-arrow-back.jpg</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>141</ImportHeight>
+              <ImportWidth>513</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="165" Width="513" Height="141" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+            <Source>
+              <FileName>Assets/Комнаты/Предисловие/4-arrows-second-arrow-back.jpg</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>141</ImportHeight>
+              <ImportWidth>513</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="166" Width="513" Height="141" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+            <Source>
+              <FileName>Assets/Комнаты/Предисловие/4-arrows-third-arrow-back.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>141</ImportHeight>
+              <ImportWidth>513</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="167" Width="513" Height="141" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+            <Source>
+              <FileName>Assets/Комнаты/Предисловие/4-arrows-forth-arrow-back.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>141</ImportHeight>
@@ -12444,6 +12524,19 @@ See KeyboardMovement.txt for details.
                 <SourceFileName xml:space="preserve">Assets/Звуки/Приготовление кофе.mp3</SourceFileName>
                 <Type>3</Type>
                 <FileLastModifiedDate>2026-06-18 14:06:45Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>45</ID>
+                <Index>48</Index>
+                <ScriptName>aMovingStone</ScriptName>
+                <SourceFileName>Assets/Звуки/moving-stones.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-07-18 14:05:34Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
