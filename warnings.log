@@ -1,1 +1,1 @@
-Game : (room:42) [GlobalScript.asc:900] Character.Walk: character cEgo is turned off and cannot be moved
+Game : (room:44) [room44.asc:15] Wait() was used in "Before Fadein" event; use "After Fadein" instead
