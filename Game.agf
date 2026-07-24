@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>49</AudioIndexer>
+      <AudioIndexer>53</AudioIndexer>
       <AutoMoveInWalkMode>False</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets>Windows</BuildTargets>
@@ -88,7 +88,7 @@
       <UseOldVoiceClipNaming>False</UseOldVoiceClipNaming>
       <Version>1.0.0.0</Version>
       <WalkInLookMode>False</WalkInLookMode>
-      <WhenInterfaceDisabled>GreyOut</WhenInterfaceDisabled>
+      <WhenInterfaceDisabled>Unchanged</WhenInterfaceDisabled>
     </Settings>
     <RuntimeSetup>
       <AAScaledSprites>False</AAScaledSprites>
@@ -721,15 +721,6 @@
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
-          <UnloadedRoomFolder Name="Night_rooms">
-            <SubFolders />
-            <UnloadedRooms>
-              <UnloadedRoom>
-                <Description IsNull="True" />
-                <Number>28</Number>
-              </UnloadedRoom>
-            </UnloadedRooms>
-          </UnloadedRoomFolder>
           <UnloadedRoomFolder Name="Preamble">
             <SubFolders />
             <UnloadedRooms>
@@ -903,17 +894,25 @@
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
+          <UnloadedRoomFolder Name="Balcony">
+            <SubFolders />
+            <UnloadedRooms>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>6</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>28</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>34</Number>
+              </UnloadedRoom>
+            </UnloadedRooms>
+          </UnloadedRoomFolder>
         </SubFolders>
-        <UnloadedRooms>
-          <UnloadedRoom>
-            <Description IsNull="True" />
-            <Number>6</Number>
-          </UnloadedRoom>
-          <UnloadedRoom>
-            <Description IsNull="True" />
-            <Number>34</Number>
-          </UnloadedRoom>
-        </UnloadedRooms>
+        <UnloadedRooms />
       </UnloadedRoomFolder>
     </Rooms>
     <GUIs>
@@ -2685,10 +2684,10 @@
           <GUIMain>
             <NormalGUI>
               <BackgroundColor>0</BackgroundColor>
-              <BackgroundImage>34</BackgroundImage>
+              <BackgroundImage>47</BackgroundImage>
               <BorderColor>0</BorderColor>
               <Clickable>True</Clickable>
-              <Height>200</Height>
+              <Height>230</Height>
               <ID>12</ID>
               <Left>0</Left>
               <Name>gMoodPanel</Name>
@@ -2698,8 +2697,8 @@
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Top>0</Top>
               <Transparency>0</Transparency>
-              <Visible>False</Visible>
-              <Width>700</Width>
+              <Visible>True</Visible>
+              <Width>230</Width>
               <ZOrder>0</ZOrder>
             </NormalGUI>
             <Controls>
@@ -2721,6 +2720,34 @@
                 <Width>282</Width>
                 <ZOrder>0</ZOrder>
               </GUILabel>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>230</Height>
+                <ID>1</ID>
+                <Image>189</Image>
+                <Left>0</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btn_Bottle_empty</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>0</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>1</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>230</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>1</ZOrder>
+              </GUIButton>
             </Controls>
           </GUIMain>
           <GUIMain>
@@ -4541,11 +4568,11 @@
             <Clickable>True</Clickable>
             <DiagonalLoops>True</DiagonalLoops>
             <ID>4</ID>
-            <IdleAnimationDelay>4</IdleAnimationDelay>
+            <IdleAnimationDelay>9</IdleAnimationDelay>
             <IdleDelay>20</IdleDelay>
             <IdleView>0</IdleView>
             <MovementLinkedToAnimation>True</MovementLinkedToAnimation>
-            <MovementSpeed>3</MovementSpeed>
+            <MovementSpeed>50</MovementSpeed>
             <MovementSpeedX>0</MovementSpeedX>
             <MovementSpeedY>0</MovementSpeedY>
             <NormalView>14</NormalView>
@@ -4557,11 +4584,11 @@
             <SpeechColor>12</SpeechColor>
             <SpeechView>0</SpeechView>
             <StartX>1330</StartX>
-            <StartY>946</StartY>
+            <StartY>948</StartY>
             <StartingRoom>44</StartingRoom>
             <ThinkingView>0</ThinkingView>
-            <TurnBeforeWalking>True</TurnBeforeWalking>
-            <TurnWhenFacing>True</TurnWhenFacing>
+            <TurnBeforeWalking>False</TurnBeforeWalking>
+            <TurnWhenFacing>False</TurnWhenFacing>
             <UniformMovementSpeed>True</UniformMovementSpeed>
             <UseRoomAreaLighting>True</UseRoomAreaLighting>
             <UseRoomAreaScaling>True</UseRoomAreaScaling>
@@ -5660,9 +5687,9 @@ stop
 return
 @1
   TypeText("Антон: Что... что черт возьми ты такое?");
-  TypeText("<????: Что мы такое? Это странный вопрос, которым почему-то задаются лишь люди, и мы не можем ответить тебе. Мы - это многое.");
-  TypeText("<????: Мы - это сумрак. Шепот земли и небо без звезд. Мы - это сны, от которых ты просыпаешься в холодном поту. Мы - это то, о чем ты мечтаешь, но не хочешь признаться. Мы - единственный друг, который у тебя остался, Антон.");
-  TypeText("<????: Когда тебя оставили все, мы тебя ждали, и мы всегда были тут.");
+  TypeText("<????: Что мы такое? Странный вопрос, которым задаются все люди. Мы не можем ответить тебе. Мы - это многое.");
+  TypeText("<????: Мы - это сумрак. Шепот земли и небо без звезд. Мы - это сны, от которых ты просыпаешься в холодном поту. Мы - твой единственный друг, который у тебя остался, Антон.");
+  TypeText("<????: Когда тебя оставили все, мы ждали, когда ты придешь, и мы всегда были тут.");
   TypeText("<????: И вот ты пришел.");
 option-off 1
 option-on 3
@@ -5673,26 +5700,28 @@ return
   TypeText("<????: Место покоя и счастья.");
   TypeText("<????: Тебе здесь не нравится?");
   TypeText("<????: Со временем ты привыкнешь. Когда забываешь, как было 'до', становится легче.");
+  TypeText("<????: Вот увидишь.");
 option-off 2
 option-on 3
 return
 @3
-  TypeText("Антон: Что это значит, 'ты меня ждал?'");
-  TypeText("<????: Это значит, что любому самообману приходит конец, и каждый получает то, чего он заслуживает, Антон.");
-  TypeText("<????: Ты пришел к нам, и ты здесь не случайно.");
-  TypeText("<????: Мы знаем, что сейчас у тебя много вопросов, но ты обязательно все поймешь, в свое время. Времени у тебя будет много.");
+  TypeText("Антон: Что это значит, 'вы меня ждали'?");
+  TypeText("<????: Это значит, что любому самообману приходит конец, и каждый получает то, чего он заслуживает.");
+  TypeText("<????: Поэтому ты здесь не случайно.");
+  TypeText("<????: Мы знаем, что у тебя много вопросов, но ты обязательно все поймешь, в свое время. Его у тебя будет достаточно.");
 option-off 3
 option-on 4
 return
 @4
-  TypeText("Антон: Пожалуйста... послушай, я не знаю, кто ты и что происходит, но просто выпусти меня. Я хочу уйти отсюда.");
+  TypeText("Антон: Послушай, я не знаю, кто ты или что ты такое и не знаю, что происходит. Но, пожалуйста, просто отпусти меня. Я хочу уйти отсюда.");
   TypeText("<????: Если так хочешь.");
   TypeText("<????: Мы дадим тебе шанс.");
   TypeText("<????: Еще один. Снова.");
   TypeText("<????: В какой-то мере, это даже забавно.");
-  TypeText("<????: А мы подождем, когда ты снова вернешься. Мы умеем ждать.");
+  TypeText("<????: А мы подождем, когда ты вернешься. Мы умеем ждать.");
   TypeText("Антон: ...");
-  TypeText("<????: Но чтобы уйти, тебе потребуется кое-что. Подойди ближе. Не бойся - это не больно.");
+  TypeText("<????: Но чтобы уйти, тебе потребуется кое-что.");
+  TypeText("<????: Подойди ближе. Не бойся - это не больно.");
   TypeText("<????: Подойди.");
   TypeText("<????: Ближе.");
   blacky = blacky + 1;
@@ -5706,25 +5735,25 @@ stop
                 <ID>1</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">&lt;&lt;Что ты такое?&gt;&gt;</Text>
+                <Text xml:space="preserve">Что ты такое?</Text>
               </DialogOption>
               <DialogOption>
                 <ID>2</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">&lt;&lt;Что это за место?&gt;&gt;</Text>
+                <Text xml:space="preserve">Что это за место?</Text>
               </DialogOption>
               <DialogOption>
                 <ID>3</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">&lt;&lt;Я ничего не понимаю.&gt;&gt;</Text>
+                <Text xml:space="preserve">Я ничего не понимаю.</Text>
               </DialogOption>
               <DialogOption>
                 <ID>4</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">&lt;&lt;Отпусти меня.&gt;&gt;</Text>
+                <Text xml:space="preserve">Отпусти меня.</Text>
               </DialogOption>
               <DialogOption>
                 <ID>5</ID>
@@ -6447,6 +6476,13 @@ stop
           <ArrayType>None</ArrayType>
           <DefaultValue>0</DefaultValue>
           <Name>blacky</Name>
+          <Type>int</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>0</DefaultValue>
+          <Name>ManekenPhase</Name>
           <Type>int</Type>
         </GlobalVariable>
       </Variables>
@@ -8890,6 +8926,219 @@ stop
                   <OffsetY>0</OffsetY>
                   <ImportHeight>800</ImportHeight>
                   <ImportWidth>950</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="177" Width="821" Height="800" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Персонажи/Манекен/Идет влево/frame_001 (1).png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>800</ImportHeight>
+                  <ImportWidth>821</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="178" Width="821" Height="800" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Персонажи/Манекен/Идет влево/frame_002 (1).png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>800</ImportHeight>
+                  <ImportWidth>821</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="179" Width="821" Height="800" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Персонажи/Манекен/Идет влево/frame_003 (3).png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>800</ImportHeight>
+                  <ImportWidth>821</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="180" Width="821" Height="800" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Персонажи/Манекен/Идет влево/frame_004 (2).png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>800</ImportHeight>
+                  <ImportWidth>821</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="181" Width="821" Height="800" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Персонажи/Манекен/Идет влево/frame_005 (1).png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>800</ImportHeight>
+                  <ImportWidth>821</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="182" Width="821" Height="800" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Персонажи/Манекен/Идет влево/frame_006 (1).png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>800</ImportHeight>
+                  <ImportWidth>821</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="183" Width="821" Height="800" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Персонажи/Манекен/Идет вправо/frame_001.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>800</ImportHeight>
+                  <ImportWidth>821</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="184" Width="821" Height="800" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Персонажи/Манекен/Идет вправо/frame_002.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>800</ImportHeight>
+                  <ImportWidth>821</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="185" Width="821" Height="800" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Персонажи/Манекен/Идет вправо/frame_003 (2).png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>800</ImportHeight>
+                  <ImportWidth>821</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="186" Width="821" Height="800" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Персонажи/Манекен/Идет вправо/frame_004 (1).png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>800</ImportHeight>
+                  <ImportWidth>821</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="187" Width="821" Height="800" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Персонажи/Манекен/Идет вправо/frame_005.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>800</ImportHeight>
+                  <ImportWidth>821</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="188" Width="821" Height="800" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Персонажи/Манекен/Идет вправо/frame_006.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>800</ImportHeight>
+                  <ImportWidth>821</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+            </Sprites>
+          </SpriteFolder>
+          <SpriteFolder Name="Mood">
+            <SubFolders />
+            <Sprites>
+              <Sprite Slot="189" Width="230" Height="230" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Панель настроения/Пустая.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>230</ImportHeight>
+                  <ImportWidth>230</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>True</RemapToGamePalette>
@@ -12120,11 +12369,46 @@ stop
                 <RunNextLoop>False</RunNextLoop>
                 <Frames>
                   <ViewFrame>
-                    <Delay>0</Delay>
+                    <Delay>12</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>0</Image>
+                    <Image>177</Image>
                     <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>12</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>178</Image>
+                    <Sound>50</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>12</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>179</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>12</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>3</ID>
+                    <Image>180</Image>
+                    <Sound>51</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>12</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>4</ID>
+                    <Image>181</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>5</ID>
+                    <Image>182</Image>
+                    <Sound>52</Sound>
                   </ViewFrame>
                 </Frames>
               </Loop>
@@ -12133,11 +12417,46 @@ stop
                 <RunNextLoop>False</RunNextLoop>
                 <Frames>
                   <ViewFrame>
-                    <Delay>0</Delay>
+                    <Delay>12</Delay>
                     <Flipped>False</Flipped>
                     <ID>0</ID>
-                    <Image>0</Image>
+                    <Image>183</Image>
                     <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>12</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>184</Image>
+                    <Sound>50</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>12</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>185</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>12</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>3</ID>
+                    <Image>186</Image>
+                    <Sound>51</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>12</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>4</ID>
+                    <Image>187</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>5</ID>
+                    <Image>188</Image>
+                    <Sound>52</Sound>
                   </ViewFrame>
                 </Frames>
               </Loop>
@@ -12838,6 +13157,19 @@ See KeyboardMovement.txt for details.
                 <Type>3</Type>
                 <FileLastModifiedDate>2026-07-22 14:52:58Z</FileLastModifiedDate>
               </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>50</ID>
+                <Index>53</Index>
+                <ScriptName>aOld_door</ScriptName>
+                <SourceFileName>Assets/Звуки/Двери/Old_door.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-07-24 16:48:47Z</FileLastModifiedDate>
+              </AudioClip>
             </AudioClips>
             <AudioClipFolder>
               <DefaultBundlingType>InGameEXE</DefaultBundlingType>
@@ -12901,6 +13233,45 @@ See KeyboardMovement.txt for details.
                 <SourceFileName xml:space="preserve">Assets/Звуки/Шаги/step 4.mp3</SourceFileName>
                 <Type>1</Type>
                 <FileLastModifiedDate>2026-05-07 23:18:52Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>47</ID>
+                <Index>50</Index>
+                <ScriptName>aMstep1</ScriptName>
+                <SourceFileName>Assets/Звуки/Шаги/Mstep1.mp3</SourceFileName>
+                <Type>1</Type>
+                <FileLastModifiedDate>2026-07-24 15:47:17Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>48</ID>
+                <Index>51</Index>
+                <ScriptName>aMstep2</ScriptName>
+                <SourceFileName>Assets/Звуки/Шаги/Mstep2.mp3</SourceFileName>
+                <Type>1</Type>
+                <FileLastModifiedDate>2026-07-24 15:47:57Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>49</ID>
+                <Index>52</Index>
+                <ScriptName>aMstep3</ScriptName>
+                <SourceFileName>Assets/Звуки/Шаги/Mstep3.mp3</SourceFileName>
+                <Type>1</Type>
+                <FileLastModifiedDate>2026-07-24 15:52:07Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
