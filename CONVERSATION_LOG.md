@@ -19,3 +19,7 @@
 - Implemented the room 36 orbit behavior: the wheel remains static while the five figures rotate around its center by 30 degrees per click.
 - `oZodiakWheel` was removed from room 36. The orbit center is now calculated from the five figures' initial positions, and the deleted object's interaction handler was removed.
 - Correction: `oZodiakWheel_Interact` is the existing shared interaction callback for the five figures. Restored the callback name without restoring any dependency on the deleted wheel object.
+- Room 23: added a test `dBeatle` dialog. The beetle's Talk event is bound to `cBeatle_Talk`, which starts the dialog without speech animation.
+- Dialog rule: when Ilya's reply duplicates a player-selected option, do not repeat it with `TypeText`; keep the option's `Say` value `False`.
+- Room 23 beetle dialog: beer options depend on inventory. With either beer bottle, the player may give one to the beetle; with both bottles, the player may drink with the beetle. The corresponding bottle(s) are removed from inventory.
+- Beer audio added for the beetle dialog: one bottle plays opening then fizz; two bottles play glass clink, opening, then fizz.
