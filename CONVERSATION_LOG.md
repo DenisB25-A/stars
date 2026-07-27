@@ -23,3 +23,24 @@
 - Dialog rule: when Ilya's reply duplicates a player-selected option, do not repeat it with `TypeText`; keep the option's `Say` value `False`.
 - Room 23 beetle dialog: beer options depend on inventory. With either beer bottle, the player may give one to the beetle; with both bottles, the player may drink with the beetle. The corresponding bottle(s) are removed from inventory.
 - Beer audio added for the beetle dialog: one bottle plays opening then fizz; two bottles play glass clink, opening, then fizz.
+- Beetle dialogue direction approved: the giant beetle is a pleasant, domestic, direct conversationalist rather than a threat or oracle. After drinking beer together, he starts a separate conversation about beetle concerns: warmth, dust, bedding, doors, and living arrangements.
+- Planned post-drink choices: ask the beetle about himself, whether he likes the apartment, whether he needs anything, or leave. Later, add a question about what he does at night. Chosen questions should be removed after use.
+- The approved post-drink beetle conversation was written into `dBeatle`: it begins after drinking two beers and offers three one-use questions about the beetle, the apartment, and his needs.
+- Choosing "Leave" after the first post-drink question block now advances to a second block. Ilya cannot simply end the conversation because he is too interested; he asks why the beetle is so large, where it came from, and what it is doing in the apartment.
+- The second beetle question block now has approved responses. Once all three questions are asked in any order, choosing the final exit triggers the beetle's observation that Ilya no longer sleeps in his bed, but merely lies in it.
+- Beetle voice direction: he has a blunt, confident action-movie cadence and treats the bedroom as his new home. Approved line: "В доме должна быть кровать. На кровати должен быть жук. Остальное - мебель."
+- Planned next beat: the beetle matter-of-factly asks Ilya to scratch his back because Ilya is the only one there with fingers. Potential response: "Правее. Ещё. Вот. Нормально. Можешь жить."
+- Approved future headache exchange:
+  - Ilya: "У меня голова болит."
+  - Beetle: "Она у тебя большая. Там много места."
+  - Ilya: "Для чего?"
+  - Beetle: "Для шума."
+  - Ilya: "И что делать?"
+  - Beetle: "Лечь."
+  - Ilya: "Я стою."
+  - Beetle: "Вот поэтому и болит."
+- The approved headache exchange was added to `dBeatle` after the second question block. After all three beetle questions, the final exit reveals the bed observation and offers Ilya a choice to tell the beetle about his headache or leave.
+- `beetleDialogueStage` now preserves this point in the conversation: if Ilya leaves before sharing the headache, the next beetle interaction resumes with "Жук: Ну?" and the same choice to share or leave.
+- Presentation preference: keep the dialogue itself complete, but present the surrounding explanation and creative pitch more compactly.
+- Current unresolved beat: Ilya offers the beetle a cigarette. The beetle refuses angrily because this is his home; smoking "breaks the mystery" of the home. The exact dialogue is not approved and must not yet be added to `dBeatle`.
+- Voice correction under consideration: make the beetle more straightforward and limited in his reasoning, with blunt confidence rather than ornate philosophy. The short smoking drafts did not land; preserve the existing approved dialogue and stop here.
