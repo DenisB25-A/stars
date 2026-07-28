@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>54</AudioIndexer>
+      <AudioIndexer>57</AudioIndexer>
       <AutoMoveInWalkMode>False</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets>Windows</BuildTargets>
@@ -4409,7 +4409,7 @@
             <SpeechView>0</SpeechView>
             <StartX>583</StartX>
             <StartY>996</StartY>
-            <StartingRoom>23</StartingRoom>
+            <StartingRoom>1</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>False</TurnWhenFacing>
@@ -5181,25 +5181,25 @@ stop
             <DialogOptions>
               <DialogOption>
                 <ID>1</ID>
-                <Say>True</Say>
+                <Say>False</Say>
                 <Show>True</Show>
                 <Text xml:space="preserve">Взять молоко</Text>
               </DialogOption>
               <DialogOption>
                 <ID>2</ID>
-                <Say>True</Say>
+                <Say>False</Say>
                 <Show>True</Show>
                 <Text xml:space="preserve">Проверить молоко</Text>
               </DialogOption>
               <DialogOption>
                 <ID>3</ID>
-                <Say>True</Say>
+                <Say>False</Say>
                 <Show>True</Show>
                 <Text xml:space="preserve">Выпить молоко</Text>
               </DialogOption>
               <DialogOption>
                 <ID>4</ID>
-                <Say>True</Say>
+                <Say>False</Say>
                 <Show>True</Show>
                 <Text>Уйти</Text>
               </DialogOption>
@@ -5511,20 +5511,52 @@ return
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-  TypeText("Жук: Ц-ц-ц. Ночь длинная.");
-  dBeatle.SetOptionState(2, eOptionOff);
-  dBeatle.SetOptionState(3, eOptionOff);
-  if (cEgo.HasInventory(iBeerBottleClose)) {
-    if (cEgo.HasInventory(iBeerBottleFar)) {
-      dBeatle.SetOptionState(3, eOptionOn);
-    }
-    else {
-      dBeatle.SetOptionState(2, eOptionOn);
-    }
+  if (beetleDialogueStage == 1) {
+    TypeText("Жук: Ну?");
+    dBeatle.SetOptionState(1, eOptionOff);
+    dBeatle.SetOptionState(2, eOptionOff);
+    dBeatle.SetOptionState(3, eOptionOff);
+    dBeatle.SetOptionState(4, eOptionOff);
+    dBeatle.SetOptionState(5, eOptionOff);
+    dBeatle.SetOptionState(6, eOptionOff);
+    dBeatle.SetOptionState(7, eOptionOff);
+    dBeatle.SetOptionState(8, eOptionOff);
+    dBeatle.SetOptionState(9, eOptionOff);
+    dBeatle.SetOptionState(10, eOptionOff);
+    dBeatle.SetOptionState(11, eOptionOff);
+    dBeatle.SetOptionState(12, eOptionOff);
+    dBeatle.SetOptionState(13, eOptionOff);
+    dBeatle.SetOptionState(14, eOptionOn);
+    dBeatle.SetOptionState(15, eOptionOn);
   }
   else {
-    if (cEgo.HasInventory(iBeerBottleFar)) {
-      dBeatle.SetOptionState(2, eOptionOn);
+    TypeText("Жук: Ц-ц-ц. Ночь длинная.");
+    dBeatle.SetOptionState(2, eOptionOff);
+    dBeatle.SetOptionState(3, eOptionOff);
+    dBeatle.SetOptionState(4, eOptionOff);
+    dBeatle.SetOptionState(5, eOptionOff);
+    dBeatle.SetOptionState(6, eOptionOff);
+    dBeatle.SetOptionState(7, eOptionOff);
+    dBeatle.SetOptionState(8, eOptionOn);
+    dBeatle.SetOptionState(9, eOptionOff);
+    dBeatle.SetOptionState(10, eOptionOff);
+    dBeatle.SetOptionState(11, eOptionOff);
+    dBeatle.SetOptionState(12, eOptionOff);
+    dBeatle.SetOptionState(13, eOptionOff);
+    dBeatle.SetOptionState(14, eOptionOff);
+    dBeatle.SetOptionState(15, eOptionOff);
+    if (cEgo.HasInventory(iBeerBottleClose)) {
+      if (cEgo.HasInventory(iBeerBottleFar)) {
+        dBeatle.SetOptionState(3, eOptionOn);
+      }
+      else {
+        dBeatle.SetOptionState(2, eOptionOn);
+      }
+    }
+    else {
+      if (cEgo.HasInventory(iBeerBottleFar)) {
+        dBeatle.SetOptionState(2, eOptionOn);
+      }
     }
   }
 return
@@ -5560,8 +5592,127 @@ stop
   aBeerFizz.Play();
   TypeText("Жук: Вот теперь разговор пойдет.");
   TypeText("Илья: Только без философии.");
-stop
+  TypeText("Жук: Ладно.");
+  TypeText("Жук: У тебя под кроватью пыль.");
+  dBeatle.SetOptionState(1, eOptionOff);
+  dBeatle.SetOptionState(2, eOptionOff);
+  dBeatle.SetOptionState(3, eOptionOff);
+  dBeatle.SetOptionState(4, eOptionOn);
+  dBeatle.SetOptionState(5, eOptionOn);
+  dBeatle.SetOptionState(6, eOptionOn);
+  dBeatle.SetOptionState(7, eOptionOn);
+  dBeatle.SetOptionState(8, eOptionOff);
+return
 @4
+  TypeText("Жук: Я жук.");
+  TypeText("Илья: Это я уже понял.");
+  TypeText("Жук: Хорошо. Значит, слушать ты умеешь.");
+  TypeText("Жук: Живу. Греюсь. Ем. Чищу лапы.");
+  TypeText("Жук: Иногда сплю.");
+option-off 4
+return
+@5
+  TypeText("Жук: Нравится.");
+  TypeText("Жук: У тебя много мягкого. Хорошая кровать.");
+  TypeText("Жук: И ты редко убираешь.");
+  TypeText("Илья: Спасибо.");
+  TypeText("Жук: Не за что. Это похвала.");
+option-off 5
+return
+@6
+  TypeText("Жук: Тепло.");
+  TypeText("Жук: Чтобы дверь не закрывалась до конца.");
+  TypeText("Жук: И чтобы ты не тряс одеяло, когда я под ним.");
+  TypeText("Илья: А если буду?");
+  TypeText("Жук: Будешь спать на полу.");
+option-off 6
+return
+@7
+  TypeText("Илья: Ладно. Я пойду.");
+  TypeText("Жук: Иди.");
+  TypeText("Илья: ...");
+  TypeText("Илья: Нет, подожди.");
+  TypeText("Илья: Ты ведь не просто жук.");
+  TypeText("Жук: Я жук. Просто большой.");
+  dBeatle.SetOptionState(4, eOptionOff);
+  dBeatle.SetOptionState(5, eOptionOff);
+  dBeatle.SetOptionState(6, eOptionOff);
+  dBeatle.SetOptionState(7, eOptionOff);
+  dBeatle.SetOptionState(9, eOptionOn);
+  dBeatle.SetOptionState(10, eOptionOn);
+  dBeatle.SetOptionState(11, eOptionOn);
+  dBeatle.SetOptionState(12, eOptionOn);
+return
+@8
+stop
+@9
+  TypeText("Жук: Потому что вырос.");
+  TypeText("Илья: До такого размера?");
+  TypeText("Жук: Да.");
+  TypeText("Жук: Жуки растут, когда им есть где жить.");
+  beetleQuestionsAsked = beetleQuestionsAsked + 1;
+  if (beetleQuestionsAsked >= 3) {
+    dBeatle.SetOptionState(12, eOptionOff);
+    dBeatle.SetOptionState(13, eOptionOn);
+  }
+option-off 9
+return
+@10
+  TypeText("Жук: Из стены за шкафом.");
+  TypeText("Жук: Там были трубы. Тёплые.");
+  TypeText("Жук: Там было тепло. Потом трубы остыли. Я пошёл дальше.");
+  beetleQuestionsAsked = beetleQuestionsAsked + 1;
+  if (beetleQuestionsAsked >= 3) {
+    dBeatle.SetOptionState(12, eOptionOff);
+    dBeatle.SetOptionState(13, eOptionOn);
+  }
+option-off 10
+return
+@11
+  TypeText("Жук: Живу.");
+  TypeText("Илья: И всё?");
+  TypeText("Жук: Пока да. Комната хорошая. Ты терпимый.");
+  TypeText("Илья: Терпимый?");
+  TypeText("Жук: Ты ещё не пытался меня выгнать.");
+  beetleQuestionsAsked = beetleQuestionsAsked + 1;
+  if (beetleQuestionsAsked >= 3) {
+    dBeatle.SetOptionState(12, eOptionOff);
+    dBeatle.SetOptionState(13, eOptionOn);
+  }
+option-off 11
+return
+@12
+stop
+@13
+  TypeText("Жук: Подожди.");
+  TypeText("Илья: Что?");
+  TypeText("Жук: Ты спросил, почему я большой.");
+  TypeText("Жук: Спросил, откуда я пришёл.");
+  TypeText("Жук: Спросил, зачем я здесь.");
+  TypeText("Жук: А самое важное не спросил.");
+  TypeText("Илья: Какое?");
+  TypeText("Жук: Почему я выбрал твою кровать.");
+  TypeText("Илья: И почему?");
+  TypeText("Жук: Потому что ты давно в ней не спишь.");
+  TypeText("Жук: Ты в ней лежишь.");
+  beetleDialogueStage = 1;
+  dBeatle.SetOptionState(13, eOptionOff);
+  dBeatle.SetOptionState(14, eOptionOn);
+  dBeatle.SetOptionState(15, eOptionOn);
+return
+@14
+  TypeText("Илья: У меня голова болит.");
+  TypeText("Жук: Она у тебя большая. Там много места.");
+  TypeText("Илья: Для чего?");
+  TypeText("Жук: Для шума.");
+  TypeText("Илья: И что делать?");
+  TypeText("Жук: Лечь.");
+  TypeText("Илья: Я стою.");
+  TypeText("Жук: Вот поэтому и болит.");
+  beetleDialogueStage = 2;
+option-off 14
+return
+@15
 stop
 ]]></Script>
             <DialogOptions>
@@ -5585,6 +5736,72 @@ stop
               </DialogOption>
               <DialogOption>
                 <ID>4</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Расскажи о себе.</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>5</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Тебе здесь нравится?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>6</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Тебе что-нибудь нужно?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>7</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text>Уйти</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>8</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text>Уйти</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>9</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Почему ты такой большой?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>10</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Откуда ты здесь?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>11</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Что ты здесь делаешь?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>12</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text>Уйти</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>13</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text>Уйти</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>14</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Рассказать про головную боль.</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>15</ID>
                 <Say>False</Say>
                 <Show>True</Show>
                 <Text>Уйти</Text>
@@ -6569,6 +6786,20 @@ stop
           <ArrayType>None</ArrayType>
           <DefaultValue>0</DefaultValue>
           <Name>ManekenPhase</Name>
+          <Type>int</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>0</DefaultValue>
+          <Name>beetleDialogueStage</Name>
+          <Type>int</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>0</DefaultValue>
+          <Name>beetleQuestionsAsked</Name>
           <Type>int</Type>
         </GlobalVariable>
       </Variables>
@@ -9376,6 +9607,182 @@ stop
               <Sprite Slot="212" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                 <Source>
                   <FileName>Assets/Анимация/Пьет водку/11.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>680</ImportHeight>
+                  <ImportWidth>356</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="213" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Анимация/Пьет молоко/1 (2).png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>680</ImportHeight>
+                  <ImportWidth>356</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="214" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Анимация/Пьет молоко/2.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>680</ImportHeight>
+                  <ImportWidth>356</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="215" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Анимация/Пьет молоко/3.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>680</ImportHeight>
+                  <ImportWidth>356</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="216" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Анимация/Пьет молоко/4.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>680</ImportHeight>
+                  <ImportWidth>356</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="217" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Анимация/Пьет молоко/5.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>680</ImportHeight>
+                  <ImportWidth>356</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="218" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Анимация/Пьет молоко/6.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>680</ImportHeight>
+                  <ImportWidth>356</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="219" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Анимация/Пьет молоко/7.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>680</ImportHeight>
+                  <ImportWidth>356</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="220" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Анимация/Пьет молоко/8.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>680</ImportHeight>
+                  <ImportWidth>356</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="221" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Анимация/Пьет молоко/9.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>680</ImportHeight>
+                  <ImportWidth>356</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="222" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Анимация/Пьет молоко/10.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>680</ImportHeight>
+                  <ImportWidth>356</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="223" Width="356" Height="680" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Анимация/Пьет молоко/11.png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
                   <ImportHeight>680</ImportHeight>
@@ -12988,7 +13395,7 @@ stop
                     <Flipped>True</Flipped>
                     <ID>7</ID>
                     <Image>209</Image>
-                    <Sound>0</Sound>
+                    <Sound>57</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
@@ -13071,7 +13478,7 @@ stop
                     <Flipped>False</Flipped>
                     <ID>7</ID>
                     <Image>209</Image>
-                    <Sound>0</Sound>
+                    <Sound>57</Sound>
                   </ViewFrame>
                   <ViewFrame>
                     <Delay>0</Delay>
@@ -13092,6 +13499,183 @@ stop
                     <Flipped>False</Flipped>
                     <ID>10</ID>
                     <Image>212</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+            </Loops>
+          </View>
+          <View>
+            <ID>16</ID>
+            <Name>Drinking_milk</Name>
+            <Loops>
+              <Loop>
+                <ID>0</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames />
+              </Loop>
+              <Loop>
+                <ID>1</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>0</ID>
+                    <Image>213</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>1</ID>
+                    <Image>214</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>2</ID>
+                    <Image>215</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>3</ID>
+                    <Image>216</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>4</ID>
+                    <Image>217</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>20</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>5</ID>
+                    <Image>218</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>6</ID>
+                    <Image>219</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>7</ID>
+                    <Image>220</Image>
+                    <Sound>57</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>8</ID>
+                    <Image>221</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>9</ID>
+                    <Image>222</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>True</Flipped>
+                    <ID>10</ID>
+                    <Image>223</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                </Frames>
+              </Loop>
+              <Loop>
+                <ID>2</ID>
+                <RunNextLoop>False</RunNextLoop>
+                <Frames>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>0</ID>
+                    <Image>213</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>1</ID>
+                    <Image>214</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>2</ID>
+                    <Image>215</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>3</ID>
+                    <Image>216</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>4</ID>
+                    <Image>217</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>20</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>5</ID>
+                    <Image>218</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>6</ID>
+                    <Image>219</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>7</ID>
+                    <Image>220</Image>
+                    <Sound>57</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>8</ID>
+                    <Image>221</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>9</ID>
+                    <Image>222</Image>
+                    <Sound>0</Sound>
+                  </ViewFrame>
+                  <ViewFrame>
+                    <Delay>0</Delay>
+                    <Flipped>False</Flipped>
+                    <ID>10</ID>
+                    <Image>223</Image>
                     <Sound>0</Sound>
                   </ViewFrame>
                 </Frames>
@@ -13838,7 +14422,20 @@ See KeyboardMovement.txt for details.
                 <ScriptName>aBeerFizz</ScriptName>
                 <SourceFileName>Assets/Звуки/beer_fizz.mp3</SourceFileName>
                 <Type>3</Type>
-                <FileLastModifiedDate>2026-07-26 13:19:06Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2026-07-26 14:22:30Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>60</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>54</ID>
+                <Index>57</Index>
+                <ScriptName>aSpit</ScriptName>
+                <SourceFileName>Assets/Звуки/Spit.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-07-28 08:54:51Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
@@ -13887,9 +14484,9 @@ See KeyboardMovement.txt for details.
                 <ID>17</ID>
                 <Index>20</Index>
                 <ScriptName>aStep_3</ScriptName>
-                <SourceFileName xml:space="preserve">Assets/Звуки/Шаги/step 4.mp3</SourceFileName>
+                <SourceFileName xml:space="preserve">Assets/Звуки/Шаги/step 3.mp3</SourceFileName>
                 <Type>1</Type>
-                <FileLastModifiedDate>2026-05-11 09:04:23Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2026-05-07 23:18:52Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InGameEXE</BundlingType>
@@ -13953,6 +14550,17 @@ See KeyboardMovement.txt for details.
             </AudioClipFolder>
           </AudioClipFolder>
           <AudioClipFolder Name="Fones">
+            <SubFolders />
+            <AudioClips />
+            <AudioClipFolder>
+              <DefaultBundlingType>InGameEXE</DefaultBundlingType>
+              <DefaultPriority>Inherit</DefaultPriority>
+              <DefaultRepeat>Inherit</DefaultRepeat>
+              <DefaultType>1</DefaultType>
+              <DefaultVolume>100</DefaultVolume>
+            </AudioClipFolder>
+          </AudioClipFolder>
+          <AudioClipFolder Name="New folder">
             <SubFolders />
             <AudioClips />
             <AudioClipFolder>
