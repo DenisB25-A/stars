@@ -4213,6 +4213,30 @@
               <Event Index="4" />
             </Interactions>
           </InventoryItem>
+          <InventoryItem>
+            <CursorImage>2042</CursorImage>
+            <Description xml:space="preserve">Ключ от чердака</Description>
+            <HotspotX>1</HotspotX>
+            <HotspotY>1</HotspotY>
+            <ID>27</ID>
+            <Image>2042</Image>
+            <Name>iAtticKey</Name>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <Properties>
+              <CustomProperty>
+                <Name>Description</Name>
+                <Value xml:space="preserve">Ключ от двери на чердак. Жук не мог открыть им маленький замок своими большими лапами.</Value>
+              </CustomProperty>
+            </Properties>
+            <Interactions>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
+              <Event Index="3" />
+              <Event Index="4" />
+            </Interactions>
+          </InventoryItem>
         </InventoryItems>
       </InventoryItemFolder>
     </InventoryItems>
@@ -4409,7 +4433,7 @@
             <SpeechView>0</SpeechView>
             <StartX>583</StartX>
             <StartY>996</StartY>
-            <StartingRoom>36</StartingRoom>
+            <StartingRoom>23</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>False</TurnWhenFacing>
@@ -5511,11 +5535,10 @@ return
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-  if (beetleDialogueStage == 1) {
-    TypeText("Жук: Ну?");
-    dBeatle.SetOptionState(1, eOptionOff);
-    dBeatle.SetOptionState(2, eOptionOff);
-    dBeatle.SetOptionState(3, eOptionOff);
+  if (beetleDialogueStage == 0) {
+    TypeText("Жук: Ц-ц-ц. Ночь длинная. Одному сидеть скучно.");
+    dBeatle.SetOptionState(1, eOptionOn);
+    dBeatle.SetOptionState(3, eOptionOn);
     dBeatle.SetOptionState(4, eOptionOff);
     dBeatle.SetOptionState(5, eOptionOff);
     dBeatle.SetOptionState(6, eOptionOff);
@@ -5526,74 +5549,127 @@ return
     dBeatle.SetOptionState(11, eOptionOff);
     dBeatle.SetOptionState(12, eOptionOff);
     dBeatle.SetOptionState(13, eOptionOff);
+    dBeatle.SetOptionState(14, eOptionOff);
+    dBeatle.SetOptionState(15, eOptionOff);
+    dBeatle.SetOptionState(16, eOptionOff);
+    dBeatle.SetOptionState(17, eOptionOff);
+    dBeatle.SetOptionState(18, eOptionOff);
+    dBeatle.SetOptionState(19, eOptionOff);
+    dBeatle.SetOptionState(20, eOptionOff);
+    dBeatle.SetOptionState(21, eOptionOff);
+    dBeatle.SetOptionState(22, eOptionOff);
+    dBeatle.SetOptionState(23, eOptionOff);
+    dBeatle.SetOptionState(2, eOptionOff);
+  }
+  else if (beetleDialogueStage == 1) {
+    TypeText("Жук: Ну?");
+    dBeatle.SetOptionState(7, eOptionOn);
+    if (cEgo.HasInventory(iBeerBottleClose) || cEgo.HasInventory(iBeerBottleFar)) {
+      dBeatle.SetOptionState(2, eOptionOn);
+    }
+    else {
+      dBeatle.SetOptionState(2, eOptionOff);
+    }
+  }
+  else if (beetleDialogueStage == 2) {
+    TypeText("Илья: Ты ведь не просто жук. Обычные жуки так не разговаривают.");
+    TypeText("Жук: Я обычный. Просто большой.");
+    beetleQuestionsAsked = 0;
+    beetleDialogueStage = 3;
+    dBeatle.SetOptionState(8, eOptionOn);
+    dBeatle.SetOptionState(9, eOptionOn);
+    dBeatle.SetOptionState(10, eOptionOn);
+    dBeatle.SetOptionState(11, eOptionOn);
+  }
+  else if (beetleDialogueStage == 3) {
+    TypeText("Жук: Ну? Спрашивай дальше.");
+    dBeatle.SetOptionState(11, eOptionOn);
+  }
+  else if (beetleDialogueStage == 4) {
+    TypeText("Жук: Ну? Кровать всё ещё здесь.");
+    dBeatle.SetOptionState(12, eOptionOn);
+    dBeatle.SetOptionState(13, eOptionOn);
     dBeatle.SetOptionState(14, eOptionOn);
     dBeatle.SetOptionState(15, eOptionOn);
   }
-  else {
-    TypeText("Жук: Ц-ц-ц. Ночь длинная.");
-    dBeatle.SetOptionState(2, eOptionOff);
-    dBeatle.SetOptionState(3, eOptionOff);
-    dBeatle.SetOptionState(4, eOptionOff);
-    dBeatle.SetOptionState(5, eOptionOff);
-    dBeatle.SetOptionState(6, eOptionOff);
-    dBeatle.SetOptionState(7, eOptionOff);
-    dBeatle.SetOptionState(8, eOptionOn);
-    dBeatle.SetOptionState(9, eOptionOff);
-    dBeatle.SetOptionState(10, eOptionOff);
-    dBeatle.SetOptionState(11, eOptionOff);
+  else if (beetleDialogueStage == 5) {
+    TypeText("Жук: Ты снова пришёл и стоишь рядом. Значит, хочешь что-то сказать.");
     dBeatle.SetOptionState(12, eOptionOff);
     dBeatle.SetOptionState(13, eOptionOff);
     dBeatle.SetOptionState(14, eOptionOff);
     dBeatle.SetOptionState(15, eOptionOff);
-    if (cEgo.HasInventory(iBeerBottleClose)) {
-      if (cEgo.HasInventory(iBeerBottleFar)) {
-        dBeatle.SetOptionState(3, eOptionOn);
-      }
-      else {
-        dBeatle.SetOptionState(2, eOptionOn);
-      }
+    dBeatle.SetOptionState(16, eOptionOn);
+    dBeatle.SetOptionState(17, eOptionOn);
+  }
+  else if (beetleDialogueStage == 6) {
+    TypeText("Жук: Ну и как ты решил меня называть?");
+    dBeatle.SetOptionState(18, eOptionOn);
+    dBeatle.SetOptionState(19, eOptionOn);
+    dBeatle.SetOptionState(20, eOptionOn);
+    dBeatle.SetOptionState(21, eOptionOn);
+  }
+  else if (beetleDialogueStage == 7) {
+    TypeText("Илья: Лучше не стало?");
+    TypeText("Жук: Нет. И внутри всё ещё холодно. Ищи что-нибудь пахучее.");
+    dBeatle.SetOptionState(23, eOptionOn);
+    if (cEgo.HasInventory(iStar_salve)) {
+      dBeatle.SetOptionState(22, eOptionOn);
     }
     else {
-      if (cEgo.HasInventory(iBeerBottleFar)) {
-        dBeatle.SetOptionState(2, eOptionOn);
-      }
+      dBeatle.SetOptionState(22, eOptionOff);
     }
   }
 return
 @1
-  TypeText("Жук: А ты умеешь слушать?");
-option-off 1
-return
-@2
-  if (cEgo.HasInventory(iBeerBottleClose)) {
-    cEgo.LoseInventory(iBeerBottleClose);
+  TypeText("Илья: Ты сейчас со мной разговариваешь? Или я уже совсем устал?");
+  TypeText("Жук: Разговариваю. Ты пока тоже можешь. Значит, всё нормально.");
+  beetleDialogueStage = 1;
+  dBeatle.SetOptionState(1, eOptionOff);
+  if (cEgo.HasInventory(iBeerBottleClose) || cEgo.HasInventory(iBeerBottleFar)) {
+    dBeatle.SetOptionState(2, eOptionOn);
   }
   else {
+    dBeatle.SetOptionState(2, eOptionOff);
+  }
+  dBeatle.SetOptionState(3, eOptionOff);
+  dBeatle.SetOptionState(4, eOptionOn);
+  dBeatle.SetOptionState(5, eOptionOn);
+  dBeatle.SetOptionState(6, eOptionOn);
+  dBeatle.SetOptionState(7, eOptionOn);
+return
+@2
+  if (cEgo.HasInventory(iBeerBottleClose) && cEgo.HasInventory(iBeerBottleFar)) {
+    cEgo.LoseInventory(iBeerBottleClose);
     cEgo.LoseInventory(iBeerBottleFar);
+    AudioChannel *drinkChannel = aBeerGlassesClink.Play();
+    while (drinkChannel != null && drinkChannel.IsPlaying) {
+      Wait(1);
+    }
+    drinkChannel = aBeerBottleOpen.Play();
+    while (drinkChannel != null && drinkChannel.IsPlaying) {
+      Wait(1);
+    }
+    aBeerFizz.Play();
+    TypeText("Жук: Теперь можно поговорить. Только сядь куда-нибудь. Ты надо мной стоишь.");
+    TypeText("Илья: На кровать я сесть не могу. Там огромный жук.");
+    TypeText("Жук: Тогда стой. У тебя ещё под кроватью пыль.");
   }
-  AudioChannel *channel = aBeerBottleOpen.Play();
-  while (channel != null && channel.IsPlaying) {
-    Wait(1);
+  else {
+    if (cEgo.HasInventory(iBeerBottleClose)) {
+      cEgo.LoseInventory(iBeerBottleClose);
+    }
+    else {
+      cEgo.LoseInventory(iBeerBottleFar);
+    }
+    AudioChannel *drinkChannel = aBeerBottleOpen.Play();
+    while (drinkChannel != null && drinkChannel.IsPlaying) {
+      Wait(1);
+    }
+    aBeerFizz.Play();
+    TypeText("Илья: У меня только одна. Забирай. Мне сейчас и без пива странно.");
+    TypeText("Жук: Правильно. Одному мало. Делить нечего.");
   }
-  aBeerFizz.Play();
-  TypeText("Жук: Ц-ц. Хорошее дело.");
-stop
-@3
-  cEgo.LoseInventory(iBeerBottleClose);
-  cEgo.LoseInventory(iBeerBottleFar);
-  AudioChannel *drinkChannel = aBeerGlassesClink.Play();
-  while (drinkChannel != null && drinkChannel.IsPlaying) {
-    Wait(1);
-  }
-  drinkChannel = aBeerBottleOpen.Play();
-  while (drinkChannel != null && drinkChannel.IsPlaying) {
-    Wait(1);
-  }
-  aBeerFizz.Play();
-  TypeText("Жук: Вот теперь разговор пойдет.");
-  TypeText("Илья: Только без философии.");
-  TypeText("Жук: Ладно.");
-  TypeText("Жук: У тебя под кроватью пыль.");
+  beetleDialogueStage = 1;
   dBeatle.SetOptionState(1, eOptionOff);
   dBeatle.SetOptionState(2, eOptionOff);
   dBeatle.SetOptionState(3, eOptionOff);
@@ -5601,118 +5677,310 @@ stop
   dBeatle.SetOptionState(5, eOptionOn);
   dBeatle.SetOptionState(6, eOptionOn);
   dBeatle.SetOptionState(7, eOptionOn);
-  dBeatle.SetOptionState(8, eOptionOff);
 return
+@3
+stop
 @4
-  TypeText("Жук: Я жук.");
-  TypeText("Илья: Это я уже понял.");
-  TypeText("Жук: Хорошо. Значит, слушать ты умеешь.");
-  TypeText("Жук: Живу. Греюсь. Ем. Чищу лапы.");
-  TypeText("Жук: Иногда сплю.");
+  TypeText("Илья: Раз уж мы разговариваем, расскажи хоть что-нибудь о себе.");
+  TypeText("Жук: Я жук. Живу в тепле. Ем что найду. Иногда сплю. Больше ничего важного нет.");
+  TypeText("Илья: Это вся твоя жизнь?");
+  TypeText("Жук: Пока хватает.");
 option-off 4
 return
 @5
-  TypeText("Жук: Нравится.");
-  TypeText("Жук: У тебя много мягкого. Хорошая кровать.");
-  TypeText("Жук: И ты редко убираешь.");
-  TypeText("Илья: Спасибо.");
-  TypeText("Жук: Не за что. Это похвала.");
+  TypeText("Илья: Тебе вообще нравится моя комната? Ты устроился здесь как хозяин.");
+  TypeText("Жук: Нравится. Кровать мягкая. Трубы тёплые. И ты редко убираешь.");
+  TypeText("Илья: Последнее сейчас было оскорблением?");
+  TypeText("Жук: Нет. В чистом месте жить неудобно. Всё сразу видно.");
 option-off 5
 return
 @6
-  TypeText("Жук: Тепло.");
-  TypeText("Жук: Чтобы дверь не закрывалась до конца.");
-  TypeText("Жук: И чтобы ты не тряс одеяло, когда я под ним.");
-  TypeText("Илья: А если буду?");
-  TypeText("Жук: Будешь спать на полу.");
+  TypeText("Илья: Раз ты решил остаться, скажи сразу, что тебе нужно.");
+  TypeText("Жук: Тепло. Чтобы дверь не закрывали до конца. И чтобы покрывало не дёргали.");
+  TypeText("Илья: А если я всё-таки дёрну?");
+  TypeText("Жук: Тогда упаду. Потом ты будешь виноват.");
 option-off 6
 return
 @7
-  TypeText("Илья: Ладно. Я пойду.");
-  TypeText("Жук: Иди.");
-  TypeText("Илья: ...");
-  TypeText("Илья: Нет, подожди.");
-  TypeText("Илья: Ты ведь не просто жук.");
-  TypeText("Жук: Я жук. Просто большой.");
+  TypeText("Илья: Ладно. Я пойду. Слишком странный вечер.");
+  TypeText("Жук: Иди. Только свет не выключай. В темноте холоднее.");
+  beetleDialogueStage = 2;
   dBeatle.SetOptionState(4, eOptionOff);
   dBeatle.SetOptionState(5, eOptionOff);
   dBeatle.SetOptionState(6, eOptionOff);
   dBeatle.SetOptionState(7, eOptionOff);
-  dBeatle.SetOptionState(9, eOptionOn);
-  dBeatle.SetOptionState(10, eOptionOn);
-  dBeatle.SetOptionState(11, eOptionOn);
-  dBeatle.SetOptionState(12, eOptionOn);
-return
-@8
 stop
-@9
-  TypeText("Жук: Потому что вырос.");
-  TypeText("Илья: До такого размера?");
-  TypeText("Жук: Да.");
-  TypeText("Жук: Жуки растут, когда им есть где жить.");
+@8
+  TypeText("Илья: Почему ты вообще такой огромный? Майские жуки такими не бывают.");
+  TypeText("Жук: Я вырос. Сначала был маленький. Потом стало много места и еды.");
+  TypeText("Илья: И ты просто рос, пока не стал размером с человека?");
+  TypeText("Жук: Да. Потом перестал. Кровать уже стала мала.");
   beetleQuestionsAsked = beetleQuestionsAsked + 1;
-  if (beetleQuestionsAsked >= 3) {
-    dBeatle.SetOptionState(12, eOptionOff);
-    dBeatle.SetOptionState(13, eOptionOn);
-  }
+option-off 8
+return
+@9
+  TypeText("Илья: Откуда ты взялся в моей спальне? Я бы заметил тебя у двери.");
+  TypeText("Жук: Из стены за шкафом. Там идут трубы. Раньше было тепло.");
+  TypeText("Илья: А потом?");
+  TypeText("Жук: Трубы остыли. Я пошёл туда, где теплее.");
+  beetleQuestionsAsked = beetleQuestionsAsked + 1;
 option-off 9
 return
 @10
-  TypeText("Жук: Из стены за шкафом.");
-  TypeText("Жук: Там были трубы. Тёплые.");
-  TypeText("Жук: Там было тепло. Потом трубы остыли. Я пошёл дальше.");
+  TypeText("Илья: Хорошо. Допустим, ты пришёл из стены. Что ты теперь здесь делаешь?");
+  TypeText("Жук: Живу. Комната хорошая. Ты пока не мешаешь.");
+  TypeText("Илья: Пока?");
+  TypeText("Жук: Ты ещё не пытался меня выгнать.");
   beetleQuestionsAsked = beetleQuestionsAsked + 1;
-  if (beetleQuestionsAsked >= 3) {
-    dBeatle.SetOptionState(12, eOptionOff);
-    dBeatle.SetOptionState(13, eOptionOn);
-  }
 option-off 10
 return
 @11
-  TypeText("Жук: Живу.");
-  TypeText("Илья: И всё?");
-  TypeText("Жук: Пока да. Комната хорошая. Ты терпимый.");
-  TypeText("Илья: Терпимый?");
-  TypeText("Жук: Ты ещё не пытался меня выгнать.");
-  beetleQuestionsAsked = beetleQuestionsAsked + 1;
-  if (beetleQuestionsAsked >= 3) {
-    dBeatle.SetOptionState(12, eOptionOff);
-    dBeatle.SetOptionState(13, eOptionOn);
+  if (beetleQuestionsAsked < 3) {
+    return RUN_DIALOG_STOP_DIALOG;
   }
-option-off 11
-return
-@12
-stop
-@13
-  TypeText("Жук: Подожди.");
-  TypeText("Илья: Что?");
-  TypeText("Жук: Ты спросил, почему я большой.");
-  TypeText("Жук: Спросил, откуда я пришёл.");
-  TypeText("Жук: Спросил, зачем я здесь.");
-  TypeText("Жук: А самое важное не спросил.");
-  TypeText("Илья: Какое?");
-  TypeText("Жук: Почему я выбрал твою кровать.");
-  TypeText("Илья: И почему?");
-  TypeText("Жук: Потому что ты давно в ней не спишь.");
-  TypeText("Жук: Ты в ней лежишь.");
-  beetleDialogueStage = 1;
-  dBeatle.SetOptionState(13, eOptionOff);
+  TypeText("Жук: Ты всё спросил не про то. Самое главное осталось.");
+  TypeText("Илья: Что ещё может быть главным? Ты огромный жук в моей спальне.");
+  TypeText("Жук: Почему я сел именно на кровать.");
+  TypeText("Илья: Хорошо. Почему именно на неё?");
+  TypeText("Жук: Ты на ней давно не спишь. Только лежишь и смотришь в потолок.");
+  TypeText("Илья: Это почти одно и то же.");
+  TypeText("Жук: Нет. После сна встают.");
+  TypeText("Илья: Всё. Хватит. Это моя кровать, и тебе надо с неё слезть.");
+  TypeText("Жук: Знаю, что твоя. Но слезать не хочу. Здесь тепло.");
+  beetleDialogueStage = 4;
+  dBeatle.SetOptionState(8, eOptionOff);
+  dBeatle.SetOptionState(9, eOptionOff);
+  dBeatle.SetOptionState(10, eOptionOff);
+  dBeatle.SetOptionState(11, eOptionOff);
+  dBeatle.SetOptionState(12, eOptionOn);
+  dBeatle.SetOptionState(13, eOptionOn);
   dBeatle.SetOptionState(14, eOptionOn);
   dBeatle.SetOptionState(15, eOptionOn);
 return
+@12
+  TypeText("Илья: Я сейчас тебя просто сдвину. Хотя бы к стене.");
+  TypeText("Жук: Попробуй. Только кровать не сломай.");
+  TypeText("Кровать скрипит. Жук остаётся на месте.");
+  TypeText("Илья: Ты вообще не двигаешься. Как будто я толкаю шкаф.");
+  TypeText("Жук: Шкаф пустой. Я тяжёлый.");
+  TypeText("Илья: Ты ещё и гордишься этим?");
+  TypeText("Жук: Нет. Просто предупреждаю.");
+  TypeText("Илья: Ты всё равно не можешь жить на моей кровати постоянно.");
+  TypeText("Жук: Могу. Я уже живу.");
+  TypeText("Илья: А где тогда спать мне?");
+  TypeText("Жук: Не знаю. Но ты и раньше почти не спал.");
+  beetleDialogueStage = 5;
+stop
+@13
+  TypeText("Илья: Тогда я вытащу покрывало. Без него тебе станет неудобно.");
+  TypeText("Жук: Не вытаскивай. Порвёшь.");
+  TypeText("Илья: Оно моё. Я могу делать с ним что хочу.");
+  TypeText("Жук: Тогда не рви. Потом сам будешь мёрзнуть.");
+  TypeText("Илья: Мне и так негде спать.");
+  TypeText("Жук: Значит, покрывало тебе пока не нужно.");
+  TypeText("Илья: Ты всё равно не можешь жить на моей кровати постоянно.");
+  TypeText("Жук: Могу. Я уже живу.");
+  TypeText("Илья: А где тогда спать мне?");
+  TypeText("Жук: Не знаю. Но ты и раньше почти не спал.");
+  beetleDialogueStage = 5;
+stop
 @14
-  TypeText("Илья: У меня голова болит.");
-  TypeText("Жук: Она у тебя большая. Там много места.");
-  TypeText("Илья: Для чего?");
-  TypeText("Жук: Для шума.");
-  TypeText("Илья: И что делать?");
-  TypeText("Жук: Лечь.");
-  TypeText("Илья: Я стою.");
-  TypeText("Жук: Вот поэтому и болит.");
-  beetleDialogueStage = 2;
-option-off 14
-return
+  TypeText("Илья: Я могу вызвать милицию. Объясню, что ты незаконно занял мою кровать.");
+  TypeText("Жук: Вызывай. Только скажи, чтобы приехали с большой машиной.");
+  TypeText("Илья: Тебя заберут в отделение.");
+  TypeText("Жук: Там тепло?");
+  TypeText("Илья: Не знаю. И вообще, это неважно.");
+  TypeText("Жук: Для меня важно. Сначала узнай.");
+  TypeText("Илья: Ты находишься в государственной квартире без разрешения.");
+  TypeText("Жук: Я пришёл из государственной стены. Значит, недалеко ушёл.");
+  TypeText("Илья: Ты всё равно не можешь жить на моей кровати постоянно.");
+  TypeText("Жук: Могу. Я уже живу.");
+  TypeText("Илья: А где тогда спать мне?");
+  TypeText("Жук: Не знаю. Но ты и раньше почти не спал.");
+  beetleDialogueStage = 5;
+stop
 @15
+  TypeText("Илья: Давай найдём тебе другое место. Есть стул, пол и ковёр.");
+  TypeText("Жук: Стул маленький. Пол холодный. Ковёр колется.");
+  TypeText("Илья: Тогда можешь вернуться за шкаф. Там ты жил раньше.");
+  TypeText("Жук: Там пыль.");
+  TypeText("Илья: Ты сам сказал, что тебе нравится, когда я редко убираю.");
+  TypeText("Жук: Нравится смотреть. Сидеть в пыли не нравится.");
+  TypeText("Илья: Ты всё равно не можешь жить на моей кровати постоянно.");
+  TypeText("Жук: Могу. Я уже живу.");
+  TypeText("Илья: А где тогда спать мне?");
+  TypeText("Жук: Не знаю. Но ты и раньше почти не спал.");
+  beetleDialogueStage = 5;
+stop
+@16
+  TypeText("Илья: У меня весь вечер болит голова. И становится только хуже.");
+  TypeText("Илья: У меня голова болит. Внутри будто кто-то стучит по трубам.");
+  TypeText("Жук: Ты весь вечер стоишь, споришь и не ешь. От этого кому угодно станет плохо.");
+  TypeText("Илья: И что мне теперь делать? Таблеток дома нет.");
+  TypeText("Жук: Ляг, закрой глаза и помолчи. Иногда этого хватает.");
+  TypeText("Илья: Ты занял кровать. Мне некуда ложиться.");
+  TypeText("Жук: Тогда сядь на пол. Голова не знает, где кровать.");
+  TypeText("Илья: Очень полезный совет.");
+  TypeText("Жук: Другого у меня нет.");
+  TypeText("Илья: Ты занял мою кровать, а я даже не знаю, как тебя зовут.");
+  TypeText("Жук: Никак не зовут. Если надо, стучат по стене.");
+  TypeText("Илья: «Жук» — это не имя. Это просто кто ты такой.");
+  TypeText("Жук: Я жук. Значит, подходит.");
+  TypeText("Илья: А если сюда придёт ещё один жук? Я позову, и вы оба повернётесь.");
+  TypeText("Жук: Если придёт ещё один такой, тебе будет не до имён.");
+  TypeText("Илья: Всё равно надо тебя как-то называть. Не могу же я каждый раз говорить: «Эй, огромный жук на моей кровати».");
+  TypeText("Жук: Говори просто «Жук». Я пойму.");
+  TypeText("Илья: Значит, имени у тебя никогда не было?");
+  TypeText("Жук: Может, было. Я забыл. Давно никто не спрашивал.");
+  TypeText("Илья: Хорошо. Тогда будешь Жуком.");
+  TypeText("Жук: Я и раньше им был.");
+  TypeText("Илья: Нет. «Жук» — это совсем плохо. Давай я придумаю тебе нормальное имя.");
+  TypeText("Жук: Зачем нормальное? Это тоже работает.");
+  TypeText("Илья: Потому что ты теперь живёшь у меня. Я не буду каждый день обращаться к тебе как к мебели.");
+  TypeText("Жук: К мебели не обращаются.");
+  beetleDialogueStage = 6;
+  dBeatle.SetOptionState(16, eOptionOff);
+  dBeatle.SetOptionState(17, eOptionOff);
+  dBeatle.SetOptionState(18, eOptionOn);
+  dBeatle.SetOptionState(19, eOptionOn);
+  dBeatle.SetOptionState(20, eOptionOn);
+  dBeatle.SetOptionState(21, eOptionOn);
+return
+@17
+stop
+@18
+  TypeText("Илья: Будешь Борисом. Имя крепкое. Тебе подходит.");
+  TypeText("Жук: Был один Борис. Работал в котельной. Плохо закончил.");
+  TypeText("Илья: Что с ним случилось?");
+  TypeText("Жук: Уволили.");
+  TypeText("Илья: Это не очень страшно.");
+  TypeText("Жук: Зимой страшно.");
+  TypeText("Илья: Значит, договорились. Теперь я буду звать тебя так.");
+  TypeText("Жук: Зови. Если не откликнусь, значит, не понравилось.");
+  TypeText("Жук замолкает посреди разговора.");
+  TypeText("Илья: Ты чего замолчал? Только что нормально разговаривал.");
+  TypeText("Жук: Плохо стало. Внутри холодно. Голова тяжёлая.");
+  TypeText("Илья: Не отключайся. Я не знаю, как лечить жука. Тем более такого большого.");
+  TypeText("Жук: Я тоже не знаю. Посижу. Может, пройдёт.");
+  beetleDialogueStage = 7;
+  dBeatle.SetOptionState(18, eOptionOff);
+  dBeatle.SetOptionState(19, eOptionOff);
+  dBeatle.SetOptionState(20, eOptionOff);
+  dBeatle.SetOptionState(21, eOptionOff);
+  dBeatle.SetOptionState(23, eOptionOn);
+  if (cEgo.HasInventory(iStar_salve)) {
+    dBeatle.SetOptionState(22, eOptionOn);
+  }
+return
+@19
+  TypeText("Илья: Тогда Аркадий. Звучит солидно.");
+  TypeText("Жук: Длинное имя. Пока позовёшь, я уже уйду.");
+  TypeText("Илья: Ты никуда быстро не уходишь.");
+  TypeText("Жук: Тогда тем более незачем торопиться.");
+  TypeText("Илья: Значит, договорились. Теперь я буду звать тебя так.");
+  TypeText("Жук: Зови. Если не откликнусь, значит, не понравилось.");
+  TypeText("Жук замолкает посреди разговора.");
+  TypeText("Илья: Ты чего замолчал? Только что нормально разговаривал.");
+  TypeText("Жук: Плохо стало. Внутри холодно. Голова тяжёлая.");
+  TypeText("Илья: Не отключайся. Я не знаю, как лечить жука. Тем более такого большого.");
+  TypeText("Жук: Я тоже не знаю. Посижу. Может, пройдёт.");
+  beetleDialogueStage = 7;
+  dBeatle.SetOptionState(18, eOptionOff);
+  dBeatle.SetOptionState(19, eOptionOff);
+  dBeatle.SetOptionState(20, eOptionOff);
+  dBeatle.SetOptionState(21, eOptionOff);
+  dBeatle.SetOptionState(23, eOptionOn);
+  if (cEgo.HasInventory(iStar_salve)) {
+    dBeatle.SetOptionState(22, eOptionOn);
+  }
+return
+@20
+  TypeText("Илья: Степан. Просто и понятно.");
+  TypeText("Жук: Нормальное имя. У нас за стеной был Степан.");
+  TypeText("Илья: Тоже жук?");
+  TypeText("Жук: Нет. Таракан. Но большой человек был.");
+  TypeText("Илья: Значит, договорились. Теперь я буду звать тебя так.");
+  TypeText("Жук: Зови. Если не откликнусь, значит, не понравилось.");
+  TypeText("Жук замолкает посреди разговора.");
+  TypeText("Илья: Ты чего замолчал? Только что нормально разговаривал.");
+  TypeText("Жук: Плохо стало. Внутри холодно. Голова тяжёлая.");
+  TypeText("Илья: Не отключайся. Я не знаю, как лечить жука. Тем более такого большого.");
+  TypeText("Жук: Я тоже не знаю. Посижу. Может, пройдёт.");
+  beetleDialogueStage = 7;
+  dBeatle.SetOptionState(18, eOptionOff);
+  dBeatle.SetOptionState(19, eOptionOff);
+  dBeatle.SetOptionState(20, eOptionOff);
+  dBeatle.SetOptionState(21, eOptionOff);
+  dBeatle.SetOptionState(23, eOptionOn);
+  if (cEgo.HasInventory(iStar_salve)) {
+    dBeatle.SetOptionState(22, eOptionOn);
+  }
+return
+@21
+  TypeText("Илья: Ладно. Оставайся Жуком. Всё равно ничего лучше не получается.");
+  TypeText("Жук: Получается. Просто хуже.");
+  TypeText("Илья: Значит, договорились. Теперь я буду звать тебя так.");
+  TypeText("Жук: Зови. Если не откликнусь, значит, не понравилось.");
+  TypeText("Жук замолкает посреди разговора.");
+  TypeText("Илья: Ты чего замолчал? Только что нормально разговаривал.");
+  TypeText("Жук: Плохо стало. Внутри холодно. Голова тяжёлая.");
+  TypeText("Илья: Не отключайся. Я не знаю, как лечить жука. Тем более такого большого.");
+  TypeText("Жук: Я тоже не знаю. Посижу. Может, пройдёт.");
+  beetleDialogueStage = 7;
+  dBeatle.SetOptionState(18, eOptionOff);
+  dBeatle.SetOptionState(19, eOptionOff);
+  dBeatle.SetOptionState(20, eOptionOff);
+  dBeatle.SetOptionState(21, eOptionOff);
+  dBeatle.SetOptionState(23, eOptionOn);
+  if (cEgo.HasInventory(iStar_salve)) {
+    dBeatle.SetOptionState(22, eOptionOn);
+  }
+return
+@22
+  cEgo.LoseInventory(iStar_salve);
+  TypeText("Илья: У меня есть «Звёздочка». Я её зачем-то весь день ношу.");
+  TypeText("Жук: Её можно есть?");
+  TypeText("Илья: Нет. Ей мажут всё, что болит. Покажи, где у тебя голова.");
+  TypeText("Жук: Спереди. Где усы.");
+  TypeText("Илья достаёт маленькую красную баночку из кармана и открывает её.");
+  TypeText("Жук: Сильно пахнет. Закрой обратно.");
+  TypeText("Илья: Поздно. Сейчас намажу между усами. Там у тебя вроде должно болеть.");
+  TypeText("Илья наносит мазь на панцирь.");
+  TypeText("Жук: Жжёт. Ты уверен, что это лекарство?");
+  TypeText("Илья: Конечно. Если жжёт, значит, дошло куда надо.");
+  TypeText("Проходит немного времени. Жук остаётся неподвижным.");
+  TypeText("Илья: Ну как? Не хуже?");
+  TypeText("Жук: Уже теплее. Голова отпускает. Пахнет только сильно.");
+  TypeText("Илья: Значит, помогло. Я тебя вылечил.");
+  TypeText("Жук: Не спеши. Я ещё посижу.");
+  TypeText("Илья: Ты и так сидел.");
+  TypeText("Жук: Значит, правильно сидел.");
+  TypeText("Жук: Всё. Теперь нормально. Голова лёгкая. Только пахну сильно.");
+  TypeText("Илья: Хорошо, что помогло. Я уже не знал, куда тебя нести.");
+  TypeText("Жук: Никуда нести не надо. На чердак пойдём.");
+  TypeText("Илья: Зачем нам на чердак? Ты только что чуть не помер.");
+  TypeText("Жук: Там будет состязание. Кто больше выпьет, тот победил.");
+  TypeText("Илья: Какое ещё состязание? Ты только что еле сидел.");
+  TypeText("Жук: Тогда я был больной. Теперь здоровый. «Звёздочка» всё исправила.");
+  TypeText("Илья: А почему обязательно на чердаке? Здесь тебе уже места мало?");
+  TypeText("Жук: Там напитки стоят. Разные. Здесь ничего подходящего нет.");
+  TypeText("Илья: Откуда ты знаешь, что там стоит? Ты же живёшь в стене.");
+  TypeText("Жук: Стена идёт до чердака. Я там был. Дверь закрыта.");
+  TypeText("Жук показывает ключ между передними лапами.");
+  TypeText("Жук: Вот ключ. Возьми. Без тебя я дверь не открою.");
+  TypeText("Илья: Почему сам не откроешь? Ключ у тебя есть.");
+  TypeText("Жук: Лапы большие. Замок маленький. Сделали неудобно.");
+  cEgo.AddInventory(iAtticKey);
+  TypeText("Получен предмет: 'ключ от чердака'.");
+  TypeText("Илья: Значит, я открываю чердак. А потом мы пьём всё, что там найдём.");
+  TypeText("Жук: Не всё. Пока один не сдастся. Остальное победителю.");
+  TypeText("Илья: Мне уже не нравится, что ты всё это заранее придумал.");
+  TypeText("Жук: Поздно. Ключ у тебя.");
+  beetleDialogueStage = 8;
+  dBeatle.SetOptionState(22, eOptionOff);
+  dBeatle.SetOptionState(23, eOptionOff);
+stop
+@23
 stop
 ]]></Script>
             <DialogOptions>
@@ -5726,13 +5994,13 @@ stop
                 <ID>2</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Отдать жуку бутылку пива</Text>
+                <Text xml:space="preserve">Предложить Жуку пиво</Text>
               </DialogOption>
               <DialogOption>
                 <ID>3</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Выпить с жуком</Text>
+                <Text>Уйти</Text>
               </DialogOption>
               <DialogOption>
                 <ID>4</ID>
@@ -5762,46 +6030,94 @@ stop
                 <ID>8</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text>Уйти</Text>
+                <Text xml:space="preserve">Почему ты такой большой?</Text>
               </DialogOption>
               <DialogOption>
                 <ID>9</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Почему ты такой большой?</Text>
+                <Text xml:space="preserve">Откуда ты здесь?</Text>
               </DialogOption>
               <DialogOption>
                 <ID>10</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Откуда ты здесь?</Text>
+                <Text xml:space="preserve">Что ты здесь делаешь?</Text>
               </DialogOption>
               <DialogOption>
                 <ID>11</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Что ты здесь делаешь?</Text>
+                <Text>Уйти</Text>
               </DialogOption>
               <DialogOption>
                 <ID>12</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text>Уйти</Text>
+                <Text xml:space="preserve">Попытаться столкнуть Жука</Text>
               </DialogOption>
               <DialogOption>
                 <ID>13</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text>Уйти</Text>
+                <Text xml:space="preserve">Стянуть покрывало</Text>
               </DialogOption>
               <DialogOption>
                 <ID>14</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Рассказать про головную боль.</Text>
+                <Text xml:space="preserve">Пригрозить милицией</Text>
               </DialogOption>
               <DialogOption>
                 <ID>15</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Предложить другое место</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>16</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Рассказать про головную боль</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>17</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text>Уйти</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>18</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text>Борис</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>19</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text>Аркадий</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>20</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text>Степан</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>21</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Оставить Жуком</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>22</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Использовать «Звёздочку»</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>23</ID>
                 <Say>False</Say>
                 <Show>True</Show>
                 <Text>Уйти</Text>
