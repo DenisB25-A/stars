@@ -4219,7 +4219,7 @@
             <HotspotX>1</HotspotX>
             <HotspotY>1</HotspotY>
             <ID>27</ID>
-            <Image>2042</Image>
+            <Image>224</Image>
             <Name>iAtticKey</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties>
@@ -12423,6 +12423,22 @@ stop
               <OffsetY>0</OffsetY>
               <ImportHeight>141</ImportHeight>
               <ImportWidth>513</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="224" Width="100" Height="100" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Инвентарь/attic_key.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>100</ImportHeight>
+              <ImportWidth>100</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>

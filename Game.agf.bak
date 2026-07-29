@@ -4219,7 +4219,7 @@
             <HotspotX>1</HotspotX>
             <HotspotY>1</HotspotY>
             <ID>27</ID>
-            <Image>2042</Image>
+            <Image>224</Image>
             <Name>iAtticKey</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties>
@@ -5770,13 +5770,7 @@ return
   TypeText("Илья: А где тогда спать мне?");
   TypeText("Жук: Не знаю. Но ты и раньше почти не спал.");
   beetleDialogueStage = 5;
-  dBeatle.SetOptionState(12, eOptionOff);
-  dBeatle.SetOptionState(13, eOptionOff);
-  dBeatle.SetOptionState(14, eOptionOff);
-  dBeatle.SetOptionState(15, eOptionOff);
-  dBeatle.SetOptionState(16, eOptionOn);
-  dBeatle.SetOptionState(17, eOptionOn);
-return
+stop
 @13
   TypeText("Илья: Тогда я вытащу покрывало. Без него тебе станет неудобно.");
   TypeText("Жук: Не вытаскивай. Порвёшь.");
@@ -5789,13 +5783,7 @@ return
   TypeText("Илья: А где тогда спать мне?");
   TypeText("Жук: Не знаю. Но ты и раньше почти не спал.");
   beetleDialogueStage = 5;
-  dBeatle.SetOptionState(12, eOptionOff);
-  dBeatle.SetOptionState(13, eOptionOff);
-  dBeatle.SetOptionState(14, eOptionOff);
-  dBeatle.SetOptionState(15, eOptionOff);
-  dBeatle.SetOptionState(16, eOptionOn);
-  dBeatle.SetOptionState(17, eOptionOn);
-return
+stop
 @14
   TypeText("Илья: Я могу вызвать милицию. Объясню, что ты незаконно занял мою кровать.");
   TypeText("Жук: Вызывай. Только скажи, чтобы приехали с большой машиной.");
@@ -5810,13 +5798,7 @@ return
   TypeText("Илья: А где тогда спать мне?");
   TypeText("Жук: Не знаю. Но ты и раньше почти не спал.");
   beetleDialogueStage = 5;
-  dBeatle.SetOptionState(12, eOptionOff);
-  dBeatle.SetOptionState(13, eOptionOff);
-  dBeatle.SetOptionState(14, eOptionOff);
-  dBeatle.SetOptionState(15, eOptionOff);
-  dBeatle.SetOptionState(16, eOptionOn);
-  dBeatle.SetOptionState(17, eOptionOn);
-return
+stop
 @15
   TypeText("Илья: Давай найдём тебе другое место. Есть стул, пол и ковёр.");
   TypeText("Жук: Стул маленький. Пол холодный. Ковёр колется.");
@@ -5829,13 +5811,7 @@ return
   TypeText("Илья: А где тогда спать мне?");
   TypeText("Жук: Не знаю. Но ты и раньше почти не спал.");
   beetleDialogueStage = 5;
-  dBeatle.SetOptionState(12, eOptionOff);
-  dBeatle.SetOptionState(13, eOptionOff);
-  dBeatle.SetOptionState(14, eOptionOff);
-  dBeatle.SetOptionState(15, eOptionOff);
-  dBeatle.SetOptionState(16, eOptionOn);
-  dBeatle.SetOptionState(17, eOptionOn);
-return
+stop
 @16
   TypeText("Илья: У меня весь вечер болит голова. И становится только хуже.");
   TypeText("Илья: У меня голова болит. Внутри будто кто-то стучит по трубам.");
@@ -6002,8 +5978,8 @@ return
   TypeText("Жук: Поздно. Ключ у тебя.");
   beetleDialogueStage = 8;
   dBeatle.SetOptionState(22, eOptionOff);
-  dBeatle.SetOptionState(23, eOptionOn);
-return
+  dBeatle.SetOptionState(23, eOptionOff);
+stop
 @23
 stop
 ]]></Script>
@@ -12447,6 +12423,22 @@ stop
               <OffsetY>0</OffsetY>
               <ImportHeight>141</ImportHeight>
               <ImportWidth>513</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="224" Width="100" Height="100" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Инвентарь/attic_key.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>100</ImportHeight>
+              <ImportWidth>100</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>
