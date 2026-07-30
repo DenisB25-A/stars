@@ -782,6 +782,10 @@
                 <Description IsNull="True" />
                 <Number>45</Number>
               </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>47</Number>
+              </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
           <UnloadedRoomFolder Name="kitchen">
@@ -4437,7 +4441,7 @@
             <SpeechView>0</SpeechView>
             <StartX>583</StartX>
             <StartY>996</StartY>
-            <StartingRoom>31</StartingRoom>
+            <StartingRoom>23</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>False</TurnWhenFacing>
@@ -4607,7 +4611,7 @@
             <Properties />
             <RealName>Maneken</RealName>
             <ScriptName>cEvil_Maneken</ScriptName>
-            <Solid>True</Solid>
+            <Solid>False</Solid>
             <SpeechAnimationDelay>5</SpeechAnimationDelay>
             <SpeechColor>12</SpeechColor>
             <SpeechView>0</SpeechView>
@@ -11165,7 +11169,7 @@ stop
           </Sprite>
           <Sprite Slot="54" Width="125" Height="123" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>Assets/Кнопки/3red33blanket_httpss.mj.runkgPjJKa9gwQ_picture_frame_ - ar_41_ - s_57cbc6e7-ba7d-4f87-bd61-39711be6d324_3.png</FileName>
+              <FileName>C:\Users\Admin\Documents\stars\Assets\Кнопки\Вернуться назад (лево).png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>123</ImportHeight>
@@ -12411,86 +12415,6 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="164" Width="534" Height="534" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-            <Source>
-              <FileName>Assets/Головоломки/zodiak-wheel-534.png</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>534</ImportHeight>
-              <ImportWidth>534</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>True</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <TransparentColorIndex>0</TransparentColorIndex>
-              <ImportAlphaChannel>True</ImportAlphaChannel>
-            </Source>
-          </Sprite>
-          <Sprite Slot="163" Width="513" Height="141" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-            <Source>
-              <FileName>Assets/Комнаты/Предисловие/4-arrows-first-arrow-back.jpg</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>141</ImportHeight>
-              <ImportWidth>513</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>True</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <TransparentColorIndex>0</TransparentColorIndex>
-              <ImportAlphaChannel>True</ImportAlphaChannel>
-            </Source>
-          </Sprite>
-          <Sprite Slot="165" Width="513" Height="141" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-            <Source>
-              <FileName>Assets/Комнаты/Предисловие/4-arrows-second-arrow-back.jpg</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>141</ImportHeight>
-              <ImportWidth>513</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>True</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <TransparentColorIndex>0</TransparentColorIndex>
-              <ImportAlphaChannel>True</ImportAlphaChannel>
-            </Source>
-          </Sprite>
-          <Sprite Slot="166" Width="513" Height="141" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-            <Source>
-              <FileName>Assets/Комнаты/Предисловие/4-arrows-third-arrow-back.png</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>141</ImportHeight>
-              <ImportWidth>513</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>True</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <TransparentColorIndex>0</TransparentColorIndex>
-              <ImportAlphaChannel>True</ImportAlphaChannel>
-            </Source>
-          </Sprite>
-          <Sprite Slot="167" Width="513" Height="141" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-            <Source>
-              <FileName>Assets/Комнаты/Предисловие/4-arrows-forth-arrow-back.png</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>141</ImportHeight>
-              <ImportWidth>513</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>True</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <TransparentColorIndex>0</TransparentColorIndex>
-              <ImportAlphaChannel>True</ImportAlphaChannel>
-            </Source>
-          </Sprite>
           <Sprite Slot="224" Width="100" Height="100" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
               <FileName>Assets/Инвентарь/attic_key.png</FileName>
@@ -12578,6 +12502,22 @@ stop
               <OffsetY>0</OffsetY>
               <ImportHeight>63</ImportHeight>
               <ImportWidth>428</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="163" Width="123" Height="125" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Кнопки/Вернуться назад (право).PNG</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>125</ImportHeight>
+              <ImportWidth>123</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>
@@ -14269,7 +14209,7 @@ See KeyboardMovement.txt for details.
                 <BundlingType>InGameEXE</BundlingType>
                 <DefaultPriority>Inherit</DefaultPriority>
                 <DefaultRepeat>Inherit</DefaultRepeat>
-                <DefaultVolume>20</DefaultVolume>
+                <DefaultVolume>5</DefaultVolume>
                 <FileType>MP3</FileType>
                 <ID>25</ID>
                 <Index>28</Index>
