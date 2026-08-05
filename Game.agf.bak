@@ -3649,7 +3649,7 @@
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Top>172</Top>
               <Transparency>0</Transparency>
-              <Visible>True</Visible>
+              <Visible>False</Visible>
               <Width>449</Width>
               <ZOrder>0</ZOrder>
             </NormalGUI>
@@ -3665,7 +3665,7 @@
                 <Image>166</Image>
                 <Left>0</Left>
                 <Locked>False</Locked>
-                <MouseoverImage>0</MouseoverImage>
+                <MouseoverImage>165</MouseoverImage>
                 <Name>btnNew_game</Name>
                 <NewModeNumber>0</NewModeNumber>
                 <OnClick>btnNew_game_OnClick</OnClick>
@@ -3677,7 +3677,7 @@
                 <TextPaddingVertical>2</TextPaddingVertical>
                 <Top>5</Top>
                 <Translated>True</Translated>
-                <Visible>True</Visible>
+                <Visible>False</Visible>
                 <Width>445</Width>
                 <WrapText>False</WrapText>
                 <ZOrder>0</ZOrder>
@@ -3691,9 +3691,9 @@
                 <Height>160</Height>
                 <ID>1</ID>
                 <Image>167</Image>
-                <Left>2</Left>
+                <Left>0</Left>
                 <Locked>False</Locked>
-                <MouseoverImage>0</MouseoverImage>
+                <MouseoverImage>238</MouseoverImage>
                 <Name>Button6</Name>
                 <NewModeNumber>0</NewModeNumber>
                 <OnClick />
@@ -3705,7 +3705,7 @@
                 <TextPaddingVertical>2</TextPaddingVertical>
                 <Top>185</Top>
                 <Translated>True</Translated>
-                <Visible>True</Visible>
+                <Visible>False</Visible>
                 <Width>445</Width>
                 <WrapText>False</WrapText>
                 <ZOrder>1</ZOrder>
@@ -3721,7 +3721,7 @@
                 <Image>233</Image>
                 <Left>0</Left>
                 <Locked>False</Locked>
-                <MouseoverImage>0</MouseoverImage>
+                <MouseoverImage>239</MouseoverImage>
                 <Name>Button7</Name>
                 <NewModeNumber>0</NewModeNumber>
                 <OnClick />
@@ -3733,7 +3733,7 @@
                 <TextPaddingVertical>2</TextPaddingVertical>
                 <Top>361</Top>
                 <Translated>True</Translated>
-                <Visible>True</Visible>
+                <Visible>False</Visible>
                 <Width>449</Width>
                 <WrapText>False</WrapText>
                 <ZOrder>2</ZOrder>
@@ -3749,7 +3749,7 @@
                 <Image>234</Image>
                 <Left>0</Left>
                 <Locked>False</Locked>
-                <MouseoverImage>0</MouseoverImage>
+                <MouseoverImage>240</MouseoverImage>
                 <Name>btn_Exit_game</Name>
                 <NewModeNumber>0</NewModeNumber>
                 <OnClick>btn_Exit_game_OnClick</OnClick>
@@ -3761,7 +3761,7 @@
                 <TextPaddingVertical>2</TextPaddingVertical>
                 <Top>544</Top>
                 <Translated>True</Translated>
-                <Visible>True</Visible>
+                <Visible>False</Visible>
                 <Width>446</Width>
                 <WrapText>False</WrapText>
                 <ZOrder>3</ZOrder>
@@ -3844,6 +3844,169 @@
                 <Width>318</Width>
                 <WrapText>False</WrapText>
                 <ZOrder>1</ZOrder>
+              </GUIButton>
+            </Controls>
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>242</BackgroundImage>
+              <BorderColor>0</BorderColor>
+              <Clickable>True</Clickable>
+              <Height>800</Height>
+              <ID>22</ID>
+              <Left>640</Left>
+              <Name>gMenu_ingame</Name>
+              <OnClick />
+              <PopupStyle>Normal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Top>100</Top>
+              <Transparency>0</Transparency>
+              <Visible>False</Visible>
+              <Width>635</Width>
+              <ZOrder>0</ZOrder>
+            </NormalGUI>
+            <Controls>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>85</Height>
+                <ID>0</ID>
+                <Image>243</Image>
+                <Left>110</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnContinue</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>0</PushedImage>
+                <Text xml:space="preserve">New Button</Text>
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>154</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>437</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>0</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>82</Height>
+                <ID>1</ID>
+                <Image>241</Image>
+                <Left>132</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnSave_game</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>0</PushedImage>
+                <Text xml:space="preserve">New Button</Text>
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>259</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>387</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>1</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>84</Height>
+                <ID>2</ID>
+                <Image>244</Image>
+                <Left>123</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>Button5</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>0</PushedImage>
+                <Text xml:space="preserve">New Button</Text>
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>362</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>385</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>2</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>89</Height>
+                <ID>3</ID>
+                <Image>245</Image>
+                <Left>110</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnSettings</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>0</PushedImage>
+                <Text xml:space="preserve">New Button</Text>
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>464</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>423</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>3</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>84</Height>
+                <ID>4</ID>
+                <Image>246</Image>
+                <Left>123</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnExit</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>0</PushedImage>
+                <Text xml:space="preserve">New Button</Text>
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>572</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>409</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>4</ZOrder>
               </GUIButton>
             </Controls>
           </GUIMain>
@@ -4328,7 +4491,12 @@
             <Image>135</Image>
             <Name>iDoor_handle</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties />
+            <Properties>
+              <CustomProperty>
+                <Name>Description</Name>
+                <Value xml:space="preserve">Это просто дверная ручка.</Value>
+              </CustomProperty>
+            </Properties>
             <Interactions>
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Event Index="0" />
@@ -4505,7 +4673,12 @@
             <Image>164</Image>
             <Name>iRazor</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties />
+            <Properties>
+              <CustomProperty>
+                <Name>Description</Name>
+                <Value xml:space="preserve">Ее с трудом можно использовать как оружие, но она очень удобно ложится в руку.</Value>
+              </CustomProperty>
+            </Properties>
             <Interactions>
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Event Index="0" />
@@ -4711,7 +4884,7 @@
             <SpeechView>0</SpeechView>
             <StartX>583</StartX>
             <StartY>996</StartY>
-            <StartingRoom>99</StartingRoom>
+            <StartingRoom>23</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>False</TurnWhenFacing>
@@ -5593,7 +5766,6 @@ return
   player.LockView(ILYA_ON_STAIRS);
   FadeIn(2);
   Wait(40);
-option-off 1
 option-off 2
 option-on 4
 option-on 5
@@ -5612,31 +5784,28 @@ return
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
   cBum.UnlockView();
   TypeText(">Бомж: Зачем мне? Здесь тепло. Батареи греют. Ветер не дует. Менты не гоняют.");
-  TypeText("Антон: Вы не понимаете - тут что-то происходит. Надо выбираться, а я... короче я не могу найти выход.");
+  TypeText("Антон: Вы не понимаете - я не о том. Я не могу найти выход. Тут что-то происходит. Надо бежать.");
   cBum.LockView(cBum.SpeechView); 
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
   TypeText(">Бомж: Бежать... я много от чего в жизни бегал."); 
   TypeText(">Бомж: От неприятностей, от долгов, от женщин, от жизни - от всего."); 
-  TypeText(">Бомж: Вот только когда бежишь, всегда оказываешься вот в такой бетонной коробке.");
+  TypeText(">Бомж: Вот только когда бежишь, всегда оказываешься вот в такой вот бетонной коробке.");
   TypeText(">Бомж: Где воняет ссаниной.");
   cBum.UnlockView();
 option-off 4
 return
 @5
-  TypeText("Антон: Что-то странное происходит...");
-  TypeText("Антон: С тех пор, как я переехал сюда.");
+  TypeText("Антон: Что-то странное происходит... С тех пор, как я переехал сюда.");
   TypeText("Антон: Мне постоянно кажется, что в квартире кроме меня кто-то есть.");
-  TypeText("Антон: А сейчас там нет света, хотя электричество есть на всех этажах.");
+  TypeText("Антон: А сегодня ночью свет отключили, хотя электричество - на всех этажах.");
   TypeText("Антон: И... я не могу выйти из дома.");
-  TypeText("Антон: Подъезд куда-то исчез. Осталась только лестница вниз.");
-  TypeText("Антон: В темноту.");
-  TypeText("Антон: Не знаю, зачем это все говорю.");
+  TypeText("Антон: Подъезд куда-то исчез. Осталась только лестница вниз. В темноту.");
+  TypeText("Антон: Знаю, это звучит как бред. Черт, я ведь вас даже не знаю. Зачем я вообще это все говорю?");
   Wait(120);
   cBum.LockView(cBum.SpeechView); 
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
-  TypeText(">Бомж: Говори, авось полегчает.");
-  TypeText(">Бомж: Ночь - она всегда долгая, а эта будет длинее прочих.");
-  TypeText(">Бомж: Времени у нас - до рассвета.");
+  TypeText(">Бомж: А чего бы и не говорить?");
+  TypeText(">Бомж: Ночь - долгая, а эта будет длинее прочих.");
   TypeText(">Бомж: Так чего же ты хочешь?");
   cBum.UnlockView();
 option-off 4
@@ -6411,6 +6580,7 @@ stop
 return
 @1
   FadeOut(2); 
+  aBlack_hole.Stop();
   AudioChannel *channel1 = aUnder_bed.Play();
 
   Wait(120);   
@@ -6420,8 +6590,10 @@ return
   TypeText("Вы вновь наклоняетесь и действуете уже более осторожно.");
   TypeText("Пальцы нащупывают бугристое от ржавчины лезвие.");
   TypeText("Получен предмет: 'Ржавый нож'");
+  aBlack_hole.Play(eAudioPriorityNormal, eRepeat);
   player.AddInventory(iRastyKnife);
   Preamble_under_bed = true;
+  
 stop
 @2
 stop
@@ -6717,6 +6889,36 @@ stop
                 <Say>False</Say>
                 <Show>True</Show>
                 <Text xml:space="preserve">Не сейчас, еще есть дела.</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>21</ID>
+            <Name>dRazor</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+  TypeText("Получен предмет: 'Опасная бритва'.");
+  player.AddInventory(iRazor);
+  Razor = true;
+stop
+@2
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Взять опасную бритву</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text>Уйти</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
@@ -7409,6 +7611,13 @@ stop
           <DefaultValue>0</DefaultValue>
           <Name>Dino</Name>
           <Type>int</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>false</DefaultValue>
+          <Name>Razor</Name>
+          <Type>bool</Type>
         </GlobalVariable>
       </Variables>
     </GlobalVariables>
@@ -10773,6 +10982,166 @@ stop
                   <OffsetY>0</OffsetY>
                   <ImportHeight>153</ImportHeight>
                   <ImportWidth>318</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="165" Width="438" Height="155" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Меню игры/Подсвет1.PNG</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>155</ImportHeight>
+                  <ImportWidth>438</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="238" Width="446" Height="155" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Меню игры/Подсвет2.PNG</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>155</ImportHeight>
+                  <ImportWidth>446</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="239" Width="442" Height="154" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Меню игры/Подсвет3.PNG</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>154</ImportHeight>
+                  <ImportWidth>442</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="240" Width="434" Height="154" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Меню игры/Подсвет4.PNG</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>154</ImportHeight>
+                  <ImportWidth>434</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="242" Width="644" Height="799" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Меню игры/Меню.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>799</ImportHeight>
+                  <ImportWidth>644</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="243" Width="437" Height="85" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Меню игры/Кнопка в игре1.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>85</ImportHeight>
+                  <ImportWidth>437</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="241" Width="387" Height="82" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Меню игры/Кнопка в игре2.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>82</ImportHeight>
+                  <ImportWidth>387</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="244" Width="385" Height="84" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Меню игры/Кнопка в игре3.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>84</ImportHeight>
+                  <ImportWidth>385</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="245" Width="423" Height="89" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Меню игры/Кнопка в игре4.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>89</ImportHeight>
+                  <ImportWidth>423</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="246" Width="409" Height="84" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Меню игры/Кнопка в игре5.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>84</ImportHeight>
+                  <ImportWidth>409</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>True</RemapToGamePalette>
