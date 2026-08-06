@@ -1,1 +1,1 @@
-Game : (room:44) [room44.asc:15] Wait() was used in "Before Fadein" event; use "After Fadein" instead
+Game : (room:99) WARNING: event script function 'room_AfterFadeIn' not found (Room 99)
