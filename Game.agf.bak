@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>58</AudioIndexer>
+      <AudioIndexer>59</AudioIndexer>
       <AutoMoveInWalkMode>False</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets>Windows</BuildTargets>
@@ -4304,7 +4304,12 @@
             <Image>101</Image>
             <Name>iBook</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties />
+            <Properties>
+              <CustomProperty>
+                <Name>Description</Name>
+                <Value xml:space="preserve">Странная история Гарри Галлера, путешествующего по собственным безумным мирам.</Value>
+              </CustomProperty>
+            </Properties>
             <Interactions>
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Event Index="0" />
@@ -5188,6 +5193,8 @@ return
   TypeText("...");
   ksenia_answer = true;
   Laptop_Button4.Visible = true;
+  ChangeMood(-1);
+  TypeText("Возможно, ваши действия продиктованы рациональностью. Но вы все равно чувствуете себя немного униженным.");
 run-script 1
 stop
 @2
@@ -5347,12 +5354,11 @@ stop
     Wait(1); 
   }
   FadeIn(2);
-  TypeText("Вот, то что надо.");
+  TypeText("Вот, то что надо. Такие мелочи делают жизнь чуть более сносной.");
   was_brew_coffee = true;
   player.LoseInventory(iCoffee);
   player.LoseInventory(iSugar);
   player.AddInventory(iCup);
-  ChangeMood(1);
 stop
 @3
   FadeOut(2);
@@ -5372,7 +5378,7 @@ stop
   player.LoseInventory(iSugar);
   player.LoseInventory(iMilk);
   player.AddInventory(iCup);
-  ChangeMood(-2);
+  ChangeMood(-3);
 stop
 @4
 stop
@@ -6919,6 +6925,19 @@ stop
 @S  // Dialog startup entry point
 return
 @1
+  if (player.HasInventory(iCup))
+  {
+    ChangeMood(1);
+  }
+  if (player.HasInventory(iBook))
+  {
+    ChangeMood(1);
+  }
+  if (player.HasInventory(iDino))
+  {
+    ChangeMood(1);
+  }
+  ChangeMood(1);
   FadeOut(2);
   player.ChangeRoom(34, 0, 0);
   Wait(80);
@@ -15675,6 +15694,19 @@ See KeyboardMovement.txt for details.
                 <SourceFileName>Assets/Звуки/Metalic_click.mp3</SourceFileName>
                 <Type>3</Type>
                 <FileLastModifiedDate>2026-07-29 12:10:51Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>70</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>56</ID>
+                <Index>59</Index>
+                <ScriptName>aEating</ScriptName>
+                <SourceFileName>Assets/Звуки/eating.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-08-07 19:06:56Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
