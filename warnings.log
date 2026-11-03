@@ -1,2 +1,3 @@
 Game : (room:1) [room1.asc:12] Warning: blocking Say call during fade-out.
 Game : (room:1) [room1.asc:12] Wait() was used in "Before Fadein" event; use "After Fadein" instead
+Game : (room:5) WARNING: event script function 'room_FirstLoad' not found (Room 5)

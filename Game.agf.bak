@@ -797,10 +797,6 @@
             <UnloadedRooms>
               <UnloadedRoom>
                 <Description IsNull="True" />
-                <Number>5</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
                 <Number>27</Number>
               </UnloadedRoom>
               <UnloadedRoom>
@@ -864,10 +860,6 @@
             <UnloadedRooms>
               <UnloadedRoom>
                 <Description IsNull="True" />
-                <Number>2</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
                 <Number>24</Number>
               </UnloadedRoom>
             </UnloadedRooms>
@@ -875,10 +867,6 @@
           <UnloadedRoomFolder Name="Bedroom">
             <SubFolders />
             <UnloadedRooms>
-              <UnloadedRoom>
-                <Description IsNull="True" />
-                <Number>1</Number>
-              </UnloadedRoom>
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>12</Number>
@@ -932,9 +920,22 @@
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
-          <UnloadedRoomFolder Name="New folder">
+          <UnloadedRoomFolder Name="Episode 1">
             <SubFolders />
-            <UnloadedRooms />
+            <UnloadedRooms>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>1</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>2</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>5</Number>
+              </UnloadedRoom>
+            </UnloadedRooms>
           </UnloadedRoomFolder>
         </SubFolders>
         <UnloadedRooms>
@@ -5294,7 +5295,7 @@ return
   }
   else
   {
-    TypeText("Там никого нет.");
+    TypeText("Вопреки вашим страхам... там никого нет.");
   }
 stop
 @2
