@@ -869,10 +869,6 @@
             <UnloadedRooms>
               <UnloadedRoom>
                 <Description IsNull="True" />
-                <Number>12</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
                 <Number>13</Number>
               </UnloadedRoom>
               <UnloadedRoom>
@@ -934,6 +930,10 @@
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>5</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>12</Number>
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
@@ -4240,7 +4240,7 @@
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
-                <Value xml:space="preserve">На вид пачка кажется слегка вздутой. Вы открываете крышку, осторожно принюхиваетесь, и ваши опасения оправдываются. Прокисло. Ну чтож, по крайней мере, вы заметили до того, как испортить свой кофе.</Value>
+                <Value xml:space="preserve">На вид пачка вздулась. Вы открываете крышку, осторожно принюхиваетесь, и ваши опасения оправдываются. Прокисло. Ну чтож, пить или добавлять его куда-либо, пожалуй, не стоит.</Value>
               </CustomProperty>
             </Properties>
             <Interactions>
