@@ -5166,7 +5166,7 @@ return
 @1
   aFridge_close.Play();
   TypeText("Дверца не открывается.");
-  TypeText("Может примерзла? Не знал, что такое бывает. Ладно. Сейчас я все равно не голоден.");
+  TypeText("Вы дергаете еще раз. Ничего. Ладно, сейчас всё равно не до этого.");
 stop
 @2
 stop
@@ -5295,7 +5295,7 @@ return
   }
   else
   {
-    TypeText("Вопреки вашим страхам... там никого нет.");
+    TypeText("Вопреки вашим детским воспоминаниям... там никого нет.");
   }
 stop
 @2
@@ -5344,7 +5344,7 @@ return
     Wait(1); 
   }
   FadeIn(2);
-  TypeText("Настолько крепкий, что сводит зубы, еще и несладкий. Не самый мой любимый напиток. Но за неимением лучшего и это сойдет.");
+  TypeText("Настолько горький, что сводит зубы. Не самый мой любимый напиток. Но за неимением лучшего и это сойдет.");
   was_brew_coffee = true;
   player.LoseInventory(iCoffee);
   player.AddInventory(iCup);
@@ -5364,6 +5364,7 @@ stop
   player.LoseInventory(iCoffee);
   player.LoseInventory(iSugar);
   player.AddInventory(iCup);
+  TypeText("Получен предмет: 'Кружка с кофе.'");
 stop
 @3
   FadeOut(2);
@@ -5374,15 +5375,15 @@ stop
   }
   FadeIn(2);
   TypeText("...");
-  TypeText("Молоко прокисло...");
-  TypeText("Я или не заметил этого или снова забыл... Теперь вода из унитаза на вкус была бы приятнее.");
-  TypeText("Черт, ну почему все снова идет не так?");
-  TypeText("Я так больше... эх.");
+  TypeText("Молоко скисло...");
+  TypeText("Ну конечно. Или не заметил, или опять забыл убрать в холодильник. Теперь вода из унитаза была бы приятнее.");
+  TypeText("Почему это обязательно случается именно со мной?");
   was_brew_coffee = true;
   player.LoseInventory(iCoffee);
   player.LoseInventory(iSugar);
   player.LoseInventory(iMilk);
   player.AddInventory(iCup);
+  TypeText("Получен предмет: 'Кружка с кофе.'");
   ChangeMood(-3);
 stop
 @4
@@ -5397,13 +5398,13 @@ stop
                 <ID>1</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">Сделать крепкий черный кофе.</Text>
+                <Text xml:space="preserve">Сделать простой черный кофе.</Text>
               </DialogOption>
               <DialogOption>
                 <ID>2</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">Сделать простой кофе с сахаром.</Text>
+                <Text xml:space="preserve">Сделать простой черный кофе с сахаром.</Text>
               </DialogOption>
               <DialogOption>
                 <ID>3</ID>
@@ -5431,12 +5432,11 @@ stop
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
-  TypeText("Что у нас тут интересно!?");
 return
 @1
   if (IsNight == false)
   {
-    TypeText("На полках стоит мука, сахар, сода и ещё какие-то крупы. Не помню, чтобы я когда-то их использовал. Обычно мама готовила. А я был беспомощен: и пельмени сварить не в состоянии.");
+    TypeText("На полках стоит мука, сахар, какие-то крупы.");
 option-on 2;
 option-off 1;
   }
@@ -5449,12 +5449,13 @@ return
 @2
   cEgo.AddInventory(iSugar);
   TypeText("Сахар, наверное, пригодится.");
+  TypeText("Получен предмет 'Банка с сахаром'.");
+  TypeText("Кофе здесь нет. Вы вспоминаете, что матушка никогда его не пила, но держала на всякий случай баночку, 'для гостей'. Кажется, где-то в кладовке.");
 option-off-forever 2;
 return
 @3
   if (IsNight == false)
   {
-    TypeText("Внутри почти пусто, но пахнет неприятно.");
     TypeText("Поворошив рукой картофельные очистки, вы нащупываете что-то маленькое и металлическое.");
     TypeText("На свет появляется крохотная шайба с логотипом, знакомым с детства: мазь 'Звездочка'.");
     TypeText("Не понимая, зачем она вам, вы кладете ее в карман.");
@@ -5472,8 +5473,7 @@ option-off 3;
 return
 @4
 stop
-@5
-stop
+
 ]]></Script>
             <DialogOptions>
               <DialogOption>
@@ -5496,12 +5496,6 @@ stop
               </DialogOption>
               <DialogOption>
                 <ID>4</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">Поговорить с тараканом</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>5</ID>
                 <Say>False</Say>
                 <Show>True</Show>
                 <Text>Уйти</Text>
