@@ -895,10 +895,6 @@
             <UnloadedRooms>
               <UnloadedRoom>
                 <Description IsNull="True" />
-                <Number>6</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
                 <Number>28</Number>
               </UnloadedRoom>
               <UnloadedRoom>
@@ -930,6 +926,10 @@
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>5</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>6</Number>
               </UnloadedRoom>
               <UnloadedRoom>
                 <Description IsNull="True" />
