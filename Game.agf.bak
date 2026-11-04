@@ -823,10 +823,6 @@
             <UnloadedRooms>
               <UnloadedRoom>
                 <Description IsNull="True" />
-                <Number>4</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
                 <Number>26</Number>
               </UnloadedRoom>
               <UnloadedRoom>
@@ -914,6 +910,10 @@
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>3</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>4</Number>
               </UnloadedRoom>
               <UnloadedRoom>
                 <Description IsNull="True" />
@@ -5107,20 +5107,24 @@ return
 @1
   if (IsNight == false)
   {
-    TypeText("Преодолевая апатию и некоторую брезгливость вы все же снимаете с себя и одежду и становитесь на холодную эмалированную поверхность.");
-    FadeOut(2);
-    aShower.Play();
-    Wait(160);
-    FadeIn(2);
-    TypeText("В голове свербит привычная мысль: 'А смысл?' Однако горячая вода и аромат какого-то дешевого шампуня делает свое дело.");
-    TypeText("Постояв несколько минут под душем, вы чувствуете себя значительно лучше.");
-    is_washed = true;
-    ChangeMood(1);
+    if (is_washed == false)
+    {
+      TypeText("Преодолевая апатию и некоторую брезгливость вы все же снимаете с себя и одежду и встаёте в холодную эмалированную ванну.");
+      FadeOut(2);
+      aShower.Play();
+      Wait(160);
+      FadeIn(2);
+      TypeText("В голове свербит привычная мысль: «А смысл?» Однако горячая вода и аромат какого-то дешёвого мыла делают своё дело.");
+      TypeText("Постояв несколько минут под душем, вы чувствуете себя значительно лучше.");
+      is_washed = true;
+      ChangeMood(1);
+    }
+    else
+    {
+      TypeText("Старая чугунная ванна. Из сливного отверстия несет гнилью.");
+    }
   }
-  else
-  {
-    TypeText("Думаю, мыться сейчас - не лучшая идея.");
-  }
+
 stop
 @2
   if (IsNight == false)
@@ -5140,19 +5144,19 @@ stop
                 <ID>1</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">1. Принять душ</Text>
+                <Text xml:space="preserve">Принять душ</Text>
               </DialogOption>
               <DialogOption>
                 <ID>2</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">2. Заглянуть под ванну</Text>
+                <Text xml:space="preserve">Заглянуть под ванну</Text>
               </DialogOption>
               <DialogOption>
                 <ID>3</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">3. Уйти</Text>
+                <Text>Уйти</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
@@ -5217,19 +5221,19 @@ stop
                 <ID>1</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">...мне очень нужна эта работа (умолять еще раз поговорить с начальником)</Text>
+                <Text xml:space="preserve">«...мне нужна эта работа. Может, попробуешь поговорить с ним ещё раз?»</Text>
               </DialogOption>
               <DialogOption>
                 <ID>2</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">...я понял, спасибо тебе. (вежливо распрощаться)</Text>
+                <Text xml:space="preserve">«Я понял. Спасибо, что попыталась помочь»</Text>
               </DialogOption>
               <DialogOption>
                 <ID>3</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Ничего не отвечать.</Text>
+                <Text xml:space="preserve">Пока не отвечать.</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
@@ -5267,13 +5271,13 @@ stop
                 <ID>2</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">"Вы наверное ошиблись."</Text>
+                <Text xml:space="preserve">"Вы, наверное, ошиблись."</Text>
               </DialogOption>
               <DialogOption>
                 <ID>3</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Не отвечать.</Text>
+                <Text xml:space="preserve">Оставить без ответа.</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
