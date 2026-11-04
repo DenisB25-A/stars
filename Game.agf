@@ -810,23 +810,11 @@
             <UnloadedRooms>
               <UnloadedRoom>
                 <Description IsNull="True" />
-                <Number>3</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
-                <Number>8</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
                 <Number>9</Number>
               </UnloadedRoom>
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>10</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
-                <Number>11</Number>
               </UnloadedRoom>
               <UnloadedRoom>
                 <Description IsNull="True" />
@@ -921,7 +909,15 @@
               </UnloadedRoom>
               <UnloadedRoom>
                 <Description IsNull="True" />
+                <Number>12</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
                 <Number>2</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>3</Number>
               </UnloadedRoom>
               <UnloadedRoom>
                 <Description IsNull="True" />
@@ -933,7 +929,11 @@
               </UnloadedRoom>
               <UnloadedRoom>
                 <Description IsNull="True" />
-                <Number>12</Number>
+                <Number>8</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>11</Number>
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
@@ -4892,9 +4892,9 @@
             <SpeechAnimationDelay>0</SpeechAnimationDelay>
             <SpeechColor>65535</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>583</StartX>
-            <StartY>996</StartY>
-            <StartingRoom>1</StartingRoom>
+            <StartX>556</StartX>
+            <StartY>850</StartY>
+            <StartingRoom>3</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>False</TurnWhenFacing>
@@ -5516,31 +5516,39 @@ return
   TypeText("Получен предмет: 'Книга'");
   player.AddInventory(iBook);
 option-off 1;
-option-on 3;
+option-on 4;
 stop
 @2
   if (prompts == 3)
   {
-    TypeText("Тоненькая книжица 'Агаты Кристи' уместилась на нижней полке, в дальнем ряду. Вы бы и не заметили, если б не знали, что ищете наверняка.");
-    TypeText("Она легко распахивается на середине, заложенная небольшим металлическим предметом вместо закладки.");
+    TypeText("Тоненькая книжица Агаты Кристи - 'Десять негритят' - затерялась на нижней полке, в дальнем ряду. Вы бы и не заметили ее, если б не знали, что ищете.");
+    TypeText("Книга легко раскрывается на середине, заложенная небольшим металлическим предметом вместо закладки.");
     TypeText("Это не ключ. Между страниц - обычная заколка для волос.");
     TypeText("Получен предмет: 'Женская заколка для волос.'");
     player.AddInventory(iBarrete);
 // ИСПРАВЛЕНИЕ: Выключаем опцию НАВСЕГДА
     dBookshelf.SetOptionState(2, eOptionOffForever);
+    dBookshelf.SetOptionState(3, eOptionOffForever);
   }
-  else
+  else if (prompts == 1)
   {
     TypeText("Вы осматриваете полки, пытаясь уловить хоть какой-нибудь след нарушенного порядка в рядах строго выстроенных книг. Однако все корешки выглядят одинаково. Вы берете несколько наугад, пролистываете, но внутри - ничего.");
     TypeText("Так можно копаться хоть до самого вечера.");
   }
 return
 @3
-  TypeText("На сегодня уже есть, чем заняться.");
+  if (prompts == 2)
+  {
+    TypeText("Вы вспоминайте о библиотечном формуляре и о книге, которая наверняка где-то здесь.");
+    TypeText("Вы лениво скользите взглядом по полкам. Впрочем, без особого энтузиазма. Искать ее нет желания - вы просто не понимаете, зачем она вам нужна.");
+   
+  }
 return
 @4
+  TypeText("С полок все также смотрят выстроенные рядами, потертые корешки книг, но на сегодня, пожалуй, уже есть чем заняться.");
+return
+@5
 stop
-
 ]]></Script>
             <DialogOptions>
               <DialogOption>
@@ -5553,16 +5561,22 @@ stop
                 <ID>2</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">Найти мамину книгу с закладкой</Text>
+                <Text xml:space="preserve">Попытаться найти книгу с закладкой</Text>
               </DialogOption>
               <DialogOption>
                 <ID>3</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">Осмотреть полки</Text>
+                <Text xml:space="preserve">Попытаться найти книгу из библиотеки</Text>
               </DialogOption>
               <DialogOption>
                 <ID>4</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Осмотреть полки</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>5</ID>
                 <Say>False</Say>
                 <Show>True</Show>
                 <Text>Уйти</Text>
