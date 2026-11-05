@@ -827,10 +827,6 @@
               </UnloadedRoom>
               <UnloadedRoom>
                 <Description IsNull="True" />
-                <Number>29</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
                 <Number>38</Number>
               </UnloadedRoom>
             </UnloadedRooms>
@@ -914,6 +910,10 @@
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>4</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>29</Number>
               </UnloadedRoom>
               <UnloadedRoom>
                 <Description IsNull="True" />
@@ -5118,11 +5118,12 @@ return
       TypeText("Постояв несколько минут под душем, вы чувствуете себя значительно лучше.");
       is_washed = true;
       ChangeMood(1);
-    }
+     }
     else
     {
       TypeText("Старая чугунная ванна. Из сливного отверстия несет гнилью.");
     }
+    
   }
 
 stop
