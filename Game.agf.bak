@@ -869,10 +869,6 @@
                 <Description IsNull="True" />
                 <Number>28</Number>
               </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
-                <Number>34</Number>
-              </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
           <UnloadedRoomFolder Name="Neighbor_apartment">
@@ -934,6 +930,10 @@
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>7</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>34</Number>
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
@@ -4284,7 +4284,7 @@
             <ID>12</ID>
             <Image>103</Image>
             <Name>iCup</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <PlayerStartsWithItem>True</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
@@ -4308,7 +4308,7 @@
             <ID>13</ID>
             <Image>101</Image>
             <Name>iBook</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <PlayerStartsWithItem>True</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
@@ -5371,6 +5371,7 @@ stop
   player.LoseInventory(iSugar);
   player.AddInventory(iCup);
   TypeText("Получен предмет: «Кружка с кофе».");
+  ChangeMood(1);
 stop
 @3
   FadeOut(2);
@@ -6839,23 +6840,23 @@ stop
 @S  // Dialog startup entry point
 return
 @1
-  if (player.HasInventory(iCup))
-  {
-    ChangeMood(1);
-  }
+  int moodBonus = 1;
+
   if (player.HasInventory(iBook))
   {
-    ChangeMood(1);
+    moodBonus++;
   }
   if (player.HasInventory(iDino))
   {
-    ChangeMood(1);
+    moodBonus++;
   }
-  ChangeMood(1);
-  FadeOut(2);
+  ChangeMood(moodBonus);
+  player.LoseInventory(iCup);
+  
+  FadeOut(2);  // Медленно погружаемся в темноту
+  Wait(80);    // Остаёмся в темноте примерно 2 секунды
+
   player.ChangeRoom(34, 0, 0);
-  Wait(80);
-  FadeIn(2);
 stop
 @2
 stop
@@ -11506,12 +11507,12 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="28" Width="100" Height="100" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+          <Sprite Slot="28" Width="100" Height="110" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>Assets/Инвентарь/iDino.png</FileName>
+              <FileName>Assets/Инвентарь/Динозавр.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
-              <ImportHeight>100</ImportHeight>
+              <ImportHeight>110</ImportHeight>
               <ImportWidth>100</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
@@ -12002,13 +12003,13 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="58" Width="77" Height="100" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+          <Sprite Slot="58" Width="90" Height="117" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>Assets/Пакет молока 2.png</FileName>
+              <FileName>Assets/Инвентарь/Пакет молока 2.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
-              <ImportHeight>100</ImportHeight>
-              <ImportWidth>77</ImportWidth>
+              <ImportHeight>117</ImportHeight>
+              <ImportWidth>90</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>
@@ -12194,13 +12195,13 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="76" Width="100" Height="100" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+          <Sprite Slot="76" Width="90" Height="100" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>Assets/Инвентарь/redblanket_Miniatures_models_for_the_game._2D_horror._Each_on_200e2005-d7e9-4991-adc7-65d5a43f2860_2.png</FileName>
+              <FileName>Assets/Инвентарь/Ключ от кладовки.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>100</ImportHeight>
-              <ImportWidth>100</ImportWidth>
+              <ImportWidth>90</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>
@@ -12482,13 +12483,13 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="116" Width="100" Height="110" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+          <Sprite Slot="116" Width="97" Height="110" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>Assets/Инвентарь/Заколка для волос.png</FileName>
+              <FileName>Assets/Инвентарь/Заколка2.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>110</ImportHeight>
-              <ImportWidth>100</ImportWidth>
+              <ImportWidth>97</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>
@@ -12578,13 +12579,13 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="122" Width="90" Height="110" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+          <Sprite Slot="122" Width="95" Height="110" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>Assets/Инвентарь/Разогнутая заколка.png</FileName>
+              <FileName>Assets/Инвентарь/Заколка Разогнутая.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>110</ImportHeight>
-              <ImportWidth>90</ImportWidth>
+              <ImportWidth>95</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>

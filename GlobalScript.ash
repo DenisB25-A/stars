@@ -14,3 +14,7 @@ import String notesNames[20];
 import function UpdateJournalUI();
 import String notesTexts[20];
 import function ReadAndAddNote(int id);
+
+import function reset_evening_balcony_animation();
+
+import bool moodPanelForced;
