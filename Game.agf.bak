@@ -4188,7 +4188,7 @@
             <ID>8</ID>
             <Image>76</Image>
             <Name>iKey_storeroom</Name>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
@@ -4284,7 +4284,7 @@
             <ID>12</ID>
             <Image>103</Image>
             <Name>iCup</Name>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
@@ -4308,7 +4308,7 @@
             <ID>13</ID>
             <Image>101</Image>
             <Name>iBook</Name>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
