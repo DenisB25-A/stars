@@ -858,10 +858,6 @@
             <UnloadedRooms>
               <UnloadedRoom>
                 <Description IsNull="True" />
-                <Number>7</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
                 <Number>39</Number>
               </UnloadedRoom>
             </UnloadedRooms>
@@ -934,6 +930,10 @@
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>11</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>7</Number>
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
@@ -4188,11 +4188,11 @@
             <ID>8</ID>
             <Image>76</Image>
             <Name>iKey_storeroom</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <PlayerStartsWithItem>True</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
-                <Value xml:space="preserve">Ключ от кладовки. Мама закрывала ее, потому что сквознял отворял дверь. Но, мне кажется, были и другие причины.</Value>
+                <Value xml:space="preserve">Ключ от кладовки. Мама закрывала ее, потому что сквозняк распахивал дверь. Но, мне кажется, были и другие причины.</Value>
               </CustomProperty>
             </Properties>
             <Interactions>
@@ -5118,15 +5118,16 @@ return
       TypeText("Постояв несколько минут под душем, вы чувствуете себя значительно лучше.");
       is_washed = true;
       ChangeMood(1);
+option-off 1;
      }
-    else
-    {
-      TypeText("Старая чугунная ванна. Из сливного отверстия несет гнилью.");
-    }
+  else
+  {
+    TypeText("Старая чугунная ванна. Из сливного отверстия несет гнилью.");
+  }
     
   }
 
-stop
+return
 @2
   if (IsNight == false)
   {
@@ -5136,7 +5137,7 @@ stop
   {
     player.ChangeRoom(38, 0, 0);
   }
-stop
+return
 @3
 stop
 ]]></Script>
@@ -5353,7 +5354,7 @@ return
   was_brew_coffee = true;
   player.LoseInventory(iCoffee);
   player.AddInventory(iCup);
-  TypeText("Получен предмет: 'Кружка с кофе.'");
+  TypeText("Получен предмет: «Кружка с кофе».");
   
 stop
 @2
@@ -5369,7 +5370,7 @@ stop
   player.LoseInventory(iCoffee);
   player.LoseInventory(iSugar);
   player.AddInventory(iCup);
-  TypeText("Получен предмет: 'Кружка с кофе.'");
+  TypeText("Получен предмет: «Кружка с кофе».");
 stop
 @3
   FadeOut(2);
@@ -5381,14 +5382,15 @@ stop
   FadeIn(2);
   TypeText("...");
   TypeText("Молоко скисло...");
-  TypeText("Ну конечно. Или не заметил, или опять забыл убрать в холодильник. Теперь вода из унитаза была бы приятнее.");
-  TypeText("Почему это обязательно случается именно со мной?");
+  TypeText("Ну конечно. Я или не заметил сразу, или снова забыл убрать его в холодильник.");
+  TypeText("Это можно пить, хотя вода из сливного бачка на вкус была бы приятнее.");
+  TypeText("Ну почему это обязательно происходит со мной? В любом случае, настроение безнадежно испорчено.");
   was_brew_coffee = true;
   player.LoseInventory(iCoffee);
   player.LoseInventory(iSugar);
   player.LoseInventory(iMilk);
   player.AddInventory(iCup);
-  TypeText("Получен предмет: 'Кружка с кофе.'");
+  TypeText("Получен предмет: «Кружка с кофе».");
   ChangeMood(-3);
 stop
 @4
@@ -5455,14 +5457,14 @@ return
   cEgo.AddInventory(iSugar);
   TypeText("Сахар, наверное, пригодится.");
   TypeText("Получен предмет «Банка с сахаром».");
-  TypeText("Кофе здесь нет. Вы вспоминаете, что матушка никогда его не пила, но держала на всякий случай баночку, 'для гостей'. Кажется, где-то в кладовке.");
+  TypeText("Кофе здесь нет. Вы вспоминаете, что матушка никогда его не пила, но держала на всякий случай баночку, «для гостей». Кажется, где-то в кладовке.");
 option-off-forever 2;
 return
 @3
   if (IsNight == false)
   {
     TypeText("Поворошив рукой картофельные очистки, вы нащупываете что-то маленькое и металлическое.");
-    TypeText("На свет появляется крохотная шайба с логотипом, знакомым с детства: мазь 'Звездочка'.");
+    TypeText("На свет появляется крохотная шайба с логотипом, знакомым с детства: мазь «Звездочка».");
     TypeText("Не понимая, зачем она вам, вы кладете ее в карман.");
     player.AddInventory(iStar_salve);
     TypeText("Получен предмет: «мазь Звездочка».");
@@ -5652,110 +5654,6 @@ stop
           </Dialog>
           <Dialog>
             <ID>10</ID>
-            <Name>dMilkCarton</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file dMilkCarton
-@S  // Dialog startup entry point
-    TypeText("Пакет молока. Почему он не в холодильнике, а здесь? Я уже и не помню.");
-return
-@1
-  TypeText("Теперь у меня есть молоко"); 
-  object[1].Visible  = false;
-  player.AddInventory(iMilk);
-stop
-@2
-  dMilkCarton.SetOptionState(2, eOptionOff);
-  TypeText("Оно прокисло. Как жаль...");
-return
-@3
-  TypeText("Фу! Прокисло!");
-  ChangeMood(-1);
-  object[1].Visible  = false;
-stop
-@4
-stop
-]]></Script>
-            <DialogOptions>
-              <DialogOption>
-                <ID>1</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Взять молоко</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>2</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Проверить молоко</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>3</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Выпить молоко</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>4</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text>Уйти</Text>
-              </DialogOption>
-            </DialogOptions>
-          </Dialog>
-          <Dialog>
-            <ID>11</ID>
-            <Name>dCoffeeTin</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file
-@S  // Dialog startup entry point
-  TypeText("На верхней полке стоит баночка приличного на вид кофе. Мама не пила его, но держала на случай прихода гостей.");
-  TypeText("Судя по слою пыли, гостей здесь не было уже очень давно.");
-return
-@1
-  player.AddInventory(iCoffee);
-  object[0].Visible = false;
-stop
-@2
-  TypeText("Какой же я неуклюжий");
-  object[0].Visible = false;
-stop
-@3
-  TypeText("На вкус как мышьяк... боже...");
-  object[0].Visible = false;
-  ChangeMood(-1);
-stop
-@4
-stop
-]]></Script>
-            <DialogOptions>
-              <DialogOption>
-                <ID>1</ID>
-                <Say>True</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Взять кофе</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>2</ID>
-                <Say>True</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Просыать кофе на пол</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>3</ID>
-                <Say>True</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Поесть кофе</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>4</ID>
-                <Say>True</Say>
-                <Show>True</Show>
-                <Text>Уйти</Text>
-              </DialogOption>
-            </DialogOptions>
-          </Dialog>
-          <Dialog>
-            <ID>12</ID>
             <Name>dBum</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -6049,7 +5947,7 @@ return
             </DialogOptions>
           </Dialog>
           <Dialog>
-            <ID>20</ID>
+            <ID>18</ID>
             <Name>dBeatle</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -6644,7 +6542,7 @@ stop
             </DialogOptions>
           </Dialog>
           <Dialog>
-            <ID>13</ID>
+            <ID>11</ID>
             <Name>dUnder_bedPreamble</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -6686,7 +6584,7 @@ stop
             </DialogOptions>
           </Dialog>
           <Dialog>
-            <ID>14</ID>
+            <ID>12</ID>
             <Name>dBeerBottle</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -6746,7 +6644,7 @@ return
             </DialogOptions>
           </Dialog>
           <Dialog>
-            <ID>15</ID>
+            <ID>13</ID>
             <Name>dKnife</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -6776,7 +6674,7 @@ stop
             </DialogOptions>
           </Dialog>
           <Dialog>
-            <ID>16</ID>
+            <ID>14</ID>
             <Name>dBoss</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -6820,7 +6718,7 @@ stop
             </DialogOptions>
           </Dialog>
           <Dialog>
-            <ID>17</ID>
+            <ID>15</ID>
             <Name>dBlacky</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -6905,7 +6803,7 @@ stop
             </DialogOptions>
           </Dialog>
           <Dialog>
-            <ID>18</ID>
+            <ID>16</ID>
             <Name>dShadows</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -6934,7 +6832,7 @@ stop
             </DialogOptions>
           </Dialog>
           <Dialog>
-            <ID>19</ID>
+            <ID>17</ID>
             <Name>dBalcony_cofee</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -6978,7 +6876,7 @@ stop
             </DialogOptions>
           </Dialog>
           <Dialog>
-            <ID>21</ID>
+            <ID>19</ID>
             <Name>dRazor</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
