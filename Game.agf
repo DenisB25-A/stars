@@ -4224,7 +4224,7 @@
                 <ID>10</ID>
                 <Image>103</Image>
                 <Name>iCup</Name>
-                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <PlayerStartsWithItem>True</PlayerStartsWithItem>
                 <Properties>
                   <CustomProperty>
                     <Name>Description</Name>
@@ -13345,6 +13345,22 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
+          <Sprite Slot="250" Width="279" Height="134" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Объекты/Динозавр в катсцене.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>134</ImportHeight>
+              <ImportWidth>279</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
         </Sprites>
       </SpriteFolder>
     </Sprites>
@@ -13608,7 +13624,7 @@ stop
           </View>
           <View>
             <ID>2</ID>
-            <Name>vIlyaSitting</Name>
+            <Name>vAntonSitting</Name>
             <Loops>
               <Loop>
                 <ID>0</ID>
@@ -13662,7 +13678,7 @@ stop
           </View>
           <View>
             <ID>3</ID>
-            <Name>vIlyaRising</Name>
+            <Name>vAntonRising</Name>
             <Loops>
               <Loop>
                 <ID>0</ID>
