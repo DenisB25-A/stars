@@ -4020,196 +4020,356 @@
     </GUIs>
     <InventoryItems>
       <InventoryItemFolder Name="Main">
-        <SubFolders />
+        <SubFolders>
+          <InventoryItemFolder Name="Episode 1">
+            <SubFolders />
+            <InventoryItems>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description>Dino_toy</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>1</ID>
+                <Image>28</Image>
+                <Name>iDino</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>Description</Name>
+                    <Value xml:space="preserve">Резиновый динозавр. Хвост немного погрызен.</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <ScriptModule>GlobalScript.asc</ScriptModule>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description />
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>2</ID>
+                <Image>33</Image>
+                <Name>iCigarettes</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>Description</Name>
+                    <Value xml:space="preserve">Пачка сигарет. Когда-нибудь я брошу, но... не сейчас.</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <ScriptModule>GlobalScript.asc</ScriptModule>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description xml:space="preserve">New inventory item</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>3</ID>
+                <Image>78</Image>
+                <Name>iCoffee</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>Description</Name>
+                    <Value xml:space="preserve">Пыльная, но приличная на вид банка кофе. Срок годности не истек и выглядит хорошо.</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <ScriptModule>GlobalScript.asc</ScriptModule>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description xml:space="preserve">New inventory item</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>4</ID>
+                <Image>79</Image>
+                <Name>iVodka</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>Description</Name>
+                    <Value xml:space="preserve">Я бы, конечно, очень хорошо подумал, прежде чем рискнул это пить.</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <ScriptModule>GlobalScript.asc</ScriptModule>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description xml:space="preserve">New inventory item</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>5</ID>
+                <Image>48</Image>
+                <Name>iSugar</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>Description</Name>
+                    <Value xml:space="preserve">Обычная банка с сахаром.</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <ScriptModule>GlobalScript.asc</ScriptModule>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description xml:space="preserve">New inventory item</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>6</ID>
+                <Image>76</Image>
+                <Name>iKey_storeroom</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>Description</Name>
+                    <Value xml:space="preserve">Ключ от кладовки. Мама закрывала ее, потому что сквозняк распахивал дверь. Но, мне кажется, были и другие причины.</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <ScriptModule>GlobalScript.asc</ScriptModule>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description xml:space="preserve">New inventory item</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>8</ID>
+                <Image>58</Image>
+                <Name>iMilk</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>Description</Name>
+                    <Value xml:space="preserve">На вид пачка вздулась. Вы открываете крышку, осторожно принюхиваетесь, и ваши опасения оправдываются. Прокисло. Ну чтож, пить или добавлять его куда-либо, пожалуй, не стоит.</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <ScriptModule>GlobalScript.asc</ScriptModule>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description xml:space="preserve">New inventory item</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>9</ID>
+                <Image>41</Image>
+                <Name>iChocolate</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>Description</Name>
+                    <Value xml:space="preserve">Плитка темного шоколада. "Превращает моменты в праздник" - написано на упаковке. </Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <ScriptModule>GlobalScript.asc</ScriptModule>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description xml:space="preserve">New inventory item</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>10</ID>
+                <Image>103</Image>
+                <Name>iCup</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>Description</Name>
+                    <Value xml:space="preserve">Кружка прекрасного горячего кофе! Что может быть лучше? Конечно, при условии, что вы все сделали правильно.</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <ScriptModule>GlobalScript.asc</ScriptModule>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description xml:space="preserve">New inventory item</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>11</ID>
+                <Image>101</Image>
+                <Name>iBook</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>Description</Name>
+                    <Value xml:space="preserve">Странная история Гарри Галлера, путешествующего по собственным безумным мирам.</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <ScriptModule>GlobalScript.asc</ScriptModule>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description xml:space="preserve">New inventory item</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>12</ID>
+                <Image>116</Image>
+                <Name>iBarrete</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>Description</Name>
+                    <Value xml:space="preserve">Женская заколка для волос</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <ScriptModule>GlobalScript.asc</ScriptModule>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description xml:space="preserve">New inventory item</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>15</ID>
+                <Image>122</Image>
+                <Name>iBarrete2</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>Description</Name>
+                    <Value xml:space="preserve">Можно было бы сказать, что теперь это отмычка, но я не вскрыватель замков. Это просто длинная проволока.</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <ScriptModule>GlobalScript.asc</ScriptModule>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description xml:space="preserve">New inventory item</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>24</ID>
+                <Image>160</Image>
+                <Name>iStar_salve</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>Description</Name>
+                    <Value xml:space="preserve">Это же легендарная "Звездочка". Как могло прийти в голову ее выбросить?</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <ScriptModule>GlobalScript.asc</ScriptModule>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description xml:space="preserve">New inventory item</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>28</ID>
+                <Image>247</Image>
+                <Name>iMusic_player</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>Description</Name>
+                    <Value xml:space="preserve">Старый кассетный плеер, который подарила мне мама. После уроков я, бывало, надевал наушники и уходил в парк, где часами бродил по аллеям, слушая музыку. Эх, как давно это было.</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <ScriptModule>GlobalScript.asc</ScriptModule>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+            </InventoryItems>
+          </InventoryItemFolder>
+        </SubFolders>
         <InventoryItems>
-          <InventoryItem>
-            <CursorImage>2041</CursorImage>
-            <Description xml:space="preserve">Blue Cup</Description>
-            <HotspotX>1</HotspotX>
-            <HotspotY>1</HotspotY>
-            <ID>1</ID>
-            <Image>2041</Image>
-            <Name>iBlueCup</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties />
-            <Interactions>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>2042</CursorImage>
-            <Description>Key</Description>
-            <HotspotX>1</HotspotX>
-            <HotspotY>1</HotspotY>
-            <ID>2</ID>
-            <Image>2042</Image>
-            <Name>iKey</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties />
-            <Interactions>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>0</CursorImage>
-            <Description>Dino_toy</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>3</ID>
-            <Image>28</Image>
-            <Name>iDino</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>Description</Name>
-                <Value xml:space="preserve">Резиновый динозавр. Хвост немного погрызен.</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>0</CursorImage>
-            <Description />
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>4</ID>
-            <Image>33</Image>
-            <Name>iCigarettes</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>Description</Name>
-                <Value xml:space="preserve">Пачка сигарет. Когда-нибудь я брошу, но... не сейчас.</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>0</CursorImage>
-            <Description xml:space="preserve">New inventory item</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>5</ID>
-            <Image>78</Image>
-            <Name>iCoffee</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>Description</Name>
-                <Value xml:space="preserve">Пыльная, но приличная на вид банка кофе. Срок годности не истек и выглядит хорошо.</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>0</CursorImage>
-            <Description xml:space="preserve">New inventory item</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>6</ID>
-            <Image>79</Image>
-            <Name>iVodka</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>Description</Name>
-                <Value xml:space="preserve">Я бы, конечно, очень хорошо подумал, прежде чем рискнул это пить.</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
           <InventoryItem>
             <CursorImage>0</CursorImage>
             <Description xml:space="preserve">New inventory item</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
             <ID>7</ID>
-            <Image>48</Image>
-            <Name>iSugar</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>Description</Name>
-                <Value xml:space="preserve">Обычная банка с сахаром.</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>0</CursorImage>
-            <Description xml:space="preserve">New inventory item</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>8</ID>
-            <Image>76</Image>
-            <Name>iKey_storeroom</Name>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>Description</Name>
-                <Value xml:space="preserve">Ключ от кладовки. Мама закрывала ее, потому что сквозняк распахивал дверь. Но, мне кажется, были и другие причины.</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>0</CursorImage>
-            <Description xml:space="preserve">New inventory item</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>9</ID>
             <Image>83</Image>
             <Name>iNote</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -4233,127 +4393,7 @@
             <Description xml:space="preserve">New inventory item</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <ID>10</ID>
-            <Image>58</Image>
-            <Name>iMilk</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>Description</Name>
-                <Value xml:space="preserve">На вид пачка вздулась. Вы открываете крышку, осторожно принюхиваетесь, и ваши опасения оправдываются. Прокисло. Ну чтож, пить или добавлять его куда-либо, пожалуй, не стоит.</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>0</CursorImage>
-            <Description xml:space="preserve">New inventory item</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>11</ID>
-            <Image>41</Image>
-            <Name>iChocolate</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>Description</Name>
-                <Value xml:space="preserve">Плитка темного шоколада. "Превращает моменты в праздник" - написано на упаковке. </Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>0</CursorImage>
-            <Description xml:space="preserve">New inventory item</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>12</ID>
-            <Image>103</Image>
-            <Name>iCup</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>Description</Name>
-                <Value xml:space="preserve">Кружка прекрасного горячего кофе! Что может быть лучше? Конечно, при условии, что вы все сделали правильно.</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>0</CursorImage>
-            <Description xml:space="preserve">New inventory item</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
             <ID>13</ID>
-            <Image>101</Image>
-            <Name>iBook</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>Description</Name>
-                <Value xml:space="preserve">Странная история Гарри Галлера, путешествующего по собственным безумным мирам.</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>0</CursorImage>
-            <Description xml:space="preserve">New inventory item</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>14</ID>
-            <Image>116</Image>
-            <Name>iBarrete</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>Description</Name>
-                <Value xml:space="preserve">Женская заколка для волос</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>0</CursorImage>
-            <Description xml:space="preserve">New inventory item</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>15</ID>
             <Image>117</Image>
             <Name>iArmature</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -4377,7 +4417,7 @@
             <Description xml:space="preserve">New inventory item</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <ID>16</ID>
+            <ID>14</ID>
             <Image>121</Image>
             <Name>iRastyKnife</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -4401,31 +4441,7 @@
             <Description xml:space="preserve">New inventory item</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <ID>17</ID>
-            <Image>122</Image>
-            <Name>iBarrete2</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>Description</Name>
-                <Value xml:space="preserve">Можно было бы сказать, что теперь это отмычка, но я не вскрыватель замков. Это просто длинная проволока.</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>0</CursorImage>
-            <Description xml:space="preserve">New inventory item</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>18</ID>
+            <ID>16</ID>
             <Image>123</Image>
             <Name>iKnife</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -4449,7 +4465,7 @@
             <Description xml:space="preserve">New inventory item</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <ID>19</ID>
+            <ID>17</ID>
             <Image>130</Image>
             <Name>iBeerBottleFar</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -4473,7 +4489,7 @@
             <Description xml:space="preserve">New inventory item</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <ID>20</ID>
+            <ID>18</ID>
             <Image>130</Image>
             <Name>iBeerBottleClose</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -4497,7 +4513,7 @@
             <Description xml:space="preserve">New inventory item</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <ID>21</ID>
+            <ID>19</ID>
             <Image>135</Image>
             <Name>iDoor_handle</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -4521,7 +4537,7 @@
             <Description xml:space="preserve">New inventory item</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <ID>22</ID>
+            <ID>20</ID>
             <Image>148</Image>
             <Name>iGoldenKey</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -4545,7 +4561,7 @@
             <Description xml:space="preserve">New inventory item</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <ID>23</ID>
+            <ID>21</ID>
             <Image>149</Image>
             <Name>iLamp</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -4564,7 +4580,7 @@
             <Description xml:space="preserve">New inventory item</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <ID>24</ID>
+            <ID>22</ID>
             <Image>155</Image>
             <Name>iBread</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -4588,7 +4604,7 @@
             <Description xml:space="preserve">New inventory item</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <ID>25</ID>
+            <ID>23</ID>
             <Image>157</Image>
             <Name>iHair</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -4608,35 +4624,11 @@
             </Interactions>
           </InventoryItem>
           <InventoryItem>
-            <CursorImage>0</CursorImage>
-            <Description xml:space="preserve">New inventory item</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>26</ID>
-            <Image>160</Image>
-            <Name>iStar_salve</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>Description</Name>
-                <Value xml:space="preserve">Это же легендарная "Звездочка". Как могло прийти в голову ее выбросить?</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
             <CursorImage>2042</CursorImage>
             <Description xml:space="preserve">Ключ от чердака</Description>
             <HotspotX>1</HotspotX>
             <HotspotY>1</HotspotY>
-            <ID>27</ID>
+            <ID>25</ID>
             <Image>224</Image>
             <Name>iAtticKey</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -4660,7 +4652,7 @@
             <Description xml:space="preserve">New inventory item</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <ID>28</ID>
+            <ID>26</ID>
             <Image>132</Image>
             <Name>iNeighbor_key</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -4679,7 +4671,7 @@
             <Description xml:space="preserve">New inventory item</Description>
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
-            <ID>29</ID>
+            <ID>27</ID>
             <Image>164</Image>
             <Name>iRazor</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
@@ -4687,30 +4679,6 @@
               <CustomProperty>
                 <Name>Description</Name>
                 <Value xml:space="preserve">Ее с трудом можно использовать как оружие, но она очень удобно ложится в руку.</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>0</CursorImage>
-            <Description xml:space="preserve">New inventory item</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>30</ID>
-            <Image>247</Image>
-            <Name>iMusic_player</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>Description</Name>
-                <Value xml:space="preserve">Старый кассетный плеер, который подарила мне мама. После уроков я, бывало, надевал наушники и уходил в парк, где часами бродил по аллеям, слушая музыку. Эх, как давно это было.</Value>
               </CustomProperty>
             </Properties>
             <Interactions>
@@ -4916,9 +4884,9 @@
             <SpeechAnimationDelay>0</SpeechAnimationDelay>
             <SpeechColor>65535</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>556</StartX>
-            <StartY>850</StartY>
-            <StartingRoom>3</StartingRoom>
+            <StartX>583</StartX>
+            <StartY>996</StartY>
+            <StartingRoom>1</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>False</TurnWhenFacing>
@@ -5119,13 +5087,15 @@
     <PlayerCharacter>0</PlayerCharacter>
     <Dialogs>
       <DialogFolder Name="Main">
-        <SubFolders />
-        <Dialogs>
-          <Dialog>
-            <ID>0</ID>
-            <Name>dBathchoice</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file
+        <SubFolders>
+          <DialogFolder Name="Episode 1">
+            <SubFolders />
+            <Dialogs>
+              <Dialog>
+                <ID>0</ID>
+                <Name>dBathchoice</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 return 
 @1
@@ -5165,32 +5135,32 @@ return
 @3
 stop
 ]]></Script>
-            <DialogOptions>
-              <DialogOption>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">Принять душ</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">Заглянуть под ванну</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>3</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text>Уйти</Text>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
                 <ID>1</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Принять душ</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>2</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Заглянуть под ванну</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>3</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text>Уйти</Text>
-              </DialogOption>
-            </DialogOptions>
-          </Dialog>
-          <Dialog>
-            <ID>1</ID>
-            <Name>dFridge</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file
+                <Name>dFridge</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 return
 @1
@@ -5201,26 +5171,26 @@ stop
 @2
 stop
 ]]></Script>
-            <DialogOptions>
-              <DialogOption>
-                <ID>1</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Открыть холодильник</Text>
-              </DialogOption>
-              <DialogOption>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">Открыть холодильник</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text>Уйти</Text>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
                 <ID>2</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text>Уйти</Text>
-              </DialogOption>
-            </DialogOptions>
-          </Dialog>
-          <Dialog>
-            <ID>2</ID>
-            <Name>dKsenia</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file
+                <Name>dKsenia</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 return
 @1
@@ -5242,32 +5212,32 @@ stop
   TypeText("...");
 stop
 ]]></Script>
-            <DialogOptions>
-              <DialogOption>
-                <ID>1</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">«...мне нужна эта работа. Может, попробуешь поговорить с ним ещё раз?»</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>2</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">«Я понял. Спасибо, что попыталась помочь»</Text>
-              </DialogOption>
-              <DialogOption>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">«...мне нужна эта работа. Может, попробуешь поговорить с ним ещё раз?»</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">«Я понял. Спасибо, что попыталась помочь»</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>3</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">Пока не отвечать.</Text>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
                 <ID>3</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Пока не отвечать.</Text>
-              </DialogOption>
-            </DialogOptions>
-          </Dialog>
-          <Dialog>
-            <ID>3</ID>
-            <Name>dUnknown</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file
+                <Name>dUnknown</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 return
 @1
@@ -5286,32 +5256,32 @@ stop
   TypeText("...");
 stop
 ]]></Script>
-            <DialogOptions>
-              <DialogOption>
-                <ID>1</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">"Кто это?"</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>2</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">"Вы, наверное, ошиблись."</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>3</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Оставить без ответа.</Text>
-              </DialogOption>
-            </DialogOptions>
-          </Dialog>
-          <Dialog>
-            <ID>4</ID>
-            <Name>dUnder_bed</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">"Кто это?"</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">"Вы, наверное, ошиблись."</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>3</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">Оставить без ответа.</Text>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
+                <ID>4</ID>
+                <Name>dUnder_bed</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 return
 @1
@@ -5331,26 +5301,26 @@ stop
 @2
 stop
 ]]></Script>
-            <DialogOptions>
-              <DialogOption>
-                <ID>1</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Заглянуть под кровать</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>2</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text>Уйти</Text>
-              </DialogOption>
-            </DialogOptions>
-          </Dialog>
-          <Dialog>
-            <ID>5</ID>
-            <Name>dTeapot</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">Заглянуть под кровать</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text>Уйти</Text>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
+                <ID>5</ID>
+                <Name>dTeapot</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
   if (cEgo.HasInventory(iCoffee)) {
       dTeapot.SetOptionState(1, eOptionOn);
@@ -5425,44 +5395,44 @@ stop
   TypeText("Мне нужны молоко, кофе, сахар, наверняка все это где-нибудь здесь.");
 stop
 ]]></Script>
-            <DialogOptions>
-              <DialogOption>
-                <ID>1</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">Сделать простой черный кофе.</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>2</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">Сделать простой черный кофе с сахаром.</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>3</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">Сделать кофе с сахаром и молоком.</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>4</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text>Уйти.</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>5</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Что там ещё нужно?</Text>
-              </DialogOption>
-            </DialogOptions>
-          </Dialog>
-          <Dialog>
-            <ID>6</ID>
-            <Name>dKitchen_sink</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text xml:space="preserve">Сделать простой черный кофе.</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text xml:space="preserve">Сделать простой черный кофе с сахаром.</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>3</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text xml:space="preserve">Сделать кофе с сахаром и молоком.</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>4</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text>Уйти.</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>5</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">Что там ещё нужно?</Text>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
+                <ID>6</ID>
+                <Name>dKitchen_sink</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 return
 @1
@@ -5507,38 +5477,38 @@ return
 stop
 
 ]]></Script>
-            <DialogOptions>
-              <DialogOption>
-                <ID>1</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Осмотреть полки</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>2</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">Взять банку с сахаром</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>3</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Осмотреть помойное ведро</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>4</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text>Уйти</Text>
-              </DialogOption>
-            </DialogOptions>
-          </Dialog>
-          <Dialog>
-            <ID>7</ID>
-            <Name>dBookshelf</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">Осмотреть полки</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text xml:space="preserve">Взять банку с сахаром</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>3</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">Осмотреть помойное ведро</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>4</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text>Уйти</Text>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
+                <ID>7</ID>
+                <Name>dBookshelf</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 return
 @1
@@ -5580,72 +5550,129 @@ return
 @5
 stop
 ]]></Script>
-            <DialogOptions>
-              <DialogOption>
-                <ID>1</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Поискать книгу на вечер</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>2</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">Попытаться найти книгу с закладкой</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>3</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">Вспомнить о книге из формуляра</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>4</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">Осмотреть полки</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>5</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text>Уйти</Text>
-              </DialogOption>
-            </DialogOptions>
-          </Dialog>
-          <Dialog>
-            <ID>8</ID>
-            <Name>dBalcony</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">Поискать книгу на вечер</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text xml:space="preserve">Попытаться найти книгу с закладкой</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>3</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text xml:space="preserve">Вспомнить о книге из формуляра</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>4</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text xml:space="preserve">Осмотреть полки</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>5</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text>Уйти</Text>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
+                <ID>16</ID>
+                <Name>dBalcony_cofee</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 return
 @1
+  int moodBonus = 1;
+
+  if (player.HasInventory(iBook))
+  {
+    moodBonus++;
+  }
+  if (player.HasInventory(iDino))
+  {
+    moodBonus++;
+  }
+  if (player.HasInventory(iMusic_player))
+  {
+    moodBonus++;
+  }
+  ChangeMood(moodBonus);
+  player.LoseInventory(iCup);
+  
+  FadeOut(2);  // Медленно погружаемся в темноту
+  Wait(80);    // Остаёмся в темноте примерно 2 секунды
+
+  player.ChangeRoom(34, 0, 0);
 stop
 @2
-  TypeText("На балконе приятно свежо и тихо. Но... чего-то не хватает.");
-  TypeText("Как же хочется курить...");
-  player.ChangeRoom(5, 406, 1010);
-  aDoor_sound3.Play();
 stop
 ]]></Script>
-            <DialogOptions>
-              <DialogOption>
-                <ID>1</ID>
-                <Say>True</Say>
-                <Show>True</Show>
-                <Text>Покурить</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>2</ID>
-                <Say>True</Say>
-                <Show>True</Show>
-                <Text>Уйти</Text>
-              </DialogOption>
-            </DialogOptions>
-          </Dialog>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">Провести остаток дня здесь.</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">Не сейчас, еще есть дела.</Text>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
+                <ID>19</ID>
+                <Name>dDark_corner</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+  TypeText("Затаив дыхание, вы встаете на нижнюю полку, рискуя повалить тяжелый шкаф на себя, и тянетесь рукой в темноту. Вы осторожно ощупываете пространство, и когда начинает казаться, что там ничего нет, пальцы нащупывают какой-то шнурок. Вы тянете его на себя.");
+  TypeText("На свет появляется пара старых наушников, а за ними - небольшой плеер.");
+  TypeText("Вы не можете поверить своим глазам. Это же плеер, который мама подарила вам, кажется, в седьмом классе.");
+  TypeText("Вы так часто им пользовались, что уже через год он сломался. Да и сейчас не работает. Однако неожиданная находка будто возвращает вас в детство, отчего на сердце становится немного теплей");
+  player.AddInventory(iMusic_player);
+  TypeText("Получен предмет: «Старый плеер»");
+  ChangeMood(1);
+  foundplayer = true;
+stop
+@2
+stop
+
+]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">Пошарить в темном углу.</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text>Уйти.</Text>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+            </Dialogs>
+          </DialogFolder>
+        </SubFolders>
+        <Dialogs>
           <Dialog>
-            <ID>9</ID>
+            <ID>8</ID>
             <Name>dUnder_bed2</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -5678,7 +5705,7 @@ stop
             </DialogOptions>
           </Dialog>
           <Dialog>
-            <ID>10</ID>
+            <ID>9</ID>
             <Name>dBum</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -5972,7 +5999,7 @@ return
             </DialogOptions>
           </Dialog>
           <Dialog>
-            <ID>18</ID>
+            <ID>17</ID>
             <Name>dBeatle</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -6567,7 +6594,7 @@ stop
             </DialogOptions>
           </Dialog>
           <Dialog>
-            <ID>11</ID>
+            <ID>10</ID>
             <Name>dUnder_bedPreamble</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -6609,7 +6636,7 @@ stop
             </DialogOptions>
           </Dialog>
           <Dialog>
-            <ID>12</ID>
+            <ID>11</ID>
             <Name>dBeerBottle</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -6669,7 +6696,7 @@ return
             </DialogOptions>
           </Dialog>
           <Dialog>
-            <ID>13</ID>
+            <ID>12</ID>
             <Name>dKnife</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -6699,7 +6726,7 @@ stop
             </DialogOptions>
           </Dialog>
           <Dialog>
-            <ID>14</ID>
+            <ID>13</ID>
             <Name>dBoss</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -6743,7 +6770,7 @@ stop
             </DialogOptions>
           </Dialog>
           <Dialog>
-            <ID>15</ID>
+            <ID>14</ID>
             <Name>dBlacky</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -6828,7 +6855,7 @@ stop
             </DialogOptions>
           </Dialog>
           <Dialog>
-            <ID>16</ID>
+            <ID>15</ID>
             <Name>dShadows</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -6857,51 +6884,7 @@ stop
             </DialogOptions>
           </Dialog>
           <Dialog>
-            <ID>17</ID>
-            <Name>dBalcony_cofee</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file
-@S  // Dialog startup entry point
-return
-@1
-  int moodBonus = 1;
-
-  if (player.HasInventory(iBook))
-  {
-    moodBonus++;
-  }
-  if (player.HasInventory(iDino))
-  {
-    moodBonus++;
-  }
-  ChangeMood(moodBonus);
-  player.LoseInventory(iCup);
-  
-  FadeOut(2);  // Медленно погружаемся в темноту
-  Wait(80);    // Остаёмся в темноте примерно 2 секунды
-
-  player.ChangeRoom(34, 0, 0);
-stop
-@2
-stop
-]]></Script>
-            <DialogOptions>
-              <DialogOption>
-                <ID>1</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Провести остаток дня здесь.</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>2</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Не сейчас, еще есть дела.</Text>
-              </DialogOption>
-            </DialogOptions>
-          </Dialog>
-          <Dialog>
-            <ID>19</ID>
+            <ID>18</ID>
             <Name>dRazor</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
@@ -6927,42 +6910,6 @@ stop
                 <Say>False</Say>
                 <Show>True</Show>
                 <Text>Уйти</Text>
-              </DialogOption>
-            </DialogOptions>
-          </Dialog>
-          <Dialog>
-            <ID>20</ID>
-            <Name>dDark_corner</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file
-@S  // Dialog startup entry point
-return
-@1
-  TypeText("Затаив дыхание, вы встаете на нижнюю полку, рискуя повалить тяжелый шкаф на себя, и тянетесь рукой в темноту. Вы осторожно ощупываете пространство, и когда начинает казаться, что там ничего нет, пальцы нащупывают какой-то шнурок. Вы тянете его на себя.");
-  TypeText("На свет появляется пара старых наушников, а за ними - небольшой плеер.");
-  TypeText("Вы не можете поверить своим глазам. Это же плеер, который мама подарила вам, кажется, в седьмом классе.");
-  TypeText("Вы так затаскали его, что уже через год он сломался. Да и сейчас не работает. Однако неожиданная находка будто возвращает вас в детство, отчего на сердце становится немного теплей");
-  player.AddInventory(iMusic_player);
-  TypeText("Получен предмет: «Старый плеер»");
-  ChangeMood(1);
-  foundplayer = true;
-stop
-@2
-stop
-
-]]></Script>
-            <DialogOptions>
-              <DialogOption>
-                <ID>1</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Пошарить в темном углу.</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>2</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text>Уйти.</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
