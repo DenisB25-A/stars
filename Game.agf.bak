@@ -4188,7 +4188,7 @@
             <ID>8</ID>
             <Image>76</Image>
             <Name>iKey_storeroom</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <PlayerStartsWithItem>True</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
@@ -4284,7 +4284,7 @@
             <ID>12</ID>
             <Image>103</Image>
             <Name>iCup</Name>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
@@ -4706,8 +4706,13 @@
             <ID>30</ID>
             <Image>247</Image>
             <Name>iMusic_player</Name>
-            <PlayerStartsWithItem>True</PlayerStartsWithItem>
-            <Properties />
+            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <Properties>
+              <CustomProperty>
+                <Name>Description</Name>
+                <Value xml:space="preserve">Старый кассетный плеер, который подарила мне мама. После уроков я, бывало, надевал наушники и уходил в парк, где часами бродил по аллеям, слушая музыку. Эх, как давно это было.</Value>
+              </CustomProperty>
+            </Properties>
             <Interactions>
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Event Index="0" />
@@ -6925,6 +6930,42 @@ stop
               </DialogOption>
             </DialogOptions>
           </Dialog>
+          <Dialog>
+            <ID>20</ID>
+            <Name>dDark_corner</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+  TypeText("Затаив дыхание, вы встаете на нижнюю полку, рискуя повалить тяжелый шкаф на себя, и тянетесь рукой в темноту. Вы осторожно ощупываете пространство, и когда начинает казаться, что там ничего нет, пальцы нащупывают какой-то шнурок. Вы тянете его на себя.");
+  TypeText("На свет появляется пара старых наушников, а за ними - небольшой плеер.");
+  TypeText("Вы не можете поверить своим глазам. Это же плеер, который мама подарила вам, кажется, в седьмом классе.");
+  TypeText("Вы так затаскали его, что уже через год он сломался. Да и сейчас не работает. Однако неожиданная находка будто возвращает вас в детство, отчего на сердце становится немного теплей");
+  player.AddInventory(iMusic_player);
+  TypeText("Получен предмет: «Старый плеер»");
+  ChangeMood(1);
+  foundplayer = true;
+stop
+@2
+stop
+
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Пошарить в темном углу.</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text>Уйти.</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
         </Dialogs>
       </DialogFolder>
     </Dialogs>
@@ -7620,6 +7661,13 @@ stop
           <ArrayType>None</ArrayType>
           <DefaultValue>false</DefaultValue>
           <Name>Razor</Name>
+          <Type>bool</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>false</DefaultValue>
+          <Name>foundplayer</Name>
           <Type>bool</Type>
         </GlobalVariable>
       </Variables>
