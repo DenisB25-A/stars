@@ -4109,9 +4109,9 @@
             <UseRoomAreaScaling>True</UseRoomAreaScaling>
             <Interactions>
               <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Event Index="0">cEgo_Look</Event>
-              <Event Index="1">cEgo_Interact</Event>
-              <Event Index="2">cEgo_Talk</Event>
+              <Event Index="0" />
+              <Event Index="1" />
+              <Event Index="2" />
               <Event Index="3" />
               <Event Index="4">cEgo_AnyClick</Event>
               <Event Index="5" />
