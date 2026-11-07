@@ -3096,9 +3096,9 @@
                 <Height>82</Height>
                 <ID>0</ID>
                 <Image>243</Image>
-                <Left>110</Left>
+                <Left>104</Left>
                 <Locked>False</Locked>
-                <MouseoverImage>0</MouseoverImage>
+                <MouseoverImage>254</MouseoverImage>
                 <Name>btnContinue</Name>
                 <NewModeNumber>0</NewModeNumber>
                 <OnClick>btnContinue_OnClick</OnClick>
@@ -10402,6 +10402,22 @@ stop
                   <OffsetY>0</OffsetY>
                   <ImportHeight>150</ImportHeight>
                   <ImportWidth>313</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="254" Width="447" Height="73" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                <Source>
+                  <FileName>Assets/Меню игры/openart-image_1794077747406_3b2020f0_1794077747551_f2af7fdc (1) (1).png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>73</ImportHeight>
+                  <ImportWidth>447</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>True</RemapToGamePalette>
