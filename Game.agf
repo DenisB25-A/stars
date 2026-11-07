@@ -789,10 +789,6 @@
             <UnloadedRooms>
               <UnloadedRoom>
                 <Description IsNull="True" />
-                <Number>9</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
                 <Number>25</Number>
               </UnloadedRoom>
             </UnloadedRooms>
@@ -897,6 +893,10 @@
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>8</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>9</Number>
               </UnloadedRoom>
               <UnloadedRoom>
                 <Description IsNull="True" />
@@ -2998,7 +2998,7 @@
               <Left>562</Left>
               <Name>gExit</Name>
               <OnClick />
-              <PopupStyle>Normal</PopupStyle>
+              <PopupStyle>PopupModal</PopupStyle>
               <PopupYPos>0</PopupYPos>
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Top>326</Top>
@@ -3019,7 +3019,7 @@
                 <Image>236</Image>
                 <Left>59</Left>
                 <Locked>False</Locked>
-                <MouseoverImage>0</MouseoverImage>
+                <MouseoverImage>252</MouseoverImage>
                 <Name>btnExit_yes</Name>
                 <NewModeNumber>0</NewModeNumber>
                 <OnClick>btnExit_yes_OnClick</OnClick>
@@ -3047,7 +3047,7 @@
                 <Image>237</Image>
                 <Left>397</Left>
                 <Locked>False</Locked>
-                <MouseoverImage>0</MouseoverImage>
+                <MouseoverImage>253</MouseoverImage>
                 <Name>btnExit_no</Name>
                 <NewModeNumber>0</NewModeNumber>
                 <OnClick>btnExit_no_OnClick</OnClick>
@@ -4100,7 +4100,7 @@
             <SpeechView>0</SpeechView>
             <StartX>583</StartX>
             <StartY>996</StartY>
-            <StartingRoom>1</StartingRoom>
+            <StartingRoom>99</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>False</TurnWhenFacing>
@@ -10205,7 +10205,7 @@ stop
               </Sprite>
               <Sprite Slot="165" Width="438" Height="155" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                 <Source>
-                  <FileName>Assets/Меню игры/Подсвет1.PNG</FileName>
+                  <FileName>Assets/Меню игры/Подсвет11.PNG</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
                   <ImportHeight>155</ImportHeight>
@@ -10221,7 +10221,7 @@ stop
               </Sprite>
               <Sprite Slot="238" Width="446" Height="155" ColorDepth="32" Resolution="Real" AlphaChannel="True">
                 <Source>
-                  <FileName>Assets/Меню игры/Подсвет2.PNG</FileName>
+                  <FileName>Assets/Меню игры/Подсвет22.PNG(1).png</FileName>
                   <OffsetX>0</OffsetX>
                   <OffsetY>0</OffsetY>
                   <ImportHeight>155</ImportHeight>
@@ -10370,6 +10370,38 @@ stop
                   <OffsetY>0</OffsetY>
                   <ImportHeight>85</ImportHeight>
                   <ImportWidth>406</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="252" Width="317" Height="151" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Меню игры/Выход1(Подсвет).png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>151</ImportHeight>
+                  <ImportWidth>317</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="253" Width="313" Height="150" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Меню игры/Выход2(Подсвет).png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>150</ImportHeight>
+                  <ImportWidth>313</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>True</RemapToGamePalette>
