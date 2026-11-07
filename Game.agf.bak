@@ -3093,7 +3093,7 @@
                 <ClipImage>False</ClipImage>
                 <Enabled>True</Enabled>
                 <Font>0</Font>
-                <Height>85</Height>
+                <Height>82</Height>
                 <ID>0</ID>
                 <Image>243</Image>
                 <Left>110</Left>
@@ -3111,7 +3111,7 @@
                 <Top>154</Top>
                 <Translated>True</Translated>
                 <Visible>True</Visible>
-                <Width>437</Width>
+                <Width>432</Width>
                 <WrapText>False</WrapText>
                 <ZOrder>0</ZOrder>
               </GUIButton>
@@ -3438,7 +3438,7 @@
                 <ID>10</ID>
                 <Image>103</Image>
                 <Name>iCup</Name>
-                <PlayerStartsWithItem>True</PlayerStartsWithItem>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
                 <Properties>
                   <CustomProperty>
                     <Name>Description</Name>
@@ -3486,7 +3486,7 @@
                 <ID>12</ID>
                 <Image>116</Image>
                 <Name>iBarrete</Name>
-                <PlayerStartsWithItem>True</PlayerStartsWithItem>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
                 <Properties>
                   <CustomProperty>
                     <Name>Description</Name>
