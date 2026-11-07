@@ -3005,7 +3005,7 @@
               <Transparency>0</Transparency>
               <Visible>False</Visible>
               <Width>777</Width>
-              <ZOrder>0</ZOrder>
+              <ZOrder>99</ZOrder>
             </NormalGUI>
             <Controls>
               <GUIButton>
@@ -3084,7 +3084,7 @@
               <Transparency>0</Transparency>
               <Visible>False</Visible>
               <Width>635</Width>
-              <ZOrder>0</ZOrder>
+              <ZOrder>95</ZOrder>
             </NormalGUI>
             <Controls>
               <GUIButton>
