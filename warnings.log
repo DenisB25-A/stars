@@ -1,3 +1,2 @@
 Game : (room:1) [room1.asc:13] Warning: blocking Say call during fade-out.
 Game : (room:1) [room1.asc:13] Wait() was used in "Before Fadein" event; use "After Fadein" instead
-Game : (room:8) [GlobalScript.asc:853] Character.Walk: character cEgo is turned off and cannot be moved

@@ -28,7 +28,7 @@
       <DeveloperURL />
       <DialogOptionsBackwards>False</DialogOptionsBackwards>
       <DialogOptionsBullet>0</DialogOptionsBullet>
-      <DialogOptionsGUI>10</DialogOptionsGUI>
+      <DialogOptionsGUI>5</DialogOptionsGUI>
       <DialogOptionsGap>20</DialogOptionsGap>
       <DialogScriptNarrateFunction IsNull="True" />
       <DialogScriptSayFunction IsNull="True" />
@@ -719,28 +719,7 @@
           </UnloadedRoomFolder>
           <UnloadedRoomFolder Name="Preamble">
             <SubFolders />
-            <UnloadedRooms>
-              <UnloadedRoom>
-                <Description IsNull="True" />
-                <Number>31</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
-                <Number>32</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
-                <Number>33</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
-                <Number>37</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
-                <Number>42</Number>
-              </UnloadedRoom>
-            </UnloadedRooms>
+            <UnloadedRooms />
           </UnloadedRoomFolder>
           <UnloadedRoomFolder Name="Scenes">
             <SubFolders />
@@ -937,6 +916,31 @@
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
+          <UnloadedRoomFolder Name="Episode 2 (dream)">
+            <SubFolders />
+            <UnloadedRooms>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>31</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>32</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>33</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>37</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>42</Number>
+              </UnloadedRoom>
+            </UnloadedRooms>
+          </UnloadedRoomFolder>
         </SubFolders>
         <UnloadedRooms>
           <UnloadedRoom>
@@ -952,572 +956,12 @@
         <GUIs>
           <GUIMain>
             <NormalGUI>
-              <BackgroundColor>32089</BackgroundColor>
-              <BackgroundImage>0</BackgroundImage>
-              <BorderColor>32089</BorderColor>
-              <Clickable>True</Clickable>
-              <Height>75</Height>
-              <ID>0</ID>
-              <Left>0</Left>
-              <Name>gStatusline</Name>
-              <OnClick />
-              <PopupStyle>Normal</PopupStyle>
-              <PopupYPos>0</PopupYPos>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Top>0</Top>
-              <Transparency>0</Transparency>
-              <Visible>False</Visible>
-              <Width>1920</Width>
-              <ZOrder>0</ZOrder>
-            </NormalGUI>
-            <Controls>
-              <GUILabel>
-                <Clickable>True</Clickable>
-                <Enabled>True</Enabled>
-                <Font>0</Font>
-                <Height>70</Height>
-                <ID>0</ID>
-                <Left>12</Left>
-                <Locked>False</Locked>
-                <Name>lblGameName</Name>
-                <Text>@GAMENAME@</Text>
-                <TextAlignment>TopLeft</TextAlignment>
-                <TextColor>19248</TextColor>
-                <Top>5</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>600</Width>
-                <ZOrder>0</ZOrder>
-              </GUILabel>
-              <GUILabel>
-                <Clickable>True</Clickable>
-                <Enabled>True</Enabled>
-                <Font>0</Font>
-                <Height>70</Height>
-                <ID>1</ID>
-                <Left>1500</Left>
-                <Locked>False</Locked>
-                <Name>lblScore</Name>
-                <Text xml:space="preserve">Score: @SCORE@</Text>
-                <TextAlignment>TopLeft</TextAlignment>
-                <TextColor>19248</TextColor>
-                <Top>5</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>420</Width>
-                <ZOrder>1</ZOrder>
-              </GUILabel>
-              <GUILabel>
-                <Clickable>True</Clickable>
-                <Enabled>True</Enabled>
-                <Font>0</Font>
-                <Height>70</Height>
-                <ID>2</ID>
-                <Left>0</Left>
-                <Locked>False</Locked>
-                <Name>lblOverHotspot</Name>
-                <Text>@OVERHOTSPOT@</Text>
-                <TextAlignment>TopCenter</TextAlignment>
-                <TextColor>19248</TextColor>
-                <Top>5</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>1920</Width>
-                <ZOrder>2</ZOrder>
-              </GUILabel>
-            </Controls>
-          </GUIMain>
-          <GUIMain>
-            <NormalGUI>
-              <BackgroundColor>32089</BackgroundColor>
-              <BackgroundImage>0</BackgroundImage>
-              <BorderColor>32089</BorderColor>
-              <Clickable>True</Clickable>
-              <Height>156</Height>
-              <ID>1</ID>
-              <Left>0</Left>
-              <Name>gIconbar</Name>
-              <OnClick />
-              <PopupStyle>MouseYPos</PopupStyle>
-              <PopupYPos>13</PopupYPos>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Top>0</Top>
-              <Transparency>0</Transparency>
-              <Visible>True</Visible>
-              <Width>1920</Width>
-              <ZOrder>1</ZOrder>
-            </NormalGUI>
-            <Controls>
-              <GUIButton>
-                <ClickAction>SetCursorMode</ClickAction>
-                <Clickable>True</Clickable>
-                <ClipImage>False</ClipImage>
-                <Enabled>True</Enabled>
-                <Font>0</Font>
-                <Height>145</Height>
-                <ID>0</ID>
-                <Image>2100</Image>
-                <Left>6</Left>
-                <Locked>False</Locked>
-                <MouseoverImage>2101</MouseoverImage>
-                <Name>btnIconWalk</Name>
-                <NewModeNumber>0</NewModeNumber>
-                <OnClick />
-                <PushedImage>2102</PushedImage>
-                <Text />
-                <TextAlignment>TopCenter</TextAlignment>
-                <TextColor>16</TextColor>
-                <TextPaddingHorizontal>2</TextPaddingHorizontal>
-                <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>5</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>192</Width>
-                <WrapText>False</WrapText>
-                <ZOrder>0</ZOrder>
-              </GUIButton>
-              <GUIButton>
-                <ClickAction>SetCursorMode</ClickAction>
-                <Clickable>True</Clickable>
-                <ClipImage>False</ClipImage>
-                <Enabled>True</Enabled>
-                <Font>0</Font>
-                <Height>145</Height>
-                <ID>1</ID>
-                <Image>2104</Image>
-                <Left>198</Left>
-                <Locked>False</Locked>
-                <MouseoverImage>2105</MouseoverImage>
-                <Name>btnIconExamine</Name>
-                <NewModeNumber>1</NewModeNumber>
-                <OnClick />
-                <PushedImage>2106</PushedImage>
-                <Text />
-                <TextAlignment>TopCenter</TextAlignment>
-                <TextColor>16</TextColor>
-                <TextPaddingHorizontal>2</TextPaddingHorizontal>
-                <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>5</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>192</Width>
-                <WrapText>False</WrapText>
-                <ZOrder>1</ZOrder>
-              </GUIButton>
-              <GUIButton>
-                <ClickAction>SetCursorMode</ClickAction>
-                <Clickable>True</Clickable>
-                <ClipImage>False</ClipImage>
-                <Enabled>True</Enabled>
-                <Font>0</Font>
-                <Height>145</Height>
-                <ID>2</ID>
-                <Image>2108</Image>
-                <Left>390</Left>
-                <Locked>False</Locked>
-                <MouseoverImage>2109</MouseoverImage>
-                <Name>btnIconInteract</Name>
-                <NewModeNumber>2</NewModeNumber>
-                <OnClick />
-                <PushedImage>2110</PushedImage>
-                <Text />
-                <TextAlignment>TopCenter</TextAlignment>
-                <TextColor>16</TextColor>
-                <TextPaddingHorizontal>2</TextPaddingHorizontal>
-                <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>5</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>192</Width>
-                <WrapText>False</WrapText>
-                <ZOrder>2</ZOrder>
-              </GUIButton>
-              <GUIButton>
-                <ClickAction>SetCursorMode</ClickAction>
-                <Clickable>True</Clickable>
-                <ClipImage>False</ClipImage>
-                <Enabled>True</Enabled>
-                <Font>0</Font>
-                <Height>145</Height>
-                <ID>3</ID>
-                <Image>2112</Image>
-                <Left>582</Left>
-                <Locked>False</Locked>
-                <MouseoverImage>2113</MouseoverImage>
-                <Name>btnIconTalk</Name>
-                <NewModeNumber>3</NewModeNumber>
-                <OnClick />
-                <PushedImage>2114</PushedImage>
-                <Text />
-                <TextAlignment>TopCenter</TextAlignment>
-                <TextColor>16</TextColor>
-                <TextPaddingHorizontal>2</TextPaddingHorizontal>
-                <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>5</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>192</Width>
-                <WrapText>False</WrapText>
-                <ZOrder>3</ZOrder>
-              </GUIButton>
-              <GUIButton>
-                <ClickAction>RunScript</ClickAction>
-                <Clickable>True</Clickable>
-                <ClipImage>False</ClipImage>
-                <Enabled>True</Enabled>
-                <Font>0</Font>
-                <Height>145</Height>
-                <ID>4</ID>
-                <Image>2120</Image>
-                <Left>774</Left>
-                <Locked>False</Locked>
-                <MouseoverImage>2121</MouseoverImage>
-                <Name>btnIconInv</Name>
-                <NewModeNumber>0</NewModeNumber>
-                <OnClick>btnIconInv_Click</OnClick>
-                <PushedImage>2122</PushedImage>
-                <Text />
-                <TextAlignment>TopCenter</TextAlignment>
-                <TextColor>16</TextColor>
-                <TextPaddingHorizontal>2</TextPaddingHorizontal>
-                <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>5</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>192</Width>
-                <WrapText>False</WrapText>
-                <ZOrder>4</ZOrder>
-              </GUIButton>
-              <GUIButton>
-                <ClickAction>RunScript</ClickAction>
-                <Clickable>True</Clickable>
-                <ClipImage>False</ClipImage>
-                <Enabled>True</Enabled>
-                <Font>0</Font>
-                <Height>145</Height>
-                <ID>5</ID>
-                <Image>2124</Image>
-                <Left>966</Left>
-                <Locked>False</Locked>
-                <MouseoverImage>2124</MouseoverImage>
-                <Name>btnIconCurInv</Name>
-                <NewModeNumber>0</NewModeNumber>
-                <OnClick>btnIconCurInv_Click</OnClick>
-                <PushedImage>2126</PushedImage>
-                <Text>(INVSHR)</Text>
-                <TextAlignment>TopCenter</TextAlignment>
-                <TextColor>16</TextColor>
-                <TextPaddingHorizontal>2</TextPaddingHorizontal>
-                <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>5</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>192</Width>
-                <WrapText>False</WrapText>
-                <ZOrder>5</ZOrder>
-              </GUIButton>
-              <GUIButton>
-                <ClickAction>RunScript</ClickAction>
-                <Clickable>True</Clickable>
-                <ClipImage>False</ClipImage>
-                <Enabled>True</Enabled>
-                <Font>0</Font>
-                <Height>145</Height>
-                <ID>6</ID>
-                <Image>2128</Image>
-                <Left>1158</Left>
-                <Locked>False</Locked>
-                <MouseoverImage>2129</MouseoverImage>
-                <Name>btnIconSave</Name>
-                <NewModeNumber>0</NewModeNumber>
-                <OnClick>btnIconSave_Click</OnClick>
-                <PushedImage>2130</PushedImage>
-                <Text />
-                <TextAlignment>TopCenter</TextAlignment>
-                <TextColor>16</TextColor>
-                <TextPaddingHorizontal>2</TextPaddingHorizontal>
-                <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>5</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>192</Width>
-                <WrapText>False</WrapText>
-                <ZOrder>6</ZOrder>
-              </GUIButton>
-              <GUIButton>
-                <ClickAction>RunScript</ClickAction>
-                <Clickable>True</Clickable>
-                <ClipImage>False</ClipImage>
-                <Enabled>True</Enabled>
-                <Font>0</Font>
-                <Height>145</Height>
-                <ID>7</ID>
-                <Image>2132</Image>
-                <Left>1350</Left>
-                <Locked>False</Locked>
-                <MouseoverImage>2133</MouseoverImage>
-                <Name>btnIconLoad</Name>
-                <NewModeNumber>0</NewModeNumber>
-                <OnClick>btnIconLoad_Click</OnClick>
-                <PushedImage>2134</PushedImage>
-                <Text />
-                <TextAlignment>TopCenter</TextAlignment>
-                <TextColor>16</TextColor>
-                <TextPaddingHorizontal>2</TextPaddingHorizontal>
-                <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>5</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>192</Width>
-                <WrapText>False</WrapText>
-                <ZOrder>7</ZOrder>
-              </GUIButton>
-              <GUIButton>
-                <ClickAction>RunScript</ClickAction>
-                <Clickable>True</Clickable>
-                <ClipImage>False</ClipImage>
-                <Enabled>True</Enabled>
-                <Font>0</Font>
-                <Height>145</Height>
-                <ID>8</ID>
-                <Image>2140</Image>
-                <Left>1734</Left>
-                <Locked>False</Locked>
-                <MouseoverImage>2141</MouseoverImage>
-                <Name>btnIconExit</Name>
-                <NewModeNumber>0</NewModeNumber>
-                <OnClick>btnIconExit_Click</OnClick>
-                <PushedImage>2142</PushedImage>
-                <Text />
-                <TextAlignment>TopCenter</TextAlignment>
-                <TextColor>16</TextColor>
-                <TextPaddingHorizontal>2</TextPaddingHorizontal>
-                <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>5</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>192</Width>
-                <WrapText>False</WrapText>
-                <ZOrder>8</ZOrder>
-              </GUIButton>
-              <GUIButton>
-                <ClickAction>RunScript</ClickAction>
-                <Clickable>True</Clickable>
-                <ClipImage>False</ClipImage>
-                <Enabled>True</Enabled>
-                <Font>0</Font>
-                <Height>145</Height>
-                <ID>9</ID>
-                <Image>2136</Image>
-                <Left>1542</Left>
-                <Locked>False</Locked>
-                <MouseoverImage>2137</MouseoverImage>
-                <Name>btnIconPanel</Name>
-                <NewModeNumber>0</NewModeNumber>
-                <OnClick>btnIconPanel_Click</OnClick>
-                <PushedImage>2138</PushedImage>
-                <Text />
-                <TextAlignment>TopCenter</TextAlignment>
-                <TextColor>16</TextColor>
-                <TextPaddingHorizontal>2</TextPaddingHorizontal>
-                <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>5</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>192</Width>
-                <WrapText>False</WrapText>
-                <ZOrder>9</ZOrder>
-              </GUIButton>
-            </Controls>
-          </GUIMain>
-          <GUIMain>
-            <NormalGUI>
-              <BackgroundColor>0</BackgroundColor>
-              <BackgroundImage>2169</BackgroundImage>
-              <BorderColor>0</BorderColor>
-              <Clickable>True</Clickable>
-              <Height>718</Height>
-              <ID>2</ID>
-              <Left>300</Left>
-              <Name>gInventory</Name>
-              <OnClick />
-              <PopupStyle>PopupModal</PopupStyle>
-              <PopupYPos>0</PopupYPos>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Top>189</Top>
-              <Transparency>0</Transparency>
-              <Visible>False</Visible>
-              <Width>1338</Width>
-              <ZOrder>2</ZOrder>
-            </NormalGUI>
-            <Controls>
-              <GUIInventory>
-                <CharacterID>-1</CharacterID>
-                <Clickable>True</Clickable>
-                <Enabled>True</Enabled>
-                <Height>469</Height>
-                <ID>0</ID>
-                <ItemHeight>21</ItemHeight>
-                <ItemWidth>21</ItemWidth>
-                <Left>48</Left>
-                <Locked>False</Locked>
-                <Name>invCustom</Name>
-                <Top>43</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>1044</Width>
-                <ZOrder>0</ZOrder>
-              </GUIInventory>
-              <GUIButton>
-                <ClickAction>RunScript</ClickAction>
-                <Clickable>True</Clickable>
-                <ClipImage>False</ClipImage>
-                <Enabled>True</Enabled>
-                <Font>0</Font>
-                <Height>145</Height>
-                <ID>1</ID>
-                <Image>2116</Image>
-                <Left>234</Left>
-                <Locked>False</Locked>
-                <MouseoverImage>2117</MouseoverImage>
-                <Name>btnInvSelect</Name>
-                <NewModeNumber>2</NewModeNumber>
-                <OnClick>btnInvSelect_Click</OnClick>
-                <PushedImage>2118</PushedImage>
-                <Text xml:space="preserve">New Button</Text>
-                <TextAlignment>TopCenter</TextAlignment>
-                <TextColor>16</TextColor>
-                <TextPaddingHorizontal>2</TextPaddingHorizontal>
-                <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>545</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>192</Width>
-                <WrapText>False</WrapText>
-                <ZOrder>1</ZOrder>
-              </GUIButton>
-              <GUIButton>
-                <ClickAction>SetCursorMode</ClickAction>
-                <Clickable>True</Clickable>
-                <ClipImage>False</ClipImage>
-                <Enabled>True</Enabled>
-                <Font>0</Font>
-                <Height>145</Height>
-                <ID>2</ID>
-                <Image>2104</Image>
-                <Left>24</Left>
-                <Locked>False</Locked>
-                <MouseoverImage>2105</MouseoverImage>
-                <Name>btnInvLook</Name>
-                <NewModeNumber>1</NewModeNumber>
-                <OnClick />
-                <PushedImage>2106</PushedImage>
-                <Text xml:space="preserve">New Button</Text>
-                <TextAlignment>TopCenter</TextAlignment>
-                <TextColor>16</TextColor>
-                <TextPaddingHorizontal>2</TextPaddingHorizontal>
-                <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>545</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>192</Width>
-                <WrapText>False</WrapText>
-                <ZOrder>2</ZOrder>
-              </GUIButton>
-              <GUIButton>
-                <ClickAction>RunScript</ClickAction>
-                <Clickable>True</Clickable>
-                <ClipImage>False</ClipImage>
-                <Enabled>True</Enabled>
-                <Font>0</Font>
-                <Height>102</Height>
-                <ID>3</ID>
-                <Image>2160</Image>
-                <Left>882</Left>
-                <Locked>False</Locked>
-                <MouseoverImage>0</MouseoverImage>
-                <Name>btnInvOK</Name>
-                <NewModeNumber>0</NewModeNumber>
-                <OnClick>close_gui_onclick</OnClick>
-                <PushedImage>2161</PushedImage>
-                <Text>Close</Text>
-                <TextAlignment>MiddleCenter</TextAlignment>
-                <TextColor>19248</TextColor>
-                <TextPaddingHorizontal>2</TextPaddingHorizontal>
-                <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>577</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>426</Width>
-                <WrapText>False</WrapText>
-                <ZOrder>3</ZOrder>
-              </GUIButton>
-              <GUIButton>
-                <ClickAction>RunScript</ClickAction>
-                <Clickable>True</Clickable>
-                <ClipImage>False</ClipImage>
-                <Enabled>True</Enabled>
-                <Font>0</Font>
-                <Height>145</Height>
-                <ID>4</ID>
-                <Image>2144</Image>
-                <Left>1128</Left>
-                <Locked>False</Locked>
-                <MouseoverImage>2145</MouseoverImage>
-                <Name>btnInvDown</Name>
-                <NewModeNumber>0</NewModeNumber>
-                <OnClick>btnInvDown_Click</OnClick>
-                <PushedImage>2146</PushedImage>
-                <Text xml:space="preserve">New Button</Text>
-                <TextAlignment>TopCenter</TextAlignment>
-                <TextColor>16</TextColor>
-                <TextPaddingHorizontal>2</TextPaddingHorizontal>
-                <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>383</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>180</Width>
-                <WrapText>False</WrapText>
-                <ZOrder>4</ZOrder>
-              </GUIButton>
-              <GUIButton>
-                <ClickAction>RunScript</ClickAction>
-                <Clickable>True</Clickable>
-                <ClipImage>False</ClipImage>
-                <Enabled>True</Enabled>
-                <Font>0</Font>
-                <Height>145</Height>
-                <ID>5</ID>
-                <Image>2147</Image>
-                <Left>1128</Left>
-                <Locked>False</Locked>
-                <MouseoverImage>2148</MouseoverImage>
-                <Name>btnInvUp</Name>
-                <NewModeNumber>0</NewModeNumber>
-                <OnClick>btnInvUp_Click</OnClick>
-                <PushedImage>2149</PushedImage>
-                <Text xml:space="preserve">New Button</Text>
-                <TextAlignment>TopCenter</TextAlignment>
-                <TextColor>16</TextColor>
-                <TextPaddingHorizontal>2</TextPaddingHorizontal>
-                <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>27</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>180</Width>
-                <WrapText>False</WrapText>
-                <ZOrder>5</ZOrder>
-              </GUIButton>
-            </Controls>
-          </GUIMain>
-          <GUIMain>
-            <NormalGUI>
               <BackgroundColor>0</BackgroundColor>
               <BackgroundImage>2167</BackgroundImage>
               <BorderColor>0</BorderColor>
               <Clickable>True</Clickable>
               <Height>847</Height>
-              <ID>3</ID>
+              <ID>0</ID>
               <Left>186</Left>
               <Name>gPanel</Name>
               <OnClick />
@@ -1573,7 +1017,7 @@
                 <MouseoverImage>0</MouseoverImage>
                 <Name>btnSave</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick>btnSave_OnClick</OnClick>
+                <OnClick />
                 <PushedImage>2161</PushedImage>
                 <Text>Save</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
@@ -1748,7 +1192,7 @@
                 <MouseoverImage>0</MouseoverImage>
                 <Name>btnLoad</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick>btnLoad_OnClick</OnClick>
+                <OnClick />
                 <PushedImage>2161</PushedImage>
                 <Text>Load</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
@@ -1916,108 +1360,11 @@
           <GUIMain>
             <NormalGUI>
               <BackgroundColor>0</BackgroundColor>
-              <BackgroundImage>2168</BackgroundImage>
-              <BorderColor>0</BorderColor>
-              <Clickable>True</Clickable>
-              <Height>351</Height>
-              <ID>4</ID>
-              <Left>348</Left>
-              <Name>gRestart</Name>
-              <OnClick />
-              <PopupStyle>PopupModal</PopupStyle>
-              <PopupYPos>0</PopupYPos>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Top>367</Top>
-              <Transparency>0</Transparency>
-              <Visible>False</Visible>
-              <Width>1230</Width>
-              <ZOrder>0</ZOrder>
-            </NormalGUI>
-            <Controls>
-              <GUILabel>
-                <Clickable>True</Clickable>
-                <Enabled>True</Enabled>
-                <Font>0</Font>
-                <Height>145</Height>
-                <ID>0</ID>
-                <Left>144</Left>
-                <Locked>False</Locked>
-                <Name>lRestartText</Name>
-                <Text xml:space="preserve">Are you sure you want to restart?</Text>
-                <TextAlignment>TopLeft</TextAlignment>
-                <TextColor>19248</TextColor>
-                <Top>32</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>900</Width>
-                <ZOrder>0</ZOrder>
-              </GUILabel>
-              <GUIButton>
-                <ClickAction>RunScript</ClickAction>
-                <Clickable>True</Clickable>
-                <ClipImage>False</ClipImage>
-                <Enabled>True</Enabled>
-                <Font>0</Font>
-                <Height>102</Height>
-                <ID>1</ID>
-                <Image>2160</Image>
-                <Left>60</Left>
-                <Locked>False</Locked>
-                <MouseoverImage>0</MouseoverImage>
-                <Name>btnRestartYes</Name>
-                <NewModeNumber>0</NewModeNumber>
-                <OnClick>btnRestartYes_OnClick</OnClick>
-                <PushedImage>2161</PushedImage>
-                <Text>Yes</Text>
-                <TextAlignment>MiddleCenter</TextAlignment>
-                <TextColor>19248</TextColor>
-                <TextPaddingHorizontal>2</TextPaddingHorizontal>
-                <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>199</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>426</Width>
-                <WrapText>False</WrapText>
-                <ZOrder>1</ZOrder>
-              </GUIButton>
-              <GUIButton>
-                <ClickAction>RunScript</ClickAction>
-                <Clickable>True</Clickable>
-                <ClipImage>False</ClipImage>
-                <Enabled>True</Enabled>
-                <Font>0</Font>
-                <Height>102</Height>
-                <ID>2</ID>
-                <Image>2160</Image>
-                <Left>738</Left>
-                <Locked>False</Locked>
-                <MouseoverImage>0</MouseoverImage>
-                <Name>btnRestartNo</Name>
-                <NewModeNumber>0</NewModeNumber>
-                <OnClick>close_gui_onclick</OnClick>
-                <PushedImage>2161</PushedImage>
-                <Text>No</Text>
-                <TextAlignment>MiddleCenter</TextAlignment>
-                <TextColor>19248</TextColor>
-                <TextPaddingHorizontal>2</TextPaddingHorizontal>
-                <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>199</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>426</Width>
-                <WrapText>False</WrapText>
-                <ZOrder>2</ZOrder>
-              </GUIButton>
-            </Controls>
-          </GUIMain>
-          <GUIMain>
-            <NormalGUI>
-              <BackgroundColor>0</BackgroundColor>
               <BackgroundImage>2167</BackgroundImage>
               <BorderColor>0</BorderColor>
               <Clickable>True</Clickable>
               <Height>847</Height>
-              <ID>5</ID>
+              <ID>1</ID>
               <Left>186</Left>
               <Name>gSaveGame</Name>
               <OnClick />
@@ -2183,7 +1530,7 @@
               <BorderColor>0</BorderColor>
               <Clickable>True</Clickable>
               <Height>847</Height>
-              <ID>6</ID>
+              <ID>2</ID>
               <Left>186</Left>
               <Name>gRestoreGame</Name>
               <OnClick />
@@ -2296,146 +1643,13 @@
             </Controls>
           </GUIMain>
           <GUIMain>
-            <TextWindowGUI>
-              <BackgroundColor>19248</BackgroundColor>
-              <BackgroundImage>0</BackgroundImage>
-              <ID>7</ID>
-              <Name>gTextBorder</Name>
-              <Padding>3</Padding>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <TextColor>65523</TextColor>
-            </TextWindowGUI>
-            <Controls>
-              <GUITextWindowEdge>
-                <Clickable>True</Clickable>
-                <Enabled>True</Enabled>
-                <Height>10</Height>
-                <ID>0</ID>
-                <Image>2150</Image>
-                <Left>0</Left>
-                <Locked>False</Locked>
-                <Name />
-                <Top>0</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>10</Width>
-                <ZOrder>0</ZOrder>
-              </GUITextWindowEdge>
-              <GUITextWindowEdge>
-                <Clickable>True</Clickable>
-                <Enabled>True</Enabled>
-                <Height>10</Height>
-                <ID>1</ID>
-                <Image>2155</Image>
-                <Left>0</Left>
-                <Locked>False</Locked>
-                <Name />
-                <Top>90</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>10</Width>
-                <ZOrder>1</ZOrder>
-              </GUITextWindowEdge>
-              <GUITextWindowEdge>
-                <Clickable>True</Clickable>
-                <Enabled>True</Enabled>
-                <Height>10</Height>
-                <ID>2</ID>
-                <Image>2152</Image>
-                <Left>90</Left>
-                <Locked>False</Locked>
-                <Name />
-                <Top>0</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>10</Width>
-                <ZOrder>2</ZOrder>
-              </GUITextWindowEdge>
-              <GUITextWindowEdge>
-                <Clickable>True</Clickable>
-                <Enabled>True</Enabled>
-                <Height>10</Height>
-                <ID>3</ID>
-                <Image>2157</Image>
-                <Left>90</Left>
-                <Locked>False</Locked>
-                <Name />
-                <Top>90</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>10</Width>
-                <ZOrder>3</ZOrder>
-              </GUITextWindowEdge>
-              <GUITextWindowEdge>
-                <Clickable>True</Clickable>
-                <Enabled>True</Enabled>
-                <Height>10</Height>
-                <ID>4</ID>
-                <Image>2153</Image>
-                <Left>0</Left>
-                <Locked>False</Locked>
-                <Name />
-                <Top>40</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>10</Width>
-                <ZOrder>4</ZOrder>
-              </GUITextWindowEdge>
-              <GUITextWindowEdge>
-                <Clickable>True</Clickable>
-                <Enabled>True</Enabled>
-                <Height>10</Height>
-                <ID>5</ID>
-                <Image>2154</Image>
-                <Left>90</Left>
-                <Locked>False</Locked>
-                <Name />
-                <Top>40</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>10</Width>
-                <ZOrder>5</ZOrder>
-              </GUITextWindowEdge>
-              <GUITextWindowEdge>
-                <Clickable>True</Clickable>
-                <Enabled>True</Enabled>
-                <Height>10</Height>
-                <ID>6</ID>
-                <Image>2151</Image>
-                <Left>40</Left>
-                <Locked>False</Locked>
-                <Name />
-                <Top>0</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>10</Width>
-                <ZOrder>6</ZOrder>
-              </GUITextWindowEdge>
-              <GUITextWindowEdge>
-                <Clickable>True</Clickable>
-                <Enabled>True</Enabled>
-                <Height>10</Height>
-                <ID>7</ID>
-                <Image>2156</Image>
-                <Left>40</Left>
-                <Locked>False</Locked>
-                <Name />
-                <Top>90</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>10</Width>
-                <ZOrder>7</ZOrder>
-              </GUITextWindowEdge>
-            </Controls>
-          </GUIMain>
-          <GUIMain>
             <NormalGUI>
               <BackgroundColor>0</BackgroundColor>
               <BackgroundImage>2168</BackgroundImage>
               <BorderColor>0</BorderColor>
               <Clickable>True</Clickable>
               <Height>351</Height>
-              <ID>8</ID>
+              <ID>3</ID>
               <Left>348</Left>
               <Name>gExitGame</Name>
               <OnClick />
@@ -2532,7 +1746,7 @@
               <BorderColor>2</BorderColor>
               <Clickable>True</Clickable>
               <Height>230</Height>
-              <ID>9</ID>
+              <ID>4</ID>
               <Left>415</Left>
               <Name>gTextBar</Name>
               <OnClick />
@@ -2573,7 +1787,7 @@
               <BorderColor>0</BorderColor>
               <Clickable>True</Clickable>
               <Height>230</Height>
-              <ID>10</ID>
+              <ID>5</ID>
               <Left>415</Left>
               <Name>gDialogMenu</Name>
               <OnClick />
@@ -2595,7 +1809,7 @@
               <BorderColor>2</BorderColor>
               <Clickable>True</Clickable>
               <Height>174</Height>
-              <ID>11</ID>
+              <ID>6</ID>
               <Left>460</Left>
               <Name>gInventory_menu</Name>
               <OnClick />
@@ -2719,7 +1933,7 @@
               <BorderColor>0</BorderColor>
               <Clickable>True</Clickable>
               <Height>230</Height>
-              <ID>12</ID>
+              <ID>7</ID>
               <Left>0</Left>
               <Name>gMoodPanel</Name>
               <OnClick />
@@ -2788,7 +2002,7 @@
               <BorderColor>0</BorderColor>
               <Clickable>True</Clickable>
               <Height>100</Height>
-              <ID>13</ID>
+              <ID>8</ID>
               <Left>0</Left>
               <Name>gContext</Name>
               <OnClick />
@@ -2895,7 +2109,7 @@
               <BorderColor>0</BorderColor>
               <Clickable>True</Clickable>
               <Height>550</Height>
-              <ID>14</ID>
+              <ID>9</ID>
               <Left>430</Left>
               <Name>gEmailReader</Name>
               <OnClick>gEmailReader_OnClick</OnClick>
@@ -2992,7 +2206,7 @@
               <BorderColor>65535</BorderColor>
               <Clickable>True</Clickable>
               <Height>750</Height>
-              <ID>15</ID>
+              <ID>10</ID>
               <Left>650</Left>
               <Name>gNote3</Name>
               <OnClick />
@@ -3079,7 +2293,7 @@
               <BorderColor>2</BorderColor>
               <Clickable>True</Clickable>
               <Height>1080</Height>
-              <ID>16</ID>
+              <ID>11</ID>
               <Left>0</Left>
               <Name>gJournal</Name>
               <OnClick />
@@ -3354,7 +2568,7 @@
               <BorderColor>65535</BorderColor>
               <Clickable>True</Clickable>
               <Height>975</Height>
-              <ID>17</ID>
+              <ID>12</ID>
               <Left>970</Left>
               <Name>gViewer</Name>
               <OnClick />
@@ -3469,7 +2683,7 @@
               <BorderColor>2</BorderColor>
               <Clickable>True</Clickable>
               <Height>1079</Height>
-              <ID>18</ID>
+              <ID>13</ID>
               <Left>0</Left>
               <Name>gDarkOverlay</Name>
               <OnClick>gDarkOverlay_OnClick</OnClick>
@@ -3510,7 +2724,7 @@
               <BorderColor>2</BorderColor>
               <Clickable>True</Clickable>
               <Height>689</Height>
-              <ID>19</ID>
+              <ID>14</ID>
               <Left>348</Left>
               <Name>gLaptop</Name>
               <OnClick />
@@ -3645,7 +2859,7 @@
               <BorderColor>0</BorderColor>
               <Clickable>True</Clickable>
               <Height>764</Height>
-              <ID>20</ID>
+              <ID>15</ID>
               <Left>1384</Left>
               <Name>gMainMenu</Name>
               <OnClick />
@@ -3780,7 +2994,7 @@
               <BorderColor>0</BorderColor>
               <Clickable>True</Clickable>
               <Height>431</Height>
-              <ID>21</ID>
+              <ID>16</ID>
               <Left>562</Left>
               <Name>gExit</Name>
               <OnClick />
@@ -3859,7 +3073,7 @@
               <BorderColor>0</BorderColor>
               <Clickable>True</Clickable>
               <Height>800</Height>
-              <ID>22</ID>
+              <ID>17</ID>
               <Left>640</Left>
               <Name>gMenu_ingame</Name>
               <OnClick />
@@ -4272,7 +3486,7 @@
                 <ID>12</ID>
                 <Image>116</Image>
                 <Name>iBarrete</Name>
-                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <PlayerStartsWithItem>True</PlayerStartsWithItem>
                 <Properties>
                   <CustomProperty>
                     <Name>Description</Name>
@@ -11140,6 +10354,22 @@ stop
                   <OffsetY>0</OffsetY>
                   <ImportHeight>84</ImportHeight>
                   <ImportWidth>409</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="251" Width="406" Height="85" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Меню игры/1).png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>85</ImportHeight>
+                  <ImportWidth>406</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>True</RemapToGamePalette>
