@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>59</AudioIndexer>
+      <AudioIndexer>60</AudioIndexer>
       <AutoMoveInWalkMode>False</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets>Windows</BuildTargets>
@@ -3394,7 +3394,7 @@
                 <Properties>
                   <CustomProperty>
                     <Name>Description</Name>
-                    <Value xml:space="preserve">На вид пачка вздулась. Вы открываете крышку, осторожно принюхиваетесь, и ваши опасения оправдываются. Прокисло. Ну чтож, пить или добавлять его куда-либо, пожалуй, не стоит.</Value>
+                    <Value xml:space="preserve">На вид пачка вздулась. Вы открываете крышку, осторожно принюхиваетесь, и ваши опасения оправдываются. Прокисло. Ну что ж, пить или добавлять его куда-либо, пожалуй, не стоит.</Value>
                   </CustomProperty>
                 </Properties>
                 <Interactions>
@@ -3418,7 +3418,7 @@
                 <Properties>
                   <CustomProperty>
                     <Name>Description</Name>
-                    <Value xml:space="preserve">Плитка темного шоколада. "Превращает моменты в праздник" - написано на упаковке. </Value>
+                    <Value xml:space="preserve">Плитка темного шоколада. «Превращает моменты в праздник» - написано на упаковке. </Value>
                   </CustomProperty>
                 </Properties>
                 <Interactions>
@@ -15151,6 +15151,19 @@ See KeyboardMovement.txt for details.
                 <SourceFileName>Assets/Звуки/eating.mp3</SourceFileName>
                 <Type>3</Type>
                 <FileLastModifiedDate>2026-08-07 19:06:56Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>57</ID>
+                <Index>60</Index>
+                <ScriptName>aClick</ScriptName>
+                <SourceFileName>Assets/Звуки/Click.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-11-08 14:27:08Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
