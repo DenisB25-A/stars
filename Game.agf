@@ -6274,6 +6274,19 @@ stop
         <StandardMode>False</StandardMode>
         <View>0</View>
       </MouseCursor>
+      <MouseCursor>
+        <Animate>False</Animate>
+        <AnimateOnlyOnHotspots>False</AnimateOnlyOnHotspots>
+        <AnimateOnlyWhenMoving>False</AnimateOnlyWhenMoving>
+        <AnimationDelay>5</AnimationDelay>
+        <HotspotX>0</HotspotX>
+        <HotspotY>0</HotspotY>
+        <ID>11</ID>
+        <Image>39</Image>
+        <Name>Neutral</Name>
+        <StandardMode>False</StandardMode>
+        <View>0</View>
+      </MouseCursor>
     </Cursors>
     <Fonts>
       <Font>
@@ -11087,22 +11100,6 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="39" Width="60" Height="57" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-            <Source>
-              <FileName>Assets/1.png</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>57</ImportHeight>
-              <ImportWidth>60</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>True</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <TransparentColorIndex>0</TransparentColorIndex>
-              <ImportAlphaChannel>True</ImportAlphaChannel>
-            </Source>
-          </Sprite>
           <Sprite Slot="43" Width="46" Height="58" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
               <FileName>Assets/2 (1).png</FileName>
@@ -12758,6 +12755,22 @@ stop
               <OffsetY>0</OffsetY>
               <ImportHeight>134</ImportHeight>
               <ImportWidth>279</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="39" Width="46" Height="58" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Курсоры/Курсор указатель.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>58</ImportHeight>
+              <ImportWidth>46</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>
