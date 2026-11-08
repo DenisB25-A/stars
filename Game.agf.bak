@@ -21,7 +21,7 @@
       <CompressSpritesType>Deflate</CompressSpritesType>
       <CustomDataDir IsNull="True" />
       <CustomResolution>1920,1080</CustomResolution>
-      <DebugMode>True</DebugMode>
+      <DebugMode>False</DebugMode>
       <DefaultRoomMaskResolution>1</DefaultRoomMaskResolution>
       <Description />
       <DeveloperName />
@@ -2680,7 +2680,7 @@
             <NormalGUI>
               <BackgroundColor>32</BackgroundColor>
               <BackgroundImage>0</BackgroundImage>
-              <BorderColor>2</BorderColor>
+              <BorderColor>0</BorderColor>
               <Clickable>True</Clickable>
               <Height>1079</Height>
               <ID>13</ID>
@@ -4100,7 +4100,7 @@
             <SpeechView>0</SpeechView>
             <StartX>583</StartX>
             <StartY>996</StartY>
-            <StartingRoom>99</StartingRoom>
+            <StartingRoom>31</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>False</TurnWhenFacing>
@@ -5825,7 +5825,7 @@ return
   TypeText("Вы резко отдергиваете руку, и видите, как на безымянном пальце выступает капелька крови.");
   TypeText("Вы вновь наклоняетесь и действуете уже более осторожно.");
   TypeText("Пальцы нащупывают бугристое от ржавчины лезвие.");
-  TypeText("Получен предмет: 'Ржавый нож'");
+  TypeText("Получен предмет: «Ржавый нож»");
   aBlack_hole.Play(eAudioPriorityNormal, eRepeat);
   player.AddInventory(iRastyKnife);
   Preamble_under_bed = true;
@@ -6077,7 +6077,7 @@ stop
 return
 @1
   aTeleport.Play();
-  player.ChangeRoom(32, 260, 960);
+  player.ChangeRoom(32, 260, 960, eDirectionRight);
 return
 @2
 stop

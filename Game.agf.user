@@ -20,7 +20,7 @@
     </LogFilter>
   </Component>
   <WorkspaceState>
-    <LastBuildConfiguration>Debug</LastBuildConfiguration>
+    <LastBuildConfiguration>Release</LastBuildConfiguration>
     <LastBuildGameFileName>DataFile=stars,Windows=stars,_Debug=stars,</LastBuildGameFileName>
     <RequiresRebuild>False</RequiresRebuild>
   </WorkspaceState>
