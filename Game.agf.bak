@@ -3912,7 +3912,7 @@
             <ID>29</ID>
             <Image>265</Image>
             <Name>iThreads</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <PlayerStartsWithItem>True</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
@@ -5866,7 +5866,7 @@ return
   }
 return
 @2
-  TypeText("Ткань почти истлела, и от нее ощутимо разит сгнившим тряпьем. Однако скрепляющие швы нити еще кажутся крепкими.");
+  TypeText("Ткань почти истлела, и от нее ощутимо разит сгнившим тряпьем. Но нити, скрепляющие швы, ещё кажутся крепкими.");
   TypeText("Я мог бы аккуратно распороть шов, будь у меня что-нибудь острое.");
 return
 @3
