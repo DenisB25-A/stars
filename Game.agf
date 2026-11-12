@@ -3576,6 +3576,83 @@
               </InventoryItem>
             </InventoryItems>
           </InventoryItemFolder>
+          <InventoryItemFolder Name="Episode 2">
+            <SubFolders />
+            <InventoryItems>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description xml:space="preserve">New inventory item</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>14</ID>
+                <Image>121</Image>
+                <Name>iRastyKnife</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>Description</Name>
+                    <Value xml:space="preserve">Ржавый, но все еще острый.</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <ScriptModule>GlobalScript.asc</ScriptModule>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description xml:space="preserve">New inventory item</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>29</ID>
+                <Image>265</Image>
+                <Name>iThreads</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>Description</Name>
+                    <Value xml:space="preserve">Когда смотрю на этот свалявшийся клубок ниток, невольно вспоминается греческий миф о Тесее и Ариадне. Что ж, буду надеяться, что в моем лабиринте нет минотавра.</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <ScriptModule>GlobalScript.asc</ScriptModule>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description xml:space="preserve">New inventory item</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>20</ID>
+                <Image>148</Image>
+                <Name>iGoldenKey</Name>
+                <PlayerStartsWithItem>True</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>Description</Name>
+                    <Value xml:space="preserve">Большой позолоченный ключ. По размеру подходит под замочную скважину шкафа.</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <ScriptModule>GlobalScript.asc</ScriptModule>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+            </InventoryItems>
+          </InventoryItemFolder>
         </SubFolders>
         <InventoryItems>
           <InventoryItem>
@@ -3615,30 +3692,6 @@
               <CustomProperty>
                 <Name>Description</Name>
                 <Value xml:space="preserve">Кусок арматуры - можно разломать что-нибудь, а можно и двинуть кому-то по морде.</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>0</CursorImage>
-            <Description xml:space="preserve">New inventory item</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>14</ID>
-            <Image>121</Image>
-            <Name>iRastyKnife</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>Description</Name>
-                <Value xml:space="preserve">Ржавый, но все еще острый.</Value>
               </CustomProperty>
             </Properties>
             <Interactions>
@@ -3735,30 +3788,6 @@
               <CustomProperty>
                 <Name>Description</Name>
                 <Value xml:space="preserve">Это просто дверная ручка.</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>0</CursorImage>
-            <Description xml:space="preserve">New inventory item</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>20</ID>
-            <Image>148</Image>
-            <Name>iGoldenKey</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>Description</Name>
-                <Value xml:space="preserve">Большой позолоченный ключ. По размеру подходит под замочную скважину шкафа.</Value>
               </CustomProperty>
             </Properties>
             <Interactions>
@@ -3893,30 +3922,6 @@
               <CustomProperty>
                 <Name>Description</Name>
                 <Value xml:space="preserve">Ее с трудом можно использовать как оружие, но она очень удобно ложится в руку.</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>0</CursorImage>
-            <Description xml:space="preserve">New inventory item</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>29</ID>
-            <Image>265</Image>
-            <Name>iThreads</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>Description</Name>
-                <Value xml:space="preserve">Когда смотрю на этот свалявшийся клубок ниток, невольно вспоминается греческий миф о Тесее и Ариадне. Что ж, буду надеяться, что в моем лабиринте нет минотавра.</Value>
               </CustomProperty>
             </Properties>
             <Interactions>
@@ -4907,6 +4912,214 @@ stop
               </Dialog>
             </Dialogs>
           </DialogFolder>
+          <DialogFolder Name="Episode 2">
+            <SubFolders />
+            <Dialogs>
+              <Dialog>
+                <ID>15</ID>
+                <Name>dShadows</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+  aTeleport.Play();
+  player.ChangeRoom(32, 260, 960, eDirectionRight);
+return
+@2
+stop
+]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">Войти в темноту.</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">Не сейчас.</Text>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
+                <ID>10</ID>
+                <Name>dUnder_bedDream</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+  if (saw_labirint == true)
+  {
+    this.SetOptionState(2, eOptionOn);
+  }
+return
+@1
+  if (Preamble_under_bed == false)
+  {
+    FadeOut(2); 
+    mouse.Visible = false;
+    gDarkOverlay.Transparency = 0;
+    gDarkOverlay.Visible = true;
+    aBlack_hole.Stop();
+    FadeIn(2);
+    AudioChannel *channel1 = aUnder_bed.Play();
+
+    while (channel1 != null && channel1.IsPlaying)
+    {
+        Wait(1);
+    } 
+    mouse.Visible = true;
+    TypeText("Антон: Черт...");
+    gDarkOverlay.Visible = false;
+    gDarkOverlay.Transparency = 100;
+    TypeText("Вы резко отдергиваете руку, и видите, как на безымянном пальце выступает капелька крови.");
+    TypeText("Вы вновь наклоняетесь и действуете уже более осторожно.");
+    TypeText("Пальцы нащупывают бугристое от ржавчины лезвие.");
+    TypeText("Получен предмет: «Ржавый нож»");
+    aBlack_hole.Play(eAudioPriorityNormal, eRepeat);
+    player.AddInventory(iRastyKnife);
+    Preamble_under_bed = true;
+  }
+  else
+  {
+    TypeText("Только плесень и темнота.");
+  }
+return
+@2
+  TypeText("Ткань почти истлела, и от нее ощутимо разит сгнившим тряпьем. Но нити, скрепляющие швы, кажутся крепкими.");
+  TypeText("Я мог бы аккуратно распороть шов, будь у меня что-нибудь острое.");
+return
+@3
+stop
+]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">Пошарить рукой под кроватью</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text xml:space="preserve">Осмотреть старое одеяло</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>3</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text>Уйти</Text>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
+                <ID>14</ID>
+                <Name>dBlacky</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+  TypeText("Антон: Ты умеешь говорить? Кто ты?");
+  TypeText("<????: Нам сложно ответить на этот вопрос.");
+  TypeText("Антон: Почему?");
+  TypeText("<????: ...");
+  TypeText("<????: Мы - это счастье.");
+  TypeText("Антон: Что?");
+  TypeText("<????: Мы знаем, это кажется странным, но ты поймешь, когда придет время. Не пытайся разобраться сразу во всем.");
+option-off 1
+
+  if (dBlacky.GetOptionState(2) == eOptionOff)
+  {
+    dBlacky.SetOptionState(3, eOptionOn);
+  }
+
+return
+@2
+  TypeText("Антон: Что это за место? Как я сюда попал?");
+  TypeText("<????: Тебе здесь не нравится?");
+  TypeText("<????: Со временем ты привыкнешь. Когда забываешь, как было «до», становится легче.");
+  TypeText("<????: Ты ведь уже приходил сюда раньше. Когда-то очень давно. Помнишь? Попробуй вспомнить.");
+  TypeText("<????: Не торопись.");
+option-off 2
+
+  if (dBlacky.GetOptionState(1) == eOptionOff)
+  {
+    dBlacky.SetOptionState(3, eOptionOn);
+  }
+
+return
+@3
+  TypeText("Антон: Я вообще ничего не понимаю... Откуда ты меня знаешь? Почему я здесь?");
+  TypeText("<????: Потому что ты устал, Антон. Ты ведь очень долго пытался, да только что из этого вышло?");
+  TypeText("<????: Здесь место, где ты можешь остаться. Просто приляг, закрой глаза. Посчитай до пяти.");
+  TypeText("<????: Мы - дерево, пустившее корни уже глубоко.");
+  TypeText("<????: Ты можешь остаться с нами. Подумай, Антон.");
+option-off 3
+
+  if (dBlacky.GetOptionState(1) == eOptionOff &&
+      dBlacky.GetOptionState(2) == eOptionOff &&
+      dBlacky.GetOptionState(3) == eOptionOff)
+  {
+    dBlacky.SetOptionState(4, eOptionOn);
+  }
+
+return
+@4
+  TypeText("Антон: Послушай, я не знаю, что здесь происходит, но я просто хочу уйти. Пожалуйста, выпусти меня.");
+  TypeText("<????: ...");
+  TypeText("<????: Хорошо. Мы ведь тебя и не держим.");
+  TypeText("<????: Ты сам пришел в это место. И если захочешь, ты всегда можешь уйти.");
+  TypeText("<????: А мы останемся и подождем, когда ты вернешься снова. Мы умеем ждать.");
+  TypeText("Антон: Тогда...");
+  TypeText("<????: Но чтобы выйти, тебе потребуется кое-что. Подойди ближе.");
+  TypeText("<????: Не бойся. Это не больно.");
+  TypeText("<????: Подойди. Ближе.");
+  blacky = blacky + 1;
+option-off-forever 4
+stop
+@5
+  TypeText("Вы отстраняетесь, почти вжавшись в стену и стараясь не замечать чудовища, занимающего добрую часть комнаты. Ваше положение от этого, конечно же, не меняется.");
+stop
+]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">Что ты такое?</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">Что это за место?</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>3</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text xml:space="preserve">Я ничего не понимаю</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>4</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text xml:space="preserve">Отпусти меня</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>5</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text>Уйти</Text>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+            </Dialogs>
+          </DialogFolder>
         </SubFolders>
         <Dialogs>
           <Dialog>
@@ -5832,74 +6045,6 @@ stop
             </DialogOptions>
           </Dialog>
           <Dialog>
-            <ID>10</ID>
-            <Name>dUnder_bedPreamble</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file
-@S  // Dialog startup entry point
-  if (saw_labirint == true)
-  {
-    this.SetOptionState(2, eOptionOn);
-  }
-return
-@1
-  if (Preamble_under_bed == false)
-  {
-    FadeOut(2); 
-    mouse.Visible = false;
-    gDarkOverlay.Transparency = 0;
-    gDarkOverlay.Visible = true;
-    aBlack_hole.Stop();
-    FadeIn(2);
-    AudioChannel *channel1 = aUnder_bed.Play();
-
-    Wait(200);   
-    mouse.Visible = true;
-    TypeText("Антон: Черт...");
-    gDarkOverlay.Visible = false;
-    gDarkOverlay.Transparency = 100;
-    TypeText("Вы резко отдергиваете руку, и видите, как на безымянном пальце выступает капелька крови.");
-    TypeText("Вы вновь наклоняетесь и действуете уже более осторожно.");
-    TypeText("Пальцы нащупывают бугристое от ржавчины лезвие.");
-    TypeText("Получен предмет: «Ржавый нож»");
-    aBlack_hole.Play(eAudioPriorityNormal, eRepeat);
-    player.AddInventory(iRastyKnife);
-    Preamble_under_bed = true;
-  }
-  else
-  {
-    TypeText("Только плесень и темнота.");
-  }
-return
-@2
-  TypeText("Ткань почти истлела, и от нее ощутимо разит сгнившим тряпьем. Но нити, скрепляющие швы, кажутся крепкими.");
-  TypeText("Я мог бы аккуратно распороть шов, будь у меня что-нибудь острое.");
-return
-@3
-stop
-]]></Script>
-            <DialogOptions>
-              <DialogOption>
-                <ID>1</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Пошарить рукой под кроватью</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>2</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">Осмотреть старое одеяло</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>3</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text>Уйти</Text>
-              </DialogOption>
-            </DialogOptions>
-          </Dialog>
-          <Dialog>
             <ID>11</ID>
             <Name>dBeerBottle</Name>
             <ShowTextParser>False</ShowTextParser>
@@ -6030,138 +6175,6 @@ stop
                 <Say>False</Say>
                 <Show>True</Show>
                 <Text xml:space="preserve">Дмитрий Васильевич, при всем уважении, пошел нахуй.</Text>
-              </DialogOption>
-            </DialogOptions>
-          </Dialog>
-          <Dialog>
-            <ID>14</ID>
-            <Name>dBlacky</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file
-@S  // Dialog startup entry point
-return
-@1
-  TypeText("Антон: Ты умеешь говорить? Кто ты?");
-  TypeText("<????: Нам сложно ответить на этот вопрос.");
-  TypeText("Антон: Почему?");
-  TypeText("<????: ...");
-  TypeText("<????: Мы - это счастье.");
-  TypeText("Антон: Что?");
-  TypeText("<????: Мы знаем, это кажется странным, но ты поймешь, когда придет время. Не пытайся разобраться сразу во всем.");
-option-off 1
-
-  if (dBlacky.GetOptionState(2) == eOptionOff)
-  {
-    dBlacky.SetOptionState(3, eOptionOn);
-  }
-
-return
-@2
-  TypeText("Антон: Что это за место? Как я сюда попал?");
-  TypeText("<????: Тебе здесь не нравится?");
-  TypeText("<????: Со временем ты привыкнешь. Когда забываешь, как было «до», становится легче.");
-  TypeText("<????: Ты ведь уже приходил сюда раньше. Когда-то очень давно. Помнишь? Попробуй вспомнить.");
-  TypeText("<????: Не торопись.");
-option-off 2
-
-  if (dBlacky.GetOptionState(1) == eOptionOff)
-  {
-    dBlacky.SetOptionState(3, eOptionOn);
-  }
-
-return
-@3
-  TypeText("Антон: Я вообще ничего не понимаю... Откуда ты меня знаешь? Почему я здесь?");
-  TypeText("<????: Потому что ты устал, Антон. Ты ведь очень долго пытался, да только что из этого вышло?");
-  TypeText("<????: Здесь место, где ты можешь остаться. Просто приляг, закрой глаза. Посчитай до пяти.");
-  TypeText("<????: Мы - дерево, пустившее корни уже глубоко.");
-  TypeText("<????: Ты можешь остаться с нами. Подумай, Антон.");
-option-off 3
-
-  if (dBlacky.GetOptionState(1) == eOptionOff &&
-      dBlacky.GetOptionState(2) == eOptionOff &&
-      dBlacky.GetOptionState(3) == eOptionOff)
-  {
-    dBlacky.SetOptionState(4, eOptionOn);
-  }
-
-return
-@4
-  TypeText("Антон: Послушай, я не знаю, что здесь происходит, но я просто хочу уйти. Пожалуйста, выпусти меня.");
-  TypeText("<????: ...");
-  TypeText("<????: Хорошо. Мы ведь тебя и не держим.");
-  TypeText("<????: Ты сам пришел в это место. И если захочешь, ты всегда можешь уйти.");
-  TypeText("<????: А мы останемся и подождем, когда ты вернешься снова. Мы умеем ждать.");
-  TypeText("Антон: Тогда...");
-  TypeText("<????: Но чтобы выйти, тебе потребуется кое-что. Подойди ближе.");
-  TypeText("<????: Не бойся. Это не больно.");
-  TypeText("<????: Подойди. Ближе.");
-  blacky = blacky + 1;
-option-off-forever 4
-stop
-@5
-  TypeText("Вы отстраняетесь, почти вжавшись в стену и стараясь не замечать чудовища, занимающего добрую часть комнаты. Ваше положение от этого, конечно же, не меняется.");
-stop
-]]></Script>
-            <DialogOptions>
-              <DialogOption>
-                <ID>1</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Что ты такое?</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>2</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Что это за место?</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>3</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">Я ничего не понимаю</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>4</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">Отпусти меня</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>5</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text>Уйти</Text>
-              </DialogOption>
-            </DialogOptions>
-          </Dialog>
-          <Dialog>
-            <ID>15</ID>
-            <Name>dShadows</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file
-@S  // Dialog startup entry point
-return
-@1
-  aTeleport.Play();
-  player.ChangeRoom(32, 260, 960, eDirectionRight);
-return
-@2
-stop
-]]></Script>
-            <DialogOptions>
-              <DialogOption>
-                <ID>1</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Войти в темноту.</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>2</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Не сейчас.</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
