@@ -3308,6 +3308,28 @@
               </GUIButton>
             </Controls>
           </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>271</BackgroundImage>
+              <BorderColor>0</BorderColor>
+              <Clickable>True</Clickable>
+              <Height>1069</Height>
+              <ID>19</ID>
+              <Left>529</Left>
+              <Name>gSettings</Name>
+              <OnClick />
+              <PopupStyle>Normal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Top>5</Top>
+              <Transparency>0</Transparency>
+              <Visible>False</Visible>
+              <Width>862</Width>
+              <ZOrder>0</ZOrder>
+            </NormalGUI>
+            <Controls />
+          </GUIMain>
         </GUIs>
       </GUIFolder>
     </GUIs>
@@ -7009,6 +7031,13 @@ stop
           <ArrayType>None</ArrayType>
           <DefaultValue>false</DefaultValue>
           <Name>saw_labirint</Name>
+          <Type>bool</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>false</DefaultValue>
+          <Name>was_dream</Name>
           <Type>bool</Type>
         </GlobalVariable>
       </Variables>
@@ -10806,6 +10835,22 @@ stop
                   <OffsetY>0</OffsetY>
                   <ImportHeight>123</ImportHeight>
                   <ImportWidth>280</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="271" Width="862" Height="1069" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Меню игры/Меню настроек (2).png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>1069</ImportHeight>
+                  <ImportWidth>862</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>True</RemapToGamePalette>
