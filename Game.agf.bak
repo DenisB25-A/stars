@@ -5846,13 +5846,15 @@ return
   if (Preamble_under_bed == false)
   {
     FadeOut(2); 
+    mouse.Visible = false;
     gDarkOverlay.Transparency = 0;
     gDarkOverlay.Visible = true;
     aBlack_hole.Stop();
     FadeIn(2);
     AudioChannel *channel1 = aUnder_bed.Play();
 
-    Wait(120);   
+    Wait(200);   
+    mouse.Visible = true;
     TypeText("Антон: Черт...");
     gDarkOverlay.Visible = false;
     gDarkOverlay.Transparency = 100;
