@@ -681,18 +681,6 @@
             <UnloadedRooms>
               <UnloadedRoom>
                 <Description IsNull="True" />
-                <Number>15</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
-                <Number>16</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
-                <Number>17</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
                 <Number>18</Number>
               </UnloadedRoom>
               <UnloadedRoom>
@@ -943,6 +931,18 @@
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>14</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>15</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>16</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>17</Number>
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
@@ -4634,13 +4634,12 @@ stop
 @S  // Dialog startup entry point
 return
 @1
-  if (packofcigarettes == false)
+  if (!player.HasInventory(iCigarettes))
   {
     TypeText("Вы вытягиваете руку и пытаетесь нащупать что-то вслепую.");
     TypeText("Среди фантиков, старых оберток и закатившихся рублевых монеток вам попадается что-то прямоугольное и хрустящее. Ну конечно! Где же она еще могла быть?");
     TypeText("Получен предмет «Пачка сигарет»");
     player.AddInventory(iCigarettes);
-    packofcigarettes = true;
   }
   else
   {
@@ -5062,7 +5061,7 @@ stop
   }
 return
 @1
-  if (Preamble_under_bed == false)
+  if (!player.HasInventory(iRastyKnife))
   {
     FadeOut(2); 
     mouse.Visible = false;
@@ -5070,23 +5069,26 @@ return
     gDarkOverlay.Visible = true;
     aBlack_hole.Stop();
     FadeIn(2);
+
     AudioChannel *channel1 = aUnder_bed.Play();
 
     while (channel1 != null && channel1.IsPlaying)
     {
         Wait(1);
-    } 
+    }
+
     mouse.Visible = true;
     TypeText("Антон: Черт...");
     gDarkOverlay.Visible = false;
     gDarkOverlay.Transparency = 100;
+
     TypeText("Вы резко отдергиваете руку, и видите, как на безымянном пальце выступает капелька крови.");
     TypeText("Вы вновь наклоняетесь и действуете уже более осторожно.");
     TypeText("Пальцы нащупывают бугристое от ржавчины лезвие.");
     TypeText("Получен предмет: «Ржавый нож»");
+
     aBlack_hole.Play(eAudioPriorityNormal, eRepeat);
     player.AddInventory(iRastyKnife);
-    Preamble_under_bed = true;
   }
   else
   {
@@ -6896,13 +6898,6 @@ stop
           <ArraySize>0</ArraySize>
           <ArrayType>None</ArrayType>
           <DefaultValue>false</DefaultValue>
-          <Name>packofcigarettes</Name>
-          <Type>bool</Type>
-        </GlobalVariable>
-        <GlobalVariable>
-          <ArraySize>0</ArraySize>
-          <ArrayType>None</ArrayType>
-          <DefaultValue>false</DefaultValue>
           <Name>Go_to_dark</Name>
           <Type>bool</Type>
         </GlobalVariable>
@@ -6954,13 +6949,6 @@ stop
           <DefaultValue>0</DefaultValue>
           <Name>prompts</Name>
           <Type>int</Type>
-        </GlobalVariable>
-        <GlobalVariable>
-          <ArraySize>0</ArraySize>
-          <ArrayType>None</ArrayType>
-          <DefaultValue>false</DefaultValue>
-          <Name>Preamble_under_bed</Name>
-          <Type>bool</Type>
         </GlobalVariable>
         <GlobalVariable>
           <ArraySize>0</ArraySize>
