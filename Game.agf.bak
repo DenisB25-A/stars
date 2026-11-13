@@ -681,10 +681,6 @@
             <UnloadedRooms>
               <UnloadedRoom>
                 <Description IsNull="True" />
-                <Number>18</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
                 <Number>19</Number>
               </UnloadedRoom>
               <UnloadedRoom>
@@ -943,6 +939,10 @@
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>17</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>18</Number>
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
@@ -3908,7 +3908,7 @@
             <HotspotX>0</HotspotX>
             <HotspotY>0</HotspotY>
             <ID>7</ID>
-            <Image>83</Image>
+            <Image>282</Image>
             <Name>iNote</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties>
@@ -12265,7 +12265,7 @@ stop
           </Sprite>
           <Sprite Slot="83" Width="110" Height="75" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>Assets/Инвентарь/redblanket_Miniatures_models_for_the_game._2D_horror._Each_on_053166fc-e600-4230-be95-5de48dc874a1_1.png</FileName>
+              <FileName>Assets/Объекты/Нечитаемая записка.png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>75</ImportHeight>
@@ -13405,6 +13405,22 @@ stop
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>100</ImportHeight>
+              <ImportWidth>100</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="282" Width="100" Height="110" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Инвентарь/Нечитаемая записка.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>110</ImportHeight>
               <ImportWidth>100</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
