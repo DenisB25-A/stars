@@ -681,10 +681,6 @@
             <UnloadedRooms>
               <UnloadedRoom>
                 <Description IsNull="True" />
-                <Number>14</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
                 <Number>15</Number>
               </UnloadedRoom>
               <UnloadedRoom>
@@ -943,6 +939,10 @@
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>13</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>14</Number>
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
@@ -14821,7 +14821,7 @@ See KeyboardMovement.txt for details.
                 <BundlingType>InSeparateVOX</BundlingType>
                 <DefaultPriority>Inherit</DefaultPriority>
                 <DefaultRepeat>Inherit</DefaultRepeat>
-                <DefaultVolume>70</DefaultVolume>
+                <DefaultVolume>50</DefaultVolume>
                 <FileType>MP3</FileType>
                 <ID>35</ID>
                 <Index>38</Index>
@@ -15254,9 +15254,9 @@ See KeyboardMovement.txt for details.
                 <ID>36</ID>
                 <Index>39</Index>
                 <ScriptName>aScary_steps</ScriptName>
-                <SourceFileName>Assets/Звуки/scary_steps.mp3</SourceFileName>
+                <SourceFileName xml:space="preserve">Assets/Звуки/scary_steps 2.mp3</SourceFileName>
                 <Type>3</Type>
-                <FileLastModifiedDate>2026-06-07 10:58:35Z</FileLastModifiedDate>
+                <FileLastModifiedDate>2026-11-13 13:17:18Z</FileLastModifiedDate>
               </AudioClip>
               <AudioClip>
                 <BundlingType>InGameEXE</BundlingType>
