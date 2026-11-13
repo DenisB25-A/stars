@@ -820,10 +820,6 @@
             <UnloadedRooms>
               <UnloadedRoom>
                 <Description IsNull="True" />
-                <Number>13</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
                 <Number>23</Number>
               </UnloadedRoom>
             </UnloadedRooms>
@@ -938,6 +934,15 @@
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>42</Number>
+              </UnloadedRoom>
+            </UnloadedRooms>
+          </UnloadedRoomFolder>
+          <UnloadedRoomFolder Name="Episode 3">
+            <SubFolders />
+            <UnloadedRooms>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>13</Number>
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
@@ -4230,7 +4235,7 @@
             <SpeechView>0</SpeechView>
             <StartX>583</StartX>
             <StartY>996</StartY>
-            <StartingRoom>31</StartingRoom>
+            <StartingRoom>13</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>False</TurnWhenFacing>
@@ -5231,12 +5236,13 @@ stop
 @S  // Dialog startup entry point
 return
 @1
-  TypeText("В темноте под кроватью белеет клочок бумаги.");
-  TypeText("Вы протягиваете руку и вытаскиваете его, поднося к свету.");
+  TypeText("Под кроватью белеет листок бумаги.");
+  TypeText("Вы протягиваете руку и вытаскиваете его, поднося к тусклому свету люстры.");
   ReadAndAddNote(4);
-  TypeText("Это мой детский рисунок.");
-  TypeText("В памяти начинает шевелиться что-то темное и склизкое, что-то, что вы годами пытались загнать как можно глубже.");
-  TypeText("Откуда он здесь?");
+  
+  dUnder_bed2.SetOptionState(1, eOptionOffForever);
+  TypeText("Это мой детский рисунок. Откуда он здесь?");
+  
 stop
 @2
 stop
@@ -11986,7 +11992,7 @@ stop
           </Sprite>
           <Sprite Slot="84" Width="558" Height="372" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>Assets/Записки/Рисунок 1.png</FileName>
+              <FileName>Assets/Записки/Детский рисунок (существо).png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>372</ImportHeight>
