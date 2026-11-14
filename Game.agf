@@ -4375,7 +4375,7 @@
             <SpeechView>0</SpeechView>
             <StartX>583</StartX>
             <StartY>996</StartY>
-            <StartingRoom>13</StartingRoom>
+            <StartingRoom>18</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>False</TurnWhenFacing>
@@ -5421,6 +5421,11 @@ return
   cBum.UnlockView();
 option-off 1
 
+    if (this.HasOptionBeenChosen(3))
+    {
+        this.SetOptionState(2, eOptionOn);
+    }
+
 return
 @2
   FadeOut(2);
@@ -5430,166 +5435,133 @@ return
   player.y = 925;
   player.LockView(ILYA_ON_STAIRS);
   FadeIn(2);
-  TypeText(">Бомж: Вот так-то лучше.");
+  cBum.LockView(cBum.SpeechView); // Включаем анимацию рта
+  cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
+  TypeText(">Бомж: Так-то лучше.");
+  cBum.UnlockView();
   Wait(40);
 option-off 2
 option-on 4
 option-on 5
+option-on 6
 return
 @3
   TypeText("Антон: Ничего я не шатаюсь...");
   cBum.LockView(cBum.SpeechView);
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
-  TypeText(">Бомж: Шатаешься. Все бегаешь туда сюда, суетишься. Потому никуда и не можешь прийти.");
+  TypeText(">Бомж: Еще как шатаешься. Все мельтешишь у меня перед глазами. Поэтому никуда и не можешь прийти.");
   TypeText(">Бомж: Так никогда не оказаться на своем месте, парень.");
   cBum.UnlockView();
 option-off 3
+
+    if (this.HasOptionBeenChosen(1))
+    {
+        this.SetOptionState(2, eOptionOn);
+    }
+
 return
 
 @4
-  TypeText("Антон: Вы пробовали выйти на улицу? Спускались туда, вниз?");
+  TypeText("Антон: Вы пытались выйти на улицу? Спускались туда, вниз?");
   cBum.LockView(cBum.SpeechView); // Включаем анимацию рта
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
   cBum.UnlockView();
   TypeText(">Бомж: А зачем мне? Здесь тепло. Батареи греют. Ветер не дует. Менты не гоняют.");
-  TypeText("Антон: Вы что не понимаете? Я не о том. Я не могу найти выход из дома. Нам надо как-то... выбираться отсюда. Бежать, чувствуете?");
+  TypeText("Антон: Я не о том. Я не могу найти выход на улицу. Это прозвучит глупо, но кажется... подъезд куда-то исчез.");
   cBum.LockView(cBum.SpeechView); 
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
-  TypeText(">Бомж: Бежать? Ну уж. Я много от чего в жизни бегал, парень."); 
-  TypeText(">Бомж: От неприятностей, от долгов, от женщин, от жизни - от всего."); 
-  TypeText(">Бомж: Вот только когда бежишь, то всегда оказываешься вот в такой вот бетонной коробке.");
+  TypeText(">Бомж: Ну, что уж теперь. Исчез, так исчез. Лично мне все равно никуда выходить не надо."); 
+  TypeText(">Бомж: Сколько не ходи, не убегай от неприятностей, парень. Всегда оказываешься в такой вот бетонной коробке."); 
   TypeText(">Бомж: Где воняет ссаниной.");
   cBum.UnlockView();
 option-off 4
+option-off 5
+option-off 6
+option-on 7
+
 return
 @5
   TypeText("Антон: И долго вы здесь сидите?");
-  cBum.LockView(cBum.SpeechView); // Включаем анимацию рта
+  cBum.LockView(cBum.SpeechView); 
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
   cBum.UnlockView();
-  TypeText(">Бомж: Да как сказать. Подъезды все одинаковые. Заснул в одном, проснулся в другом - так что и не понять.");
+  TypeText(">Бомж: Да как сказать. Подъезды все одинаковые. Заснул в одном, проснулся в другом - так что и не посчитать.");
   cBum.UnlockView();
   TypeText("Антон: Не понял...");
-  cBum.LockView(cBum.SpeechView); // Включаем анимацию рта
+  cBum.LockView(cBum.SpeechView); 
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
-  cBum.UnlockView();
   TypeText(">Бомж: Ну как же. А ты сам уверен, что проснулся там же, где засыпал?");
+  cBum.UnlockView();
+option-off 4
 option-off 5
-return
-@6
-  TypeText("Антон: Что-то странное происходит... С тех пор, как я переехал сюда.");
-  TypeText("Антон: Мне постоянно кажется, что в квартире кроме меня кто-то есть.");
-  TypeText("Антон: У меня бессоница, а сегодня еще и отключили свет, хотя электричество - на всех этажах.");
-  TypeText("Антон: И... я не могу выйти из дома.");
-  TypeText("Антон: Подъезд куда-то исчез. Осталась только лестница вниз. В темноту.");
-  TypeText("Антон: Знаю, это звучит как бред. Черт, зачем я вообще это все говорю? Я ведь вас первый раз вижу.");
-  Wait(120);
-  cBum.LockView(cBum.SpeechView); 
-  cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
-  TypeText(">Бомж: Хм...");
-  TypeText(">Бомж: Если в самую долгую ночь в году тебе что-то мерещится, то поверь - тебе не мерещится, парень. Ночь всегда длинная, а эта будет длинее прочих.");
-  cBum.UnlockView();
-  TypeText("Антон: Какая еще ночь?...");
-  cBum.LockView(cBum.SpeechView); 
-  cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
-  TypeText(">Бомж: Темная. Очень долгая ночь, парень. Сегодня даже звезды погаснут.");
-  TypeText(">Бомж: Но в такую ночь можно загадать желание. Возможно, оно даже сбудется. Если попросишь правильно, и черные звезды заметят тебя.");
-  TypeText(">Бомж: Так чего же ты хочешь?");
-  cBum.UnlockView();
 option-off 6
 option-on 7
-option-on 8
-option-on 9
+
+return
+@6
+  TypeText("Антон: Вы так и не ответили: вы кто?");
+  cBum.LockView(cBum.SpeechView); 
+  cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
+  TypeText(">Бомж: А кого ты перед собой видишь?");
+  cBum.UnlockView();
+  TypeText("Антон: Ну...");
+  cBum.LockView(cBum.SpeechView); 
+  cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
+  TypeText(">Бомж: То-то и оно.");
+  TypeText(">Бомж: Захожу сюда временами: погреться, передохнуть. Сижу тихо. Не отсвечиваю, не нагоняю суеты. Не бегаю по всему дому как ошпаренный. Понимаешь, о чем я?");
+  TypeText(">Бомж: И ты бы не мозолил глаза. Не всегда знаешь, кто смотрит.");
+
+option-off 4
+option-off 5
+option-off 6
+option-on 7
+
 return
 @7
-  TypeText("Антон: Я? Я хочу просто вернуться домой.");
-  TypeText("Антон: Это ведь не так уж и много, правда?");
+  TypeText("Антон: Что-то странное происходит. С тех пор, как я переехал сюда.");
+  TypeText("Антон: У меня в квартире нет света, хотя электричество - на всех этажах.");
+  TypeText("Антон: И мне постоянно кажется, что там кроме меня кто-то есть.");
+  TypeText("Антон: А теперь я еще и не могу выйти на улицу!");
+  TypeText("Антон: Подъезд куда-то исчез. Вместо него дом будто бы тянется... куда-то на глубину.");
+  TypeText("Антон: Знаю, это звучит как бред. Черт. Даже не знаю, зачем вообще я все это говорю.");
   cBum.LockView(cBum.SpeechView); 
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
-  TypeText(">Бомж: Домой, говоришь?");
+  TypeText(">Бомж: Кхм. Кхм.");
+  TypeText(">Бомж: Хочешь, расскажу тебе одну историю, парень?");
   cBum.UnlockView();
-  Wait(120);
-  cBum.LockView(cBum.SpeechView); 
-  cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
-  TypeText(">Бомж: Дом - хорошее и теплое слово. Но знаешь, что я тебе скажу, парень?");
-  TypeText(">Бомж: Мне кажется, ты не хочешь домой.");
-  TypeText(">Бомж: Ты хочешь спрятаться: закрыться за дверью, провернуть все замки, задернуть шторы и думаешь, что как в детстве, окажешься там - в месте, где тебя когда-то любили. Ты хочешь вернуться в прошлое. Но это было давно, парень, и там никого больше нет.");
-  TypeText(">Бомж: А ты носишь это, как тяжелый мешок за плечами.");
-  TypeText(">Бомж: Я же вижу. Это не дом. Брось его. Посмотри на меня - вот я дома.");
-  cBum.UnlockView();
+  
+
 option-off-forever 7
 option-off-forever 8
 option-off-forever 9
 option-on 8  
 return
 @8
-  TypeText("Антон: Здесь творится что-то ненормальное. Я должен как-то выбраться отсюда.");
-  cBum.LockView(cBum.SpeechView); 
-  cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
-  TypeText(">Бомж: Это несложно, парень. Сбежать можно всегда. Но, знаешь, как говорят? Можно уйти из обоссанного подъезда, а вот он не уйдет из тебя, и ты будешь просто таскать его за собой всюду.");
-  TypeText(">Бомж: Я сам много бегал. И знаешь, что понял, когда стер ноги до крови?");
-  TypeText(">Бомж: Бежать нужно не из места, бежать нужно от самого себя. Говорят, это невозможно, но поверь, рано или поздно это получится.");
-  TypeText(">Бомж: Когда удалось сбежать от себя - становится все равно, где ты и кто ты.");
-  TypeText(">Бомж: Тогда-то и становишься свободным.");
-  cBum.UnlockView();
+
 option-off 8
 option-off 9
 option-off 10
 option-on 11
 return
 @9
-  TypeText("Антон: Послушайте, я просто хочу чтобы этот кошмар закончился.");
-  TypeText("Антон: Хочу вернуться к своей обычной, понятной и скучной жизни.");
-  cBum.LockView(cBum.SpeechView); 
-  cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
-  TypeText(">Бомж: Вернуться к обычной жизни? А она тебе нравилась?");
-  cBum.UnlockView();
-  TypeText("Антон: Ну...");
-  cBum.LockView(cBum.SpeechView); 
-  cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
-  TypeText(">Бомж: У тебя там было хорошего, парень? Вещи, ради которых стоило жить? Люди, которые тебя любили?");
-  cBum.UnlockView();
-  TypeText("Антон: Вы это о чем вообще?");
-  cBum.LockView(cBum.SpeechView); 
-  cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
-  TypeText(">Бомж: Пойми, я ведь не имею ввиду, что твоя жизнь была говном, хотя она и была. Это уже не важно. Я имею ввиду, что твоя прежняя жизнь закончилась, раз уж ты сидишь здесь со мной, в разгар самой долгой ночи в году. Поэтому пытаться вернуть ее глупо.");
-  TypeText(">Бомж: Плохое желание. Мог бы загадать что угодно, а вместо этого... Фарш не провернуть обратно, а тебе - не вернуть того, что было, парень.");
-  TypeText(">Бомж: Так что хуй с ним. Ведь может наоборот, это шанс для чего-то нового?");
+
 option-off 8
 option-off 9
 option-off 10
 option-on 11
 return
 @10
-  TypeText("Антон: Чтож, спасибо за... совет. Не скажу, что я понял, что мне делать, но я обо всем этом подумаю на досуге.");
-  cBum.LockView(cBum.SpeechView); 
-  cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
-  TypeText(">Бомж: Обращайся, парень. Первая консультация бесплатно.");
-  TypeText(">Бомж: И помни, с любой проблемой главное не спешить. Она все равно решится, а ты не будешь уставшим.");
-  cBum.UnlockView();
+
 return
 @11
-  TypeText("Антон: Послушайте, это все, конечно, очень интересно. Вот только я не понял вообще нихрена. Че вы несете?");
-  cBum.LockView(cBum.SpeechView); 
-  cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
-  TypeText(">Бомж: Ну, если ты оказался здесь и до сих пор ничегошеньки не понял, то дела твои никудышно, парень");
-  TypeText(">Бомж: Это все молодость - время есть. Но помни - его не так уж и много.");
-  cBum.UnlockView();
+
 return
 @12
-  TypeText("Антон: Слушай, я типо воспитанный и знаю, что старшим грубить нехорошо.");
-  TypeText("Антон: Но меня твои истории малость заебали уже");
-  TypeText("Антон: Но по-моему ты просто старый выживший из ума маразматик.");
-  TypeText("Антон: Так что не капай мне на мозги. Со своей жизнью я как-нибудь сам разберусь.");
-  cBum.LockView(cBum.SpeechView); 
-  cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
-  TypeText(">Бомж: Разберешься - охотно верю.");
-  TypeText(">Бомж: Но пока ты сидишь на ступеньках с воняющим старым бомжом.");
-  cBum.UnlockView();
+
 return
 @13
 
-return
+stop
 @14
   cBum.LockView(cBum.SpeechView); 
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
@@ -5621,14 +5593,14 @@ return
               <DialogOption>
                 <ID>2</ID>
                 <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">"Дать сигарету"</Text>
+                <Show>False</Show>
+                <Text xml:space="preserve">«Дать сигарету»</Text>
               </DialogOption>
               <DialogOption>
                 <ID>3</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Я не шатаюсь...</Text>
+                <Text xml:space="preserve">Я не шатаюсь.</Text>
               </DialogOption>
               <DialogOption>
                 <ID>4</ID>
@@ -5646,55 +5618,55 @@ return
                 <ID>6</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">Что-то странное происходит.</Text>
+                <Text xml:space="preserve">Так кто вы такой?</Text>
               </DialogOption>
               <DialogOption>
                 <ID>7</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">Я хочу домой.</Text>
+                <Text xml:space="preserve">Здесь что-то странное происходит.</Text>
               </DialogOption>
               <DialogOption>
                 <ID>8</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">Я хочу уйти отсюда.</Text>
+                <Text />
               </DialogOption>
               <DialogOption>
                 <ID>9</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">Я хочу... вернуться к нормальной жизни.</Text>
+                <Text />
               </DialogOption>
               <DialogOption>
                 <ID>10</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">Спасибо за совет.</Text>
+                <Text />
               </DialogOption>
               <DialogOption>
                 <ID>11</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">Че то я не понял нихрена</Text>
+                <Text />
               </DialogOption>
               <DialogOption>
                 <ID>12</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">Слушай, ты меня заебал.</Text>
+                <Text />
               </DialogOption>
               <DialogOption>
                 <ID>13</ID>
                 <Say>False</Say>
-                <Show>False</Show>
-                <Text />
+                <Show>True</Show>
+                <Text>Уйти</Text>
               </DialogOption>
               <DialogOption>
                 <ID>14</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text xml:space="preserve">Ты что, типо, психолог?</Text>
+                <Text />
               </DialogOption>
             </DialogOptions>
           </Dialog>
