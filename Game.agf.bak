@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>60</AudioIndexer>
+      <AudioIndexer>61</AudioIndexer>
       <AutoMoveInWalkMode>False</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets>Windows</BuildTargets>
@@ -678,24 +678,7 @@
         <SubFolders>
           <UnloadedRoomFolder Name="Stairs">
             <SubFolders />
-            <UnloadedRooms>
-              <UnloadedRoom>
-                <Description IsNull="True" />
-                <Number>19</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
-                <Number>20</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
-                <Number>21</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
-                <Number>22</Number>
-              </UnloadedRoom>
-            </UnloadedRooms>
+            <UnloadedRooms />
           </UnloadedRoomFolder>
           <UnloadedRoomFolder Name="Preamble">
             <SubFolders />
@@ -943,6 +926,22 @@
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>18</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>19</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>20</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>21</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>22</Number>
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
@@ -3938,7 +3937,7 @@
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
-                <Value xml:space="preserve">Кусок арматуры - можно разломать что-нибудь, а можно и двинуть кому-то по морде.</Value>
+                <Value xml:space="preserve">Кусок арматуры. Можно разломать что-нибудь, а можно и двинуть кому-то по морде.</Value>
               </CustomProperty>
             </Properties>
             <Interactions>
@@ -15783,6 +15782,19 @@ See KeyboardMovement.txt for details.
                 <SourceFileName>Assets/Звуки/Click.mp3</SourceFileName>
                 <Type>3</Type>
                 <FileLastModifiedDate>2026-11-08 14:27:08Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InSeparateVOX</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>5</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>58</ID>
+                <Index>61</Index>
+                <ScriptName>aWhispers2</ScriptName>
+                <SourceFileName xml:space="preserve">Assets/Звуки/Фоновая/whispers 2.mp3</SourceFileName>
+                <Type>2</Type>
+                <FileLastModifiedDate>2026-11-14 11:59:10Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
