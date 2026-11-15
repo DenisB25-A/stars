@@ -5471,7 +5471,7 @@ return
   cBum.LockView(cBum.SpeechView); 
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
   TypeText(">Бомж: Ну, что уж теперь. Исчез, так исчез. Лично мне все равно никуда выходить не надо."); 
-  TypeText(">Бомж: Сколько не ходи, не убегай от неприятностей, парень. Всегда оказываешься в такой вот бетонной коробке."); 
+  TypeText(">Бомж: Сколько ни ходи, не убегай от неприятностей, парень. Всегда оказываешься в такой вот бетонной коробке."); 
   TypeText(">Бомж: Где воняет ссаниной.");
   cBum.UnlockView();
 option-off 4
@@ -5523,7 +5523,7 @@ return
   TypeText("Антон: И мне постоянно кажется, что там кроме меня кто-то есть.");
   TypeText("Антон: А теперь я еще и не могу выйти на улицу!");
   TypeText("Антон: Подъезд пропал. Вместо него дом будто бы тянется... куда-то на глубину.");
-  TypeText("Антон: Знаю, это звучит как бред. Черт. Понятия не имею, зачем вообще я все это говорю.");
+  TypeText("Антон: Знаю, это звучит как бред. Понятия не имею, зачем вообще все это рассказываю.");
   cBum.LockView(cBum.SpeechView); 
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
   TypeText(">Бомж: Кхм. Кхм.");
@@ -5536,7 +5536,7 @@ option-on 9
 return
 @8
   TypeText("Антон: Рассказывай, что уж теперь.");
-  BumRespect(1);
+  BumRespect(2);
   cBum.LockView(cBum.SpeechView); 
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
   TypeText(">Бомж: Ну, тогда слушай.");
@@ -5552,6 +5552,7 @@ return
   TypeText(">Бомж: ...После этого меня упекли в психушку. Зато в тот день я многое понял о жизни.");
   cBum.UnlockView();
   TypeText("Антон: ...");
+option-off 8  
 option-off 9
 option-on 10
 option-on 11
@@ -5576,6 +5577,7 @@ return
 @10
   TypeText("Антон: Занятно. Я... даже не знаю, что сказать.");
   TypeText("(Вы чувствуете, что разговор уходит в какую-то странную плоскость. Стоит ли его продолжать? Да и как тут вообще себя вести?)");
+option-off 10
 option-off 11
 option-off 12
 option-on 13
@@ -5585,6 +5587,7 @@ return
 @11
   TypeText("Антон: Ты надо мной что, издеваешься? Застряли тут, на ступеньках обоссанных сидим, а ты мне... Оох, ладно, не важно.");
   TypeText("(Вы чувствуете, что разговор уходит в какую-то странную плоскость. Стоит ли его продолжать? Да и как тут вообще себя вести?)");
+option-off 11
 option-off 10
 option-off 12
 option-on 13
@@ -5595,6 +5598,7 @@ return
   TypeText("Антон: Ахуительная история... Я даже не знаю, что на это ответить.");
   TypeText("Антон: Лужи, бомжи бесконечные. Что к чему, непонятно. Хорошо хоть, не запихали в бесконечный лабиринт-обезьянник - со мной такое было на днях.");
   TypeText("(Вы чувствуете, что разговор уходит в какую-то странную плоскость. Стоит ли его продолжать? Да и как тут вообще себя вести?)");
+option-off 12
 option-off 10
 option-off 11
 option-on 13
@@ -5602,12 +5606,40 @@ option-on 14
 option-on 15
 return
 @13
-
-stop
+  TypeText("Антон: Если честно, я не знаю, что делать. Не знаю, как себя вести, как вокруг... это все происходит.");
+  TypeText("Антон: Посоветуете что-нибудь? Только в этот раз, пожалуйста, без историй.");
+  BumRespect(1);
+  cBum.LockView(cBum.SpeechView); 
+  cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
+  TypeText(">Бомж: Не нагонять суеты. Держи ухо в остро, будь внимателен и не лезь на рожон.");
+  TypeText(">Бомж: А еще, присматривайся к вещам вокруг, парень. Сегодня они одни, завтра - другие. Никогда не знаешь, когда и что тебе пригодится.");
+  cBum.UnlockView();
+option-off 13
+option-off 14
+option-off 15
+return
 @14
-
+  TypeText("Антон: Я недавно переехал, а вы тут, похоже, человек бывалый. Что говорят про дом?");
+  cBum.LockView(cBum.SpeechView); 
+  cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
+  TypeText(">Бомж: Говорят, что жилец ваш пропал. Толи в реке утоп, толи кредиторы в лесу за долги закопали.");
+  TypeText(">Бомж: А как по мне, так он из дома даже не выходил.");
+  cBum.UnlockView();
+option-off 13
+option-off 14
+option-off 15
 return
 @15
+  BumRespect(-1);
+  TypeText("Антон: Вы так разговариваете, будто вас тут уже домоуправленцем назначили. Туда не ходи, вопросов не задавай. У вас какая должность? Смотритель лестницы?");
+  cBum.LockView(cBum.SpeechView); 
+  cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
+  TypeText(">Бомж: Кхм. А ты шутник, парень. Только смотри, я тут тебя вообще-то и не держу.");
+  TypeText("(Бомж старается не подавать виду, но вы чувствуете, что вашего юмора он не оценил)");
+  cBum.UnlockView();
+option-off 13
+option-off 14
+option-off 15
 return
 @16
 stop
@@ -5689,19 +5721,19 @@ stop
                 <ID>13</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text />
+                <Text xml:space="preserve">Спросить совет у бомжа.</Text>
               </DialogOption>
               <DialogOption>
                 <ID>14</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text />
+                <Text xml:space="preserve">Расспросить о сплетнях.</Text>
               </DialogOption>
               <DialogOption>
                 <ID>15</ID>
                 <Say>False</Say>
                 <Show>False</Show>
-                <Text />
+                <Text xml:space="preserve">Подшутить над бомжом.</Text>
               </DialogOption>
               <DialogOption>
                 <ID>16</ID>
