@@ -5622,7 +5622,7 @@ option-off 14
 option-off 15
 option-off 16
 option-on 17
-stop
+return
 @14
   TypeText("Антон: Я недавно переехал, а вы тут, похоже, человек бывалый. Что говорят про дом?");
   cBum.LockView(cBum.SpeechView); 
@@ -5636,7 +5636,7 @@ option-off 14
 option-off 15
 option-off 16
 option-on 17
-stop
+return
 @15
   BumRespect -= 1;
   TypeText("Антон: Вы так разговариваете, будто вас тут управдомом назначили. Туда не ходи, вопросов не задавай. У вас какая должность? Смотритель лестницы?");
@@ -5651,7 +5651,7 @@ option-off 14
 option-off 15
 option-off 16
 option-on 17
-stop
+return
 @16
 stop
 @17
@@ -5660,14 +5660,13 @@ stop
     FadeOut(5);
     cEgo.x = 1253; 
     cEgo.y = 968; 
-    cEgo.Loop = 1;
-    FadeIn(5);
     cEgo.UnlockView();
+    FadeIn(5);
     cBum.LockView(cBum.SpeechView); 
     cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
     TypeText(">Бомж: Ладно, парень, поболтали и хватит. Теперь я бы немного вздремнул.");
     cBum.UnlockView();
-    TypeText("(Неясно, чем вы его подкупили, но бомж достаточно проникся к вам симпатией, чтобы помочь)");
+    TypeText("(Неясно, чем вы его подкупили, но бомж достаточно проникся к вам симпатией, чтобы помочь.)");
     cBum.LockView(cBum.SpeechView); 
     cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
     TypeText(">Бомж: Но напоследок. Вот это, возьми.");
@@ -5676,12 +5675,26 @@ stop
     cBum.LockView(cBum.SpeechView); 
     cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
     TypeText(">Бомж: Да не для тебя, дурень.");
-    TypeText(">Бомж: Это добрый дом, парень. Пусть иногда он и кажется не таким. Будь с ним по доброму, и он с тобой будет по доброму. Хороший это дом.");
-    TypeText(">Бомж: Просто иногда он хочет есть.");
+    TypeText(">Бомж: Это добрый дом, парень. Чтобы ты там ни думал. Будь с ним по доброму, и он с тобой будет по доброму. Хороший это дом.");
+    TypeText(">Бомж: Просто иногда он хочет поесть.");
     cBum.UnlockView();
     player.AddInventory(iBread);
-    TypeText("Получен предмет: «Батон плесневелого хлеба».");
+    TypeText("Получен предмет: «Батон черствого хлеба».");
   }
+  else
+  {
+    FadeOut(5);
+    cEgo.x = 1253; 
+    cEgo.y = 968; 
+    cEgo.UnlockView();
+    FadeIn(5);
+    cBum.LockView(cBum.SpeechView); 
+    cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
+    TypeText(">Бомж: Ладно, парень, поболтали и хватит. Теперь я бы немного вздремнул.");
+    cBum.UnlockView();
+    TypeText("(Вы чувствуете, что бомж знает больше, чем говорит. Однако он недостаточно доверяет вам, чтобы помочь. Возможно, вы чем-то обидели его или... Да кто поймет этих поехавших?)");
+  }
+option-off 17
 stop
 ]]></Script>
             <DialogOptions>
