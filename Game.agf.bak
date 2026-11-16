@@ -5439,7 +5439,7 @@ return
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
   TypeText(">Бомж: Так-то лучше.");
   cBum.UnlockView();
-  Wait(40);
+  
 option-off 2
 option-on 4
 option-on 5
@@ -5467,11 +5467,11 @@ return
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
   TypeText(">Бомж: А зачем мне? Здесь тепло. Батареи греют. Ветер не дует. Менты не гоняют.");
   cBum.UnlockView();
-  TypeText("Антон: Я не о том. Я не могу найти выход. Это прозвучит глупо, но кажется... выход на улицу куда-то исчез.");
+  TypeText("Антон: Я не о том. Я не могу найти выход. Это прозвучит глупо, но кажется... выход из дома куда-то исчез.");
   cBum.LockView(cBum.SpeechView); 
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
   TypeText(">Бомж: Ну, что уж теперь. Исчез, так исчез. Лично мне все равно никуда выходить не надо."); 
-  TypeText(">Бомж: Куда не беги от неприятностей, парень, все равно оказываешься в такой вот бетонной коробке."); 
+  TypeText(">Бомж: Куда не беги от неприятностей, парень, всегда оказываешься в такой вот бетонной коробке."); 
   TypeText(">Бомж: Где воняет ссаниной.");
   cBum.UnlockView();
 option-off 4
@@ -5546,8 +5546,8 @@ return
   TypeText(">Бомж: Я был слишком уставшим, чтобы куда-то идти. Поэтому просто сидел и смотрел, как передо мной наливается огромная лужа.");
   TypeText(">Бомж: Холодно было и зябко. Голодно. Сил не было. Вот я и смотрел в эту лужу, наблюдал, как круги расходятся по воде. Смотрел на свое отражение.");
   TypeText(">Бомж: И в какой-то момент, знаешь, парень... Что-то произошло. Я что-то увидел.");
-  TypeText(">Бомж: Я увидел свое отражение. Вот только оно не было отражением.");
-  TypeText(">Бомж: Это был кто-то другой. Другой я, сидящий по ту сторону, который смотрел в точно такую же лужу.");
+  TypeText(">Бомж: Увидел свое отражение. Вот только оно не было отражением.");
+  TypeText(">Бомж: Это был кто-то другой. Другой я, сидящий по ту сторону, но в то же время и тот же самый. Который смотрел в точно такую же лужу.");
   TypeText(">Бомж: В лужу, в которой отражался уже кто-то третий, похожий на меня, смотрящий туда, где отражался еще один. Понимаешь? Я видел их по отдельности и одновременно всех вместе.");
   TypeText(">Бомж: Бесконечные бомжи, смотрящие в бесконечные лужи.");
   TypeText(">Бомж: Это было, как озарение. В тот момент, парень, я тоже почувствовал, что не понимаю, где оказался. Каким из тех бомжей был я сам.");
@@ -5627,7 +5627,7 @@ return
   TypeText("Антон: Я недавно переехал, а вы тут, похоже, человек бывалый. Что говорят про дом?");
   cBum.LockView(cBum.SpeechView); 
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
-  TypeText(">Бомж: Говорят, что жилец ваш пропал. Толи в реке утоп, толи кредиторы в лесу за долги закопали.");
+  TypeText(">Бомж: Говорят, что жилец ваш пропал. То ли в реке утоп, то ли кредиторы в лесу за долги закопали.");
   TypeText(">Бомж: А как по мне, так он из дома даже не выходил.");
   cBum.UnlockView();
   BumMeeting += 1;
@@ -5653,30 +5653,56 @@ option-off 16
 option-on 17
 return
 @16
+  if (this.HasOptionBeenChosen(2))
+  {
+    // Здесь повторяем блок перехода из @17:
+    FadeOut(5);
+
+    cEgo.StopMoving();
+
+    cEgo.x = 1253;
+    cEgo.y = 968;
+
+    cEgo.UnlockView();
+    cEgo.FaceCharacter(cBum, eNoBlock);
+
+    Wait(1);
+    FadeIn(5);
+    
+  }
+
 stop
 @17
   if (BumRespect >= 1)
   {
     FadeOut(5);
-    cEgo.x = 1253; 
-    cEgo.y = 968; 
+
+    cEgo.StopMoving();
+
+    cEgo.x = 1253;
+    cEgo.y = 968;
+
     cEgo.UnlockView();
+    cEgo.FaceCharacter(cBum, eNoBlock);
+
+    Wait(1);
     FadeIn(5);
+
     cBum.LockView(cBum.SpeechView); 
     cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
-    TypeText(">Бомж: Ладно, парень, поболтали и хватит. Теперь я бы немного вздремнул.");
+    TypeText(">Бомж: Ладно, парень, поболтали и хватит. Теперь я бы немного поспал.");
     cBum.UnlockView();
     TypeText("(Неясно, чем вы его подкупили, но бомж достаточно проникся к вам симпатией, чтобы помочь.)");
     cBum.LockView(cBum.SpeechView); 
     cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
-    TypeText(">Бомж: Но напоследок. Вот это, возьми.");
+    TypeText(">Бомж: Напоследок. Вот это, возьми.");
     cBum.UnlockView();
     TypeText("Антон: Спасибо, но я не голодный.");
     cBum.LockView(cBum.SpeechView); 
     cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
     TypeText(">Бомж: Да не для тебя, дурень.");
     TypeText(">Бомж: Это добрый дом, парень. Чтобы ты там ни думал. Будь с ним по доброму, и он с тобой будет по доброму. Хороший это дом.");
-    TypeText(">Бомж: Просто иногда он хочет поесть.");
+    TypeText(">Бомж: Просто иногда... ему хочется есть.");
     cBum.UnlockView();
     player.AddInventory(iBread);
     TypeText("Получен предмет: «Батон черствого хлеба».");
@@ -5684,13 +5710,21 @@ stop
   else
   {
     FadeOut(5);
-    cEgo.x = 1253; 
-    cEgo.y = 968; 
+
+    cEgo.StopMoving();
+
+    cEgo.x = 1253;
+    cEgo.y = 968;
+
     cEgo.UnlockView();
+    cEgo.FaceCharacter(cBum, eNoBlock);
+
+    Wait(1);
     FadeIn(5);
+
     cBum.LockView(cBum.SpeechView); 
     cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
-    TypeText(">Бомж: Ладно, парень, поболтали и хватит. Теперь я бы немного вздремнул.");
+    TypeText(">Бомж: Ладно, парень, поболтали и хватит. Теперь я бы немного поспал.");
     cBum.UnlockView();
     TypeText("(Вы чувствуете, что бомж знает больше, чем говорит. Однако он недостаточно доверяет вам, чтобы помочь. Возможно, вы чем-то обидели его или... Да кто поймет этих поехавших?)");
   }
@@ -7288,7 +7322,7 @@ stop
         <GlobalVariable>
           <ArraySize>0</ArraySize>
           <ArrayType>None</ArrayType>
-          <DefaultValue>0</DefaultValue>
+          <DefaultValue>1</DefaultValue>
           <Name>BumMeeting</Name>
           <Type>int</Type>
         </GlobalVariable>
@@ -12627,38 +12661,6 @@ stop
               <OffsetY>0</OffsetY>
               <ImportHeight>110</ImportHeight>
               <ImportWidth>95</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>True</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <TransparentColorIndex>0</TransparentColorIndex>
-              <ImportAlphaChannel>True</ImportAlphaChannel>
-            </Source>
-          </Sprite>
-          <Sprite Slot="109" Width="299" Height="400" ColorDepth="32" Resolution="Real" AlphaChannel="False">
-            <Source>
-              <FileName>Assets/Анимация/На лестнице(2).png</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>400</ImportHeight>
-              <ImportWidth>299</ImportWidth>
-              <ImportAsTile>False</ImportAsTile>
-              <Frame>0</Frame>
-              <RemapToGamePalette>True</RemapToGamePalette>
-              <RemapToRoomPalette>False</RemapToRoomPalette>
-              <ImportMethod>LeaveAsIs</ImportMethod>
-              <TransparentColorIndex>0</TransparentColorIndex>
-              <ImportAlphaChannel>True</ImportAlphaChannel>
-            </Source>
-          </Sprite>
-          <Sprite Slot="118" Width="299" Height="400" ColorDepth="32" Resolution="Real" AlphaChannel="True">
-            <Source>
-              <FileName>Assets/Анимация/На лестнице(2).png</FileName>
-              <OffsetX>0</OffsetX>
-              <OffsetY>0</OffsetY>
-              <ImportHeight>400</ImportHeight>
-              <ImportWidth>299</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>
