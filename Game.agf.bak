@@ -4076,7 +4076,7 @@
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
-                <Value xml:space="preserve">Немного черствый батон хлеба, с краев чуть поддернутый плесенью.</Value>
+                <Value xml:space="preserve">Батон черствого хлеба, с краев чуть поддернутый плесенью. Я не настолько голоден, чтобы это есть.</Value>
               </CustomProperty>
             </Properties>
             <Interactions>
@@ -5471,7 +5471,7 @@ return
   cBum.LockView(cBum.SpeechView); 
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
   TypeText(">Бомж: Ну, что уж теперь. Исчез, так исчез. Лично мне все равно никуда выходить не надо."); 
-  TypeText(">Бомж: Куда не беги от неприятностей, парень, всегда оказываешься в такой вот бетонной коробке."); 
+  TypeText(">Бомж: Куда ни беги от неприятностей, парень, всегда оказываешься в такой вот бетонной коробке."); 
   TypeText(">Бомж: Где воняет ссаниной.");
   cBum.UnlockView();
 option-off 4
@@ -5550,7 +5550,7 @@ return
   TypeText(">Бомж: Это был кто-то другой. Другой я, сидящий по ту сторону, но в то же время и тот же самый. Который смотрел в точно такую же лужу.");
   TypeText(">Бомж: В лужу, в которой отражался уже кто-то третий, похожий на меня, смотрящий туда, где отражался еще один. Понимаешь? Я видел их по отдельности и одновременно всех вместе.");
   TypeText(">Бомж: Бесконечные бомжи, смотрящие в бесконечные лужи.");
-  TypeText(">Бомж: Это было, как озарение. В тот момент, парень, я тоже почувствовал, что не понимаю, где оказался. Каким из тех бомжей был я сам.");
+  TypeText(">Бомж: Это было как озарение. В тот момент, парень, я тоже почувствовал, что не понимаю, где оказался. Каким из тех бомжей был я сам.");
   TypeText(">Бомж: И до сих пор не уверен, в какой из тех луж я остался.");
   cBum.UnlockView();
   TypeText("Антон: ...");
@@ -5701,7 +5701,7 @@ stop
     cBum.LockView(cBum.SpeechView); 
     cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
     TypeText(">Бомж: Да не для тебя, дурень.");
-    TypeText(">Бомж: Это добрый дом, парень. Чтобы ты там ни думал. Будь с ним по доброму, и он с тобой будет по доброму. Хороший это дом.");
+    TypeText(">Бомж: Это добрый дом, парень. Что бы ты там ни думал. Будь с ним по-доброму, и он с тобой будет по-доброму. Хороший это дом.");
     TypeText(">Бомж: Просто иногда... ему хочется есть.");
     cBum.UnlockView();
     player.AddInventory(iBread);
@@ -7176,13 +7176,6 @@ stop
           <ArraySize>0</ArraySize>
           <ArrayType>None</ArrayType>
           <DefaultValue>false</DefaultValue>
-          <Name>Go_to_dark</Name>
-          <Type>bool</Type>
-        </GlobalVariable>
-        <GlobalVariable>
-          <ArraySize>0</ArraySize>
-          <ArrayType>None</ArrayType>
-          <DefaultValue>false</DefaultValue>
           <Name>was_balcony_thoughts</Name>
           <Type>bool</Type>
         </GlobalVariable>
@@ -7322,9 +7315,16 @@ stop
         <GlobalVariable>
           <ArraySize>0</ArraySize>
           <ArrayType>None</ArrayType>
-          <DefaultValue>1</DefaultValue>
+          <DefaultValue>0</DefaultValue>
           <Name>BumMeeting</Name>
           <Type>int</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>false</DefaultValue>
+          <Name>Electricity</Name>
+          <Type>bool</Type>
         </GlobalVariable>
       </Variables>
     </GlobalVariables>
