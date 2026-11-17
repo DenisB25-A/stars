@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>61</AudioIndexer>
+      <AudioIndexer>64</AudioIndexer>
       <AutoMoveInWalkMode>False</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets>Windows</BuildTargets>
@@ -942,6 +942,10 @@
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>22</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>50</Number>
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
@@ -4100,7 +4104,7 @@
             <ID>22</ID>
             <Image>155</Image>
             <Name>iBread</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
+            <PlayerStartsWithItem>True</PlayerStartsWithItem>
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
@@ -4403,7 +4407,7 @@
             <SpeechView>0</SpeechView>
             <StartX>583</StartX>
             <StartY>996</StartY>
-            <StartingRoom>18</StartingRoom>
+            <StartingRoom>50</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
             <TurnWhenFacing>False</TurnWhenFacing>
@@ -15945,6 +15949,45 @@ See KeyboardMovement.txt for details.
                 <SourceFileName xml:space="preserve">Assets/Звуки/Фоновая/whispers 2.mp3</SourceFileName>
                 <Type>2</Type>
                 <FileLastModifiedDate>2026-11-14 11:59:10Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>59</ID>
+                <Index>62</Index>
+                <ScriptName>aElectropanel_Eating</ScriptName>
+                <SourceFileName>Assets/Звуки/Electropanel_Eating.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-11-17 08:52:18Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>60</ID>
+                <Index>63</Index>
+                <ScriptName>aLight_on</ScriptName>
+                <SourceFileName>Assets/Звуки/Light_on.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-11-17 09:13:36Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>61</ID>
+                <Index>64</Index>
+                <ScriptName>aLock_picking</ScriptName>
+                <SourceFileName>Assets/Звуки/Lock_picking.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-11-17 12:44:27Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
