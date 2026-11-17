@@ -1816,7 +1816,7 @@
               <ID>6</ID>
               <Left>460</Left>
               <Name>gInventory_menu</Name>
-              <OnClick />
+              <OnClick>gInventory_menu_OnClick</OnClick>
               <PopupStyle>Normal</PopupStyle>
               <PopupYPos>0</PopupYPos>
               <ScriptModule>GlobalScript.asc</ScriptModule>
@@ -2103,6 +2103,34 @@
                 <Width>165</Width>
                 <WrapText>False</WrapText>
                 <ZOrder>2</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>5</Font>
+                <Height>51</Height>
+                <ID>3</ID>
+                <Image>36</Image>
+                <Left>0</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>BtnEat</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>BtnEat_OnClick</OnClick>
+                <PushedImage>0</PushedImage>
+                <Text>Употребить</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>50712</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>91</Top>
+                <Translated>True</Translated>
+                <Visible>False</Visible>
+                <Width>165</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>3</ZOrder>
               </GUIButton>
             </Controls>
           </GUIMain>
@@ -3660,7 +3688,7 @@
                 <ID>9</ID>
                 <Image>41</Image>
                 <Name>iChocolate</Name>
-                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <PlayerStartsWithItem>True</PlayerStartsWithItem>
                 <Properties>
                   <CustomProperty>
                     <Name>Description</Name>
@@ -5706,6 +5734,8 @@ stop
     cBum.UnlockView();
     player.AddInventory(iBread);
     TypeText("Получен предмет: «Батон черствого хлеба».");
+    TypeText("Хоть этот бродяга и странный, но от разговора с обычным живым человеком вам стало немного полегче.");
+    ChangeMood(1);
   }
   else
   {
