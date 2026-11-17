@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>64</AudioIndexer>
+      <AudioIndexer>65</AudioIndexer>
       <AutoMoveInWalkMode>False</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets>Windows</BuildTargets>
@@ -3507,6 +3507,28 @@
               </GUIButton>
             </Controls>
           </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>38912</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <BorderColor>0</BorderColor>
+              <Clickable>False</Clickable>
+              <Height>1079</Height>
+              <ID>20</ID>
+              <Left>0</Left>
+              <Name>gRedOverlay</Name>
+              <OnClick />
+              <PopupStyle>Normal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Top>0</Top>
+              <Transparency>100</Transparency>
+              <Visible>False</Visible>
+              <Width>1919</Width>
+              <ZOrder>1</ZOrder>
+            </NormalGUI>
+            <Controls />
+          </GUIMain>
         </GUIs>
       </GUIFolder>
     </GUIs>
@@ -4405,8 +4427,8 @@
             <SpeechAnimationDelay>0</SpeechAnimationDelay>
             <SpeechColor>65535</SpeechColor>
             <SpeechView>0</SpeechView>
-            <StartX>583</StartX>
-            <StartY>996</StartY>
+            <StartX>355</StartX>
+            <StartY>942</StartY>
             <StartingRoom>50</StartingRoom>
             <ThinkingView>0</ThinkingView>
             <TurnBeforeWalking>False</TurnBeforeWalking>
@@ -6623,6 +6645,71 @@ stop
               </DialogOption>
               <DialogOption>
                 <ID>2</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text>Уйти</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>20</ID>
+            <Name>dWires</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+  TypeText("Несколько минут вы пытаетесь разобраться, что с чем соединено. Тщетно. С этой задачей едва ли справился бы даже специалист.");
+  TypeText("Может, попробовать их подергать? Вы вроде удачливый - вдруг повезет?");
+option-off 1
+option-on 2
+stop
+@2
+  TypeText("Ничего страшного. Главное, соблюдать осторожность...");
+  Mouse.Visible = false;
+  Wait(40);
+  FadeOut(4);
+  Wait(120);
+  // Полностью закрываем изображение чёрным
+  gDarkOverlay.Transparency = 0;
+  gDarkOverlay.Visible = true;
+
+  // Подготавливаем красный слой
+  gRedOverlay.ZOrder = 1;
+  gRedOverlay.Transparency = 100;
+  gRedOverlay.Visible = true;
+  aElectric_shock.Play();
+  // Первое красное мигание
+  gRedOverlay.Transparency = 45;
+  Wait(4);
+  gRedOverlay.Transparency = 100;
+  Wait(6);
+
+  // Второе, более короткое мигание
+  gRedOverlay.Transparency = 60;
+  Wait(3);
+  gRedOverlay.Transparency = 100;
+  Wait(40);
+  FadeIn(4);
+stop
+@3
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Осмотреть сплетение кабелей</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Покопаться в кабелях</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
                 <Say>False</Say>
                 <Show>True</Show>
                 <Text>Уйти</Text>
@@ -15988,6 +16075,19 @@ See KeyboardMovement.txt for details.
                 <SourceFileName>Assets/Звуки/Lock_picking.mp3</SourceFileName>
                 <Type>3</Type>
                 <FileLastModifiedDate>2026-11-17 12:44:27Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>62</ID>
+                <Index>65</Index>
+                <ScriptName>aElectric_shock</ScriptName>
+                <SourceFileName>Assets/Звуки/electric_shock.mp3</SourceFileName>
+                <Type>1</Type>
+                <FileLastModifiedDate>2026-11-17 16:49:37Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
