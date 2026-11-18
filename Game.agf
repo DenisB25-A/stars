@@ -6663,13 +6663,13 @@ stop
 @S  // Dialog startup entry point
 return
 @1
-  TypeText("Несколько минут вы пытаетесь разобраться, что с чем соединено. Тщетно. С этой задачей едва ли справился бы даже специалист.");
+  TypeText("Несколько минут вы пытаетесь разобраться, что с чем соединено. Безуспешно. С этой задачей не справился бы даже специалист.");
   TypeText("Может, попробовать их подергать? Вы вроде удачливый - вдруг повезет?");
 option-off 1
 option-on 2
 stop
 @2
-  TypeText("Ничего страшного. Главное, соблюдать технику безопасности...");
+  TypeText("Ничего страшного. Главное - соблюдать технику безопасности...");
   Mouse.Visible = false;
   Wait(40);
 
@@ -6706,9 +6706,14 @@ stop
   gRedOverlay.Transparency = 40;
   Wait(3);
   gRedOverlay.Transparency = 100;
-
+  Wait(6);
+  // Третья вспышка
+  gRedOverlay.Transparency = 40;
+  Wait(3);
+  gRedOverlay.Transparency = 100;
   // Небольшая пауза в темноте
-  Wait(140);
+
+  Wait(240);
 
   // Убираем красный слой
   gRedOverlay.Visible = false;
@@ -6717,13 +6722,17 @@ stop
     // Возвращаем курсор
   Mouse.Visible = true;
   TypeText("Говорят, дуракам везет. Но только один раз.");
+  Mouse.Visible = false;
   Wait(80);
-  TypeText("Вы различаете где-то наверху яркий свет. Он бьет по глазам, то приближаясь, то отдаляясь. Как светлое пятнышко в конце темного пустого тунеля. Этот свет манит к себе.");
-  TypeText("Вы открываете глаза, и понимаете, что это - всего лишь лампочка под потолком."); 
-  TypeText("Вы лежите на холодном полу. Вы не знаете, сколько прошло времени. Все тело болит ужасно. Однако дом теперь гудит как-то иначе. Неужели электричество и правда восстановилось?");
+  Mouse.Visible = true;
+  TypeText("Сквозь темноту проступает свет. Сначала едва различимо, но постепенно становится ярче. На мгновение кажется, будто впереди — выход из темного пустого туннеля.");
+  TypeText("Вы открываете глаза. Над вами - всего лишь лампочка под потолком."); 
+  TypeText("Вы лежите на холодном полу. Вы не знаете, сколько прошло времени. Тело ужасно болит. Однако дом гудит как-то иначе. Неужели электричество и правда восстановилось?");
+  Mouse.Visible = false;
   // Убираем черный слой
   gDarkOverlay.Visible = false;
   gDarkOverlay.Transparency = 100;
+  SetNextScreenTransition(eTransitionInstant);
   player.ChangeRoom(51, 0, 0);
 
 stop
@@ -7480,6 +7489,13 @@ stop
           <ArrayType>None</ArrayType>
           <DefaultValue>false</DefaultValue>
           <Name>Electricity</Name>
+          <Type>bool</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>false</DefaultValue>
+          <Name>Wound</Name>
           <Type>bool</Type>
         </GlobalVariable>
       </Variables>
