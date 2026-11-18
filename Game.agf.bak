@@ -947,6 +947,10 @@
                 <Description IsNull="True" />
                 <Number>50</Number>
               </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>51</Number>
+              </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
         </SubFolders>
@@ -2730,7 +2734,7 @@
               <Transparency>100</Transparency>
               <Visible>False</Visible>
               <Width>1919</Width>
-              <ZOrder>0</ZOrder>
+              <ZOrder>1</ZOrder>
             </NormalGUI>
             <Controls>
               <GUILabel>
@@ -3525,7 +3529,7 @@
               <Transparency>100</Transparency>
               <Visible>False</Visible>
               <Width>1919</Width>
-              <ZOrder>1</ZOrder>
+              <ZOrder>2</ZOrder>
             </NormalGUI>
             <Controls />
           </GUIMain>
@@ -6665,32 +6669,63 @@ option-off 1
 option-on 2
 stop
 @2
-  TypeText("Ничего страшного. Главное, соблюдать осторожность...");
+  TypeText("Ничего страшного. Главное, соблюдать технику безопасности...");
   Mouse.Visible = false;
   Wait(40);
+
+  // Подготавливаем оверлеи
+  gDarkOverlay.Visible = false;
+  gDarkOverlay.Transparency = 100;
+
+  gRedOverlay.Visible = false;
+  gRedOverlay.Transparency = 100;
+
+  // Плавно затемняем экран
   FadeOut(4);
   Wait(120);
-  // Полностью закрываем изображение чёрным
+
+  // Фиксируем полностью черный экран
   gDarkOverlay.Transparency = 0;
   gDarkOverlay.Visible = true;
 
-  // Подготавливаем красный слой
-  gRedOverlay.ZOrder = 1;
+  // Включаем красный слой поверх черного
   gRedOverlay.Transparency = 100;
   gRedOverlay.Visible = true;
+    // Возвращаем изображение
+  FadeIn(4);
+  // Звук удара током
   aElectric_shock.Play();
-  // Первое красное мигание
-  gRedOverlay.Transparency = 45;
-  Wait(4);
+
+  // Первая красная вспышка
+  gRedOverlay.Transparency = 35;
+  Wait(2);
   gRedOverlay.Transparency = 100;
   Wait(6);
 
-  // Второе, более короткое мигание
-  gRedOverlay.Transparency = 60;
+  // Вторая, более слабая вспышка
+  gRedOverlay.Transparency = 40;
   Wait(3);
   gRedOverlay.Transparency = 100;
-  Wait(40);
-  FadeIn(4);
+
+  // Небольшая пауза в темноте
+  Wait(140);
+
+  // Убираем красный слой
+  gRedOverlay.Visible = false;
+  gRedOverlay.Transparency = 100;
+  
+    // Возвращаем курсор
+  Mouse.Visible = true;
+  TypeText("Говорят, дуракам везет. Но только один раз.");
+  Wait(80);
+  TypeText("Вы различаете где-то наверху яркий свет. Он бьет по глазам, то приближаясь, то отдаляясь. Как светлое пятнышко в конце темного пустого тунеля. Этот свет манит к себе.");
+  TypeText("Вы открываете глаза, и понимаете, что это - всего лишь лампочка под потолком."); 
+  TypeText("Вы лежите на холодном полу. Вы не знаете, сколько прошло времени. Все тело болит ужасно. Однако дом теперь гудит как-то иначе. Неужели электричество и правда восстановилось?");
+  // Убираем черный слой
+  gDarkOverlay.Visible = false;
+  gDarkOverlay.Transparency = 100;
+  player.ChangeRoom(51, 0, 0);
+
 stop
 @3
 stop
