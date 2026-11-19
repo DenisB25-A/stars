@@ -5521,58 +5521,78 @@ return
 
 @4
   TypeText("Антон: Вы пытались выйти на улицу? Спускались туда, вниз?");
-  cBum.LockView(cBum.SpeechView); // Включаем анимацию рта
+  cBum.LockView(cBum.SpeechView);
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
   TypeText(">Бомж: А зачем мне? Здесь тепло. Батареи греют. Ветер не дует. Менты не гоняют.");
   cBum.UnlockView();
+
   TypeText("Антон: Я не о том. Я не могу найти выход. Это прозвучит глупо, но кажется... выход из дома куда-то исчез.");
-  cBum.LockView(cBum.SpeechView); 
+
+  cBum.LockView(cBum.SpeechView);
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
-  TypeText(">Бомж: Ну, что уж теперь. Исчез, так исчез. Лично мне все равно никуда выходить не надо."); 
-  TypeText(">Бомж: Куда ни беги от неприятностей, парень, всегда оказываешься в такой вот бетонной коробке."); 
+  TypeText(">Бомж: Ну, что уж теперь. Исчез, так исчез. Лично мне все равно никуда выходить не надо.");
+  TypeText(">Бомж: Куда ни беги от неприятностей, парень, всегда оказываешься в такой вот бетонной коробке.");
   TypeText(">Бомж: Где воняет ссаниной.");
   cBum.UnlockView();
+
 option-off 4
-option-off 5
-option-off 6
-option-on 7
+
+  if (this.HasOptionBeenChosen(4) &&
+      this.HasOptionBeenChosen(5) &&
+      this.HasOptionBeenChosen(6))
+  {
+    this.SetOptionState(7, eOptionOn);
+  }
 
 return
 @5
   TypeText("Антон: И долго вы здесь сидите?");
-  cBum.LockView(cBum.SpeechView); 
+  cBum.LockView(cBum.SpeechView);
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
   TypeText(">Бомж: Да как сказать. Подъезды все одинаковые. Заснул в одном, проснулся в другом - так что и не понять.");
   cBum.UnlockView();
+
   TypeText("Антон: Не понял...");
-  cBum.LockView(cBum.SpeechView); 
+
+  cBum.LockView(cBum.SpeechView);
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
   TypeText(">Бомж: Ну как же. А ты сам уверен, что проснулся там же, где засыпал?");
   cBum.UnlockView();
-option-off 4
+
 option-off 5
-option-off 6
-option-on 7
+
+  if (this.HasOptionBeenChosen(4) &&
+      this.HasOptionBeenChosen(5) &&
+      this.HasOptionBeenChosen(6))
+  {
+    this.SetOptionState(7, eOptionOn);
+  }
 
 return
 @6
   TypeText("Антон: Вы так и не ответили, вы кто?");
-  cBum.LockView(cBum.SpeechView); 
+  cBum.LockView(cBum.SpeechView);
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
   TypeText(">Бомж: А кого ты перед собой видишь?");
   cBum.UnlockView();
+
   TypeText("Антон: Ну...");
-  cBum.LockView(cBum.SpeechView); 
+
+  cBum.LockView(cBum.SpeechView);
   cBum.Animate(cBum.Loop, 15, eRepeat, eNoBlock);
   TypeText(">Бомж: То-то и оно.");
   TypeText(">Бомж: Захожу сюда временами. Погреться, передохнуть. Сижу тихо. Не отсвечиваю, не нагоняю суеты. Не бегаю по всему дому как ошпаренный. Понимаешь, о чем я?");
   TypeText(">Бомж: И ты бы не мозолил глаза. Не всегда знаешь, кто смотрит.");
   cBum.UnlockView();
 
-option-off 4
-option-off 5
 option-off 6
-option-on 7
+
+  if (this.HasOptionBeenChosen(4) &&
+      this.HasOptionBeenChosen(5) &&
+      this.HasOptionBeenChosen(6))
+  {
+    this.SetOptionState(7, eOptionOn);
+  }
 
 return
 @7
