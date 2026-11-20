@@ -3611,7 +3611,7 @@
                 <MouseoverImage>287</MouseoverImage>
                 <Name>btn_saveg</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick />
+                <OnClick>btn_saveg_OnClick</OnClick>
                 <PushedImage>0</PushedImage>
                 <Text />
                 <TextAlignment>TopCenter</TextAlignment>
@@ -3793,23 +3793,42 @@
                 <WrapText>False</WrapText>
                 <ZOrder>8</ZOrder>
               </GUIButton>
-              <GUILabel>
+              <GUITextBox>
                 <Clickable>True</Clickable>
                 <Enabled>True</Enabled>
                 <Font>6</Font>
-                <Height>60</Height>
+                <Height>69</Height>
                 <ID>9</ID>
-                <Left>89</Left>
+                <Left>83</Left>
                 <Locked>False</Locked>
-                <Name>txtSaveName</Name>
+                <Name>txtSaveName1</Name>
+                <OnActivate />
+                <ShowBorder>False</ShowBorder>
                 <Text />
-                <TextAlignment>TopCenter</TextAlignment>
                 <TextColor>65535</TextColor>
-                <Top>416</Top>
+                <Top>411</Top>
+                <Translated>True</Translated>
+                <Visible>False</Visible>
+                <Width>316</Width>
+                <ZOrder>9</ZOrder>
+              </GUITextBox>
+              <GUILabel>
+                <Clickable>False</Clickable>
+                <Enabled>True</Enabled>
+                <Font>6</Font>
+                <Height>69</Height>
+                <ID>10</ID>
+                <Left>83</Left>
+                <Locked>False</Locked>
+                <Name>lblSaveSlot1</Name>
+                <Text>Пусто</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>65535</TextColor>
+                <Top>411</Top>
                 <Translated>True</Translated>
                 <Visible>True</Visible>
-                <Width>306</Width>
-                <ZOrder>9</ZOrder>
+                <Width>315</Width>
+                <ZOrder>10</ZOrder>
               </GUILabel>
             </Controls>
           </GUIMain>
