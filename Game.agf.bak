@@ -3802,7 +3802,7 @@
                 <Left>83</Left>
                 <Locked>False</Locked>
                 <Name>txtSaveName1</Name>
-                <OnActivate />
+                <OnActivate>txtSaveName1_OnActivate</OnActivate>
                 <ShowBorder>False</ShowBorder>
                 <Text />
                 <TextColor>65535</TextColor>
