@@ -3695,7 +3695,7 @@
                 <MouseoverImage>0</MouseoverImage>
                 <Name>btnSaveSlot1</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick>btnSaveSlot1_OnClick</OnClick>
+                <OnClick>SaveSlot_OnClick</OnClick>
                 <PushedImage>0</PushedImage>
                 <Text />
                 <TextAlignment>TopCenter</TextAlignment>
@@ -3723,7 +3723,7 @@
                 <MouseoverImage>0</MouseoverImage>
                 <Name>btnSaveSlot2</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick />
+                <OnClick>SaveSlot_OnClick</OnClick>
                 <PushedImage>0</PushedImage>
                 <Text />
                 <TextAlignment>TopCenter</TextAlignment>
@@ -3746,12 +3746,12 @@
                 <Height>192</Height>
                 <ID>7</ID>
                 <Image>0</Image>
-                <Left>86</Left>
+                <Left>83</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>0</MouseoverImage>
                 <Name>btnSaveSlot3</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick />
+                <OnClick>SaveSlot_OnClick</OnClick>
                 <PushedImage>0</PushedImage>
                 <Text />
                 <TextAlignment>TopCenter</TextAlignment>
@@ -3779,7 +3779,7 @@
                 <MouseoverImage>0</MouseoverImage>
                 <Name>btnSaveSlot4</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick />
+                <OnClick>SaveSlot_OnClick</OnClick>
                 <PushedImage>0</PushedImage>
                 <Text />
                 <TextAlignment>TopCenter</TextAlignment>
