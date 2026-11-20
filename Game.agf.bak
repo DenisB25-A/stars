@@ -3639,7 +3639,7 @@
                 <MouseoverImage>289</MouseoverImage>
                 <Name>btn_saveLeft</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick />
+                <OnClick>btn_saveLeft_OnClick</OnClick>
                 <PushedImage>0</PushedImage>
                 <Text />
                 <TextAlignment>TopCenter</TextAlignment>
@@ -3667,9 +3667,9 @@
                 <MouseoverImage>291</MouseoverImage>
                 <Name>btn_saveRight</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick />
+                <OnClick>btn_saveRight_OnClick</OnClick>
                 <PushedImage>0</PushedImage>
-                <Text xml:space="preserve">New Button</Text>
+                <Text />
                 <TextAlignment>TopCenter</TextAlignment>
                 <TextColor>0</TextColor>
                 <TextPaddingHorizontal>2</TextPaddingHorizontal>
