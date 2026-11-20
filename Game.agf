@@ -3156,7 +3156,7 @@
                 <MouseoverImage>254</MouseoverImage>
                 <Name>btnSave_game</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick />
+                <OnClick>btnSave_game_OnClick</OnClick>
                 <PushedImage>0</PushedImage>
                 <Text xml:space="preserve">New Button</Text>
                 <TextAlignment>TopCenter</TextAlignment>
@@ -3351,7 +3351,7 @@
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Top>5</Top>
               <Transparency>0</Transparency>
-              <Visible>True</Visible>
+              <Visible>False</Visible>
               <Width>862</Width>
               <ZOrder>0</ZOrder>
             </NormalGUI>
@@ -3536,9 +3536,9 @@
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Top>5</Top>
               <Transparency>0</Transparency>
-              <Visible>True</Visible>
+              <Visible>False</Visible>
               <Width>862</Width>
-              <ZOrder>0</ZOrder>
+              <ZOrder>96</ZOrder>
             </NormalGUI>
             <Controls>
               <GUIButton>
@@ -3555,7 +3555,7 @@
                 <MouseoverImage>283</MouseoverImage>
                 <Name>btn_save_back</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick />
+                <OnClick>btn_save_back_OnClick</OnClick>
                 <PushedImage>0</PushedImage>
                 <Text />
                 <TextAlignment>TopCenter</TextAlignment>
@@ -3681,6 +3681,136 @@
                 <WrapText>False</WrapText>
                 <ZOrder>4</ZOrder>
               </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>192</Height>
+                <ID>5</ID>
+                <Image>0</Image>
+                <Left>83</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnSaveSlot1</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnSaveSlot1_OnClick</OnClick>
+                <PushedImage>0</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>216</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>316</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>5</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>192</Height>
+                <ID>6</ID>
+                <Image>0</Image>
+                <Left>472</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnSaveSlot2</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>0</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>216</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>316</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>6</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>192</Height>
+                <ID>7</ID>
+                <Image>0</Image>
+                <Left>86</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnSaveSlot3</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>0</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>516</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>314</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>7</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>192</Height>
+                <ID>8</ID>
+                <Image>0</Image>
+                <Left>473</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnSaveSlot4</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>0</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>515</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>314</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>8</ZOrder>
+              </GUIButton>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>6</Font>
+                <Height>60</Height>
+                <ID>9</ID>
+                <Left>89</Left>
+                <Locked>False</Locked>
+                <Name>txtSaveName</Name>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>65535</TextColor>
+                <Top>416</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>306</Width>
+                <ZOrder>9</ZOrder>
+              </GUILabel>
             </Controls>
           </GUIMain>
         </GUIs>
