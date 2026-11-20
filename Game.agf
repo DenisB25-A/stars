@@ -676,14 +676,6 @@
     <Rooms>
       <UnloadedRoomFolder Name="Main">
         <SubFolders>
-          <UnloadedRoomFolder Name="Stairs">
-            <SubFolders />
-            <UnloadedRooms />
-          </UnloadedRoomFolder>
-          <UnloadedRoomFolder Name="Preamble">
-            <SubFolders />
-            <UnloadedRooms />
-          </UnloadedRoomFolder>
           <UnloadedRoomFolder Name="Scenes">
             <SubFolders />
             <UnloadedRooms>
@@ -766,24 +758,6 @@
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>38</Number>
-              </UnloadedRoom>
-            </UnloadedRooms>
-          </UnloadedRoomFolder>
-          <UnloadedRoomFolder Name="Coridor">
-            <SubFolders />
-            <UnloadedRooms>
-              <UnloadedRoom>
-                <Description IsNull="True" />
-                <Number>24</Number>
-              </UnloadedRoom>
-            </UnloadedRooms>
-          </UnloadedRoomFolder>
-          <UnloadedRoomFolder Name="Bedroom">
-            <SubFolders />
-            <UnloadedRooms>
-              <UnloadedRoom>
-                <Description IsNull="True" />
-                <Number>23</Number>
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
@@ -900,7 +874,7 @@
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
-          <UnloadedRoomFolder Name="Episode 3">
+          <UnloadedRoomFolder Name="Episode 3 (stairs)">
             <SubFolders />
             <UnloadedRooms>
               <UnloadedRoom>
@@ -950,6 +924,19 @@
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>51</Number>
+              </UnloadedRoom>
+            </UnloadedRooms>
+          </UnloadedRoomFolder>
+          <UnloadedRoomFolder Name="Episode 4 (night)">
+            <SubFolders />
+            <UnloadedRooms>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>23</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>24</Number>
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
@@ -3364,7 +3351,7 @@
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Top>5</Top>
               <Transparency>0</Transparency>
-              <Visible>False</Visible>
+              <Visible>True</Visible>
               <Width>862</Width>
               <ZOrder>0</ZOrder>
             </NormalGUI>
@@ -3532,6 +3519,169 @@
               <ZOrder>2</ZOrder>
             </NormalGUI>
             <Controls />
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>109</BackgroundImage>
+              <BorderColor>0</BorderColor>
+              <Clickable>True</Clickable>
+              <Height>1069</Height>
+              <ID>21</ID>
+              <Left>529</Left>
+              <Name>gSave_game</Name>
+              <OnClick />
+              <PopupStyle>Normal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Top>5</Top>
+              <Transparency>0</Transparency>
+              <Visible>True</Visible>
+              <Width>862</Width>
+              <ZOrder>0</ZOrder>
+            </NormalGUI>
+            <Controls>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>82</Height>
+                <ID>0</ID>
+                <Image>118</Image>
+                <Left>574</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>283</MouseoverImage>
+                <Name>btn_save_back</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>0</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>874</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>240</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>0</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>81</Height>
+                <ID>1</ID>
+                <Image>284</Image>
+                <Left>321</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>285</MouseoverImage>
+                <Name>btn_save_del</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>0</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>872</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>234</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>1</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>81</Height>
+                <ID>2</ID>
+                <Image>286</Image>
+                <Left>54</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>287</MouseoverImage>
+                <Name>btn_saveg</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>0</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>872</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>248</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>2</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>36</Height>
+                <ID>3</ID>
+                <Image>288</Image>
+                <Left>228</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>289</MouseoverImage>
+                <Name>btn_saveLeft</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>0</PushedImage>
+                <Text />
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>808</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>47</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>3</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>0</Font>
+                <Height>38</Height>
+                <ID>4</ID>
+                <Image>290</Image>
+                <Left>584</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>291</MouseoverImage>
+                <Name>btn_saveRight</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick />
+                <PushedImage>0</PushedImage>
+                <Text xml:space="preserve">New Button</Text>
+                <TextAlignment>TopCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>807</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>48</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>4</ZOrder>
+              </GUIButton>
+            </Controls>
           </GUIMain>
         </GUIs>
       </GUIFolder>
@@ -3718,7 +3868,7 @@
                 <ID>9</ID>
                 <Image>41</Image>
                 <Name>iChocolate</Name>
-                <PlayerStartsWithItem>True</PlayerStartsWithItem>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
                 <Properties>
                   <CustomProperty>
                     <Name>Description</Name>
@@ -3957,56 +4107,85 @@
               </InventoryItem>
             </InventoryItems>
           </InventoryItemFolder>
+          <InventoryItemFolder Name="Episode 3">
+            <SubFolders />
+            <InventoryItems>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description xml:space="preserve">New inventory item</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>7</ID>
+                <Image>282</Image>
+                <Name>iNote</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>Description</Name>
+                    <Value xml:space="preserve">Каждое слово старательно замазано черным маркером.</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <ScriptModule>GlobalScript.asc</ScriptModule>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description xml:space="preserve">New inventory item</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>13</ID>
+                <Image>117</Image>
+                <Name>iArmature</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>Description</Name>
+                    <Value xml:space="preserve">Кусок арматуры. Можно разломать что-нибудь, а можно и двинуть кому-то по морде.</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <ScriptModule>GlobalScript.asc</ScriptModule>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+              <InventoryItem>
+                <CursorImage>0</CursorImage>
+                <Description xml:space="preserve">New inventory item</Description>
+                <HotspotX>0</HotspotX>
+                <HotspotY>0</HotspotY>
+                <ID>22</ID>
+                <Image>155</Image>
+                <Name>iBread</Name>
+                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <Properties>
+                  <CustomProperty>
+                    <Name>Description</Name>
+                    <Value xml:space="preserve">Батон черствого хлеба, с краев чуть поддернутый плесенью. Я не настолько голоден, чтобы это есть.</Value>
+                  </CustomProperty>
+                </Properties>
+                <Interactions>
+                  <ScriptModule>GlobalScript.asc</ScriptModule>
+                  <Event Index="0" />
+                  <Event Index="1" />
+                  <Event Index="2" />
+                  <Event Index="3" />
+                  <Event Index="4" />
+                </Interactions>
+              </InventoryItem>
+            </InventoryItems>
+          </InventoryItemFolder>
         </SubFolders>
         <InventoryItems>
-          <InventoryItem>
-            <CursorImage>0</CursorImage>
-            <Description xml:space="preserve">New inventory item</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>7</ID>
-            <Image>282</Image>
-            <Name>iNote</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>Description</Name>
-                <Value xml:space="preserve">Каждое слово старательно замазано черным маркером.</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>0</CursorImage>
-            <Description xml:space="preserve">New inventory item</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>13</ID>
-            <Image>117</Image>
-            <Name>iArmature</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>Description</Name>
-                <Value xml:space="preserve">Кусок арматуры. Можно разломать что-нибудь, а можно и двинуть кому-то по морде.</Value>
-              </CustomProperty>
-            </Properties>
-            <Interactions>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
           <InventoryItem>
             <CursorImage>0</CursorImage>
             <Description xml:space="preserve">New inventory item</Description>
@@ -4113,30 +4292,6 @@
             <Name>iLamp</Name>
             <PlayerStartsWithItem>False</PlayerStartsWithItem>
             <Properties />
-            <Interactions>
-              <ScriptModule>GlobalScript.asc</ScriptModule>
-              <Event Index="0" />
-              <Event Index="1" />
-              <Event Index="2" />
-              <Event Index="3" />
-              <Event Index="4" />
-            </Interactions>
-          </InventoryItem>
-          <InventoryItem>
-            <CursorImage>0</CursorImage>
-            <Description xml:space="preserve">New inventory item</Description>
-            <HotspotX>0</HotspotX>
-            <HotspotY>0</HotspotY>
-            <ID>22</ID>
-            <Image>155</Image>
-            <Name>iBread</Name>
-            <PlayerStartsWithItem>False</PlayerStartsWithItem>
-            <Properties>
-              <CustomProperty>
-                <Name>Description</Name>
-                <Value xml:space="preserve">Батон черствого хлеба, с краев чуть поддернутый плесенью. Я не настолько голоден, чтобы это есть.</Value>
-              </CustomProperty>
-            </Properties>
             <Interactions>
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Event Index="0" />
@@ -5426,13 +5581,14 @@ stop
               </Dialog>
             </Dialogs>
           </DialogFolder>
-        </SubFolders>
-        <Dialogs>
-          <Dialog>
-            <ID>8</ID>
-            <Name>dUnder_bed2</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file
+          <DialogFolder Name="Episode 3">
+            <SubFolders />
+            <Dialogs>
+              <Dialog>
+                <ID>8</ID>
+                <Name>dUnder_bed2</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 return
 @1
@@ -5447,26 +5603,26 @@ stop
 @2
 stop
 ]]></Script>
-            <DialogOptions>
-              <DialogOption>
-                <ID>1</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Заглянуть под кровать</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>2</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text>Уйти</Text>
-              </DialogOption>
-            </DialogOptions>
-          </Dialog>
-          <Dialog>
-            <ID>9</ID>
-            <Name>dBum</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">Заглянуть под кровать</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text>Уйти</Text>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
+                <ID>9</ID>
+                <Name>dBum</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
 @S  // Dialog startup entry point
 return
 
@@ -5694,7 +5850,7 @@ return
   TypeText(">Бомж: Не нагоняй суеты. Держи ухо востро, будь внимателен и на рожон не лезь");
   TypeText(">Бомж: И не забывай присматриваться к вещам вокруг, парень. Сегодня они одни, завтра - другие. Никогда не знаешь, когда и что тебе пригодится.");
   cBum.UnlockView();
-  BumMeeting += 1;
+  
 option-off 13
 option-off 14
 option-off 15
@@ -5708,7 +5864,7 @@ return
   TypeText(">Бомж: Говорят, что жилец ваш пропал. То ли в реке утоп, то ли кредиторы в лесу за долги закопали.");
   TypeText(">Бомж: А как по мне, так он из дома даже не выходил.");
   cBum.UnlockView();
-  BumMeeting += 1;
+  
 option-off 13
 option-off 14
 option-off 15
@@ -5723,7 +5879,7 @@ return
   TypeText(">Бомж: Кхм, кхм. А ты шутник, парень. Только смотри, я тут тебя вообще-то и не держу.");
   TypeText("(Бомж старается не подавать виду, однако вы чувствуете, что вашего юмора он не оценил)");
   cBum.UnlockView();
-  BumMeeting += 1;
+  
 option-off 13
 option-off 14
 option-off 15
@@ -5785,6 +5941,7 @@ stop
     player.AddInventory(iBread);
     TypeText("Получен предмет: «Батон черствого хлеба».");
     TypeText("Хоть этот бродяга и странный, но от разговора с обычным живым человеком вам стало немного полегче.");
+    BumMeeting += 1;
     ChangeMood(1);
   }
   else
@@ -5807,115 +5964,221 @@ stop
     TypeText(">Бомж: Ладно, парень, поболтали и хватит. Теперь я бы немного поспал.");
     cBum.UnlockView();
     TypeText("(Вы чувствуете, что бомж знает больше, чем говорит. Однако он недостаточно доверяет вам, чтобы помочь. Возможно, вы чем-то обидели его или... Да кто поймет этих поехавших?)");
+    BumMeeting += 1;
   }
 option-off 17
 stop
 ]]></Script>
-            <DialogOptions>
-              <DialogOption>
-                <ID>1</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Вы вообще кто?</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>2</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">«Дать сигарету»</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>3</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Я не шатаюсь.</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>4</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">Вы пытались выйти на улицу?</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>5</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">Давно вы здесь?</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>6</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">Так кто вы такой?</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>7</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">Здесь что-то странное происходит.</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>8</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text>Да.</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>9</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text>Нет.</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>10</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text>Занятно.</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>11</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">Ты что, издеваешься?</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>12</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">Ахуительная история.</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>13</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">Спросить совет у бомжа.</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>14</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">Расспросить о сплетнях.</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>15</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">Подшутить над бомжом.</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>16</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text>Уйти.</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>17</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text>(Концовка)</Text>
-              </DialogOption>
-            </DialogOptions>
-          </Dialog>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">Вы вообще кто?</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text xml:space="preserve">«Дать сигарету»</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>3</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">Я не шатаюсь.</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>4</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text xml:space="preserve">Вы пытались выйти на улицу?</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>5</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text xml:space="preserve">Давно вы здесь?</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>6</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text xml:space="preserve">Так кто вы такой?</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>7</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text xml:space="preserve">Здесь что-то странное происходит.</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>8</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text>Да.</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>9</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text>Нет.</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>10</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text>Занятно.</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>11</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text xml:space="preserve">Ты что, издеваешься?</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>12</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text xml:space="preserve">Ахуительная история.</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>13</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text xml:space="preserve">Спросить совет у бомжа.</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>14</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text xml:space="preserve">Расспросить о сплетнях.</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>15</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text xml:space="preserve">Подшутить над бомжом.</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>16</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text>Уйти.</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>17</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text>(Концовка)</Text>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+              <Dialog>
+                <ID>20</ID>
+                <Name>dWires</Name>
+                <ShowTextParser>False</ShowTextParser>
+                <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+  TypeText("Несколько минут вы пытаетесь разобраться, что с чем соединено. Безуспешно. С этой задачей едва бы справился даже специалист.");
+  TypeText("Может, попробовать их подергать? Вы вроде удачливый - вдруг повезет?");
+option-off 1
+option-on 2
+return
+@2
+  TypeText("Ничего страшного. Главное - соблюдать технику безопасности...");
+  Mouse.Visible = false;
+  Wait(40);
+
+  // Подготавливаем оверлеи
+  gDarkOverlay.Visible = false;
+  gDarkOverlay.Transparency = 100;
+
+  gRedOverlay.Visible = false;
+  gRedOverlay.Transparency = 100;
+
+  // Плавно затемняем экран
+  FadeOut(4);
+  Wait(180);
+
+  // Фиксируем полностью черный экран
+  gDarkOverlay.Transparency = 0;
+  gDarkOverlay.Visible = true;
+
+  // Включаем красный слой поверх черного
+  gRedOverlay.Transparency = 100;
+  gRedOverlay.Visible = true;
+    // Возвращаем изображение
+  FadeIn(4);
+  // Звук удара током
+  aElectric_shock.Play();
+
+  // Первая красная вспышка
+  gRedOverlay.Transparency = 35;
+  Wait(2);
+  gRedOverlay.Transparency = 100;
+  Wait(6);
+
+  // Вторая, более слабая вспышка
+  gRedOverlay.Transparency = 40;
+  Wait(3);
+  gRedOverlay.Transparency = 100;
+  Wait(6);
+  // Третья вспышка
+  gRedOverlay.Transparency = 40;
+  Wait(3);
+  gRedOverlay.Transparency = 100;
+  // Небольшая пауза в темноте
+
+  Wait(240);
+
+  // Убираем красный слой
+  gRedOverlay.Visible = false;
+  gRedOverlay.Transparency = 100;
+  
+    // Возвращаем курсор
+  TypeText("Говорят, дуракам везет. Но только один раз.");
+  Wait(80);
+  TypeText("Сквозь темноту проступает свет. Сначала он едва различим, но постепенно становится ярче. На мгновение кажется, будто впереди — выход из темного пустого туннеля.");
+  TypeText("Вы открываете глаза. Над вами - всего лишь лампочка под потолком."); 
+  TypeText("Вы лежите на холодном полу. Вы не знаете, сколько прошло времени. Тело ужасно болит. Но дом теперь гудит как-то иначе. Неужели электричество и правда восстановилось?");
+  // Убираем черный слой
+  gDarkOverlay.Visible = false;
+  gDarkOverlay.Transparency = 100;
+  SetNextScreenTransition(eTransitionInstant);
+  player.ChangeRoom(51, 0, 0);
+
+stop
+@3
+stop
+]]></Script>
+                <DialogOptions>
+                  <DialogOption>
+                    <ID>1</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text xml:space="preserve">Осмотреть сплетение кабелей</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>2</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text xml:space="preserve">Покопаться в кабелях</Text>
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>3</ID>
+                    <Say>False</Say>
+                    <Show>True</Show>
+                    <Text>Уйти</Text>
+                  </DialogOption>
+                </DialogOptions>
+              </Dialog>
+            </Dialogs>
+          </DialogFolder>
+        </SubFolders>
+        <Dialogs>
           <Dialog>
             <ID>17</ID>
             <Name>dBeatle</Name>
@@ -6669,107 +6932,6 @@ stop
               </DialogOption>
               <DialogOption>
                 <ID>2</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text>Уйти</Text>
-              </DialogOption>
-            </DialogOptions>
-          </Dialog>
-          <Dialog>
-            <ID>20</ID>
-            <Name>dWires</Name>
-            <ShowTextParser>False</ShowTextParser>
-            <Script><![CDATA[// Dialog script file
-@S  // Dialog startup entry point
-return
-@1
-  TypeText("Несколько минут вы пытаетесь разобраться, что с чем соединено. Безуспешно. С этой задачей едва бы справился даже специалист.");
-  TypeText("Может, попробовать их подергать? Вы вроде удачливый - вдруг повезет?");
-option-off 1
-option-on 2
-return
-@2
-  TypeText("Ничего страшного. Главное - соблюдать технику безопасности...");
-  Mouse.Visible = false;
-  Wait(40);
-
-  // Подготавливаем оверлеи
-  gDarkOverlay.Visible = false;
-  gDarkOverlay.Transparency = 100;
-
-  gRedOverlay.Visible = false;
-  gRedOverlay.Transparency = 100;
-
-  // Плавно затемняем экран
-  FadeOut(4);
-  Wait(240);
-
-  // Фиксируем полностью черный экран
-  gDarkOverlay.Transparency = 0;
-  gDarkOverlay.Visible = true;
-
-  // Включаем красный слой поверх черного
-  gRedOverlay.Transparency = 100;
-  gRedOverlay.Visible = true;
-    // Возвращаем изображение
-  FadeIn(4);
-  // Звук удара током
-  aElectric_shock.Play();
-
-  // Первая красная вспышка
-  gRedOverlay.Transparency = 35;
-  Wait(2);
-  gRedOverlay.Transparency = 100;
-  Wait(6);
-
-  // Вторая, более слабая вспышка
-  gRedOverlay.Transparency = 40;
-  Wait(3);
-  gRedOverlay.Transparency = 100;
-  Wait(6);
-  // Третья вспышка
-  gRedOverlay.Transparency = 40;
-  Wait(3);
-  gRedOverlay.Transparency = 100;
-  // Небольшая пауза в темноте
-
-  Wait(240);
-
-  // Убираем красный слой
-  gRedOverlay.Visible = false;
-  gRedOverlay.Transparency = 100;
-  
-    // Возвращаем курсор
-  TypeText("Говорят, дуракам везет. Но только один раз.");
-  Wait(80);
-  TypeText("Сквозь темноту проступает свет. Сначала он едва различим, но постепенно становится ярче. На мгновение кажется, будто впереди — выход из темного пустого туннеля.");
-  TypeText("Вы открываете глаза. Над вами - всего лишь лампочка под потолком."); 
-  TypeText("Вы лежите на холодном полу. Вы не знаете, сколько прошло времени. Тело ужасно болит. Но дом теперь гудит как-то иначе. Неужели электричество и правда восстановилось?");
-  // Убираем черный слой
-  gDarkOverlay.Visible = false;
-  gDarkOverlay.Transparency = 100;
-  SetNextScreenTransition(eTransitionInstant);
-  player.ChangeRoom(51, 0, 0);
-
-stop
-@3
-stop
-]]></Script>
-            <DialogOptions>
-              <DialogOption>
-                <ID>1</ID>
-                <Say>False</Say>
-                <Show>True</Show>
-                <Text xml:space="preserve">Осмотреть сплетение кабелей</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>2</ID>
-                <Say>False</Say>
-                <Show>False</Show>
-                <Text xml:space="preserve">Покопаться в кабелях</Text>
-              </DialogOption>
-              <DialogOption>
-                <ID>3</ID>
                 <Say>False</Say>
                 <Show>True</Show>
                 <Text>Уйти</Text>
@@ -11485,6 +11647,182 @@ stop
                   <OffsetY>0</OffsetY>
                   <ImportHeight>73</ImportHeight>
                   <ImportWidth>299</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="109" Width="861" Height="1069" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Меню игры/Сохранение/Окно сохранения (2).png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>1069</ImportHeight>
+                  <ImportWidth>861</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="118" Width="240" Height="82" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Меню игры/Сохранение/Сохранение - назад.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>82</ImportHeight>
+                  <ImportWidth>240</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="283" Width="240" Height="82" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Меню игры/Сохранение/Сохранение - назад (подсвет).png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>82</ImportHeight>
+                  <ImportWidth>240</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="284" Width="234" Height="81" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Меню игры/Сохранение/Сохранение - удалить.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>81</ImportHeight>
+                  <ImportWidth>234</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="285" Width="234" Height="81" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Меню игры/Сохранение/Сохранение - удалить (подсвет).png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>81</ImportHeight>
+                  <ImportWidth>234</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="286" Width="248" Height="81" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Меню игры/Сохранение/Сохранение - сохранить.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>81</ImportHeight>
+                  <ImportWidth>248</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="287" Width="248" Height="81" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Меню игры/Сохранение/Сохранение - сохранить (подсвет).png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>81</ImportHeight>
+                  <ImportWidth>248</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="288" Width="47" Height="36" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                <Source>
+                  <FileName>Assets/Меню игры/Сохранение/Стрелка влево.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>36</ImportHeight>
+                  <ImportWidth>47</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="289" Width="47" Height="36" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                <Source>
+                  <FileName>Assets/Меню игры/Сохранение/Стрелка влево (подсвет).png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>36</ImportHeight>
+                  <ImportWidth>47</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="290" Width="48" Height="38" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                <Source>
+                  <FileName>Assets/Меню игры/Сохранение/Стрелка вправо.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>38</ImportHeight>
+                  <ImportWidth>48</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="291" Width="48" Height="38" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                <Source>
+                  <FileName>Assets/Меню игры/Сохранение/Стрелка вправо (подсвет).png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>38</ImportHeight>
+                  <ImportWidth>48</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>True</RemapToGamePalette>

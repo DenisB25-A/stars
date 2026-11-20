@@ -18,3 +18,7 @@ import function ReadAndAddNote(int id);
 import function reset_evening_balcony_animation();
 
 import bool moodPanelForced;
+
+
+import function SaveAndClearEpisode1Inventory();
+import function RestoreEpisode1Inventory();
