@@ -64,7 +64,7 @@
       <RunGameLoopsWhileDialogOptionsDisplayed>True</RunGameLoopsWhileDialogOptionsDisplayed>
       <SaveGameFileExtension />
       <SaveGameFolderName>Stars</SaveGameFolderName>
-      <SaveScreenshots>False</SaveScreenshots>
+      <SaveScreenshots>True</SaveScreenshots>
       <ScaleCharacterSpriteOffsets>True</ScaleCharacterSpriteOffsets>
       <ScaleMovementSpeedWithMaskResolution>False</ScaleMovementSpeedWithMaskResolution>
       <ScriptAPIVersion>Highest</ScriptAPIVersion>
@@ -3562,7 +3562,7 @@
                 <TextColor>0</TextColor>
                 <TextPaddingHorizontal>2</TextPaddingHorizontal>
                 <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>874</Top>
+                <Top>872</Top>
                 <Translated>True</Translated>
                 <Visible>True</Visible>
                 <Width>240</Width>
@@ -3774,7 +3774,7 @@
                 <Height>192</Height>
                 <ID>8</ID>
                 <Image>0</Image>
-                <Left>473</Left>
+                <Left>472</Left>
                 <Locked>False</Locked>
                 <MouseoverImage>0</MouseoverImage>
                 <Name>btnSaveSlot4</Name>
@@ -3786,7 +3786,7 @@
                 <TextColor>0</TextColor>
                 <TextPaddingHorizontal>2</TextPaddingHorizontal>
                 <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>515</Top>
+                <Top>516</Top>
                 <Translated>True</Translated>
                 <Visible>True</Visible>
                 <Width>314</Width>
@@ -3829,6 +3829,117 @@
                 <Visible>True</Visible>
                 <Width>315</Width>
                 <ZOrder>10</ZOrder>
+              </GUILabel>
+              <GUITextBox>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>6</Font>
+                <Height>69</Height>
+                <ID>11</ID>
+                <Left>472</Left>
+                <Locked>False</Locked>
+                <Name>txtSaveName2</Name>
+                <OnActivate>txtSaveName1_OnActivate</OnActivate>
+                <ShowBorder>False</ShowBorder>
+                <Text />
+                <TextColor>65535</TextColor>
+                <Top>411</Top>
+                <Translated>True</Translated>
+                <Visible>False</Visible>
+                <Width>316</Width>
+                <ZOrder>11</ZOrder>
+              </GUITextBox>
+              <GUITextBox>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>6</Font>
+                <Height>69</Height>
+                <ID>12</ID>
+                <Left>83</Left>
+                <Locked>False</Locked>
+                <Name>txtSaveName3</Name>
+                <OnActivate>txtSaveName1_OnActivate</OnActivate>
+                <ShowBorder>False</ShowBorder>
+                <Text />
+                <TextColor>65535</TextColor>
+                <Top>712</Top>
+                <Translated>True</Translated>
+                <Visible>False</Visible>
+                <Width>316</Width>
+                <ZOrder>12</ZOrder>
+              </GUITextBox>
+              <GUITextBox>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>6</Font>
+                <Height>69</Height>
+                <ID>13</ID>
+                <Left>472</Left>
+                <Locked>False</Locked>
+                <Name>txtSaveName4</Name>
+                <OnActivate>txtSaveName1_OnActivate</OnActivate>
+                <ShowBorder>False</ShowBorder>
+                <Text />
+                <TextColor>65535</TextColor>
+                <Top>712</Top>
+                <Translated>True</Translated>
+                <Visible>False</Visible>
+                <Width>316</Width>
+                <ZOrder>13</ZOrder>
+              </GUITextBox>
+              <GUILabel>
+                <Clickable>False</Clickable>
+                <Enabled>True</Enabled>
+                <Font>6</Font>
+                <Height>69</Height>
+                <ID>14</ID>
+                <Left>472</Left>
+                <Locked>False</Locked>
+                <Name>lblSaveSlot2</Name>
+                <Text>Пусто</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>65535</TextColor>
+                <Top>411</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>315</Width>
+                <ZOrder>14</ZOrder>
+              </GUILabel>
+              <GUILabel>
+                <Clickable>False</Clickable>
+                <Enabled>True</Enabled>
+                <Font>6</Font>
+                <Height>69</Height>
+                <ID>15</ID>
+                <Left>83</Left>
+                <Locked>False</Locked>
+                <Name>lblSaveSlot3</Name>
+                <Text>Пусто</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>65535</TextColor>
+                <Top>712</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>315</Width>
+                <ZOrder>15</ZOrder>
+              </GUILabel>
+              <GUILabel>
+                <Clickable>False</Clickable>
+                <Enabled>True</Enabled>
+                <Font>6</Font>
+                <Height>69</Height>
+                <ID>16</ID>
+                <Left>472</Left>
+                <Locked>False</Locked>
+                <Name>lblSaveSlot4</Name>
+                <Text>Пусто</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>65535</TextColor>
+                <Top>712</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>315</Width>
+                <ZOrder>16</ZOrder>
               </GUILabel>
             </Controls>
           </GUIMain>
