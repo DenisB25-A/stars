@@ -3941,44 +3941,34 @@
                 <Width>315</Width>
                 <ZOrder>16</ZOrder>
               </GUILabel>
-              <GUIButton>
-                <ClickAction>RunScript</ClickAction>
+              <GUILabel>
                 <Clickable>False</Clickable>
-                <ClipImage>False</ClipImage>
                 <Enabled>True</Enabled>
-                <Font>0</Font>
-                <Height>38</Height>
+                <Font>6</Font>
+                <Height>64</Height>
                 <ID>17</ID>
-                <Image>0</Image>
-                <Left>346</Left>
+                <Left>65</Left>
                 <Locked>False</Locked>
-                <MouseoverImage>0</MouseoverImage>
-                <Name>btnSavePageIndicator</Name>
-                <NewModeNumber>0</NewModeNumber>
-                <OnClick />
-                <PushedImage>0</PushedImage>
-                <Text />
-                <TextAlignment>TopCenter</TextAlignment>
-                <TextColor>0</TextColor>
-                <TextPaddingHorizontal>2</TextPaddingHorizontal>
-                <TextPaddingVertical>2</TextPaddingVertical>
-                <Top>807</Top>
+                <Name>lbl_save</Name>
+                <Text>Сохранить</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>65535</TextColor>
+                <Top>880</Top>
                 <Translated>True</Translated>
                 <Visible>True</Visible>
-                <Width>175</Width>
-                <WrapText>False</WrapText>
+                <Width>228</Width>
                 <ZOrder>17</ZOrder>
-              </GUIButton>
+              </GUILabel>
               <GUILabel>
                 <Clickable>False</Clickable>
                 <Enabled>True</Enabled>
                 <Font>6</Font>
                 <Height>64</Height>
                 <ID>18</ID>
-                <Left>65</Left>
+                <Left>325</Left>
                 <Locked>False</Locked>
-                <Name>lbl_save</Name>
-                <Text>Сохранить</Text>
+                <Name>lbl_save_del</Name>
+                <Text>Удалить</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
                 <TextColor>65535</TextColor>
                 <Top>880</Top>
@@ -3993,24 +3983,6 @@
                 <Font>6</Font>
                 <Height>64</Height>
                 <ID>19</ID>
-                <Left>325</Left>
-                <Locked>False</Locked>
-                <Name>lbl_save_del</Name>
-                <Text>Удалить</Text>
-                <TextAlignment>MiddleCenter</TextAlignment>
-                <TextColor>65535</TextColor>
-                <Top>880</Top>
-                <Translated>True</Translated>
-                <Visible>True</Visible>
-                <Width>228</Width>
-                <ZOrder>19</ZOrder>
-              </GUILabel>
-              <GUILabel>
-                <Clickable>False</Clickable>
-                <Enabled>True</Enabled>
-                <Font>6</Font>
-                <Height>64</Height>
-                <ID>20</ID>
                 <Left>584</Left>
                 <Locked>False</Locked>
                 <Name>lbl_save_back</Name>
@@ -4021,14 +3993,14 @@
                 <Translated>True</Translated>
                 <Visible>True</Visible>
                 <Width>228</Width>
-                <ZOrder>20</ZOrder>
+                <ZOrder>19</ZOrder>
               </GUILabel>
               <GUILabel>
                 <Clickable>True</Clickable>
                 <Enabled>True</Enabled>
                 <Font>8</Font>
                 <Height>70</Height>
-                <ID>21</ID>
+                <ID>20</ID>
                 <Left>140</Left>
                 <Locked>False</Locked>
                 <Name>lbl_save_game</Name>
@@ -4039,25 +4011,25 @@
                 <Translated>True</Translated>
                 <Visible>True</Visible>
                 <Width>586</Width>
-                <ZOrder>21</ZOrder>
+                <ZOrder>20</ZOrder>
               </GUILabel>
               <GUILabel>
                 <Clickable>False</Clickable>
                 <Enabled>True</Enabled>
                 <Font>6</Font>
                 <Height>44</Height>
-                <ID>22</ID>
+                <ID>21</ID>
                 <Left>325</Left>
                 <Locked>False</Locked>
                 <Name>lblSavePageIndicator</Name>
                 <Text xml:space="preserve">Страницы 1 / 5</Text>
                 <TextAlignment>MiddleCenter</TextAlignment>
                 <TextColor>65535</TextColor>
-                <Top>800</Top>
+                <Top>799</Top>
                 <Translated>True</Translated>
                 <Visible>True</Visible>
                 <Width>215</Width>
-                <ZOrder>22</ZOrder>
+                <ZOrder>21</ZOrder>
               </GUILabel>
             </Controls>
           </GUIMain>
@@ -4083,7 +4055,7 @@
             </NormalGUI>
             <Controls>
               <GUILabel>
-                <Clickable>True</Clickable>
+                <Clickable>False</Clickable>
                 <Enabled>True</Enabled>
                 <Font>8</Font>
                 <Height>122</Height>
