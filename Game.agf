@@ -3523,7 +3523,7 @@
           <GUIMain>
             <NormalGUI>
               <BackgroundColor>0</BackgroundColor>
-              <BackgroundImage>109</BackgroundImage>
+              <BackgroundImage>301</BackgroundImage>
               <BorderColor>0</BorderColor>
               <Clickable>True</Clickable>
               <Height>1069</Height>
@@ -3547,12 +3547,12 @@
                 <ClipImage>False</ClipImage>
                 <Enabled>True</Enabled>
                 <Font>0</Font>
-                <Height>82</Height>
+                <Height>83</Height>
                 <ID>0</ID>
-                <Image>118</Image>
+                <Image>299</Image>
                 <Left>574</Left>
                 <Locked>False</Locked>
-                <MouseoverImage>283</MouseoverImage>
+                <MouseoverImage>300</MouseoverImage>
                 <Name>btn_save_back</Name>
                 <NewModeNumber>0</NewModeNumber>
                 <OnClick>btn_save_back_OnClick</OnClick>
@@ -3565,7 +3565,7 @@
                 <Top>872</Top>
                 <Translated>True</Translated>
                 <Visible>True</Visible>
-                <Width>240</Width>
+                <Width>250</Width>
                 <WrapText>False</WrapText>
                 <ZOrder>0</ZOrder>
               </GUIButton>
@@ -3575,12 +3575,12 @@
                 <ClipImage>False</ClipImage>
                 <Enabled>True</Enabled>
                 <Font>0</Font>
-                <Height>81</Height>
+                <Height>83</Height>
                 <ID>1</ID>
-                <Image>284</Image>
-                <Left>321</Left>
+                <Image>299</Image>
+                <Left>314</Left>
                 <Locked>False</Locked>
-                <MouseoverImage>285</MouseoverImage>
+                <MouseoverImage>300</MouseoverImage>
                 <Name>btn_save_del</Name>
                 <NewModeNumber>0</NewModeNumber>
                 <OnClick />
@@ -3593,7 +3593,7 @@
                 <Top>872</Top>
                 <Translated>True</Translated>
                 <Visible>True</Visible>
-                <Width>234</Width>
+                <Width>250</Width>
                 <WrapText>False</WrapText>
                 <ZOrder>1</ZOrder>
               </GUIButton>
@@ -3603,12 +3603,12 @@
                 <ClipImage>False</ClipImage>
                 <Enabled>True</Enabled>
                 <Font>0</Font>
-                <Height>81</Height>
+                <Height>83</Height>
                 <ID>2</ID>
-                <Image>286</Image>
+                <Image>299</Image>
                 <Left>54</Left>
                 <Locked>False</Locked>
-                <MouseoverImage>287</MouseoverImage>
+                <MouseoverImage>300</MouseoverImage>
                 <Name>btn_saveg</Name>
                 <NewModeNumber>0</NewModeNumber>
                 <OnClick>btn_saveg_OnClick</OnClick>
@@ -3621,7 +3621,7 @@
                 <Top>872</Top>
                 <Translated>True</Translated>
                 <Visible>True</Visible>
-                <Width>248</Width>
+                <Width>250</Width>
                 <WrapText>False</WrapText>
                 <ZOrder>2</ZOrder>
               </GUIButton>
@@ -3692,7 +3692,7 @@
                 <Image>0</Image>
                 <Left>83</Left>
                 <Locked>False</Locked>
-                <MouseoverImage>0</MouseoverImage>
+                <MouseoverImage>302</MouseoverImage>
                 <Name>btnSaveSlot1</Name>
                 <NewModeNumber>0</NewModeNumber>
                 <OnClick>SaveSlot_OnClick</OnClick>
@@ -3969,7 +3969,101 @@
                 <WrapText>False</WrapText>
                 <ZOrder>17</ZOrder>
               </GUIButton>
+              <GUILabel>
+                <Clickable>False</Clickable>
+                <Enabled>True</Enabled>
+                <Font>6</Font>
+                <Height>64</Height>
+                <ID>18</ID>
+                <Left>65</Left>
+                <Locked>False</Locked>
+                <Name>lbl_save</Name>
+                <Text>Сохранить</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>65535</TextColor>
+                <Top>880</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>228</Width>
+                <ZOrder>18</ZOrder>
+              </GUILabel>
+              <GUILabel>
+                <Clickable>False</Clickable>
+                <Enabled>True</Enabled>
+                <Font>6</Font>
+                <Height>64</Height>
+                <ID>19</ID>
+                <Left>325</Left>
+                <Locked>False</Locked>
+                <Name>Label4</Name>
+                <Text>Удалить</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>65535</TextColor>
+                <Top>880</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>228</Width>
+                <ZOrder>19</ZOrder>
+              </GUILabel>
+              <GUILabel>
+                <Clickable>False</Clickable>
+                <Enabled>True</Enabled>
+                <Font>6</Font>
+                <Height>64</Height>
+                <ID>20</ID>
+                <Left>584</Left>
+                <Locked>False</Locked>
+                <Name>Label5</Name>
+                <Text>Назад</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>65535</TextColor>
+                <Top>880</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>228</Width>
+                <ZOrder>20</ZOrder>
+              </GUILabel>
+              <GUILabel>
+                <Clickable>True</Clickable>
+                <Enabled>True</Enabled>
+                <Font>8</Font>
+                <Height>70</Height>
+                <ID>21</ID>
+                <Left>140</Left>
+                <Locked>False</Locked>
+                <Name>Label6</Name>
+                <Text xml:space="preserve">С О Х Р А Н Е Н И Е  И Г Р Ы</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>65535</TextColor>
+                <Top>63</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>586</Width>
+                <ZOrder>21</ZOrder>
+              </GUILabel>
             </Controls>
+          </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>0</BackgroundColor>
+              <BackgroundImage>297</BackgroundImage>
+              <BorderColor>0</BorderColor>
+              <Clickable>True</Clickable>
+              <Height>337</Height>
+              <ID>22</ID>
+              <Left>615</Left>
+              <Name>gDeleteSaveConfirm</Name>
+              <OnClick />
+              <PopupStyle>Normal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Top>350</Top>
+              <Transparency>0</Transparency>
+              <Visible>False</Visible>
+              <Width>693</Width>
+              <ZOrder>100</ZOrder>
+            </NormalGUI>
+            <Controls />
           </GUIMain>
         </GUIs>
       </GUIFolder>
@@ -7497,6 +7591,20 @@ stop
         <PointSize>25</PointSize>
         <SizeMultiplier>1</SizeMultiplier>
         <SourceFilename>Assets/Шрифты/arialbd.ttf</SourceFilename>
+        <TTFMetricsFixup>SetAscenderToHeight</TTFMetricsFixup>
+        <VerticalOffset>0</VerticalOffset>
+      </Font>
+      <Font>
+        <AutoOutlineStyle>Squared</AutoOutlineStyle>
+        <AutoOutlineThickness>1</AutoOutlineThickness>
+        <ID>8</ID>
+        <LineSpacing>50</LineSpacing>
+        <Name xml:space="preserve">Font 8</Name>
+        <OutlineFont>0</OutlineFont>
+        <OutlineStyle>None</OutlineStyle>
+        <PointSize>48</PointSize>
+        <SizeMultiplier>1</SizeMultiplier>
+        <SourceFilename>Assets/Шрифты/ofont.ru_Daneehand.ttf</SourceFilename>
         <TTFMetricsFixup>SetAscenderToHeight</TTFMetricsFixup>
         <VerticalOffset>0</VerticalOffset>
       </Font>
@@ -12191,6 +12299,102 @@ stop
                   <OffsetY>0</OffsetY>
                   <ImportHeight>38</ImportHeight>
                   <ImportWidth>175</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="297" Width="693" Height="337" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Меню игры/Сохранение/Удаление/Подтверждение удаления.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>337</ImportHeight>
+                  <ImportWidth>693</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="298" Width="278" Height="111" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Меню игры/Сохранение/Новая папка/Окно сохранения (2).png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>111</ImportHeight>
+                  <ImportWidth>278</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="299" Width="250" Height="83" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Меню игры/Сохранение/Новая папка/Кнопка.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>83</ImportHeight>
+                  <ImportWidth>250</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="300" Width="250" Height="83" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Меню игры/Сохранение/Новая папка/Кнопка - подсвет.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>83</ImportHeight>
+                  <ImportWidth>250</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="301" Width="861" Height="1069" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+                <Source>
+                  <FileName>Assets/Меню игры/Сохранение/Новая папка/Окно сохранения (2).png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>1069</ImportHeight>
+                  <ImportWidth>861</ImportWidth>
+                  <ImportAsTile>False</ImportAsTile>
+                  <Frame>0</Frame>
+                  <RemapToGamePalette>True</RemapToGamePalette>
+                  <RemapToRoomPalette>False</RemapToRoomPalette>
+                  <ImportMethod>LeaveAsIs</ImportMethod>
+                  <TransparentColorIndex>0</TransparentColorIndex>
+                  <ImportAlphaChannel>True</ImportAlphaChannel>
+                </Source>
+              </Sprite>
+              <Sprite Slot="302" Width="317" Height="194" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+                <Source>
+                  <FileName>Assets/Меню игры/Сохранение/Новая папка/Слот сохранения.png</FileName>
+                  <OffsetX>0</OffsetX>
+                  <OffsetY>0</OffsetY>
+                  <ImportHeight>194</ImportHeight>
+                  <ImportWidth>317</ImportWidth>
                   <ImportAsTile>False</ImportAsTile>
                   <Frame>0</Frame>
                   <RemapToGamePalette>True</RemapToGamePalette>
