@@ -3583,7 +3583,7 @@
                 <MouseoverImage>300</MouseoverImage>
                 <Name>btn_save_del</Name>
                 <NewModeNumber>0</NewModeNumber>
-                <OnClick />
+                <OnClick>btn_save_del_OnClick</OnClick>
                 <PushedImage>0</PushedImage>
                 <Text />
                 <TextAlignment>TopCenter</TextAlignment>
@@ -4077,7 +4077,7 @@
               <ScriptModule>GlobalScript.asc</ScriptModule>
               <Top>350</Top>
               <Transparency>0</Transparency>
-              <Visible>True</Visible>
+              <Visible>False</Visible>
               <Width>693</Width>
               <ZOrder>100</ZOrder>
             </NormalGUI>
@@ -4157,12 +4157,12 @@
                 <ZOrder>2</ZOrder>
               </GUIButton>
               <GUILabel>
-                <Clickable>True</Clickable>
+                <Clickable>False</Clickable>
                 <Enabled>True</Enabled>
                 <Font>6</Font>
                 <Height>46</Height>
                 <ID>3</ID>
-                <Left>73</Left>
+                <Left>74</Left>
                 <Locked>False</Locked>
                 <Name>lbl_savedel_yes</Name>
                 <Text>Да</Text>
@@ -4175,7 +4175,7 @@
                 <ZOrder>3</ZOrder>
               </GUILabel>
               <GUILabel>
-                <Clickable>True</Clickable>
+                <Clickable>False</Clickable>
                 <Enabled>True</Enabled>
                 <Font>6</Font>
                 <Height>46</Height>
