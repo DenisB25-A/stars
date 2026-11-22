@@ -731,10 +731,6 @@
             <UnloadedRooms>
               <UnloadedRoom>
                 <Description IsNull="True" />
-                <Number>27</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
                 <Number>35</Number>
               </UnloadedRoom>
             </UnloadedRooms>
@@ -937,6 +933,10 @@
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>24</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>27</Number>
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
@@ -5755,7 +5755,6 @@ option-off 1;
   else
   {
     TypeText("Не вижу ничего, что могло бы мне пригодиться.");
-option-off 1;
   }
 return
 @2
@@ -5773,18 +5772,21 @@ return
     TypeText("Не понимая, зачем она вам, вы кладете ее в карман.");
     player.AddInventory(iStar_salve);
     TypeText("Получен предмет: «мазь Звездочка».");
+option-off 3;    
   }
   else
   {
-    TypeText("За день произошло так много всего, что перспектива покопаться в мусоре уже не пугает.");
+    TypeText("Вонючая куча заполняет помойку примерно наполовину и со дня на день грозит превратиться в однородную массу.");
     TypeText("Разворошив гниющую кучку, вы находите небольшой плотный листок, сложенный вдвое. Развернув его и протерев рукавом, вы с удивлением понимаете, что это фотография.");
     TypeText("На ней я, а вот девочку я не помню, хотя она почему-то кажется мне знакомой.");
   }
-option-off 3;
+
 return
 @4
-stop
+return
 
+@5
+stop
 ]]></Script>
                 <DialogOptions>
                   <DialogOption>
@@ -5807,6 +5809,12 @@ stop
                   </DialogOption>
                   <DialogOption>
                     <ID>4</ID>
+                    <Say>False</Say>
+                    <Show>False</Show>
+                    <Text />
+                  </DialogOption>
+                  <DialogOption>
+                    <ID>5</ID>
                     <Say>False</Say>
                     <Show>True</Show>
                     <Text>Уйти</Text>
