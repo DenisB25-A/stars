@@ -768,12 +768,7 @@
           </UnloadedRoomFolder>
           <UnloadedRoomFolder Name="Balcony">
             <SubFolders />
-            <UnloadedRooms>
-              <UnloadedRoom>
-                <Description IsNull="True" />
-                <Number>28</Number>
-              </UnloadedRoom>
-            </UnloadedRooms>
+            <UnloadedRooms />
           </UnloadedRoomFolder>
           <UnloadedRoomFolder Name="Neighbor_apartment">
             <SubFolders />
@@ -937,6 +932,10 @@
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>27</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>28</Number>
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
@@ -2317,7 +2316,7 @@
             <NormalGUI>
               <BackgroundColor>8</BackgroundColor>
               <BackgroundImage>37</BackgroundImage>
-              <BorderColor>2</BorderColor>
+              <BorderColor>0</BorderColor>
               <Clickable>True</Clickable>
               <Height>1080</Height>
               <ID>11</ID>
@@ -2585,6 +2584,34 @@
                 <Width>695</Width>
                 <WrapText>False</WrapText>
                 <ZOrder>8</ZOrder>
+              </GUIButton>
+              <GUIButton>
+                <ClickAction>RunScript</ClickAction>
+                <Clickable>True</Clickable>
+                <ClipImage>False</ClipImage>
+                <Enabled>True</Enabled>
+                <Font>6</Font>
+                <Height>52</Height>
+                <ID>9</ID>
+                <Image>61</Image>
+                <Left>254</Left>
+                <Locked>False</Locked>
+                <MouseoverImage>0</MouseoverImage>
+                <Name>btnNote10</Name>
+                <NewModeNumber>0</NewModeNumber>
+                <OnClick>btnNote10_OnClick</OnClick>
+                <PushedImage>0</PushedImage>
+                <Text xml:space="preserve">New Button</Text>
+                <TextAlignment>MiddleCenter</TextAlignment>
+                <TextColor>0</TextColor>
+                <TextPaddingHorizontal>2</TextPaddingHorizontal>
+                <TextPaddingVertical>2</TextPaddingVertical>
+                <Top>566</Top>
+                <Translated>True</Translated>
+                <Visible>True</Visible>
+                <Width>695</Width>
+                <WrapText>False</WrapText>
+                <ZOrder>9</ZOrder>
               </GUIButton>
             </Controls>
           </GUIMain>
@@ -5493,7 +5520,7 @@ return
       aFridge_close.Play();
       TypeText("Дверца не открывается.");
       TypeText("Вы с силой дергаете еще раз. Безуспешно.");
-      TypeText("Сказать по правде, это уже не смешно. Может что-то заклинило или просто примерзла? Но это обычный холодильник - ничего подобного с ним не может произойти.");
+      TypeText("Сказать по правде, это уже не смешно. Может что-то заклинило или примерзло? Но это же обычный холодильник - ничего подобного с ним не может произойти.");
     }
     
   }
@@ -5762,7 +5789,16 @@ stop
                 <Name>dKitchen_sink</Name>
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
-@S  // Dialog startup entry point
+@S
+  if (IsNight)
+  {
+    dKitchen_sink.SetOptionState(1, eOptionOn);
+    dKitchen_sink.SetOptionState(2, eOptionOff);
+    dKitchen_sink.SetOptionState(3, eOptionOn);
+    dKitchen_sink.SetOptionState(4, eOptionOff);
+    dKitchen_sink.SetOptionState(5, eOptionOff);
+    dKitchen_sink.SetOptionState(6, eOptionOn);
+  }
 return
 @1
   if (IsNight == false)
@@ -5807,13 +5843,13 @@ return
 @4
   if (Game.DoOnceOnly("room27_search_trash"))
   {
-    TypeText("Пальцы касаются чего-то липкого, и мозг взрывается от десятка ассоциаций, вызывающих рвотный рефлекс. Вы тут же отдергиваете руку.");
-    TypeText("Чем вы вообще занимаетесь? Зачем копаетесь в помойном ведре? Вы правда пали настолько низко?");
+    TypeText("Пальцы касаются чего-то мягкого и липкого. Вы тут же отдергиваете руку, чувствуя, как к горлу подкатывает рвотный позыв.");
+    TypeText("Чем я вообще занимаюсь и зачем копаюсь в помойном ведре? Неужели я правда опустился настолько низко??");
     ChangeMood(-1);
   }
   else
   {
-    TypeText("Вы с сомнением осматриваете вонючую кучу. Нет уж. На сегодня с вас более, чем достаточно.");
+    TypeText("Вы с сомнением осматриваете вонючую кучу. Нет уж. Лезть туда руками я больше не собираюсь.");
   }
 option-on 1;
 option-on 3;
@@ -7509,7 +7545,7 @@ return
 return
 @1
   player.AddInventory(iKnife);
-  TypeText("Получен предмет: 'Кухонный нож'");
+  TypeText("Получен предмет: «Кухонный нож»");
   knife = true;
 stop
 @2
@@ -14743,6 +14779,38 @@ stop
               <OffsetY>0</OffsetY>
               <ImportHeight>110</ImportHeight>
               <ImportWidth>100</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="234" Width="72" Height="34" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Объекты/Фото_на балконе2.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>34</ImportHeight>
+              <ImportWidth>72</ImportWidth>
+              <ImportAsTile>False</ImportAsTile>
+              <Frame>0</Frame>
+              <RemapToGamePalette>True</RemapToGamePalette>
+              <RemapToRoomPalette>False</RemapToRoomPalette>
+              <ImportMethod>LeaveAsIs</ImportMethod>
+              <TransparentColorIndex>0</TransparentColorIndex>
+              <ImportAlphaChannel>True</ImportAlphaChannel>
+            </Source>
+          </Sprite>
+          <Sprite Slot="236" Width="558" Height="698" ColorDepth="32" Resolution="Real" AlphaChannel="True">
+            <Source>
+              <FileName>Assets/Записки/Нечто на балконе.png</FileName>
+              <OffsetX>0</OffsetX>
+              <OffsetY>0</OffsetY>
+              <ImportHeight>698</ImportHeight>
+              <ImportWidth>558</ImportWidth>
               <ImportAsTile>False</ImportAsTile>
               <Frame>0</Frame>
               <RemapToGamePalette>True</RemapToGamePalette>
