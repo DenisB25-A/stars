@@ -746,16 +746,7 @@
           </UnloadedRoomFolder>
           <UnloadedRoomFolder Name="Bathroom">
             <SubFolders />
-            <UnloadedRooms>
-              <UnloadedRoom>
-                <Description IsNull="True" />
-                <Number>26</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
-                <Number>38</Number>
-              </UnloadedRoom>
-            </UnloadedRooms>
+            <UnloadedRooms />
           </UnloadedRoomFolder>
           <UnloadedRoomFolder Name="Storeroom">
             <SubFolders />
@@ -936,6 +927,14 @@
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>28</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>26</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>38</Number>
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
@@ -5117,7 +5116,7 @@
             <Properties>
               <CustomProperty>
                 <Name>Description</Name>
-                <Value xml:space="preserve">Моток женских волос черного цвета. У меня очень неприятное чувство, будто они едва заметно шевелятся в кармане.</Value>
+                <Value xml:space="preserve">Моток женских волос черного цвета. У меня очень неприятное чувство, будто они едва заметно шевелятся, лежа в кармане.</Value>
               </CustomProperty>
             </Properties>
             <Interactions>
@@ -5626,7 +5625,10 @@ option-off 1;
   }
     
   }
-
+  else
+  {
+    TypeText("Думаю, принимать сейчас душ - не самая лучшая идея.");
+  }
 return
 @2
   if (IsNight == false)
@@ -5635,7 +5637,14 @@ return
   }
   else
   {
-    player.ChangeRoom(38, 0, 0);
+    if (Hair == false)
+    {
+      player.ChangeRoom(38, 0, 0);
+    }
+    else
+    {
+      TypeText("Вы наклоняетесь и с опаской осматриваете пространство под ванной. Ничего необычного. Темно, грязно и по-прежнему несет сыростью. Однако вас не покидает какое-то нехорошее чувство.");
+    }
   }
 return
 @3
@@ -8586,6 +8595,13 @@ stop
           <ArrayType>None</ArrayType>
           <DefaultValue>false</DefaultValue>
           <Name>Wound</Name>
+          <Type>bool</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>0</ArraySize>
+          <ArrayType>None</ArrayType>
+          <DefaultValue>false</DefaultValue>
+          <Name>Hair</Name>
           <Type>bool</Type>
         </GlobalVariable>
       </Variables>
