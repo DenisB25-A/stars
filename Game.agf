@@ -12,7 +12,7 @@
       <AntiAliasFonts>False</AntiAliasFonts>
       <AntiGlideMode>True</AntiGlideMode>
       <AttachDataToExe>False</AttachDataToExe>
-      <AudioIndexer>65</AudioIndexer>
+      <AudioIndexer>66</AudioIndexer>
       <AutoMoveInWalkMode>False</AutoMoveInWalkMode>
       <BackwardsText>False</BackwardsText>
       <BuildTargets>Windows</BuildTargets>
@@ -4944,7 +4944,7 @@
                 <ID>13</ID>
                 <Image>117</Image>
                 <Name>iArmature</Name>
-                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <PlayerStartsWithItem>True</PlayerStartsWithItem>
                 <Properties>
                   <CustomProperty>
                     <Name>Description</Name>
@@ -4968,7 +4968,7 @@
                 <ID>22</ID>
                 <Image>155</Image>
                 <Name>iBread</Name>
-                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <PlayerStartsWithItem>True</PlayerStartsWithItem>
                 <Properties>
                   <CustomProperty>
                     <Name>Description</Name>
@@ -17424,6 +17424,19 @@ See KeyboardMovement.txt for details.
                 <SourceFileName>Assets/Звуки/electric_shock.mp3</SourceFileName>
                 <Type>1</Type>
                 <FileLastModifiedDate>2026-11-17 16:49:37Z</FileLastModifiedDate>
+              </AudioClip>
+              <AudioClip>
+                <BundlingType>InGameEXE</BundlingType>
+                <DefaultPriority>Inherit</DefaultPriority>
+                <DefaultRepeat>Inherit</DefaultRepeat>
+                <DefaultVolume>-1</DefaultVolume>
+                <FileType>MP3</FileType>
+                <ID>63</ID>
+                <Index>66</Index>
+                <ScriptName>aHouse_eating</ScriptName>
+                <SourceFileName>Assets/Звуки/House_eating.mp3</SourceFileName>
+                <Type>3</Type>
+                <FileLastModifiedDate>2026-11-24 10:50:50Z</FileLastModifiedDate>
               </AudioClip>
             </AudioClips>
             <AudioClipFolder>
