@@ -737,12 +737,7 @@
           </UnloadedRoomFolder>
           <UnloadedRoomFolder Name="Living_room">
             <SubFolders />
-            <UnloadedRooms>
-              <UnloadedRoom>
-                <Description IsNull="True" />
-                <Number>25</Number>
-              </UnloadedRoom>
-            </UnloadedRooms>
+            <UnloadedRooms />
           </UnloadedRoomFolder>
           <UnloadedRoomFolder Name="Bathroom">
             <SubFolders />
@@ -935,6 +930,10 @@
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>38</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>25</Number>
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
@@ -5601,8 +5600,12 @@
                 <Name>dBathchoice</Name>
                 <ShowTextParser>False</ShowTextParser>
                 <Script><![CDATA[// Dialog script file
-@S  // Dialog startup entry point
-return 
+@S
+  if (IsNight == true)
+  {
+    dBathchoice.SetOptionState(1, eOptionOn);
+  }
+return
 @1
   if (IsNight == false)
   {
