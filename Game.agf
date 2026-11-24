@@ -5775,28 +5775,29 @@ stop
                 <ID>2</ID>
                 <Name>dKsenia</Name>
                 <ShowTextParser>False</ShowTextParser>
-                <Script><![CDATA[// Dialog script file
-@S  // Dialog startup entry point
+                <Script><![CDATA[@S
 return
+
 @1
   aComputer_keyboard.Play();
   TypeText("...");
-  ksenia_answer = true;
+  EmailState[0] = 1;
   Laptop_Button4.Visible = true;
   ChangeMood(-1);
   TypeText("Возможно, ваши действия продиктованы рациональностью. Но вы все равно чувствуете себя немного униженным.");
 run-script 1
 stop
+
 @2
   aComputer_keyboard.Play();
   TypeText("...");
-  ksenia_answer = true;
+  EmailState[0] = 2;
 run-script 1
 stop
+
 @3
   TypeText("...");
-stop
-]]></Script>
+stop]]></Script>
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
@@ -5822,25 +5823,26 @@ stop
                 <ID>3</ID>
                 <Name>dUnknown</Name>
                 <ShowTextParser>False</ShowTextParser>
-                <Script><![CDATA[// Dialog script file
-@S  // Dialog startup entry point
+                <Script><![CDATA[@S
 return
+
 @1
   aComputer_keyboard.Play();
   TypeText("...");
-  unknown_answer = true;
+  EmailState[2] = 1;
 run-script 1
 stop
+
 @2
   aComputer_keyboard.Play();
   TypeText("...");
-  unknown_answer = true;
+  EmailState[2] = 2;
 run-script 1
 stop
+
 @3
   TypeText("...");
-stop
-]]></Script>
+stop]]></Script>
                 <DialogOptions>
                   <DialogOption>
                     <ID>1</ID>
@@ -7799,42 +7801,56 @@ stop
             <Name>dBoss</Name>
             <ShowTextParser>False</ShowTextParser>
             <Script><![CDATA[// Dialog script file
-@S  // Dialog startup entry point
+@S
 return
+
 @1
   aComputer_keyboard.Play();
   TypeText("...");
-  boss_answer = boss_answer + 1;
+  EmailState[4] = 1;
+run-script 1
 stop
+
 @2
   aComputer_keyboard.Play();
   TypeText("...");
-  boss_answer = boss_answer + 1;
+  EmailState[4] = 2;
+run-script 1
 stop
+
 @3
   aComputer_keyboard.Play();
   TypeText("...");
-  boss_answer = boss_answer + 1;
+  EmailState[4] = 3;
+run-script 1
 stop
-]]></Script>
+
+@4
+stop]]></Script>
             <DialogOptions>
               <DialogOption>
                 <ID>1</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Хорошо, Дмитрий Васильевич.</Text>
+                <Text xml:space="preserve">«Как скажите, Дмитрий Васильевич».</Text>
               </DialogOption>
               <DialogOption>
                 <ID>2</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Знаете, с выходом из дома у меня сейчас некие трудности...</Text>
+                <Text xml:space="preserve">«Знаете, с выходом из дома у меня сейчас некие трудности...»</Text>
               </DialogOption>
               <DialogOption>
                 <ID>3</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Дмитрий Васильевич, при всем уважении, пошел нахуй.</Text>
+                <Text xml:space="preserve">«Дмитрий Васильевич, при всем уважении, иди нахуй».</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Пока не отвечать.</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
@@ -7865,6 +7881,51 @@ stop
                 <Say>False</Say>
                 <Show>True</Show>
                 <Text>Уйти</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>21</ID>
+            <Name>dUnknown2</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S
+return
+
+@1
+  aComputer_keyboard.Play();
+  TypeText("...");
+  EmailState[5] = 1;
+run-script 1
+stop
+
+@2
+  aComputer_keyboard.Play();
+  TypeText("...");
+  EmailState[5] = 2;
+run-script 1
+stop
+
+@3
+stop]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text />
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text />
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text />
               </DialogOption>
             </DialogOptions>
           </Dialog>
@@ -8462,23 +8523,9 @@ stop
         <GlobalVariable>
           <ArraySize>0</ArraySize>
           <ArrayType>None</ArrayType>
-          <DefaultValue>false</DefaultValue>
-          <Name>ksenia_answer</Name>
-          <Type>bool</Type>
-        </GlobalVariable>
-        <GlobalVariable>
-          <ArraySize>0</ArraySize>
-          <ArrayType>None</ArrayType>
           <DefaultValue>-1</DefaultValue>
           <Name>CurrentEmail</Name>
           <Type>int</Type>
-        </GlobalVariable>
-        <GlobalVariable>
-          <ArraySize>0</ArraySize>
-          <ArrayType>None</ArrayType>
-          <DefaultValue>false</DefaultValue>
-          <Name>unknown_answer</Name>
-          <Type>bool</Type>
         </GlobalVariable>
         <GlobalVariable>
           <ArraySize>0</ArraySize>
@@ -8542,13 +8589,6 @@ stop
           <DefaultValue>false</DefaultValue>
           <Name>knife</Name>
           <Type>bool</Type>
-        </GlobalVariable>
-        <GlobalVariable>
-          <ArraySize>0</ArraySize>
-          <ArrayType>None</ArrayType>
-          <DefaultValue>0</DefaultValue>
-          <Name>boss_answer</Name>
-          <Type>int</Type>
         </GlobalVariable>
         <GlobalVariable>
           <ArraySize>0</ArraySize>
@@ -8654,6 +8694,13 @@ stop
           <DefaultValue>false</DefaultValue>
           <Name>Hair</Name>
           <Type>bool</Type>
+        </GlobalVariable>
+        <GlobalVariable>
+          <ArraySize>50</ArraySize>
+          <ArrayType>Array</ArrayType>
+          <DefaultValue />
+          <Name>EmailState</Name>
+          <Type>int</Type>
         </GlobalVariable>
       </Variables>
     </GlobalVariables>
