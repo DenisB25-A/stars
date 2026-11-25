@@ -735,14 +735,6 @@
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
-          <UnloadedRoomFolder Name="Storeroom">
-            <SubFolders />
-            <UnloadedRooms />
-          </UnloadedRoomFolder>
-          <UnloadedRoomFolder Name="Balcony">
-            <SubFolders />
-            <UnloadedRooms />
-          </UnloadedRoomFolder>
           <UnloadedRoomFolder Name="Neighbor_apartment">
             <SubFolders />
             <UnloadedRooms>
