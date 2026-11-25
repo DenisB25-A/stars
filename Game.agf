@@ -5848,13 +5848,13 @@ stop]]></Script>
                     <ID>1</ID>
                     <Say>False</Say>
                     <Show>True</Show>
-                    <Text xml:space="preserve">"Кто это?"</Text>
+                    <Text xml:space="preserve">«Кто это?»</Text>
                   </DialogOption>
                   <DialogOption>
                     <ID>2</ID>
                     <Say>False</Say>
                     <Show>True</Show>
-                    <Text xml:space="preserve">"Вы, наверное, ошиблись."</Text>
+                    <Text xml:space="preserve">«Вы, наверное, ошиблись.»</Text>
                   </DialogOption>
                   <DialogOption>
                     <ID>3</ID>
@@ -7807,6 +7807,8 @@ return
 @1
   aComputer_keyboard.Play();
   TypeText("...");
+  TypeText("Возможно, вам и удастся договориться, если вы учтиво раскланейтесь перед вашим сумасбродным начальником. Вот только настроения от этого не прибавилось.");
+  ChangeMood(-1);
   EmailState[4] = 1;
 run-script 1
 stop
@@ -7821,6 +7823,8 @@ stop
 @3
   aComputer_keyboard.Play();
   TypeText("...");
+  TypeText("Что он вообще о себе вообразил? Давно следовало послать этого надоедливого хренососа. Будто камень с души.");
+  ChangeMood(1);
   EmailState[4] = 3;
 run-script 1
 stop
@@ -7832,7 +7836,7 @@ stop]]></Script>
                 <ID>1</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">«Как скажите, Дмитрий Васильевич».</Text>
+                <Text xml:space="preserve">«Хорошо, Дмитрий Васильевич. Вот только насчет зарплаты...».</Text>
               </DialogOption>
               <DialogOption>
                 <ID>2</ID>
@@ -7907,25 +7911,38 @@ run-script 1
 stop
 
 @3
-stop]]></Script>
+  aComputer_keyboard.Play();
+  TypeText("...");
+  EmailState[5] = 3;
+run-script 1
+stop
+@4
+stop
+]]></Script>
             <DialogOptions>
               <DialogOption>
                 <ID>1</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text />
+                <Text xml:space="preserve">«Хватит придуриваться. Кто это?»</Text>
               </DialogOption>
               <DialogOption>
                 <ID>2</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text />
+                <Text xml:space="preserve">«Это что, шутка такая?»</Text>
               </DialogOption>
               <DialogOption>
                 <ID>3</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text />
+                <Text xml:space="preserve">«Не пиши сюда больше»</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Оставить без ответа</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
