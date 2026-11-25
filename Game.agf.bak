@@ -735,22 +735,9 @@
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
-          <UnloadedRoomFolder Name="Living_room">
-            <SubFolders />
-            <UnloadedRooms />
-          </UnloadedRoomFolder>
-          <UnloadedRoomFolder Name="Bathroom">
-            <SubFolders />
-            <UnloadedRooms />
-          </UnloadedRoomFolder>
           <UnloadedRoomFolder Name="Storeroom">
             <SubFolders />
-            <UnloadedRooms>
-              <UnloadedRoom>
-                <Description IsNull="True" />
-                <Number>39</Number>
-              </UnloadedRoom>
-            </UnloadedRooms>
+            <UnloadedRooms />
           </UnloadedRoomFolder>
           <UnloadedRoomFolder Name="Balcony">
             <SubFolders />
@@ -934,6 +921,10 @@
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>25</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>39</Number>
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
@@ -7807,7 +7798,7 @@ return
 @1
   aComputer_keyboard.Play();
   TypeText("...");
-  TypeText("Возможно, вам и удастся договориться, если вы учтиво раскланейтесь перед вашим сумасбродным начальником. Вот только настроения от этого не прибавилось.");
+  TypeText("Возможно, вам и удастся договориться, если вы учтиво раскланяетесь перед своим сумасбродным начальником. Вот только настроения от этого не прибавится.");
   ChangeMood(-1);
   EmailState[4] = 1;
 run-script 1
@@ -7943,6 +7934,36 @@ stop
                 <Say>False</Say>
                 <Show>True</Show>
                 <Text xml:space="preserve">Оставить без ответа</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>22</ID>
+            <Name>dDark_hole</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+  TypeText("Вы наклоняйтесь и с опаской ощупываете пространство где-то внизу.");
+  TypeText("Полка пуста. Ее покрывают только высохшие трупики мух и какой-то листок завалялся у самой стены. Вы осторожно вытягиваете его на свет.");
+  ReadAndAddNote(7);
+  TypeText("Это... это я рисовал, когда был ребенком. Кажется. Что он здесь делает?");
+return
+@2
+stop]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Пошарить в темноте</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text>УйтиЭто</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
@@ -14415,9 +14436,9 @@ stop
               <ImportAlphaChannel>True</ImportAlphaChannel>
             </Source>
           </Sprite>
-          <Sprite Slot="136" Width="558" Height="372" ColorDepth="32" Resolution="Real" AlphaChannel="False">
+          <Sprite Slot="136" Width="558" Height="372" ColorDepth="32" Resolution="Real" AlphaChannel="True">
             <Source>
-              <FileName>Assets/Записки/Рисунок 2.png</FileName>
+              <FileName>Assets/Записки/Детский рисунок (шкаф).png</FileName>
               <OffsetX>0</OffsetX>
               <OffsetY>0</OffsetY>
               <ImportHeight>372</ImportHeight>
