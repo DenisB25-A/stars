@@ -7937,13 +7937,23 @@ stop
 @S  // Dialog startup entry point
 return
 @1
-  TypeText("Вы наклоняйтесь и с опаской ощупываете пространство где-то внизу.");
-  TypeText("Полка пуста. Ее покрывают только высохшие трупики мух и какой-то листок завалялся у самой стены. Вы осторожно вытягиваете его на свет.");
-  ReadAndAddNote(7);
-  TypeText("Это... это я рисовал, когда был ребенком. Кажется. Что он здесь делает?");
-return
+  TypeText("Вы осторожно протягиваете руку в темноту и пытаетесь хоть что-то нащупать.");
+  TypeText("А секунду спустя отдергиваете ее, вскрикиваете и от неожиданности валитесь на пол.");
+  TypeText("По вашей руке только что что-то проползло.");
+  ChangeMood(-1);
+option-off 1
+option-on 2
+stop
 @2
-stop]]></Script>
+  TypeText("Вы снова наклоняетесь и еще раз с опаской ощупываете пространство.");
+  TypeText("Под пальцами - только пыль, да высохшие трупики мух. И какой-то листок, затерявшийся у самой стены. Вы осторожно вытягиваете его на свет.");
+  ReadAndAddNote(7);
+  TypeText("Это я рисовал, когда был ребенком. Кажется. Но только что он здесь делает?");
+  dDark_hole.SetOptionState(2, eOptionOffForever);
+return
+@3
+stop
+]]></Script>
             <DialogOptions>
               <DialogOption>
                 <ID>1</ID>
@@ -7954,8 +7964,14 @@ stop]]></Script>
               <DialogOption>
                 <ID>2</ID>
                 <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Пошарить в темноте еще раз</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>False</Say>
                 <Show>True</Show>
-                <Text>УйтиЭто</Text>
+                <Text>Уйти</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
