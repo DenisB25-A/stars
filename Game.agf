@@ -698,10 +698,6 @@
               </UnloadedRoom>
               <UnloadedRoom>
                 <Description IsNull="True" />
-                <Number>40</Number>
-              </UnloadedRoom>
-              <UnloadedRoom>
-                <Description IsNull="True" />
                 <Number>41</Number>
               </UnloadedRoom>
               <UnloadedRoom>
@@ -917,6 +913,10 @@
               <UnloadedRoom>
                 <Description IsNull="True" />
                 <Number>39</Number>
+              </UnloadedRoom>
+              <UnloadedRoom>
+                <Description IsNull="True" />
+                <Number>40</Number>
               </UnloadedRoom>
             </UnloadedRooms>
           </UnloadedRoomFolder>
