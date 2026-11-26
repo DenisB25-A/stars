@@ -7942,15 +7942,15 @@ return
   ChangeMood(-1);
   aHeartbeat.Play();
   TypeText("Секунду спустя - резко отдергиваете ее, вскрикиваете и от неожиданности валитесь на пол.");
-  TypeText("По вашей руке только что проползло нечто.");
+  TypeText("По вашей руке только что что-то проползло.");
 option-off 1
 option-on 2
 stop
 @2
   TypeText("Вы снова наклоняетесь и еще раз с опаской ощупываете пространство.");
-  TypeText("Под пальцами - только пыль, да высохшие трупики мух. И какой-то листок, затерявшийся у самой стены. Вы осторожно вытягиваете его на свет.");
+  TypeText("Под пальцами - только пыль, высохшие трупики мух. И какой-то листок, затерявшийся у самой стены. Вы осторожно вытягиваете его на свет.");
   ReadAndAddNote(7);
-  TypeText("Это я рисовал, когда был ребенком. Кажется. Но что он здесь делает?");
+  TypeText("Это рисунок. Но что он здесь делает?");
   dDark_hole.SetOptionState(2, eOptionOffForever);
 stop
 @3
@@ -7968,6 +7968,44 @@ stop
                 <Say>False</Say>
                 <Show>False</Show>
                 <Text xml:space="preserve">Пошарить в темноте еще раз</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text>Уйти</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
+          <Dialog>
+            <ID>23</ID>
+            <Name>dBird</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+  TypeText("Антон: Эээ, привет...");
+  TypeText("...");
+return
+@2
+  TypeText("Вы трете клюв костяшками пальцев, но ничего не происходит.");
+return
+@3
+stop
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Поговорить с чучелом</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Почесать клюв</Text>
               </DialogOption>
               <DialogOption>
                 <ID>3</ID>
