@@ -8015,6 +8015,112 @@ stop
               </DialogOption>
             </DialogOptions>
           </Dialog>
+          <Dialog>
+            <ID>24</ID>
+            <Name>dDino</Name>
+            <ShowTextParser>False</ShowTextParser>
+            <Script><![CDATA[// Dialog script file
+@S  // Dialog startup entry point
+return
+@1
+  TypeText("Антон: Погоди. Это... ты что-ли разговариваешь?");
+  TypeText("Динозавр: Я просто должен тебя предупредить. Тебя не было слишком давно, Антон, и дом больше не помнит тебя. Ты здесь чужой.");
+  TypeText("Динозавр: Они не замечают тебя. Пока. Но если перейдешь границу - они обратят внимание.");
+option-off 1
+option-off 2
+option-off 3
+option-off 4
+option-on 5
+option-on 6
+option-on 7
+return
+@2
+  TypeText("Антон: Ну все. Похоже я тронулся. Разговариваю с игрушечным динозавром.");
+  TypeText("Динозавр: Я просто должен тебя предупредить. Тебя не было слишком давно, Антон, и дом больше не помнит тебя. Ты здесь чужой.");
+  TypeText("Динозавр: Они не замечают тебя. Пока. Но если перейдешь границу - они обратят внимание.");
+option-off 1
+option-off 2
+option-off 3
+option-off 4
+option-on 5
+option-on 6
+option-on 7
+return
+@3
+  TypeText("Антон: Так ведь и ты - говорящая игрушка. Значит и в дверь нарисованную можно войти.");
+  TypeText("Динозавр: Я просто должен тебя предупредить. Тебя не было слишком давно, Антон, и дом больше не помнит тебя. Ты здесь чужой.");
+  TypeText("Динозавр: Они не замечают тебя. Пока. Но если перейдешь границу - они обратят внимание.");
+option-off 1
+option-off 2
+option-off 3
+option-off 4
+option-on 5
+option-on 6
+option-on 7
+return
+@4
+  TypeText("Антон: Бред. Резиновые динозавры не разговаривают. Полезай обратно в карман, а я еще пока не тронулся рассудком.");
+stop
+@5
+  TypeText("Антон: Кто обратит внимание?");
+  TypeText("Динозавр: Те, кто живет здесь, конечно. Обитатели дома.");
+  TypeText("Динозавр: Берегись Длинного человека.");
+option-off 5
+return
+@6
+  TypeText("Антон: Что там, за дверью?");
+return
+@7
+  TypeText("Антон: Слушай, а куда черный шкаф подевался? Из кладовки.");
+  TypeText("Динозавр: ...");
+  TypeText("Антон: Вот и поговорили.");
+return
+]]></Script>
+            <DialogOptions>
+              <DialogOption>
+                <ID>1</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Подожди... Ты что ли говорящий?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>2</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Кажется, я поехал кукухой</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>3</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Могу попробовать. Почему нет?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>4</ID>
+                <Say>False</Say>
+                <Show>True</Show>
+                <Text xml:space="preserve">Бред. Резиновые динозавры не разговаривают (игнорировать)</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>5</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Кто обратит внимание?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>6</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Что за дверью?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>7</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Куда шкаф подевался?</Text>
+              </DialogOption>
+            </DialogOptions>
+          </Dialog>
         </Dialogs>
       </DialogFolder>
     </Dialogs>
