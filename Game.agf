@@ -8023,9 +8023,9 @@ stop
 @S  // Dialog startup entry point
 return
 @1
-  TypeText("Антон: Погоди. Это... ты что-ли разговариваешь?");
+  TypeText("Антон: Погоди. Это... ты что-ли говорящий?");
   TypeText("~Динозавр: Я просто должен тебя предупредить. Тебя не было слишком давно, Антон. Дом больше не помнит тебя. Здесь ты - чужой.");
-  TypeText("~Динозавр: Они не замечают, пока что. Но если перейдешь границу - они обратят внимание.");
+  TypeText("~Динозавр: Они пока тебя не замечают. Но если переступишь границу - обратят внимание.");
 option-off 1
 option-off 2
 option-off 3
@@ -8038,9 +8038,9 @@ option-on 6
   }
 return
 @2
-  TypeText("Антон: Ну все. Похоже я тронулся. Разговариваю с игрушечным динозавром.");
+  TypeText("Антон: Ну все. Похоже я рехнулся. Разговариваю с игрушечным динозавром.");
   TypeText("~Динозавр: Я просто должен тебя предупредить. Тебя не было слишком давно, Антон. Дом больше не помнит тебя. Здесь ты - чужой.");
-  TypeText("~Динозавр: Они не замечают, пока что. Но если перейдешь границу - они обратят внимание.");
+  TypeText("~Динозавр: Они пока тебя не замечают. Но если переступишь границу - обратят внимание.");
 option-off 1
 option-off 2
 option-off 3
@@ -8055,7 +8055,7 @@ return
 @3
   TypeText("Антон: Так ведь и ты - говорящая игрушка. Значит и в дверь нарисованную можно войти.");
   TypeText("~Динозавр: Я просто должен тебя предупредить. Тебя не было слишком давно, Антон. Дом больше не помнит тебя. Здесь ты - чужой.");
-  TypeText("~Динозавр: Они не замечают, пока что. Но если перейдешь границу - они обратят внимание.");
+  TypeText("~Динозавр: Они пока тебя не замечают. Но если переступишь границу - обратят внимание.");
 option-off 1
 option-off 2
 option-off 3
@@ -8072,53 +8072,54 @@ return
   player.ChangeRoom(25, 1625, 850, eDirectionRight);
 stop
 @5
-  TypeText("Антон: Кто обратит внимание?");
+  TypeText("Антон: Кто обратит на меня внимание?");
   TypeText("~Динозавр: Те, кто теперь здесь живет. Обитатели дома.");
   TypeText("Антон: И много их?");
-  TypeText("~Динозавр: Не знаю. Но больше других - опасайся Длинного человека. Не доверяй ему.");
+  TypeText("~Динозавр: Не знаю. Но больше других - опасайся Длинного человека. Не доверяй Длинному человеку.");
 option-off 5
 
   if (this.HasOptionBeenChosen(5) &&
       this.HasOptionBeenChosen(6) &&
-      this.HasOptionBeenChosen(7))
+      (this.HasOptionBeenChosen(7) ||
+       !HasPlayerBeenInRoom(39)))
   {
     this.SetOptionState(8, eOptionOn);
   }
-
 return
 @6
   TypeText("Антон: Что там, за дверью?");
   TypeText("~Динозавр: Это сложно объяснить. Там место, которое двигает звезды.");
-  TypeText("~Динозавр: Им очень давно никто не пользовался, конечно. Я думаю, оно сломано.");
-  TypeText("Антон: Что это значит?");
-  TypeText("~Динозавр: ...");
+  TypeText("~Динозавр: Им очень давно никто не пользовался. Я думаю, оно сломано.");
 option-off 6
 
   if (this.HasOptionBeenChosen(5) &&
       this.HasOptionBeenChosen(6) &&
-      this.HasOptionBeenChosen(7))
+      (this.HasOptionBeenChosen(7) ||
+       !HasPlayerBeenInRoom(39)))
   {
     this.SetOptionState(8, eOptionOn);
   }
 
 return
 @7
-  TypeText("Антон: Слушай, а куда подевался черный шкаф? Из кладовки.");
+  TypeText("Антон: Слушай, а ты случайно не знаешь, куда подевался черный шкаф? Из кладовки.");
   TypeText("~Динозавр: ...");
   TypeText("Антон: Вот и поговорили.");
 option-off 7
 
   if (this.HasOptionBeenChosen(5) &&
       this.HasOptionBeenChosen(6) &&
-      this.HasOptionBeenChosen(7))
+      (this.HasOptionBeenChosen(7) ||
+       !HasPlayerBeenInRoom(39)))
   {
     this.SetOptionState(8, eOptionOn);
-  }  
+  }
 return
 @8
   TypeText("Антон: Ладно. Что ж, спасибо, что предупредил.");
-  TypeText("~Динозавр: Будь осторожен, Антон.");
-  player.ChangeRoom(25, 1625, 850, eDirectionRight);
+  TypeText("~Динозавр: Мы снова сможем говорить, когда придет время.");
+  Dino = 1;
+  player.ChangeRoom(25, 1580, 850, eDirectionRight);
 stop
 ]]></Script>
             <DialogOptions>
@@ -8126,25 +8127,25 @@ stop
                 <ID>1</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Подожди... Ты что ли говорящий?</Text>
+                <Text xml:space="preserve">Ты что, разговариваешь?</Text>
               </DialogOption>
               <DialogOption>
                 <ID>2</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Кажется, я поехал кукухой</Text>
+                <Text xml:space="preserve">Похоже, я рехнулся.</Text>
               </DialogOption>
               <DialogOption>
                 <ID>3</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Могу попробовать. Почему нет?</Text>
+                <Text xml:space="preserve">Можно попробовать. Почему нет?</Text>
               </DialogOption>
               <DialogOption>
                 <ID>4</ID>
                 <Say>False</Say>
                 <Show>True</Show>
-                <Text xml:space="preserve">Бред. Резиновые динозавры не разговаривают (игнорировать)</Text>
+                <Text xml:space="preserve">Игрушки не разговаривают (игнорировать динозавра)</Text>
               </DialogOption>
               <DialogOption>
                 <ID>5</ID>
