@@ -4468,6 +4468,28 @@
               </GUILabel>
             </Controls>
           </GUIMain>
+          <GUIMain>
+            <NormalGUI>
+              <BackgroundColor>65434</BackgroundColor>
+              <BackgroundImage>0</BackgroundImage>
+              <BorderColor>65434</BorderColor>
+              <Clickable>False</Clickable>
+              <Height>1080</Height>
+              <ID>23</ID>
+              <Left>0</Left>
+              <Name>gLightOverlay</Name>
+              <OnClick />
+              <PopupStyle>Normal</PopupStyle>
+              <PopupYPos>0</PopupYPos>
+              <ScriptModule>GlobalScript.asc</ScriptModule>
+              <Top>0</Top>
+              <Transparency>100</Transparency>
+              <Visible>False</Visible>
+              <Width>1920</Width>
+              <ZOrder>3</ZOrder>
+            </NormalGUI>
+            <Controls />
+          </GUIMain>
         </GUIs>
       </GUIFolder>
     </GUIs>
@@ -4509,7 +4531,7 @@
                 <ID>2</ID>
                 <Image>33</Image>
                 <Name>iCigarettes</Name>
-                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <PlayerStartsWithItem>True</PlayerStartsWithItem>
                 <Properties>
                   <CustomProperty>
                     <Name>Description</Name>
@@ -8069,7 +8091,7 @@ option-on 6
 return
 @4
   TypeText("Антон: Бред. Резиновые динозавры не разговаривают. Полезай обратно в карман, а я еще пока не тронулся рассудком.");
-  player.ChangeRoom(25, 1625, 850, eDirectionRight);
+  player.ChangeRoom(25, 1580, 850, eDirectionRight);
 stop
 @5
   TypeText("Антон: Кто обратит на меня внимание?");
