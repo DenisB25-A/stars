@@ -4485,7 +4485,7 @@
                 <ID>1</ID>
                 <Image>28</Image>
                 <Name>iDino</Name>
-                <PlayerStartsWithItem>False</PlayerStartsWithItem>
+                <PlayerStartsWithItem>True</PlayerStartsWithItem>
                 <Properties>
                   <CustomProperty>
                     <Name>Description</Name>
@@ -8024,57 +8024,102 @@ stop
 return
 @1
   TypeText("Антон: Погоди. Это... ты что-ли разговариваешь?");
-  TypeText("Динозавр: Я просто должен тебя предупредить. Тебя не было слишком давно, Антон, и дом больше не помнит тебя. Ты здесь чужой.");
-  TypeText("Динозавр: Они не замечают тебя. Пока. Но если перейдешь границу - они обратят внимание.");
+  TypeText("~Динозавр: Я просто должен тебя предупредить. Тебя не было слишком давно, Антон. Дом больше не помнит тебя. Здесь ты - чужой.");
+  TypeText("~Динозавр: Они не замечают, пока что. Но если перейдешь границу - они обратят внимание.");
 option-off 1
 option-off 2
 option-off 3
 option-off 4
 option-on 5
 option-on 6
-option-on 7
+  if (HasPlayerBeenInRoom(39))
+  {
+    dDino.SetOptionState(7, eOptionOn);
+  }
 return
 @2
   TypeText("Антон: Ну все. Похоже я тронулся. Разговариваю с игрушечным динозавром.");
-  TypeText("Динозавр: Я просто должен тебя предупредить. Тебя не было слишком давно, Антон, и дом больше не помнит тебя. Ты здесь чужой.");
-  TypeText("Динозавр: Они не замечают тебя. Пока. Но если перейдешь границу - они обратят внимание.");
+  TypeText("~Динозавр: Я просто должен тебя предупредить. Тебя не было слишком давно, Антон. Дом больше не помнит тебя. Здесь ты - чужой.");
+  TypeText("~Динозавр: Они не замечают, пока что. Но если перейдешь границу - они обратят внимание.");
 option-off 1
 option-off 2
 option-off 3
 option-off 4
 option-on 5
 option-on 6
-option-on 7
+  if (HasPlayerBeenInRoom(39))
+  {
+    dDino.SetOptionState(7, eOptionOn);
+  }
 return
 @3
   TypeText("Антон: Так ведь и ты - говорящая игрушка. Значит и в дверь нарисованную можно войти.");
-  TypeText("Динозавр: Я просто должен тебя предупредить. Тебя не было слишком давно, Антон, и дом больше не помнит тебя. Ты здесь чужой.");
-  TypeText("Динозавр: Они не замечают тебя. Пока. Но если перейдешь границу - они обратят внимание.");
+  TypeText("~Динозавр: Я просто должен тебя предупредить. Тебя не было слишком давно, Антон. Дом больше не помнит тебя. Здесь ты - чужой.");
+  TypeText("~Динозавр: Они не замечают, пока что. Но если перейдешь границу - они обратят внимание.");
 option-off 1
 option-off 2
 option-off 3
 option-off 4
 option-on 5
 option-on 6
-option-on 7
+  if (HasPlayerBeenInRoom(39))
+  {
+    dDino.SetOptionState(7, eOptionOn);
+  }
 return
 @4
   TypeText("Антон: Бред. Резиновые динозавры не разговаривают. Полезай обратно в карман, а я еще пока не тронулся рассудком.");
+  player.ChangeRoom(25, 1625, 850, eDirectionRight);
 stop
 @5
   TypeText("Антон: Кто обратит внимание?");
-  TypeText("Динозавр: Те, кто живет здесь, конечно. Обитатели дома.");
-  TypeText("Динозавр: Берегись Длинного человека.");
+  TypeText("~Динозавр: Те, кто теперь здесь живет. Обитатели дома.");
+  TypeText("Антон: И много их?");
+  TypeText("~Динозавр: Не знаю. Но больше других - опасайся Длинного человека. Не доверяй ему.");
 option-off 5
+
+  if (this.HasOptionBeenChosen(5) &&
+      this.HasOptionBeenChosen(6) &&
+      this.HasOptionBeenChosen(7))
+  {
+    this.SetOptionState(8, eOptionOn);
+  }
+
 return
 @6
   TypeText("Антон: Что там, за дверью?");
+  TypeText("~Динозавр: Это сложно объяснить. Там место, которое двигает звезды.");
+  TypeText("~Динозавр: Им очень давно никто не пользовался, конечно. Я думаю, оно сломано.");
+  TypeText("Антон: Что это значит?");
+  TypeText("~Динозавр: ...");
+option-off 6
+
+  if (this.HasOptionBeenChosen(5) &&
+      this.HasOptionBeenChosen(6) &&
+      this.HasOptionBeenChosen(7))
+  {
+    this.SetOptionState(8, eOptionOn);
+  }
+
 return
 @7
-  TypeText("Антон: Слушай, а куда черный шкаф подевался? Из кладовки.");
-  TypeText("Динозавр: ...");
+  TypeText("Антон: Слушай, а куда подевался черный шкаф? Из кладовки.");
+  TypeText("~Динозавр: ...");
   TypeText("Антон: Вот и поговорили.");
+option-off 7
+
+  if (this.HasOptionBeenChosen(5) &&
+      this.HasOptionBeenChosen(6) &&
+      this.HasOptionBeenChosen(7))
+  {
+    this.SetOptionState(8, eOptionOn);
+  }  
 return
+@8
+  TypeText("Антон: Ладно. Что ж, спасибо, что предупредил.");
+  TypeText("~Динозавр: Будь осторожен, Антон.");
+  player.ChangeRoom(25, 1625, 850, eDirectionRight);
+stop
 ]]></Script>
             <DialogOptions>
               <DialogOption>
@@ -8118,6 +8163,12 @@ return
                 <Say>False</Say>
                 <Show>False</Show>
                 <Text xml:space="preserve">Куда шкаф подевался?</Text>
+              </DialogOption>
+              <DialogOption>
+                <ID>8</ID>
+                <Say>False</Say>
+                <Show>False</Show>
+                <Text xml:space="preserve">Спасибо за совет</Text>
               </DialogOption>
             </DialogOptions>
           </Dialog>
